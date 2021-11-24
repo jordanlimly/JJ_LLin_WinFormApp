@@ -52,11 +52,23 @@
     <Compile Include="CreateUserAccForm.Designer.cs">
       <DependentUpon>CreateUserAccForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustLoginForm.Designer.cs">
+      <DependentUpon>CustLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForgetPasswordForm.Designer.cs">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogoutForm.Designer.cs">
+      <DependentUpon>LogoutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance.cs">
       <SubType>Form</SubType>
@@ -75,8 +87,14 @@
     <EmbeddedResource Include="CreateUserAccForm.resx">
       <DependentUpon>CreateUserAccForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustLoginForm.resx">
+      <DependentUpon>CustLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogoutForm.resx">
+      <DependentUpon>LogoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance.resx">
       <DependentUpon>Maintenance.cs</DependentUpon>
