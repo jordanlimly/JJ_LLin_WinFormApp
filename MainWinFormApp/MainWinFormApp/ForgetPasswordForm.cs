@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MainWinFormApp
 {
-    public partial class Form1 : Form
+    public partial class frmforgetpw : Form
     {
-        public Form1()
+        public frmforgetpw()
         {
             InitializeComponent();
         }
