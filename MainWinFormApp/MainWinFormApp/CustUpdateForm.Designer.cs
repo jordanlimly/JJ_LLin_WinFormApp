@@ -80,25 +80,25 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(293, 134);
+            this.tbName.Location = new System.Drawing.Point(360, 137);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(170, 22);
+            this.tbName.Size = new System.Drawing.Size(261, 22);
             this.tbName.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(293, 194);
+            this.textBox5.Location = new System.Drawing.Point(360, 194);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(170, 22);
+            this.textBox5.Size = new System.Drawing.Size(260, 22);
             this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(293, 250);
+            this.textBox6.Location = new System.Drawing.Point(360, 250);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(170, 22);
+            this.textBox6.Size = new System.Drawing.Size(260, 22);
             this.textBox6.TabIndex = 5;
             // 
             // lblSecurityQn
