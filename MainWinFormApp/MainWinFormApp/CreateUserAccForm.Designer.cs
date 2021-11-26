@@ -41,13 +41,19 @@
             this.tbCardID = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblSQ2 = new System.Windows.Forms.Label();
+            this.lblSQ1 = new System.Windows.Forms.Label();
+            this.combSQ1 = new System.Windows.Forms.ComboBox();
+            this.tbSQ1 = new System.Windows.Forms.TextBox();
+            this.tbSQ2 = new System.Windows.Forms.TextBox();
+            this.combSQ2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblCreateUserAcc
             // 
             this.lblCreateUserAcc.AutoSize = true;
             this.lblCreateUserAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateUserAcc.Location = new System.Drawing.Point(273, 29);
+            this.lblCreateUserAcc.Location = new System.Drawing.Point(314, 35);
             this.lblCreateUserAcc.Name = "lblCreateUserAcc";
             this.lblCreateUserAcc.Size = new System.Drawing.Size(297, 46);
             this.lblCreateUserAcc.TabIndex = 0;
@@ -57,7 +63,7 @@
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(189, 134);
+            this.lblFullname.Location = new System.Drawing.Point(221, 125);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(79, 17);
             this.lblFullname.TabIndex = 1;
@@ -66,7 +72,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(189, 178);
+            this.lblEmail.Location = new System.Drawing.Point(221, 169);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 17);
             this.lblEmail.TabIndex = 2;
@@ -75,7 +81,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(189, 227);
+            this.lblPassword.Location = new System.Drawing.Point(221, 220);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(77, 17);
             this.lblPassword.TabIndex = 3;
@@ -84,7 +90,7 @@
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(189, 272);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(221, 265);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(129, 17);
             this.lblConfirmPassword.TabIndex = 4;
@@ -93,7 +99,7 @@
             // lblCardID
             // 
             this.lblCardID.AutoSize = true;
-            this.lblCardID.Location = new System.Drawing.Point(189, 322);
+            this.lblCardID.Location = new System.Drawing.Point(221, 318);
             this.lblCardID.Name = "lblCardID";
             this.lblCardID.Size = new System.Drawing.Size(63, 17);
             this.lblCardID.TabIndex = 5;
@@ -101,42 +107,42 @@
             // 
             // tbFullName
             // 
-            this.tbFullName.Location = new System.Drawing.Point(321, 129);
+            this.tbFullName.Location = new System.Drawing.Point(372, 122);
             this.tbFullName.Name = "tbFullName";
             this.tbFullName.Size = new System.Drawing.Size(290, 22);
             this.tbFullName.TabIndex = 6;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(321, 173);
+            this.tbEmail.Location = new System.Drawing.Point(372, 166);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(290, 22);
             this.tbEmail.TabIndex = 7;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(321, 224);
+            this.tbPassword.Location = new System.Drawing.Point(372, 217);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(290, 22);
             this.tbPassword.TabIndex = 8;
             // 
             // tbCfmPassword
             // 
-            this.tbCfmPassword.Location = new System.Drawing.Point(321, 269);
+            this.tbCfmPassword.Location = new System.Drawing.Point(372, 262);
             this.tbCfmPassword.Name = "tbCfmPassword";
             this.tbCfmPassword.Size = new System.Drawing.Size(290, 22);
             this.tbCfmPassword.TabIndex = 9;
             // 
             // tbCardID
             // 
-            this.tbCardID.Location = new System.Drawing.Point(321, 322);
+            this.tbCardID.Location = new System.Drawing.Point(372, 315);
             this.tbCardID.Name = "tbCardID";
             this.tbCardID.Size = new System.Drawing.Size(290, 22);
             this.tbCardID.TabIndex = 10;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(192, 381);
+            this.btnNext.Location = new System.Drawing.Point(201, 571);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(160, 49);
             this.btnNext.TabIndex = 11;
@@ -145,18 +151,72 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(591, 381);
+            this.btnCancel.Location = new System.Drawing.Point(600, 571);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(160, 49);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // lblSQ2
+            // 
+            this.lblSQ2.AutoSize = true;
+            this.lblSQ2.Location = new System.Drawing.Point(221, 489);
+            this.lblSQ2.Name = "lblSQ2";
+            this.lblSQ2.Size = new System.Drawing.Size(140, 17);
+            this.lblSQ2.TabIndex = 13;
+            this.lblSQ2.Text = "Security Question 2: ";
+            // 
+            // lblSQ1
+            // 
+            this.lblSQ1.AutoSize = true;
+            this.lblSQ1.Location = new System.Drawing.Point(221, 399);
+            this.lblSQ1.Name = "lblSQ1";
+            this.lblSQ1.Size = new System.Drawing.Size(140, 17);
+            this.lblSQ1.TabIndex = 14;
+            this.lblSQ1.Text = "Security Question 1: ";
+            // 
+            // combSQ1
+            // 
+            this.combSQ1.FormattingEnabled = true;
+            this.combSQ1.Location = new System.Drawing.Point(372, 396);
+            this.combSQ1.Name = "combSQ1";
+            this.combSQ1.Size = new System.Drawing.Size(290, 24);
+            this.combSQ1.TabIndex = 15;
+            // 
+            // tbSQ1
+            // 
+            this.tbSQ1.Location = new System.Drawing.Point(372, 436);
+            this.tbSQ1.Name = "tbSQ1";
+            this.tbSQ1.Size = new System.Drawing.Size(290, 22);
+            this.tbSQ1.TabIndex = 16;
+            // 
+            // tbSQ2
+            // 
+            this.tbSQ2.Location = new System.Drawing.Point(372, 526);
+            this.tbSQ2.Name = "tbSQ2";
+            this.tbSQ2.Size = new System.Drawing.Size(290, 22);
+            this.tbSQ2.TabIndex = 18;
+            // 
+            // combSQ2
+            // 
+            this.combSQ2.FormattingEnabled = true;
+            this.combSQ2.Location = new System.Drawing.Point(372, 486);
+            this.combSQ2.Name = "combSQ2";
+            this.combSQ2.Size = new System.Drawing.Size(290, 24);
+            this.combSQ2.TabIndex = 17;
+            // 
             // frmCreateuserAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 473);
+            this.ClientSize = new System.Drawing.Size(931, 713);
+            this.Controls.Add(this.tbSQ2);
+            this.Controls.Add(this.combSQ2);
+            this.Controls.Add(this.tbSQ1);
+            this.Controls.Add(this.combSQ1);
+            this.Controls.Add(this.lblSQ1);
+            this.Controls.Add(this.lblSQ2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.tbCardID);
@@ -192,5 +252,11 @@
         private System.Windows.Forms.TextBox tbCardID;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblSQ2;
+        private System.Windows.Forms.Label lblSQ1;
+        private System.Windows.Forms.ComboBox combSQ1;
+        private System.Windows.Forms.TextBox tbSQ1;
+        private System.Windows.Forms.TextBox tbSQ2;
+        private System.Windows.Forms.ComboBox combSQ2;
     }
 }

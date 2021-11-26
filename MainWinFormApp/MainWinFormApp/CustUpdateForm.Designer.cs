@@ -35,10 +35,14 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lblSecurityQn = new System.Windows.Forms.Label();
-            this.combSecurityQuestion = new System.Windows.Forms.ComboBox();
+            this.combSQ1 = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbSQ1 = new System.Windows.Forms.TextBox();
+            this.tbSQ2 = new System.Windows.Forms.TextBox();
+            this.comboSQ2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblName
@@ -103,21 +107,21 @@
             this.lblSecurityQn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblSecurityQn.Location = new System.Drawing.Point(191, 312);
             this.lblSecurityQn.Name = "lblSecurityQn";
-            this.lblSecurityQn.Size = new System.Drawing.Size(147, 20);
+            this.lblSecurityQn.Size = new System.Drawing.Size(161, 20);
             this.lblSecurityQn.TabIndex = 6;
-            this.lblSecurityQn.Text = "Security Question:";
+            this.lblSecurityQn.Text = "Security Question 1:";
             // 
-            // combSecurityQuestion
+            // combSQ1
             // 
-            this.combSecurityQuestion.FormattingEnabled = true;
-            this.combSecurityQuestion.Location = new System.Drawing.Point(360, 312);
-            this.combSecurityQuestion.Name = "combSecurityQuestion";
-            this.combSecurityQuestion.Size = new System.Drawing.Size(261, 24);
-            this.combSecurityQuestion.TabIndex = 7;
+            this.combSQ1.FormattingEnabled = true;
+            this.combSQ1.Location = new System.Drawing.Point(360, 312);
+            this.combSQ1.Name = "combSQ1";
+            this.combSQ1.Size = new System.Drawing.Size(261, 24);
+            this.combSQ1.TabIndex = 7;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(462, 371);
+            this.btnCancel.Location = new System.Drawing.Point(461, 560);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(160, 49);
             this.btnCancel.TabIndex = 13;
@@ -126,7 +130,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(180, 371);
+            this.btnSubmit.Location = new System.Drawing.Point(179, 560);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(160, 49);
             this.btnSubmit.TabIndex = 14;
@@ -143,15 +147,51 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Update Particulars ";
             // 
+            // tbSQ1
+            // 
+            this.tbSQ1.Location = new System.Drawing.Point(360, 356);
+            this.tbSQ1.Name = "tbSQ1";
+            this.tbSQ1.Size = new System.Drawing.Size(260, 22);
+            this.tbSQ1.TabIndex = 16;
+            // 
+            // tbSQ2
+            // 
+            this.tbSQ2.Location = new System.Drawing.Point(360, 470);
+            this.tbSQ2.Name = "tbSQ2";
+            this.tbSQ2.Size = new System.Drawing.Size(260, 22);
+            this.tbSQ2.TabIndex = 19;
+            // 
+            // comboSQ2
+            // 
+            this.comboSQ2.FormattingEnabled = true;
+            this.comboSQ2.Location = new System.Drawing.Point(360, 426);
+            this.comboSQ2.Name = "comboSQ2";
+            this.comboSQ2.Size = new System.Drawing.Size(261, 24);
+            this.comboSQ2.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(191, 426);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Security Question 2:";
+            // 
             // CustUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 525);
+            this.ClientSize = new System.Drawing.Size(790, 710);
+            this.Controls.Add(this.tbSQ2);
+            this.Controls.Add(this.comboSQ2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbSQ1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.combSecurityQuestion);
+            this.Controls.Add(this.combSQ1);
             this.Controls.Add(this.lblSecurityQn);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -175,9 +215,13 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lblSecurityQn;
-        private System.Windows.Forms.ComboBox combSecurityQuestion;
+        private System.Windows.Forms.ComboBox combSQ1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbSQ1;
+        private System.Windows.Forms.TextBox tbSQ2;
+        private System.Windows.Forms.ComboBox comboSQ2;
+        private System.Windows.Forms.Label label2;
     }
 }
