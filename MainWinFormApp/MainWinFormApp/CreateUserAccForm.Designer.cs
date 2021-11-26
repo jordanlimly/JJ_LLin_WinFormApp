@@ -39,7 +39,7 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbCfmPassword = new System.Windows.Forms.TextBox();
             this.tbCardID = new System.Windows.Forms.TextBox();
-            this.btnSignUp = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,14 +134,14 @@
             this.tbCardID.Size = new System.Drawing.Size(290, 22);
             this.tbCardID.TabIndex = 10;
             // 
-            // btnSignUp
+            // btnNext
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(192, 381);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(160, 49);
-            this.btnSignUp.TabIndex = 11;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnNext.Location = new System.Drawing.Point(192, 381);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(160, 49);
+            this.btnNext.TabIndex = 11;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
@@ -158,7 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 473);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSignUp);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.tbCardID);
             this.Controls.Add(this.tbCfmPassword);
             this.Controls.Add(this.tbPassword);
@@ -190,7 +190,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbCfmPassword;
         private System.Windows.Forms.TextBox tbCardID;
-        private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnCancel;
     }
 }

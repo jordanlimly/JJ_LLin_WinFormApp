@@ -41,7 +41,7 @@
             // 
             this.lblLoginfrm.AutoSize = true;
             this.lblLoginfrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginfrm.Location = new System.Drawing.Point(342, 60);
+            this.lblLoginfrm.Location = new System.Drawing.Point(337, 52);
             this.lblLoginfrm.Name = "lblLoginfrm";
             this.lblLoginfrm.Size = new System.Drawing.Size(118, 46);
             this.lblLoginfrm.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.lblLoginEmail.AutoSize = true;
             this.lblLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginEmail.Location = new System.Drawing.Point(231, 163);
+            this.lblLoginEmail.Location = new System.Drawing.Point(224, 163);
             this.lblLoginEmail.Name = "lblLoginEmail";
             this.lblLoginEmail.Size = new System.Drawing.Size(62, 24);
             this.lblLoginEmail.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.lblloginpw.AutoSize = true;
             this.lblloginpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblloginpw.Location = new System.Drawing.Point(231, 245);
+            this.lblloginpw.Location = new System.Drawing.Point(224, 247);
             this.lblloginpw.Name = "lblloginpw";
             this.lblloginpw.Size = new System.Drawing.Size(97, 24);
             this.lblloginpw.TabIndex = 2;
@@ -70,7 +70,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(235, 357);
+            this.btnLogin.Location = new System.Drawing.Point(228, 357);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(137, 35);
             this.btnLogin.TabIndex = 3;
@@ -79,14 +79,14 @@
             // 
             // tbLoginEmail
             // 
-            this.tbLoginEmail.Location = new System.Drawing.Point(350, 163);
+            this.tbLoginEmail.Location = new System.Drawing.Point(365, 163);
             this.tbLoginEmail.Name = "tbLoginEmail";
             this.tbLoginEmail.Size = new System.Drawing.Size(237, 22);
             this.tbLoginEmail.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(350, 247);
+            this.textBox2.Location = new System.Drawing.Point(365, 249);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(237, 22);
             this.textBox2.TabIndex = 5;
@@ -94,7 +94,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(460, 357);
+            this.btnCancel.Location = new System.Drawing.Point(465, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 35);
             this.btnCancel.TabIndex = 6;
