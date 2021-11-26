@@ -80,14 +80,14 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(360, 137);
+            this.tbName.Location = new System.Drawing.Point(373, 134);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(261, 22);
             this.tbName.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(360, 194);
+            this.textBox5.Location = new System.Drawing.Point(374, 194);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(260, 22);
@@ -95,7 +95,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(360, 250);
+            this.textBox6.Location = new System.Drawing.Point(373, 250);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(260, 22);
@@ -114,7 +114,7 @@
             // combSQ1
             // 
             this.combSQ1.FormattingEnabled = true;
-            this.combSQ1.Location = new System.Drawing.Point(360, 312);
+            this.combSQ1.Location = new System.Drawing.Point(373, 312);
             this.combSQ1.Name = "combSQ1";
             this.combSQ1.Size = new System.Drawing.Size(261, 24);
             this.combSQ1.TabIndex = 7;
@@ -149,14 +149,14 @@
             // 
             // tbSQ1
             // 
-            this.tbSQ1.Location = new System.Drawing.Point(360, 356);
+            this.tbSQ1.Location = new System.Drawing.Point(373, 352);
             this.tbSQ1.Name = "tbSQ1";
             this.tbSQ1.Size = new System.Drawing.Size(260, 22);
             this.tbSQ1.TabIndex = 16;
             // 
             // tbSQ2
             // 
-            this.tbSQ2.Location = new System.Drawing.Point(360, 470);
+            this.tbSQ2.Location = new System.Drawing.Point(374, 463);
             this.tbSQ2.Name = "tbSQ2";
             this.tbSQ2.Size = new System.Drawing.Size(260, 22);
             this.tbSQ2.TabIndex = 19;
@@ -164,7 +164,7 @@
             // comboSQ2
             // 
             this.comboSQ2.FormattingEnabled = true;
-            this.comboSQ2.Location = new System.Drawing.Point(360, 426);
+            this.comboSQ2.Location = new System.Drawing.Point(373, 422);
             this.comboSQ2.Name = "comboSQ2";
             this.comboSQ2.Size = new System.Drawing.Size(261, 24);
             this.comboSQ2.TabIndex = 18;
