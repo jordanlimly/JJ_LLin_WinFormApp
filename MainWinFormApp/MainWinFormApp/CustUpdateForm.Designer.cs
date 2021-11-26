@@ -74,7 +74,7 @@
             this.lblCardID.Location = new System.Drawing.Point(195, 250);
             this.lblCardID.Name = "lblCardID";
             this.lblCardID.ReadOnly = true;
-            this.lblCardID.Size = new System.Drawing.Size(58, 19);
+            this.lblCardID.Size = new System.Drawing.Size(69, 19);
             this.lblCardID.TabIndex = 2;
             this.lblCardID.Text = "Card ID:";
             // 
