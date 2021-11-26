@@ -53,63 +53,68 @@
             // lbl_machineID
             // 
             this.lbl_machineID.AutoSize = true;
+            this.lbl_machineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_machineID.Location = new System.Drawing.Point(103, 136);
             this.lbl_machineID.Name = "lbl_machineID";
-            this.lbl_machineID.Size = new System.Drawing.Size(124, 17);
+            this.lbl_machineID.Size = new System.Drawing.Size(166, 24);
             this.lbl_machineID.TabIndex = 2;
             this.lbl_machineID.Text = "Game Machine ID:";
             // 
             // lbl_date
             // 
             this.lbl_date.AutoSize = true;
+            this.lbl_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.Location = new System.Drawing.Point(103, 182);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(144, 17);
+            this.lbl_date.Size = new System.Drawing.Size(188, 24);
             this.lbl_date.TabIndex = 3;
             this.lbl_date.Text = "Date (YYYY-MM-DD):";
             // 
             // lbl_cost
             // 
             this.lbl_cost.AutoSize = true;
+            this.lbl_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cost.Location = new System.Drawing.Point(103, 223);
             this.lbl_cost.Name = "lbl_cost";
-            this.lbl_cost.Size = new System.Drawing.Size(40, 17);
+            this.lbl_cost.Size = new System.Drawing.Size(52, 24);
             this.lbl_cost.TabIndex = 4;
             this.lbl_cost.Text = "Cost:";
             // 
             // lbl_remarks
             // 
             this.lbl_remarks.AutoSize = true;
+            this.lbl_remarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_remarks.Location = new System.Drawing.Point(103, 263);
             this.lbl_remarks.Name = "lbl_remarks";
-            this.lbl_remarks.Size = new System.Drawing.Size(68, 17);
+            this.lbl_remarks.Size = new System.Drawing.Size(89, 24);
             this.lbl_remarks.TabIndex = 5;
             this.lbl_remarks.Text = "Remarks:";
             // 
             // tbMachineID
             // 
-            this.tbMachineID.Location = new System.Drawing.Point(296, 136);
+            this.tbMachineID.Location = new System.Drawing.Point(331, 138);
             this.tbMachineID.Name = "tbMachineID";
             this.tbMachineID.Size = new System.Drawing.Size(129, 22);
             this.tbMachineID.TabIndex = 6;
             // 
             // tbDate
             // 
-            this.tbDate.Location = new System.Drawing.Point(296, 182);
+            this.tbDate.Location = new System.Drawing.Point(331, 184);
             this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(175, 22);
+            this.tbDate.Size = new System.Drawing.Size(187, 22);
             this.tbDate.TabIndex = 7;
             // 
             // tbCost
             // 
-            this.tbCost.Location = new System.Drawing.Point(296, 223);
+            this.tbCost.Location = new System.Drawing.Point(331, 225);
             this.tbCost.Name = "tbCost";
             this.tbCost.Size = new System.Drawing.Size(129, 22);
             this.tbCost.TabIndex = 8;
+            this.tbCost.TextChanged += new System.EventHandler(this.tbCost_TextChanged);
             // 
             // tbRemarks
             // 
-            this.tbRemarks.Location = new System.Drawing.Point(296, 263);
+            this.tbRemarks.Location = new System.Drawing.Point(331, 265);
             this.tbRemarks.Name = "tbRemarks";
             this.tbRemarks.Size = new System.Drawing.Size(351, 22);
             this.tbRemarks.TabIndex = 9;

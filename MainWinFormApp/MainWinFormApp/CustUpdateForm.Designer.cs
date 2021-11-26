@@ -48,33 +48,33 @@
             // lblName
             // 
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblName.Location = new System.Drawing.Point(195, 137);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblName.Location = new System.Drawing.Point(179, 135);
             this.lblName.Name = "lblName";
             this.lblName.ReadOnly = true;
-            this.lblName.Size = new System.Drawing.Size(120, 19);
+            this.lblName.Size = new System.Drawing.Size(120, 21);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
             // lblEmail
             // 
             this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblEmail.Location = new System.Drawing.Point(195, 194);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblEmail.Location = new System.Drawing.Point(179, 192);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.ReadOnly = true;
-            this.lblEmail.Size = new System.Drawing.Size(58, 19);
+            this.lblEmail.Size = new System.Drawing.Size(58, 21);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Email:";
             // 
             // lblCardID
             // 
             this.lblCardID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCardID.Location = new System.Drawing.Point(195, 250);
+            this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCardID.Location = new System.Drawing.Point(179, 248);
             this.lblCardID.Name = "lblCardID";
             this.lblCardID.ReadOnly = true;
-            this.lblCardID.Size = new System.Drawing.Size(69, 19);
+            this.lblCardID.Size = new System.Drawing.Size(69, 21);
             this.lblCardID.TabIndex = 2;
             this.lblCardID.Text = "Card ID:";
             // 
@@ -104,10 +104,10 @@
             // lblSecurityQn
             // 
             this.lblSecurityQn.AutoSize = true;
-            this.lblSecurityQn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblSecurityQn.Location = new System.Drawing.Point(191, 312);
+            this.lblSecurityQn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblSecurityQn.Location = new System.Drawing.Point(175, 310);
             this.lblSecurityQn.Name = "lblSecurityQn";
-            this.lblSecurityQn.Size = new System.Drawing.Size(161, 20);
+            this.lblSecurityQn.Size = new System.Drawing.Size(178, 24);
             this.lblSecurityQn.TabIndex = 6;
             this.lblSecurityQn.Text = "Security Question 1:";
             // 
@@ -121,6 +121,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(461, 560);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(160, 49);
@@ -130,6 +131,7 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(179, 560);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(160, 49);
@@ -172,10 +174,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(191, 426);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Location = new System.Drawing.Point(175, 420);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 20);
+            this.label2.Size = new System.Drawing.Size(178, 24);
             this.label2.TabIndex = 17;
             this.label2.Text = "Security Question 2:";
             // 

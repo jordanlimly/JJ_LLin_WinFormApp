@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace MainWinFormApp
 {
-    public partial class frmMaintenance : Form
+    public partial class AdminLoginForm : Form
     {
-        public frmMaintenance()
+        public AdminLoginForm()
         {
             InitializeComponent();
         }
 
-        private void tbCost_TextChanged(object sender, EventArgs e)
+        private void lblAdminLogin_Click(object sender, EventArgs e)
         {
 
         }
