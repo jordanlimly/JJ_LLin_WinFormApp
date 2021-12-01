@@ -203,7 +203,13 @@
             // 
             // combSQ1
             // 
+            this.combSQ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ1.FormattingEnabled = true;
+            this.combSQ1.Items.AddRange(new object[] {
+            "What is your mother\'s maiden name?",
+            "What is your childhood nickname?",
+            "What primary school/secondary school did you go to?",
+            "What is your PC model?"});
             this.combSQ1.Location = new System.Drawing.Point(316, 322);
             this.combSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combSQ1.Name = "combSQ1";
@@ -228,7 +234,13 @@
             // 
             // combSQ2
             // 
+            this.combSQ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ2.FormattingEnabled = true;
+            this.combSQ2.Items.AddRange(new object[] {
+            "What is your father\'s name?",
+            "What is your sibling\'s name(any)?",
+            "Are you a pet owner?",
+            "What is your favourite teacher\'s name?"});
             this.combSQ2.Location = new System.Drawing.Point(316, 395);
             this.combSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combSQ2.Name = "combSQ2";

@@ -48,9 +48,9 @@ namespace MainWinFormApp
             updateCmd.Parameters.AddWithValue("@ahockey", 0);
             updateCmd.Parameters.AddWithValue("@ddr", 0);
             updateCmd.Parameters.AddWithValue("@sfighter", 0);
-            updateCmd.Parameters.AddWithValue("@secqn1", combSQ1);
+            updateCmd.Parameters.AddWithValue("@secqn1", combSQ1.Items);
             updateCmd.Parameters.AddWithValue("@secqn1ans", tbSQ1.Text);
-            updateCmd.Parameters.AddWithValue("@secqn2", combSQ2);
+            updateCmd.Parameters.AddWithValue("@secqn2", combSQ2.Items);
             updateCmd.Parameters.AddWithValue("@secqn2ans", tbSQ2.Text);
 
             myConnect.Open();
