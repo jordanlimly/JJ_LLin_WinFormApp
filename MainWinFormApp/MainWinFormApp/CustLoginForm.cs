@@ -15,7 +15,7 @@ namespace MainWinFormApp
     public partial class CustLoginForm : Form
     {
         // retrieve connection information from App.Config
-        private string strConnectionString = ConfigurationManager.ConnectionStrings["JJLLinDatabaseConnection"].ConnectionString;
+        private string strConnectionString = ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
         public CustLoginForm()
         {
