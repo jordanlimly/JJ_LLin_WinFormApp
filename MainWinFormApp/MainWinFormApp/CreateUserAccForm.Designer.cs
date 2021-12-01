@@ -53,9 +53,10 @@
             // 
             this.lblCreateUserAcc.AutoSize = true;
             this.lblCreateUserAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateUserAcc.Location = new System.Drawing.Point(326, 33);
+            this.lblCreateUserAcc.Location = new System.Drawing.Point(244, 27);
+            this.lblCreateUserAcc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreateUserAcc.Name = "lblCreateUserAcc";
-            this.lblCreateUserAcc.Size = new System.Drawing.Size(297, 46);
+            this.lblCreateUserAcc.Size = new System.Drawing.Size(238, 37);
             this.lblCreateUserAcc.TabIndex = 0;
             this.lblCreateUserAcc.Text = "Create Account";
             this.lblCreateUserAcc.Click += new System.EventHandler(this.lblCreateUserAcc_Click);
@@ -64,9 +65,10 @@
             // 
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullname.Location = new System.Drawing.Point(216, 122);
+            this.lblFullname.Location = new System.Drawing.Point(162, 99);
+            this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(107, 24);
+            this.lblFullname.Size = new System.Drawing.Size(83, 18);
             this.lblFullname.TabIndex = 1;
             this.lblFullname.Text = "Full Name: ";
             // 
@@ -74,9 +76,10 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(216, 164);
+            this.lblEmail.Location = new System.Drawing.Point(162, 133);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(67, 24);
+            this.lblEmail.Size = new System.Drawing.Size(53, 18);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email: ";
             // 
@@ -84,9 +87,10 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(216, 215);
+            this.lblPassword.Location = new System.Drawing.Point(162, 175);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(102, 24);
+            this.lblPassword.Size = new System.Drawing.Size(83, 18);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password: ";
             // 
@@ -94,9 +98,10 @@
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(216, 260);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(162, 211);
+            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(172, 24);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(140, 18);
             this.lblConfirmPassword.TabIndex = 4;
             this.lblConfirmPassword.Text = "Confirm Password: ";
             // 
@@ -104,63 +109,72 @@
             // 
             this.lblCardID.AutoSize = true;
             this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardID.Location = new System.Drawing.Point(216, 313);
+            this.lblCardID.Location = new System.Drawing.Point(162, 254);
+            this.lblCardID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCardID.Name = "lblCardID";
-            this.lblCardID.Size = new System.Drawing.Size(82, 24);
+            this.lblCardID.Size = new System.Drawing.Size(66, 18);
             this.lblCardID.TabIndex = 5;
             this.lblCardID.Text = "Card ID: ";
             // 
             // tbFullName
             // 
-            this.tbFullName.Location = new System.Drawing.Point(421, 124);
+            this.tbFullName.Location = new System.Drawing.Point(316, 101);
+            this.tbFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbFullName.Name = "tbFullName";
-            this.tbFullName.Size = new System.Drawing.Size(290, 22);
+            this.tbFullName.Size = new System.Drawing.Size(218, 20);
             this.tbFullName.TabIndex = 6;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(421, 166);
+            this.tbEmail.Location = new System.Drawing.Point(316, 135);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(290, 22);
+            this.tbEmail.Size = new System.Drawing.Size(218, 20);
             this.tbEmail.TabIndex = 7;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(421, 217);
+            this.tbPassword.Location = new System.Drawing.Point(316, 176);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(290, 22);
+            this.tbPassword.Size = new System.Drawing.Size(218, 20);
             this.tbPassword.TabIndex = 8;
             // 
             // tbCfmPassword
             // 
-            this.tbCfmPassword.Location = new System.Drawing.Point(421, 262);
+            this.tbCfmPassword.Location = new System.Drawing.Point(316, 213);
+            this.tbCfmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCfmPassword.Name = "tbCfmPassword";
-            this.tbCfmPassword.Size = new System.Drawing.Size(290, 22);
+            this.tbCfmPassword.Size = new System.Drawing.Size(218, 20);
             this.tbCfmPassword.TabIndex = 9;
             // 
             // tbCardID
             // 
-            this.tbCardID.Location = new System.Drawing.Point(421, 315);
+            this.tbCardID.Location = new System.Drawing.Point(316, 256);
+            this.tbCardID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCardID.Name = "tbCardID";
-            this.tbCardID.Size = new System.Drawing.Size(290, 22);
+            this.tbCardID.Size = new System.Drawing.Size(218, 20);
             this.tbCardID.TabIndex = 10;
             // 
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(194, 571);
+            this.btnCreate.Location = new System.Drawing.Point(146, 464);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(160, 49);
+            this.btnCreate.Size = new System.Drawing.Size(120, 40);
             this.btnCreate.TabIndex = 11;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(642, 571);
+            this.btnCancel.Location = new System.Drawing.Point(482, 464);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(160, 49);
+            this.btnCancel.Size = new System.Drawing.Size(120, 40);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -169,9 +183,10 @@
             // 
             this.lblSQ2.AutoSize = true;
             this.lblSQ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSQ2.Location = new System.Drawing.Point(216, 484);
+            this.lblSQ2.Location = new System.Drawing.Point(162, 393);
+            this.lblSQ2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSQ2.Name = "lblSQ2";
-            this.lblSQ2.Size = new System.Drawing.Size(183, 24);
+            this.lblSQ2.Size = new System.Drawing.Size(145, 18);
             this.lblSQ2.TabIndex = 13;
             this.lblSQ2.Text = "Security Question 2: ";
             // 
@@ -179,47 +194,52 @@
             // 
             this.lblSQ1.AutoSize = true;
             this.lblSQ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSQ1.Location = new System.Drawing.Point(216, 394);
+            this.lblSQ1.Location = new System.Drawing.Point(162, 320);
+            this.lblSQ1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSQ1.Name = "lblSQ1";
-            this.lblSQ1.Size = new System.Drawing.Size(183, 24);
+            this.lblSQ1.Size = new System.Drawing.Size(145, 18);
             this.lblSQ1.TabIndex = 14;
             this.lblSQ1.Text = "Security Question 1: ";
             // 
             // combSQ1
             // 
             this.combSQ1.FormattingEnabled = true;
-            this.combSQ1.Location = new System.Drawing.Point(421, 396);
+            this.combSQ1.Location = new System.Drawing.Point(316, 322);
+            this.combSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combSQ1.Name = "combSQ1";
-            this.combSQ1.Size = new System.Drawing.Size(290, 24);
+            this.combSQ1.Size = new System.Drawing.Size(218, 21);
             this.combSQ1.TabIndex = 15;
             // 
             // tbSQ1
             // 
-            this.tbSQ1.Location = new System.Drawing.Point(421, 437);
+            this.tbSQ1.Location = new System.Drawing.Point(316, 355);
+            this.tbSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSQ1.Name = "tbSQ1";
-            this.tbSQ1.Size = new System.Drawing.Size(290, 22);
+            this.tbSQ1.Size = new System.Drawing.Size(218, 20);
             this.tbSQ1.TabIndex = 16;
             // 
             // tbSQ2
             // 
-            this.tbSQ2.Location = new System.Drawing.Point(421, 527);
+            this.tbSQ2.Location = new System.Drawing.Point(316, 428);
+            this.tbSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSQ2.Name = "tbSQ2";
-            this.tbSQ2.Size = new System.Drawing.Size(290, 22);
+            this.tbSQ2.Size = new System.Drawing.Size(218, 20);
             this.tbSQ2.TabIndex = 18;
             // 
             // combSQ2
             // 
             this.combSQ2.FormattingEnabled = true;
-            this.combSQ2.Location = new System.Drawing.Point(421, 486);
+            this.combSQ2.Location = new System.Drawing.Point(316, 395);
+            this.combSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combSQ2.Name = "combSQ2";
-            this.combSQ2.Size = new System.Drawing.Size(290, 24);
+            this.combSQ2.Size = new System.Drawing.Size(218, 21);
             this.combSQ2.TabIndex = 17;
             // 
             // frmCreateuserAcc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 713);
+            this.ClientSize = new System.Drawing.Size(698, 579);
             this.Controls.Add(this.tbSQ2);
             this.Controls.Add(this.combSQ2);
             this.Controls.Add(this.tbSQ1);
@@ -239,6 +259,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblFullname);
             this.Controls.Add(this.lblCreateUserAcc);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCreateuserAcc";
             this.Text = "CreateUserAccForm";
             this.ResumeLayout(false);
