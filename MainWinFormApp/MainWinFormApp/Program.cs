@@ -18,8 +18,9 @@ namespace MainWinFormApp
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmforgetpw());
             //Application.Run(new frmMaintenance());
-            Application.Run(new frmCurrentCrowd());
-            Application.Run(new CustLoginForm());
+            //Application.Run(new frmCurrentCrowd());
+            //Application.Run(new CustLoginForm());
+            Application.Run(new frmCreateuserAcc());
         }
     }
 }
