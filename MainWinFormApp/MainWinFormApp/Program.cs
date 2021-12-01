@@ -17,7 +17,8 @@ namespace MainWinFormApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmforgetpw());
-            Application.Run(new frmMaintenance());
+            //Application.Run(new frmMaintenance());
+            Application.Run(new frmCurrentCrowd());
         }
     }
 }
