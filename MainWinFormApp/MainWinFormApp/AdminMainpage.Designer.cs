@@ -222,14 +222,13 @@
             this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPopularity.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopularity.ForeColor = System.Drawing.Color.White;
-            this.btnPopularity.Image = global::MainWinFormApp.Properties.Resources.popularity_icon_removebg_preview__1_;
+            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPopularity.Location = new System.Drawing.Point(12, 119);
             this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPopularity.Name = "btnPopularity";
             this.btnPopularity.Size = new System.Drawing.Size(163, 35);
             this.btnPopularity.TabIndex = 1;
             this.btnPopularity.Text = "Game Popularity";
-            this.btnPopularity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPopularity.UseVisualStyleBackColor = false;
             this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
             // 
@@ -241,7 +240,6 @@
             this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrowdLvl.Font = new System.Drawing.Font("Bernard MT Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
-            this.btnCrowdLvl.Image = global::MainWinFormApp.Properties.Resources.crowd_icon2;
             this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
             this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
