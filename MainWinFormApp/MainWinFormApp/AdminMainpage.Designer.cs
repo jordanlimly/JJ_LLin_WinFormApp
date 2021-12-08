@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -59,17 +56,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
             this.CurCrowdPanel.SuspendLayout();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -285,7 +279,6 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.chart1);
             this.panel7.Location = new System.Drawing.Point(220, 131);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(590, 321);
@@ -409,23 +402,6 @@
             this.btnCrowdLvl.UseVisualStyleBackColor = false;
             this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(590, 321);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -449,10 +425,8 @@
             this.PopularityTab.PerformLayout();
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
-            this.panel7.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.sideNavPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,6 +461,5 @@
         private System.Windows.Forms.Button btnAddMaintenanceRecord;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
