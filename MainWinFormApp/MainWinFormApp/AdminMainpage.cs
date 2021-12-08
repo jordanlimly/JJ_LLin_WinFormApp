@@ -246,5 +246,11 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
         }
+
+        private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
+        {
+            frmMaintenance frm = new frmMaintenance();
+            frm.ShowDialog();
+        }
     }
 }

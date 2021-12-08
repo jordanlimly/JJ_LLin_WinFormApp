@@ -63,36 +63,6 @@ namespace MainWinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crowd_icon {
-            get {
-                object obj = ResourceManager.GetObject("crowd icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap crowd_icon1 {
-            get {
-                object obj = ResourceManager.GetObject("crowd icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap crowd_icon2 {
-            get {
-                object obj = ResourceManager.GetObject("crowd icon2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1061119906_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1061119906-612x612", resourceCulture);
@@ -106,26 +76,6 @@ namespace MainWinFormApp.Properties {
         internal static System.Drawing.Bitmap JJ_LLin_logo_png {
             get {
                 object obj = ResourceManager.GetObject("JJ_LLin_logo_png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap popularity_icon {
-            get {
-                object obj = ResourceManager.GetObject("popularity icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap popularity_icon_removebg_preview__1_ {
-            get {
-                object obj = ResourceManager.GetObject("popularity_icon-removebg-preview (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

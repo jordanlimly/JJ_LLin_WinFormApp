@@ -193,19 +193,10 @@
     <None Include="Resources\istockphoto-1061119906-612x612.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\crowd icon.jpg" />
+    <None Include="Resources\istockphoto-1061119906-612x6121.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\crowd icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\crowd icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\popularity icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\popularity_icon-removebg-preview %281%29.png" />
+    <None Include="Resources\JJ_LLin_logo_png1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
