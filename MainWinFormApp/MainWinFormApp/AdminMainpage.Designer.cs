@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -56,14 +59,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
             this.CurCrowdPanel.SuspendLayout();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -279,6 +285,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.MaintenanceExpenditureChart);
             this.panel7.Location = new System.Drawing.Point(220, 131);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(590, 321);
@@ -402,6 +409,23 @@
             this.btnCrowdLvl.UseVisualStyleBackColor = false;
             this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
             // 
+            // MaintenanceExpenditureChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend1);
+            this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
+            this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
+            this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series1);
+            this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(590, 321);
+            this.MaintenanceExpenditureChart.TabIndex = 0;
+            this.MaintenanceExpenditureChart.Text = "chart1";
+            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -425,8 +449,10 @@
             this.PopularityTab.PerformLayout();
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.sideNavPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +487,6 @@
         private System.Windows.Forms.Button btnAddMaintenanceRecord;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataVisualization.Charting.Chart MaintenanceExpenditureChart;
     }
 }
