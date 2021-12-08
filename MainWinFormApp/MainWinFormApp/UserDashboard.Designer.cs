@@ -29,30 +29,128 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pBUserAvatar = new System.Windows.Forms.PictureBox();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
+            this.lblDashboardText = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.pnlCurrCreds = new System.Windows.Forms.Panel();
+            this.lblCurrentCredits = new System.Windows.Forms.Label();
+            this.pnlMemTier = new System.Windows.Forms.Panel();
+            this.lblMemTier = new System.Windows.Forms.Label();
+            this.pnlAccumPoints = new System.Windows.Forms.Panel();
+            this.lblAccumPoints = new System.Windows.Forms.Label();
+            this.pnlCurrPoints = new System.Windows.Forms.Panel();
+            this.lblCurrentPoints = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBUserAvatar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.pnlCurrCreds.SuspendLayout();
+            this.pnlMemTier.SuspendLayout();
+            this.pnlAccumPoints.SuspendLayout();
+            this.pnlCurrPoints.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.button5);
-            this.panelMenu.Controls.Add(this.button4);
-            this.panelMenu.Controls.Add(this.button3);
-            this.panelMenu.Controls.Add(this.button2);
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.pnlNav);
+            this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.btnSettings);
+            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Controls.Add(this.panelUser);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(178, 414);
+            this.panelMenu.Size = new System.Drawing.Size(178, 401);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(0, 294);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(178, 35);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Location = new System.Drawing.Point(0, 259);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(178, 35);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 224);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(178, 35);
+            this.btnDashboard.TabIndex = 3;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
+            // 
+            // panelUser
+            // 
+            this.panelUser.Controls.Add(this.label1);
+            this.panelUser.Controls.Add(this.pBUserAvatar);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUser.Location = new System.Drawing.Point(0, 80);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(178, 144);
+            this.panelUser.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(60, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "User Name";
+            // 
+            // pBUserAvatar
+            // 
+            this.pBUserAvatar.Image = global::MainWinFormApp.Properties.Resources.Custom_Icon_Design_Pretty_Office_8_User_yellow_0_removebg_preview1;
+            this.pBUserAvatar.InitialImage = null;
+            this.pBUserAvatar.Location = new System.Drawing.Point(60, 22);
+            this.pBUserAvatar.Name = "pBUserAvatar";
+            this.pBUserAvatar.Size = new System.Drawing.Size(63, 63);
+            this.pBUserAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBUserAvatar.TabIndex = 0;
+            this.pBUserAvatar.TabStop = false;
             // 
             // panelLogo
             // 
@@ -67,81 +165,123 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lblDashboardText);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(178, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 80);
             this.panel1.TabIndex = 1;
             // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.pnlNav.Location = new System.Drawing.Point(3, 230);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 8;
+            // 
+            // lblDashboardText
+            // 
+            this.lblDashboardText.AutoSize = true;
+            this.lblDashboardText.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashboardText.Font = new System.Drawing.Font("Britannic Bold", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboardText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblDashboardText.Location = new System.Drawing.Point(280, 23);
+            this.lblDashboardText.Name = "lblDashboardText";
+            this.lblDashboardText.Size = new System.Drawing.Size(148, 31);
+            this.lblDashboardText.TabIndex = 2;
+            this.lblDashboardText.Text = "Dashboard";
+            // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 80);
+            this.button1.Location = new System.Drawing.Point(703, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 35);
+            this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // pnlCurrCreds
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 115);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.pnlCurrCreds.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlCurrCreds.Controls.Add(this.lblCurrentCredits);
+            this.pnlCurrCreds.Location = new System.Drawing.Point(192, 94);
+            this.pnlCurrCreds.Name = "pnlCurrCreds";
+            this.pnlCurrCreds.Size = new System.Drawing.Size(258, 130);
+            this.pnlCurrCreds.TabIndex = 2;
             // 
-            // button3
+            // lblCurrentCredits
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 35);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.lblCurrentCredits.AutoSize = true;
+            this.lblCurrentCredits.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentCredits.Location = new System.Drawing.Point(15, 8);
+            this.lblCurrentCredits.Name = "lblCurrentCredits";
+            this.lblCurrentCredits.Size = new System.Drawing.Size(96, 15);
+            this.lblCurrentCredits.TabIndex = 0;
+            this.lblCurrentCredits.Text = "Current Credits";
             // 
-            // button4
+            // pnlMemTier
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 185);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(178, 35);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.pnlMemTier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlMemTier.Controls.Add(this.lblMemTier);
+            this.pnlMemTier.Location = new System.Drawing.Point(586, 249);
+            this.pnlMemTier.Name = "pnlMemTier";
+            this.pnlMemTier.Size = new System.Drawing.Size(258, 130);
+            this.pnlMemTier.TabIndex = 3;
             // 
-            // button5
+            // lblMemTier
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 379);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(178, 35);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.lblMemTier.AutoSize = true;
+            this.lblMemTier.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemTier.Location = new System.Drawing.Point(15, 8);
+            this.lblMemTier.Name = "lblMemTier";
+            this.lblMemTier.Size = new System.Drawing.Size(104, 15);
+            this.lblMemTier.TabIndex = 0;
+            this.lblMemTier.Text = "Membership Tier";
+            // 
+            // pnlAccumPoints
+            // 
+            this.pnlAccumPoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlAccumPoints.Controls.Add(this.lblAccumPoints);
+            this.pnlAccumPoints.Location = new System.Drawing.Point(192, 249);
+            this.pnlAccumPoints.Name = "pnlAccumPoints";
+            this.pnlAccumPoints.Size = new System.Drawing.Size(258, 130);
+            this.pnlAccumPoints.TabIndex = 3;
+            // 
+            // lblAccumPoints
+            // 
+            this.lblAccumPoints.AutoSize = true;
+            this.lblAccumPoints.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccumPoints.Location = new System.Drawing.Point(15, 8);
+            this.lblAccumPoints.Name = "lblAccumPoints";
+            this.lblAccumPoints.Size = new System.Drawing.Size(119, 15);
+            this.lblAccumPoints.TabIndex = 0;
+            this.lblAccumPoints.Text = "Accumulated Points";
+            // 
+            // pnlCurrPoints
+            // 
+            this.pnlCurrPoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlCurrPoints.Controls.Add(this.lblCurrentPoints);
+            this.pnlCurrPoints.Location = new System.Drawing.Point(586, 94);
+            this.pnlCurrPoints.Name = "pnlCurrPoints";
+            this.pnlCurrPoints.Size = new System.Drawing.Size(258, 130);
+            this.pnlCurrPoints.TabIndex = 3;
+            // 
+            // lblCurrentPoints
+            // 
+            this.lblCurrentPoints.AutoSize = true;
+            this.lblCurrentPoints.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentPoints.Location = new System.Drawing.Point(15, 8);
+            this.lblCurrentPoints.Name = "lblCurrentPoints";
+            this.lblCurrentPoints.Size = new System.Drawing.Size(91, 15);
+            this.lblCurrentPoints.TabIndex = 0;
+            this.lblCurrentPoints.Text = "Current Points";
             // 
             // UserDashboard
             // 
@@ -149,7 +289,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x6121;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(909, 414);
+            this.ClientSize = new System.Drawing.Size(909, 401);
+            this.Controls.Add(this.pnlMemTier);
+            this.Controls.Add(this.pnlAccumPoints);
+            this.Controls.Add(this.pnlCurrPoints);
+            this.Controls.Add(this.pnlCurrCreds);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -157,6 +301,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDashboard";
             this.panelMenu.ResumeLayout(false);
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBUserAvatar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnlCurrCreds.ResumeLayout(false);
+            this.pnlCurrCreds.PerformLayout();
+            this.pnlMemTier.ResumeLayout(false);
+            this.pnlMemTier.PerformLayout();
+            this.pnlAccumPoints.ResumeLayout(false);
+            this.pnlAccumPoints.PerformLayout();
+            this.pnlCurrPoints.ResumeLayout(false);
+            this.pnlCurrPoints.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,11 +322,23 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.PictureBox pBUserAvatar;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlNav;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblDashboardText;
+        private System.Windows.Forms.Panel pnlCurrCreds;
+        private System.Windows.Forms.Label lblCurrentCredits;
+        private System.Windows.Forms.Panel pnlMemTier;
+        private System.Windows.Forms.Label lblMemTier;
+        private System.Windows.Forms.Panel pnlAccumPoints;
+        private System.Windows.Forms.Label lblAccumPoints;
+        private System.Windows.Forms.Panel pnlCurrPoints;
+        private System.Windows.Forms.Label lblCurrentPoints;
     }
 }

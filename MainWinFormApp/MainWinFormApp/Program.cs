@@ -20,8 +20,9 @@ namespace MainWinFormApp
             //Application.Run(new frmMaintenance());
             //Application.Run(new frmCurrentCrowd());
             //Application.Run(new CustLoginForm());
-            //Application.Run(new frmCreateuserAcc());
-            Application.Run(new AdminMainpage());
+            Application.Run(new frmCreateuserAcc());
+            //Application.Run(new AdminMainpage());
+            //Application.Run(new UserDashboard());
         }
     }
 }
