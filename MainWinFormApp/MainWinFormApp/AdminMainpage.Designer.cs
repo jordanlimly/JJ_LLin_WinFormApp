@@ -67,7 +67,7 @@
             this.btnMaintenance.BackColor = System.Drawing.Color.Black;
             this.btnMaintenance.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaintenance.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaintenance.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
             this.btnMaintenance.Location = new System.Drawing.Point(12, 220);
             this.btnMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -83,7 +83,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.Black;
             this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(12, 322);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -220,7 +220,7 @@
             this.btnPopularity.BackColor = System.Drawing.Color.Black;
             this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPopularity.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopularity.ForeColor = System.Drawing.Color.White;
             this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPopularity.Location = new System.Drawing.Point(12, 119);
@@ -238,7 +238,7 @@
             this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrowdLvl.Font = new System.Drawing.Font("Bernard MT Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
             this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
