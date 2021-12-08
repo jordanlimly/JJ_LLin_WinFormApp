@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 
+using System.Windows.Forms.DataVisualization.Charting;
+
 namespace MainWinFormApp
 {
     public partial class AdminMainpage : Form
