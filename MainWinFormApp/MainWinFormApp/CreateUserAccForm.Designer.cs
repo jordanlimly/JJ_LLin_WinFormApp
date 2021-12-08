@@ -119,7 +119,7 @@
             // tbFullName
             // 
             this.tbFullName.Location = new System.Drawing.Point(316, 101);
-            this.tbFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFullName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFullName.Name = "tbFullName";
             this.tbFullName.Size = new System.Drawing.Size(218, 20);
             this.tbFullName.TabIndex = 6;
@@ -127,7 +127,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(316, 135);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(218, 20);
             this.tbEmail.TabIndex = 7;
@@ -135,23 +135,25 @@
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(316, 176);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(218, 20);
             this.tbPassword.TabIndex = 8;
             // 
             // tbCfmPassword
             // 
             this.tbCfmPassword.Location = new System.Drawing.Point(316, 213);
-            this.tbCfmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCfmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbCfmPassword.Name = "tbCfmPassword";
+            this.tbCfmPassword.PasswordChar = '*';
             this.tbCfmPassword.Size = new System.Drawing.Size(218, 20);
             this.tbCfmPassword.TabIndex = 9;
             // 
             // tbCardID
             // 
             this.tbCardID.Location = new System.Drawing.Point(316, 256);
-            this.tbCardID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCardID.Margin = new System.Windows.Forms.Padding(2);
             this.tbCardID.Name = "tbCardID";
             this.tbCardID.Size = new System.Drawing.Size(218, 20);
             this.tbCardID.TabIndex = 10;
@@ -160,7 +162,7 @@
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.Location = new System.Drawing.Point(146, 464);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(120, 40);
             this.btnCreate.TabIndex = 11;
@@ -172,7 +174,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(482, 464);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 40);
             this.btnCancel.TabIndex = 12;
@@ -211,7 +213,7 @@
             "What primary school/secondary school did you go to?",
             "What is your PC model?"});
             this.combSQ1.Location = new System.Drawing.Point(316, 322);
-            this.combSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ1.Name = "combSQ1";
             this.combSQ1.Size = new System.Drawing.Size(218, 21);
             this.combSQ1.TabIndex = 15;
@@ -219,7 +221,7 @@
             // tbSQ1
             // 
             this.tbSQ1.Location = new System.Drawing.Point(316, 355);
-            this.tbSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ1.Name = "tbSQ1";
             this.tbSQ1.Size = new System.Drawing.Size(218, 20);
             this.tbSQ1.TabIndex = 16;
@@ -227,7 +229,7 @@
             // tbSQ2
             // 
             this.tbSQ2.Location = new System.Drawing.Point(316, 428);
-            this.tbSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ2.Name = "tbSQ2";
             this.tbSQ2.Size = new System.Drawing.Size(218, 20);
             this.tbSQ2.TabIndex = 18;
@@ -242,7 +244,7 @@
             "Are you a pet owner?",
             "What is your favourite teacher\'s name?"});
             this.combSQ2.Location = new System.Drawing.Point(316, 395);
-            this.combSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ2.Name = "combSQ2";
             this.combSQ2.Size = new System.Drawing.Size(218, 21);
             this.combSQ2.TabIndex = 17;
@@ -271,7 +273,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblFullname);
             this.Controls.Add(this.lblCreateUserAcc);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCreateuserAcc";
             this.Text = "CreateUserAccForm";
             this.ResumeLayout(false);
