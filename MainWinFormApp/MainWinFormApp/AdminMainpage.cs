@@ -200,6 +200,10 @@ namespace MainWinFormApp
         private void button1_Click(object sender, EventArgs e) // Current crowd btn click
         {
             tabControl1.SelectTab(0);
+            panel2.Visible = true;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -210,11 +214,19 @@ namespace MainWinFormApp
         private void btnPopularity_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(1);
+            panel3.Visible = true;
+            panel2.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(2);
+            panel4.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel5.Visible = false;
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)
@@ -225,6 +237,14 @@ namespace MainWinFormApp
         private void lbDataComms_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
         }
     }
 }
