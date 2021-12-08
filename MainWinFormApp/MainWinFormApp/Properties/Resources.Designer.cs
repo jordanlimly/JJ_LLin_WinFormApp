@@ -73,6 +73,26 @@ namespace MainWinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_8_User_yellow_0_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-8-User-yellow-0-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_8_User_yellow_0_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-8-User-yellow-0-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1061119906_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1061119906-612x612", resourceCulture);

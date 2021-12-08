@@ -16,5 +16,15 @@ namespace MainWinFormApp
         {
             InitializeComponent();
         }
+
+        private void btnCfmLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCancelLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
