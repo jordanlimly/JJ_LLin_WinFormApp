@@ -41,30 +41,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbSQ1 = new System.Windows.Forms.TextBox();
             this.tbSQ2 = new System.Windows.Forms.TextBox();
-            this.comboSQ2 = new System.Windows.Forms.ComboBox();
+            this.combSQ2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblName
             // 
-            this.lblName.BackColor = System.Drawing.Color.DarkGray;
+            this.lblName.BackColor = System.Drawing.Color.Black;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblName.Location = new System.Drawing.Point(134, 110);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2);
             this.lblName.Name = "lblName";
             this.lblName.ReadOnly = true;
-            this.lblName.Size = new System.Drawing.Size(90, 17);
+            this.lblName.Size = new System.Drawing.Size(52, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
             // lblEmail
             // 
-            this.lblEmail.BackColor = System.Drawing.Color.DarkGray;
+            this.lblEmail.BackColor = System.Drawing.Color.Black;
             this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblEmail.Location = new System.Drawing.Point(134, 156);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.ReadOnly = true;
             this.lblEmail.Size = new System.Drawing.Size(44, 17);
@@ -73,11 +75,12 @@
             // 
             // lblCardID
             // 
-            this.lblCardID.BackColor = System.Drawing.Color.DarkGray;
+            this.lblCardID.BackColor = System.Drawing.Color.Black;
             this.lblCardID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCardID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblCardID.Location = new System.Drawing.Point(134, 202);
-            this.lblCardID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCardID.Margin = new System.Windows.Forms.Padding(2);
             this.lblCardID.Name = "lblCardID";
             this.lblCardID.ReadOnly = true;
             this.lblCardID.Size = new System.Drawing.Size(52, 17);
@@ -86,16 +89,18 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(280, 109);
-            this.tbName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbName.BackColor = System.Drawing.Color.White;
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.Location = new System.Drawing.Point(280, 114);
+            this.tbName.Margin = new System.Windows.Forms.Padding(2);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(197, 20);
+            this.tbName.Size = new System.Drawing.Size(197, 13);
             this.tbName.TabIndex = 3;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(280, 158);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(196, 20);
@@ -104,7 +109,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(280, 203);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(196, 20);
@@ -114,6 +119,7 @@
             // 
             this.lblSecurityQn.AutoSize = true;
             this.lblSecurityQn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblSecurityQn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblSecurityQn.Location = new System.Drawing.Point(131, 252);
             this.lblSecurityQn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecurityQn.Name = "lblSecurityQn";
@@ -125,7 +131,7 @@
             // 
             this.combSQ1.FormattingEnabled = true;
             this.combSQ1.Location = new System.Drawing.Point(280, 254);
-            this.combSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ1.Name = "combSQ1";
             this.combSQ1.Size = new System.Drawing.Size(197, 21);
             this.combSQ1.TabIndex = 7;
@@ -136,7 +142,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(346, 455);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 40);
             this.btnCancel.TabIndex = 13;
@@ -149,7 +155,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(134, 455);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 40);
             this.btnSubmit.TabIndex = 14;
@@ -160,6 +166,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.label1.Location = new System.Drawing.Point(171, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -170,7 +177,7 @@
             // tbSQ1
             // 
             this.tbSQ1.Location = new System.Drawing.Point(280, 286);
-            this.tbSQ1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ1.Name = "tbSQ1";
             this.tbSQ1.Size = new System.Drawing.Size(196, 20);
             this.tbSQ1.TabIndex = 16;
@@ -178,24 +185,25 @@
             // tbSQ2
             // 
             this.tbSQ2.Location = new System.Drawing.Point(280, 376);
-            this.tbSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ2.Name = "tbSQ2";
             this.tbSQ2.Size = new System.Drawing.Size(196, 20);
             this.tbSQ2.TabIndex = 19;
             // 
-            // comboSQ2
+            // combSQ2
             // 
-            this.comboSQ2.FormattingEnabled = true;
-            this.comboSQ2.Location = new System.Drawing.Point(280, 343);
-            this.comboSQ2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboSQ2.Name = "comboSQ2";
-            this.comboSQ2.Size = new System.Drawing.Size(197, 21);
-            this.comboSQ2.TabIndex = 18;
+            this.combSQ2.FormattingEnabled = true;
+            this.combSQ2.Location = new System.Drawing.Point(280, 343);
+            this.combSQ2.Margin = new System.Windows.Forms.Padding(2);
+            this.combSQ2.Name = "combSQ2";
+            this.combSQ2.Size = new System.Drawing.Size(197, 21);
+            this.combSQ2.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.label2.Location = new System.Drawing.Point(131, 341);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -207,10 +215,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(592, 577);
             this.Controls.Add(this.tbSQ2);
-            this.Controls.Add(this.comboSQ2);
+            this.Controls.Add(this.combSQ2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbSQ1);
             this.Controls.Add(this.label1);
@@ -225,7 +233,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustUpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustUpdateForm";
@@ -249,7 +257,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbSQ1;
         private System.Windows.Forms.TextBox tbSQ2;
-        private System.Windows.Forms.ComboBox comboSQ2;
+        private System.Windows.Forms.ComboBox combSQ2;
         private System.Windows.Forms.Label label2;
     }
 }
