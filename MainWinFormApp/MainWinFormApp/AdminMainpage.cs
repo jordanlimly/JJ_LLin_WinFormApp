@@ -206,6 +206,8 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+            
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -220,6 +222,7 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -229,6 +232,7 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel3.Visible = false;
             panel5.Visible = false;
+
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)
@@ -247,12 +251,18 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
         {
             frmMaintenance frm = new frmMaintenance();
             frm.ShowDialog();
+        }
+
+        private void btnCloseWindow_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
