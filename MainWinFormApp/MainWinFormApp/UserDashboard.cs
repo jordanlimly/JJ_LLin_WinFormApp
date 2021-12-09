@@ -50,12 +50,12 @@ namespace MainWinFormApp
 
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            btnDashboard.BackColor = Color.FromArgb(0, 0, 0);
         }
 
         private void btnSettings_Leave(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            btnDashboard.BackColor = Color.FromArgb(0, 0, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
