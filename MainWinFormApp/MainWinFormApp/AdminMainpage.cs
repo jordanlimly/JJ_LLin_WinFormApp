@@ -25,7 +25,7 @@ namespace MainWinFormApp
 
         public delegate void myprocessDataDelegate(String strData);
 
-        private void addCrowdRecord(DateTime curDateTime, int enterExit)
+        private void addCrowdRecord(string curDateTime, int enterExit)
         {
             int result = 0;
             //create connection
@@ -78,7 +78,7 @@ namespace MainWinFormApp
                 lbCurCrowdCount.Text = Convert.ToString(current + 1);
 
                 //update database
-                addCrowdRecord(Convert.ToDateTime(strTime), 1);
+                addCrowdRecord(strTime, 1);
             }
             else if (strDistanceValue == "Out")
             {
@@ -88,7 +88,7 @@ namespace MainWinFormApp
                 lbCurCrowdCount.Text = Convert.ToString(current - 1);
 
                 //update database
-                addCrowdRecord(Convert.ToDateTime(strTime), -1);
+                addCrowdRecord(strTime, -1);
             }
 
             //float fLightValue = extractFloatValue(strData, ID);
