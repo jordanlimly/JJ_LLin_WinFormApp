@@ -209,6 +209,7 @@ namespace MainWinFormApp
             
             
         }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -263,6 +264,26 @@ namespace MainWinFormApp
         private void btnCloseWindow_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCrowdLvl_Leave(object sender, EventArgs e)
+        {
+            btnCrowdLvl.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void btnPopularity_Leave(object sender, EventArgs e)
+        {
+            btnPopularity.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void btnMaintenance_Leave(object sender, EventArgs e)
+        {
+            btnMaintenance.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void btnLogout_Leave(object sender, EventArgs e)
+        {
+            btnLogout.BackColor = Color.FromArgb(0, 0, 0);
         }
     }
 }
