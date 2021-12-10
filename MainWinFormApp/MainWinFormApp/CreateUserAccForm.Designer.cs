@@ -52,11 +52,12 @@
             // lblCreateUserAcc
             // 
             this.lblCreateUserAcc.AutoSize = true;
-            this.lblCreateUserAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateUserAcc.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateUserAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblCreateUserAcc.Location = new System.Drawing.Point(244, 27);
             this.lblCreateUserAcc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreateUserAcc.Name = "lblCreateUserAcc";
-            this.lblCreateUserAcc.Size = new System.Drawing.Size(238, 37);
+            this.lblCreateUserAcc.Size = new System.Drawing.Size(229, 36);
             this.lblCreateUserAcc.TabIndex = 0;
             this.lblCreateUserAcc.Text = "Create Account";
             this.lblCreateUserAcc.Click += new System.EventHandler(this.lblCreateUserAcc_Click);
@@ -64,60 +65,67 @@
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
-            this.lblFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullname.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblFullname.Location = new System.Drawing.Point(162, 99);
             this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(83, 18);
+            this.lblFullname.Size = new System.Drawing.Size(87, 17);
             this.lblFullname.TabIndex = 1;
             this.lblFullname.Text = "Full Name: ";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblEmail.Location = new System.Drawing.Point(162, 133);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 18);
+            this.lblEmail.Size = new System.Drawing.Size(56, 17);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email: ";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblPassword.Location = new System.Drawing.Point(162, 175);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(83, 18);
+            this.lblPassword.Size = new System.Drawing.Size(88, 17);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password: ";
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblConfirmPassword.Location = new System.Drawing.Point(162, 211);
             this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(140, 18);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(150, 17);
             this.lblConfirmPassword.TabIndex = 4;
             this.lblConfirmPassword.Text = "Confirm Password: ";
             // 
             // lblCardID
             // 
             this.lblCardID.AutoSize = true;
-            this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCardID.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCardID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblCardID.Location = new System.Drawing.Point(162, 254);
             this.lblCardID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCardID.Name = "lblCardID";
-            this.lblCardID.Size = new System.Drawing.Size(66, 18);
+            this.lblCardID.Size = new System.Drawing.Size(73, 17);
             this.lblCardID.TabIndex = 5;
             this.lblCardID.Text = "Card ID: ";
             // 
             // tbFullName
             // 
+            this.tbFullName.BackColor = System.Drawing.Color.Gray;
+            this.tbFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFullName.Location = new System.Drawing.Point(316, 101);
             this.tbFullName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFullName.Name = "tbFullName";
@@ -126,6 +134,8 @@
             // 
             // tbEmail
             // 
+            this.tbEmail.BackColor = System.Drawing.Color.Gray;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmail.Location = new System.Drawing.Point(316, 135);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
@@ -134,6 +144,8 @@
             // 
             // tbPassword
             // 
+            this.tbPassword.BackColor = System.Drawing.Color.Gray;
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPassword.Location = new System.Drawing.Point(316, 176);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
@@ -143,6 +155,8 @@
             // 
             // tbCfmPassword
             // 
+            this.tbCfmPassword.BackColor = System.Drawing.Color.Gray;
+            this.tbCfmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCfmPassword.Location = new System.Drawing.Point(316, 213);
             this.tbCfmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbCfmPassword.Name = "tbCfmPassword";
@@ -152,6 +166,8 @@
             // 
             // tbCardID
             // 
+            this.tbCardID.BackColor = System.Drawing.Color.Gray;
+            this.tbCardID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCardID.Location = new System.Drawing.Point(316, 256);
             this.tbCardID.Margin = new System.Windows.Forms.Padding(2);
             this.tbCardID.Name = "tbCardID";
@@ -160,7 +176,9 @@
             // 
             // btnCreate
             // 
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCreate.Location = new System.Drawing.Point(146, 464);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
@@ -172,7 +190,9 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCancel.Location = new System.Drawing.Point(482, 464);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
@@ -184,28 +204,32 @@
             // lblSQ2
             // 
             this.lblSQ2.AutoSize = true;
-            this.lblSQ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSQ2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSQ2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblSQ2.Location = new System.Drawing.Point(162, 393);
             this.lblSQ2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSQ2.Name = "lblSQ2";
-            this.lblSQ2.Size = new System.Drawing.Size(145, 18);
+            this.lblSQ2.Size = new System.Drawing.Size(157, 17);
             this.lblSQ2.TabIndex = 13;
             this.lblSQ2.Text = "Security Question 2: ";
             // 
             // lblSQ1
             // 
             this.lblSQ1.AutoSize = true;
-            this.lblSQ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSQ1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSQ1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblSQ1.Location = new System.Drawing.Point(162, 320);
             this.lblSQ1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSQ1.Name = "lblSQ1";
-            this.lblSQ1.Size = new System.Drawing.Size(145, 18);
+            this.lblSQ1.Size = new System.Drawing.Size(157, 17);
             this.lblSQ1.TabIndex = 14;
             this.lblSQ1.Text = "Security Question 1: ";
             // 
             // combSQ1
             // 
+            this.combSQ1.BackColor = System.Drawing.Color.Gray;
             this.combSQ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combSQ1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.combSQ1.FormattingEnabled = true;
             this.combSQ1.Items.AddRange(new object[] {
             "What is your mother\'s maiden name?",
@@ -220,6 +244,8 @@
             // 
             // tbSQ1
             // 
+            this.tbSQ1.BackColor = System.Drawing.Color.Gray;
+            this.tbSQ1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSQ1.Location = new System.Drawing.Point(316, 355);
             this.tbSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ1.Name = "tbSQ1";
@@ -228,6 +254,8 @@
             // 
             // tbSQ2
             // 
+            this.tbSQ2.BackColor = System.Drawing.Color.Gray;
+            this.tbSQ2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSQ2.Location = new System.Drawing.Point(316, 428);
             this.tbSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ2.Name = "tbSQ2";
@@ -236,6 +264,7 @@
             // 
             // combSQ2
             // 
+            this.combSQ2.BackColor = System.Drawing.Color.Gray;
             this.combSQ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ2.FormattingEnabled = true;
             this.combSQ2.Items.AddRange(new object[] {
@@ -253,6 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(698, 579);
             this.Controls.Add(this.tbSQ2);
             this.Controls.Add(this.combSQ2);
@@ -273,6 +303,8 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblFullname);
             this.Controls.Add(this.lblCreateUserAcc);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCreateuserAcc";
             this.Text = "CreateUserAccForm";

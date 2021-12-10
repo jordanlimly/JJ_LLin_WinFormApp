@@ -135,6 +135,11 @@
             // 
             this.combSQ1.BackColor = System.Drawing.Color.Gray;
             this.combSQ1.FormattingEnabled = true;
+            this.combSQ1.Items.AddRange(new object[] {
+            "What is your mother\'s maiden name?",
+            "What is your childhood nickname?",
+            "What primary school/secondary school did you go to?",
+            "What is your PC model?"});
             this.combSQ1.Location = new System.Drawing.Point(298, 248);
             this.combSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ1.Name = "combSQ1";
