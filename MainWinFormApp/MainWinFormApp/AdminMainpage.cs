@@ -143,12 +143,75 @@ namespace MainWinFormApp
             myConnect.Close();
         }
 
+
+        private void addGameRecord(string machineID, DateTime curDT, string detectedRFID)
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+            
+            //Step 2: Create command
+            String strCommandText =
+                "INSERT INTO GameRecord (GameMachineID, DateTime, RFID_ID) VALUES (@machineID, @curDT, @detectedRFID)";
+
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@machineID", machineID);
+            updateCmd.Parameters.AddWithValue("@curDT", curDT);
+            updateCmd.Parameters.AddWithValue("@detectedRFID", detectedRFID);
+            
+            //Step 3: Open Connection myConnect.Open();
+            myConnect.Open();
+
+            //Step 4: ExecuteCommand
+            int result = updateCmd.ExecuteNonQuery();
+
+            //Step 5: Close connection
+            myConnect.Close();
+        }
+
+        private int generateGamePoints()
+        {
+            Random rnd = new Random();
+            // Since we are not coding the game logic for this project, we will randomly generated a number
+            // and assume it is the no. of points earned in a game round
+            int pointsEarnedCurRound = rnd.Next(5, 100);
+            Console.WriteLine("Player earned " + Convert.ToString(pointsEarnedCurRound) + " points");
+            return pointsEarnedCurRound;            
+            
+        }
+
+        private void addUserPoints(int pointsEarned, string detectedRFID)
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "UPDATE UserAccount SET CurrentPoints = (CurrentPoints + @pointsEarned), AccumulatedPoints = (AccumulatedPoints + @pointsEarned) WHERE RFID_ID = @rfid_id";
+
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@pointsEarned", pointsEarned);
+            updateCmd.Parameters.AddWithValue("@rfid_id", detectedRFID);
+
+            //Step 3: Open Connection myConnect.Open();
+            myConnect.Open();
+
+            //Step 4: ExecuteCommand
+            int result = updateCmd.ExecuteNonQuery();
+
+            //Step 5: Close connection
+            myConnect.Close();
+        }
+
         private void handleGameMode(string strData, string ID)
         {
             string detectedRFID = extractStringValue(strData, ID);
 
             //update DB
             deductMaintenanceCount("G001");
+            DateTime curDT = DateTime.Now;
+            addGameRecord("G001", curDT, detectedRFID);
+            addUserPoints(generateGamePoints(), detectedRFID);
+      
         }
 
         //create your own data handler for your project needs
