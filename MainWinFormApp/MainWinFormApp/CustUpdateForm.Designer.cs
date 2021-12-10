@@ -134,6 +134,7 @@
             // combSQ1
             // 
             this.combSQ1.BackColor = System.Drawing.Color.Gray;
+            this.combSQ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ1.FormattingEnabled = true;
             this.combSQ1.Items.AddRange(new object[] {
             "What is your mother\'s maiden name?",
@@ -208,6 +209,7 @@
             // combSQ2
             // 
             this.combSQ2.BackColor = System.Drawing.Color.Gray;
+            this.combSQ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ2.FormattingEnabled = true;
             this.combSQ2.Location = new System.Drawing.Point(298, 337);
             this.combSQ2.Margin = new System.Windows.Forms.Padding(2);
