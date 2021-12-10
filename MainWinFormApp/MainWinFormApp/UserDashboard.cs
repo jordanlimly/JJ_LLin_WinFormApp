@@ -55,18 +55,43 @@ namespace MainWinFormApp
 
         private void btnSettings_Leave(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(0, 0, 0);
+            btnSettings.BackColor = Color.FromArgb(0, 0, 0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnX_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            pnlNav.Height = btnLogout.Height;
+            pnlNav.Top = btnLogout.Top;
+            pnlNav.Left = btnLogout.Left;
+            btnLogout.BackColor = Color.FromArgb(46, 51, 73);
             LogoutForm frm = new LogoutForm();
             frm.ShowDialog();
         }
+
+        private void pnlCurrCreds_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnGameMachineUsage_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnGameMachineUsage.Height;
+            pnlNav.Top = btnGameMachineUsage.Top;
+            pnlNav.Left = btnGameMachineUsage.Left;
+            btnGameMachineUsage.BackColor = Color.FromArgb(46, 51, 73);
+            panelGMU.Visible = true;
+        }
+
+        private void btnGameMachineUsage_Leave(object sender, EventArgs e)
+        {
+            btnGameMachineUsage.BackColor = Color.FromArgb(0, 0, 0);
+            panelGMU.Visible = false;
+        }
     }
+    
 }

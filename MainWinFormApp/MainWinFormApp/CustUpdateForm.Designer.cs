@@ -49,13 +49,13 @@
             // 
             this.lblName.BackColor = System.Drawing.Color.Black;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblName.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblName.Location = new System.Drawing.Point(134, 110);
             this.lblName.Margin = new System.Windows.Forms.Padding(2);
             this.lblName.Name = "lblName";
             this.lblName.ReadOnly = true;
-            this.lblName.Size = new System.Drawing.Size(52, 17);
+            this.lblName.Size = new System.Drawing.Size(52, 18);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
@@ -63,13 +63,13 @@
             // 
             this.lblEmail.BackColor = System.Drawing.Color.Black;
             this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblEmail.Location = new System.Drawing.Point(134, 156);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.ReadOnly = true;
-            this.lblEmail.Size = new System.Drawing.Size(44, 17);
+            this.lblEmail.Size = new System.Drawing.Size(44, 18);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Email:";
             // 
@@ -77,29 +77,31 @@
             // 
             this.lblCardID.BackColor = System.Drawing.Color.Black;
             this.lblCardID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblCardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCardID.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCardID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblCardID.Location = new System.Drawing.Point(134, 202);
             this.lblCardID.Margin = new System.Windows.Forms.Padding(2);
             this.lblCardID.Name = "lblCardID";
             this.lblCardID.ReadOnly = true;
-            this.lblCardID.Size = new System.Drawing.Size(52, 17);
+            this.lblCardID.Size = new System.Drawing.Size(63, 18);
             this.lblCardID.TabIndex = 2;
             this.lblCardID.Text = "Card ID:";
             // 
             // tbName
             // 
-            this.tbName.BackColor = System.Drawing.Color.White;
-            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbName.Location = new System.Drawing.Point(280, 114);
+            this.tbName.BackColor = System.Drawing.Color.Gray;
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbName.Location = new System.Drawing.Point(299, 108);
             this.tbName.Margin = new System.Windows.Forms.Padding(2);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(197, 13);
+            this.tbName.Size = new System.Drawing.Size(197, 20);
             this.tbName.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(280, 158);
+            this.textBox5.BackColor = System.Drawing.Color.Gray;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Location = new System.Drawing.Point(299, 154);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -108,29 +110,38 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(280, 203);
+            this.textBox6.BackColor = System.Drawing.Color.Gray;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Location = new System.Drawing.Point(299, 200);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(196, 20);
+            this.textBox6.Size = new System.Drawing.Size(197, 20);
             this.textBox6.TabIndex = 5;
             // 
             // lblSecurityQn
             // 
             this.lblSecurityQn.AutoSize = true;
-            this.lblSecurityQn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblSecurityQn.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecurityQn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblSecurityQn.Location = new System.Drawing.Point(131, 252);
             this.lblSecurityQn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecurityQn.Name = "lblSecurityQn";
-            this.lblSecurityQn.Size = new System.Drawing.Size(141, 18);
+            this.lblSecurityQn.Size = new System.Drawing.Size(152, 17);
             this.lblSecurityQn.TabIndex = 6;
             this.lblSecurityQn.Text = "Security Question 1:";
             // 
             // combSQ1
             // 
+            this.combSQ1.BackColor = System.Drawing.Color.Gray;
+            this.combSQ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ1.FormattingEnabled = true;
-            this.combSQ1.Location = new System.Drawing.Point(280, 254);
+            this.combSQ1.Items.AddRange(new object[] {
+            "What is your mother\'s maiden name?",
+            "What is your childhood nickname?",
+            "What primary school/secondary school did you go to?",
+            "What is your PC model?"});
+            this.combSQ1.Location = new System.Drawing.Point(298, 248);
             this.combSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ1.Name = "combSQ1";
             this.combSQ1.Size = new System.Drawing.Size(197, 21);
@@ -138,9 +149,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCancel.Location = new System.Drawing.Point(346, 455);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
@@ -148,12 +159,13 @@
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnSubmit.Location = new System.Drawing.Point(134, 455);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
@@ -176,24 +188,30 @@
             // 
             // tbSQ1
             // 
-            this.tbSQ1.Location = new System.Drawing.Point(280, 286);
+            this.tbSQ1.BackColor = System.Drawing.Color.Gray;
+            this.tbSQ1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSQ1.Location = new System.Drawing.Point(298, 287);
             this.tbSQ1.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ1.Name = "tbSQ1";
-            this.tbSQ1.Size = new System.Drawing.Size(196, 20);
+            this.tbSQ1.Size = new System.Drawing.Size(197, 20);
             this.tbSQ1.TabIndex = 16;
             // 
             // tbSQ2
             // 
-            this.tbSQ2.Location = new System.Drawing.Point(280, 376);
+            this.tbSQ2.BackColor = System.Drawing.Color.Gray;
+            this.tbSQ2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSQ2.Location = new System.Drawing.Point(298, 376);
             this.tbSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.tbSQ2.Name = "tbSQ2";
-            this.tbSQ2.Size = new System.Drawing.Size(196, 20);
+            this.tbSQ2.Size = new System.Drawing.Size(197, 20);
             this.tbSQ2.TabIndex = 19;
             // 
             // combSQ2
             // 
+            this.combSQ2.BackColor = System.Drawing.Color.Gray;
+            this.combSQ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ2.FormattingEnabled = true;
-            this.combSQ2.Location = new System.Drawing.Point(280, 343);
+            this.combSQ2.Location = new System.Drawing.Point(298, 337);
             this.combSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ2.Name = "combSQ2";
             this.combSQ2.Size = new System.Drawing.Size(197, 21);
@@ -202,12 +220,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.label2.Location = new System.Drawing.Point(131, 341);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 18);
+            this.label2.Size = new System.Drawing.Size(152, 17);
             this.label2.TabIndex = 17;
             this.label2.Text = "Security Question 2:";
             // 

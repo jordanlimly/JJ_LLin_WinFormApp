@@ -37,6 +37,7 @@
             // 
             this.lblLogout.AutoSize = true;
             this.lblLogout.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblLogout.Location = new System.Drawing.Point(80, 63);
             this.lblLogout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogout.Name = "lblLogout";
@@ -47,11 +48,11 @@
             // 
             // btnCfmLogout
             // 
-            this.btnCfmLogout.FlatAppearance.BorderSize = 0;
             this.btnCfmLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCfmLogout.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCfmLogout.Font = new System.Drawing.Font("Britannic Bold", 12F);
+            this.btnCfmLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCfmLogout.Location = new System.Drawing.Point(282, 154);
-            this.btnCfmLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCfmLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCfmLogout.Name = "btnCfmLogout";
             this.btnCfmLogout.Size = new System.Drawing.Size(81, 39);
             this.btnCfmLogout.TabIndex = 1;
@@ -61,11 +62,11 @@
             // 
             // btnCancelLogout
             // 
-            this.btnCancelLogout.FlatAppearance.BorderSize = 0;
             this.btnCancelLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelLogout.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelLogout.Font = new System.Drawing.Font("Britannic Bold", 12F);
+            this.btnCancelLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCancelLogout.Location = new System.Drawing.Point(122, 154);
-            this.btnCancelLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelLogout.Name = "btnCancelLogout";
             this.btnCancelLogout.Size = new System.Drawing.Size(80, 39);
             this.btnCancelLogout.TabIndex = 2;
@@ -82,9 +83,9 @@
             this.Controls.Add(this.btnCancelLogout);
             this.Controls.Add(this.btnCfmLogout);
             this.Controls.Add(this.lblLogout);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LogoutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoutForm";
