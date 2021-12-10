@@ -61,5 +61,10 @@ namespace MainWinFormApp
             myConnect.Close();
             Close();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
