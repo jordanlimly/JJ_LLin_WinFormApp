@@ -41,6 +41,7 @@
             // 
             this.lblLoginfrm.AutoSize = true;
             this.lblLoginfrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginfrm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblLoginfrm.Location = new System.Drawing.Point(253, 42);
             this.lblLoginfrm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLoginfrm.Name = "lblLoginfrm";
@@ -52,6 +53,7 @@
             // 
             this.lblLoginEmail.AutoSize = true;
             this.lblLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblLoginEmail.Location = new System.Drawing.Point(168, 132);
             this.lblLoginEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLoginEmail.Name = "lblLoginEmail";
@@ -63,6 +65,7 @@
             // 
             this.lblloginpw.AutoSize = true;
             this.lblloginpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblloginpw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblloginpw.Location = new System.Drawing.Point(168, 201);
             this.lblloginpw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblloginpw.Name = "lblloginpw";
@@ -72,9 +75,11 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnLogin.Location = new System.Drawing.Point(171, 290);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 28);
             this.btnLogin.TabIndex = 3;
@@ -84,25 +89,31 @@
             // 
             // tbLoginEmail
             // 
+            this.tbLoginEmail.BackColor = System.Drawing.Color.Gray;
+            this.tbLoginEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLoginEmail.Location = new System.Drawing.Point(274, 132);
-            this.tbLoginEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLoginEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbLoginEmail.Name = "tbLoginEmail";
             this.tbLoginEmail.Size = new System.Drawing.Size(179, 20);
             this.tbLoginEmail.TabIndex = 4;
             // 
             // tbLoginPw
             // 
+            this.tbLoginPw.BackColor = System.Drawing.Color.Gray;
+            this.tbLoginPw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLoginPw.Location = new System.Drawing.Point(274, 202);
-            this.tbLoginPw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLoginPw.Margin = new System.Windows.Forms.Padding(2);
             this.tbLoginPw.Name = "tbLoginPw";
             this.tbLoginPw.Size = new System.Drawing.Size(179, 20);
             this.tbLoginPw.TabIndex = 5;
             // 
             // btnCancel
             // 
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnCancel.Location = new System.Drawing.Point(349, 290);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(103, 28);
             this.btnCancel.TabIndex = 6;
@@ -114,6 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(608, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbLoginPw);
@@ -122,7 +134,8 @@
             this.Controls.Add(this.lblloginpw);
             this.Controls.Add(this.lblLoginEmail);
             this.Controls.Add(this.lblLoginfrm);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustLoginForm";
             this.Text = "CustLoginForm";
             this.ResumeLayout(false);
