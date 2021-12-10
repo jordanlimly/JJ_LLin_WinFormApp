@@ -25,7 +25,7 @@ namespace MainWinFormApp
 
         public delegate void myprocessDataDelegate(String strData);
 
-        private void addCrowdRecord(string curDateTime, int enterExit)
+        private void addCrowdRecord(DateTime curDateTime, int enterExit)
         {
             int result = 0;
             //create connection
@@ -78,7 +78,7 @@ namespace MainWinFormApp
                 lbCurCrowdCount.Text = Convert.ToString(current + 1);
 
                 //update database
-                addCrowdRecord(strTime, 1);
+                addCrowdRecord(Convert.ToDateTime(strTime), 1);
             }
             else if (strDistanceValue == "Out")
             {
@@ -88,7 +88,7 @@ namespace MainWinFormApp
                 lbCurCrowdCount.Text = Convert.ToString(current - 1);
 
                 //update database
-                addCrowdRecord(strTime, -1);
+                addCrowdRecord(Convert.ToDateTime(strTime), -1);
             }
 
             //float fLightValue = extractFloatValue(strData, ID);
@@ -121,6 +121,36 @@ namespace MainWinFormApp
             }
         }
 
+        private void deductMaintenanceCount(string machineID)
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "UPDATE GameMachine SET UsageCount = (UsageCount - 1) WHERE GameMachineID = @machineID";
+
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@machineID", machineID);
+
+            //Step 3: Open Connection myConnect.Open();
+            myConnect.Open();
+
+            //Step 4: ExecuteCommand
+            int result = updateCmd.ExecuteNonQuery();
+
+            //Step 5: Close connection
+            myConnect.Close();
+        }
+
+        private void handleGameMode(string strData, string ID)
+        {
+            string detectedRFID = extractStringValue(strData, ID);
+
+            //update DB
+            deductMaintenanceCount("G001");
+        }
+
         //create your own data handler for your project needs
         //private void handleButtonData(string strData, string strTime, string ID)
         //{
@@ -146,9 +176,8 @@ namespace MainWinFormApp
                 handledSensorTriggeredData(strData, strTime, "SENSORTRIGGERED=");    
             if (strData.IndexOf("DIRECTION=") != -1)
                 handledDistanceSensorData(strData, strTime, "DIRECTION=");
-            //    handleButtonData(strData, strTime, "BUTTON=");
-            //else if (strData.IndexOf("BUTTON=") != -1) //check button status
-            //    handleButtonData(strData, strTime, "BUTTON=");
+            if (strData.IndexOf("RFIDGAMESTART=") != -1) //check button status
+                handleGameMode(strData, "RFIDGAMESTART=");
         }
 
         private void handleSensorData(String strData)
