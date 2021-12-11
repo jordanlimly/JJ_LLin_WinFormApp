@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CrowdTab = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.TotalCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTotalCrowd = new System.Windows.Forms.Label();
             this.CurCrowdPanel = new System.Windows.Forms.Panel();
             this.lblCurrentCrowd = new System.Windows.Forms.Label();
@@ -64,10 +65,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.TotalCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).BeginInit();
             this.CurCrowdPanel.SuspendLayout();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
@@ -75,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -154,6 +154,19 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(410, 346);
             this.panel6.TabIndex = 8;
+            // 
+            // TotalCrowdCht
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
+            this.TotalCrowdCht.Location = new System.Drawing.Point(3, 43);
+            this.TotalCrowdCht.Name = "TotalCrowdCht";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series1);
+            this.TotalCrowdCht.Size = new System.Drawing.Size(396, 238);
+            this.TotalCrowdCht.TabIndex = 1;
+            this.TotalCrowdCht.Text = "chart1";
             // 
             // lblTotalCrowd
             // 
@@ -472,19 +485,6 @@
             this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
             this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
             // 
-            // TotalCrowdCht
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
-            this.TotalCrowdCht.Location = new System.Drawing.Point(3, 43);
-            this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series1);
-            this.TotalCrowdCht.Size = new System.Drawing.Size(396, 238);
-            this.TotalCrowdCht.TabIndex = 1;
-            this.TotalCrowdCht.Text = "chart1";
-            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -503,6 +503,7 @@
             this.CrowdTab.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).EndInit();
             this.CurCrowdPanel.ResumeLayout(false);
             this.CurCrowdPanel.PerformLayout();
             this.PopularityTab.ResumeLayout(false);
@@ -512,7 +513,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.sideNavPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).EndInit();
             this.ResumeLayout(false);
 
         }
