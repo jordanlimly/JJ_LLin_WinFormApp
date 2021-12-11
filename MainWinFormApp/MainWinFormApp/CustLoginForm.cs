@@ -42,7 +42,11 @@ namespace MainWinFormApp
                 myConnect.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
+                {
                     MessageBox.Show("Login Successful");
+                    Application.Run(new UserDashboard());
+                }
+                    
                 else
                     MessageBox.Show("Login Fail");
                 //Step 5: Close connection

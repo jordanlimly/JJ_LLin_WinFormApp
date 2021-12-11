@@ -73,6 +73,8 @@
             // 
             // tbNewpw
             // 
+            this.tbNewpw.BackColor = System.Drawing.Color.Gray;
+            this.tbNewpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNewpw.Location = new System.Drawing.Point(258, 108);
             this.tbNewpw.Name = "tbNewpw";
             this.tbNewpw.Size = new System.Drawing.Size(152, 20);
@@ -80,6 +82,8 @@
             // 
             // tbCfmpw
             // 
+            this.tbCfmpw.BackColor = System.Drawing.Color.Gray;
+            this.tbCfmpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCfmpw.Location = new System.Drawing.Point(258, 153);
             this.tbCfmpw.Name = "tbCfmpw";
             this.tbCfmpw.Size = new System.Drawing.Size(152, 20);
@@ -92,7 +96,7 @@
             this.btnsubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnsubmit.Location = new System.Drawing.Point(192, 219);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(91, 41);
+            this.btnsubmit.Size = new System.Drawing.Size(104, 43);
             this.btnsubmit.TabIndex = 5;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.UseVisualStyleBackColor = true;

@@ -51,10 +51,8 @@ namespace MainWinFormApp
             result = cmd.ExecuteNonQuery();
 
             if (result > 0)
-            {
+           
                 MessageBox.Show("Account Created!");
-                Application.Run(new CustLoginForm());
-            }
                 
             else
                 MessageBox.Show("Account Creation unsuccessful!");
