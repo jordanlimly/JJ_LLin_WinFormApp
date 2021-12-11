@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CrowdTab = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.TotalCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTotalCrowd = new System.Windows.Forms.Label();
             this.CurCrowdPanel = new System.Windows.Forms.Panel();
             this.lblCurrentCrowd = new System.Windows.Forms.Label();
@@ -43,7 +46,9 @@
             this.lbDataComms = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PopularityTab = new System.Windows.Forms.TabPage();
+            this.panelPopularityChart = new System.Windows.Forms.Panel();
             this.MaintenanceTab = new System.Windows.Forms.TabPage();
+            this.panelUpForMtnce = new System.Windows.Forms.Panel();
             this.btnRetrieveMaintenanceRecord = new System.Windows.Forms.Button();
             this.btnAddMaintenanceRecord = new System.Windows.Forms.Button();
             this.panelNeedMtnce = new System.Windows.Forms.Panel();
@@ -60,11 +65,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.panelUpForMtnce = new System.Windows.Forms.Panel();
-            this.panelPopularityChart = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).BeginInit();
             this.CurCrowdPanel.SuspendLayout();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
@@ -143,12 +147,27 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.TotalCrowdCht);
             this.panel6.Controls.Add(this.lblTotalCrowd);
             this.panel6.Location = new System.Drawing.Point(793, 117);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(364, 277);
             this.panel6.TabIndex = 8;
+            // 
+            // TotalCrowdCht
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
+            this.TotalCrowdCht.Location = new System.Drawing.Point(3, 34);
+            this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TotalCrowdCht.Name = "TotalCrowdCht";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series1);
+            this.TotalCrowdCht.Size = new System.Drawing.Size(352, 190);
+            this.TotalCrowdCht.TabIndex = 1;
+            this.TotalCrowdCht.Text = "chart1";
             // 
             // lblTotalCrowd
             // 
@@ -227,6 +246,13 @@
             this.PopularityTab.Text = "PopularityTab";
             this.PopularityTab.UseVisualStyleBackColor = true;
             // 
+            // panelPopularityChart
+            // 
+            this.panelPopularityChart.Location = new System.Drawing.Point(236, 132);
+            this.panelPopularityChart.Name = "panelPopularityChart";
+            this.panelPopularityChart.Size = new System.Drawing.Size(848, 354);
+            this.panelPopularityChart.TabIndex = 0;
+            // 
             // MaintenanceTab
             // 
             this.MaintenanceTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
@@ -245,6 +271,13 @@
             this.MaintenanceTab.Text = "MaintenanceTab";
             this.MaintenanceTab.UseVisualStyleBackColor = true;
             // 
+            // panelUpForMtnce
+            // 
+            this.panelUpForMtnce.Location = new System.Drawing.Point(847, 308);
+            this.panelUpForMtnce.Name = "panelUpForMtnce";
+            this.panelUpForMtnce.Size = new System.Drawing.Size(287, 144);
+            this.panelUpForMtnce.TabIndex = 5;
+            // 
             // btnRetrieveMaintenanceRecord
             // 
             this.btnRetrieveMaintenanceRecord.BackColor = System.Drawing.Color.Black;
@@ -258,6 +291,7 @@
             this.btnRetrieveMaintenanceRecord.TabIndex = 4;
             this.btnRetrieveMaintenanceRecord.Text = "Retrieve Record";
             this.btnRetrieveMaintenanceRecord.UseVisualStyleBackColor = false;
+            this.btnRetrieveMaintenanceRecord.Click += new System.EventHandler(this.btnRetrieveMaintenanceRecord_Click);
             // 
             // btnAddMaintenanceRecord
             // 
@@ -291,17 +325,17 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea2);
             legend1.Name = "Legend1";
             this.MaintenanceExpenditureChart.Legends.Add(legend1);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(3, -3);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series2);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(590, 321);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -439,20 +473,6 @@
             this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
             this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
             // 
-            // panelUpForMtnce
-            // 
-            this.panelUpForMtnce.Location = new System.Drawing.Point(847, 308);
-            this.panelUpForMtnce.Name = "panelUpForMtnce";
-            this.panelUpForMtnce.Size = new System.Drawing.Size(287, 144);
-            this.panelUpForMtnce.TabIndex = 5;
-            // 
-            // panelPopularityChart
-            // 
-            this.panelPopularityChart.Location = new System.Drawing.Point(236, 132);
-            this.panelPopularityChart.Name = "panelPopularityChart";
-            this.panelPopularityChart.Size = new System.Drawing.Size(848, 354);
-            this.panelPopularityChart.TabIndex = 0;
-            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -471,6 +491,7 @@
             this.CrowdTab.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).EndInit();
             this.CurCrowdPanel.ResumeLayout(false);
             this.CurCrowdPanel.PerformLayout();
             this.PopularityTab.ResumeLayout(false);
@@ -517,5 +538,6 @@
         private System.Windows.Forms.Button btnCloseWindow;
         private System.Windows.Forms.Panel panelUpForMtnce;
         private System.Windows.Forms.Panel panelPopularityChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart TotalCrowdCht;
     }
 }
