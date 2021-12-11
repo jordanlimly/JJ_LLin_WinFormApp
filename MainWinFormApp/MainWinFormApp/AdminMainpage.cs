@@ -32,11 +32,13 @@ namespace MainWinFormApp
             SqlConnection myConnect = new SqlConnection(strConnectionString);
 
             //create command
+            DateTime curDate = DateTime.Now.Date;
             String strCommandText =
-                "INSERT CrowdLevelTable (DateTime, EnterExit) " +
-                " VALUES (@NewDateTime, @NewEnterExit)";
+                "INSERT CrowdLevelTable (DateOnly, DateTime, EnterExit) " +
+                " VALUES (@curDate, @NewDateTime, @NewEnterExit)";
 
             SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@curDate", curDate);
             updateCmd.Parameters.AddWithValue("@NewDateTime", curDateTime);
             updateCmd.Parameters.AddWithValue("@NewEnterExit", enterExit);
 
@@ -79,16 +81,20 @@ namespace MainWinFormApp
 
                 //update database
                 addCrowdRecord(Convert.ToDateTime(strTime), 1);
+                loadDBtoChart();
             }
             else if (strDistanceValue == "Out")
             {
-                string strMessage = "=== Exit Captured at " + strTime.Replace("T", " ") + " ===";
-                lbDataComms.Items.Insert(0, strMessage);
-                int current = Convert.ToInt32(lbCurCrowdCount.Text);
-                lbCurCrowdCount.Text = Convert.ToString(current - 1);
+                if (Convert.ToInt32(lbCurCrowdCount.Text) != 0)
+                {
+                    string strMessage = "=== Exit Captured at " + strTime.Replace("T", " ") + " ===";
+                    lbDataComms.Items.Insert(0, strMessage);
+                    int current = Convert.ToInt32(lbCurCrowdCount.Text);
+                    lbCurCrowdCount.Text = Convert.ToString(current - 1);
 
-                //update database
-                addCrowdRecord(Convert.ToDateTime(strTime), -1);
+                    //update database
+                    addCrowdRecord(Convert.ToDateTime(strTime), -1);
+                }
             }
 
             //float fLightValue = extractFloatValue(strData, ID);
@@ -298,6 +304,7 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+            loadDBtoChart();
             
             
         }
@@ -331,6 +338,8 @@ namespace MainWinFormApp
         private void AdminMainpage_Load(object sender, EventArgs e)
         {
             InitComms();
+            initChartProperties();
+            loadDBtoChart();
         }
 
         private void lbDataComms_SelectedIndexChanged(object sender, EventArgs e)
@@ -376,6 +385,159 @@ namespace MainWinFormApp
         private void btnLogout_Leave(object sender, EventArgs e)
         {
             btnLogout.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private Color getColor(int r, int g, int b, int transparent = 255)
+        {
+            return System.Drawing.Color.FromArgb(transparent, r, g, b);
+        }
+
+        private DateTime getDateTime(int year, int month, int day, int hour, int min, int sec, int millesecs = 0)
+        {
+            DateTime dt = new DateTime(year, month, day, hour, min, sec, millesecs);
+            Console.WriteLine("MM/dd/yyyy hh:mm:ss.fff");
+            return dt;
+        }
+
+        private void setXAxisDisplayRange(Chart cht, DateTime dtStart, DateTime dtEnd)
+        {
+            DateTime minDate = dtStart.AddSeconds(-1);
+            DateTime maxDate = dtEnd;
+
+            Console.WriteLine("Setting AxisX.Minimum =" + minDate.ToOADate());
+            Console.WriteLine("Setting AxisX.Maximum =" + maxDate.ToOADate());
+
+            cht.ChartAreas[0].AxisX.Minimum = minDate.ToOADate();
+            cht.ChartAreas[0].AxisX.Maximum = maxDate.ToOADate();
+            cht.Series[0].IsXValueIndexed = false; //This must be false for AxisX max and min to work
+        } //End of setXAxisDisplayRange()
+
+        private void initChartProperties()
+        {
+            TotalCrowdCht.BackColor = getColor(243, 223, 193);
+            TotalCrowdCht.BackGradientStyle = GradientStyle.TopBottom;
+            TotalCrowdCht.BorderlineColor = getColor(181, 64, 1);
+            TotalCrowdCht.BorderlineDashStyle = ChartDashStyle.Solid;
+            TotalCrowdCht.BorderlineWidth = 2;
+
+            //Title
+            Title title1 = new Title();
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 7.25F, System.Drawing.FontStyle.Bold);
+            title1.Text = "Daily Number of Visitors for the past week";
+            TotalCrowdCht.Titles.Add(title1);
+
+            Font labelFont = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
+
+            //Graph legend
+            //Legend legend1 = chart1.Legends[0];
+            //legend1.BackColor = Color.Transparent;
+            //legend1.Enabled = true;
+            //legend1.Font = labelFont;
+
+            //Chart area is the whole X-Y axis area
+            Color colorGridLines = getColor(64, 64, 64, 64);
+            ChartArea chartArea1 = TotalCrowdCht.ChartAreas[0];
+            chartArea1.BackColor = Color.OldLace;
+            chartArea1.BackGradientStyle = GradientStyle.TopBottom;
+            chartArea1.BorderColor = colorGridLines;
+            chartArea1.BorderDashStyle = ChartDashStyle.Solid;
+            chartArea1.ShadowColor = Color.Transparent;
+
+            //X-Axis settings
+            chartArea1.AxisX.LabelStyle.Font = labelFont;
+            chartArea1.AxisX.LineColor = colorGridLines;
+            chartArea1.AxisX.MajorGrid.LineColor = colorGridLines;
+
+            chartArea1.AxisX.IntervalType = DateTimeIntervalType.Days;
+            chartArea1.AxisX.Interval = 1;
+            //DateTime minDate = getDateTime(2021, 12, 5, 0, 0, 0);
+            DateTime maxDate = DateTime.Now;
+            //DateTime maxDate = getDateTime(2021, 12, 12, 0, 0, 0);
+            DateTime minDate = maxDate.AddDays(-7);
+
+
+            setXAxisDisplayRange(TotalCrowdCht, minDate, maxDate);
+
+            //chartArea1.AxisX.LabelStyle.Format = "hh:ss";
+            // You can change to the below formats as well depending on your needs. 
+            chartArea1.AxisX.LabelStyle.Format = "MMM dd";
+            //chartAreal. AxisX.Label5tyle.Format="HH:mm"
+            //chartAreal.AxisX.LabelStyle.Format "yyyy MMM dd HH:mm";
+            //chartAreal.AxisX.LabelStyle.Format="MMM dd HH:mm:ss";
+
+            // Y-Axis Settings
+            chartArea1.AxisY.LabelStyle.Font = labelFont;
+            chartArea1.AxisY.LineColor = colorGridLines;
+            chartArea1.AxisY.MajorGrid.LineColor = colorGridLines;
+            chartArea1.AxisY.Interval = 2;
+            chartArea1.AxisY.IsStartedFromZero = true;
+
+            // Line Graph Data points
+
+            Series series1 = TotalCrowdCht.Series[0];
+            series1.Name = "Temp"; // This will show up in the legend text
+            Color lineColor = getColor(26, 59, 185, 180);
+            series1.BorderColor = lineColor; series1.ChartType = SeriesChartType.Column;
+            series1.XValueType = ChartValueType.DateTime;
+            series1.YValueType = ChartValueType.Double;
+            //series1.MarkerStyle = MarkerStyle.Circle;
+            //series1.MarkerSize = 6;
+            //series1.MarkerBorderColor = lineColor;
+            //series1.MarkerColor = lineColor;
+            //Hover cursor on point to show
+            //series1.ToolTip = "Timestamp: #VALX{d MMM yyyy H:mm:ss}, Value : #VAL";
+
+
+        }//End of initChartProperties()
+
+        private void loadDBtoChart()
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create SQL command
+            //string curDate = DateTime.Now.ToString("dd/MM/yyyy");
+            string now = DateTime.Now.Date.ToString();
+            string startdate = (DateTime.Now.Date.AddDays(-6)).ToString();
+            //String strCommandText = "Select * from CrowdLevelTable where CONVERT(VARCHAR, DateTime , 103) = '5/12/2021'";
+            //String strCommandText = "Select * from CrowdLevelTable WHERE Year(DateTime) = " + curYear + "AND Month(DateTime) = " + curMonth +
+            //    "AND Day(DateTime) = " + curDay + "AND Hour(DateTime) = " + curHour + "AND Minute(DateTime) = " + curMin;
+            String strCommandText = "Select DateOnly, sum(EnterExit) sumCol from CrowdLevelTable WHERE EnterExit = 1 group by DateOnly";
+
+
+            try
+            {
+                //Step 3. Create a Data Adapter to retrieve data from Table in Database
+                SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+                // create SELECT, DELETE, INSERT, UPDATE commands for data adapter
+                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                // STEP 4: Access data: Pill the Dataset using Data Adapter Fill method
+                // Note: We do NOT need to open database connection
+                // as data adapter does it internally
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows.Count);
+                TotalCrowdCht.DataSource = ds;
+
+                // Chart X - Axis take from this Database field
+                TotalCrowdCht.Series[0].XValueMember = "DateOnly";
+
+                //Chart Y-Axis take from this Database field.
+                TotalCrowdCht.Series[0].YValueMembers = "sumCol";
+
+                //clears and reload series data if there are existing data on chart
+                TotalCrowdCht.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message.ToString());
+            }
+            finally
+            {
+                //Step 5: Close connection
+                myConnect.Close();
+            }
         }
     }
 }
