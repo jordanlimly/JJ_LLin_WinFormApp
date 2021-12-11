@@ -377,5 +377,11 @@ namespace MainWinFormApp
         {
             btnLogout.BackColor = Color.FromArgb(0, 0, 0);
         }
+
+        private void btnRetrieveMaintenanceRecord_Click(object sender, EventArgs e)
+        {
+            RUDMaintenance frm = new RUDMaintenance();
+            frm.ShowDialog();
+        }
     }
 }

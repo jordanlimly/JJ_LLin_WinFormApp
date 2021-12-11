@@ -45,10 +45,9 @@
             // 
             this.lbl_maintenance.AutoSize = true;
             this.lbl_maintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_maintenance.Location = new System.Drawing.Point(80, 25);
-            this.lbl_maintenance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_maintenance.Location = new System.Drawing.Point(107, 31);
             this.lbl_maintenance.Name = "lbl_maintenance";
-            this.lbl_maintenance.Size = new System.Drawing.Size(433, 37);
+            this.lbl_maintenance.Size = new System.Drawing.Size(540, 46);
             this.lbl_maintenance.TabIndex = 0;
             this.lbl_maintenance.Text = "Game Machine Maintenance ";
             // 
@@ -56,10 +55,9 @@
             // 
             this.lbl_machineID.AutoSize = true;
             this.lbl_machineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_machineID.Location = new System.Drawing.Point(77, 110);
-            this.lbl_machineID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_machineID.Location = new System.Drawing.Point(103, 135);
             this.lbl_machineID.Name = "lbl_machineID";
-            this.lbl_machineID.Size = new System.Drawing.Size(131, 18);
+            this.lbl_machineID.Size = new System.Drawing.Size(166, 24);
             this.lbl_machineID.TabIndex = 2;
             this.lbl_machineID.Text = "Game Machine ID:";
             // 
@@ -67,10 +65,9 @@
             // 
             this.lbl_date.AutoSize = true;
             this.lbl_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date.Location = new System.Drawing.Point(77, 148);
-            this.lbl_date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_date.Location = new System.Drawing.Point(103, 182);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(151, 18);
+            this.lbl_date.Size = new System.Drawing.Size(188, 24);
             this.lbl_date.TabIndex = 3;
             this.lbl_date.Text = "Date (YYYY-MM-DD):";
             // 
@@ -78,21 +75,19 @@
             // 
             this.lbl_cost.AutoSize = true;
             this.lbl_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cost.Location = new System.Drawing.Point(77, 181);
-            this.lbl_cost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_cost.Location = new System.Drawing.Point(103, 223);
             this.lbl_cost.Name = "lbl_cost";
-            this.lbl_cost.Size = new System.Drawing.Size(44, 18);
+            this.lbl_cost.Size = new System.Drawing.Size(166, 24);
             this.lbl_cost.TabIndex = 4;
-            this.lbl_cost.Text = "Cost:";
+            this.lbl_cost.Text = "Maintenance Cost:";
             // 
             // lbl_remarks
             // 
             this.lbl_remarks.AutoSize = true;
             this.lbl_remarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_remarks.Location = new System.Drawing.Point(77, 214);
-            this.lbl_remarks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_remarks.Location = new System.Drawing.Point(103, 263);
             this.lbl_remarks.Name = "lbl_remarks";
-            this.lbl_remarks.Size = new System.Drawing.Size(73, 18);
+            this.lbl_remarks.Size = new System.Drawing.Size(89, 24);
             this.lbl_remarks.TabIndex = 5;
             this.lbl_remarks.Text = "Remarks:";
             // 
@@ -100,20 +95,20 @@
             // 
             this.tbMachineID.BackColor = System.Drawing.Color.Gray;
             this.tbMachineID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbMachineID.Location = new System.Drawing.Point(248, 112);
-            this.tbMachineID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMachineID.Location = new System.Drawing.Point(331, 138);
+            this.tbMachineID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMachineID.Name = "tbMachineID";
-            this.tbMachineID.Size = new System.Drawing.Size(98, 20);
+            this.tbMachineID.Size = new System.Drawing.Size(130, 22);
             this.tbMachineID.TabIndex = 6;
             // 
             // tbDate
             // 
             this.tbDate.BackColor = System.Drawing.Color.Gray;
             this.tbDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDate.Location = new System.Drawing.Point(248, 150);
-            this.tbDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDate.Location = new System.Drawing.Point(331, 185);
+            this.tbDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(141, 20);
+            this.tbDate.Size = new System.Drawing.Size(187, 22);
             this.tbDate.TabIndex = 7;
             // 
             // tbCost
@@ -121,10 +116,10 @@
             this.tbCost.BackColor = System.Drawing.Color.Gray;
             this.tbCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCost.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbCost.Location = new System.Drawing.Point(248, 183);
-            this.tbCost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCost.Location = new System.Drawing.Point(331, 225);
+            this.tbCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbCost.Name = "tbCost";
-            this.tbCost.Size = new System.Drawing.Size(98, 20);
+            this.tbCost.Size = new System.Drawing.Size(130, 22);
             this.tbCost.TabIndex = 8;
             this.tbCost.TextChanged += new System.EventHandler(this.tbCost_TextChanged);
             // 
@@ -132,20 +127,20 @@
             // 
             this.tbRemarks.BackColor = System.Drawing.Color.Gray;
             this.tbRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRemarks.Location = new System.Drawing.Point(248, 215);
-            this.tbRemarks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRemarks.Location = new System.Drawing.Point(331, 265);
+            this.tbRemarks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbRemarks.Name = "tbRemarks";
-            this.tbRemarks.Size = new System.Drawing.Size(264, 20);
+            this.tbRemarks.Size = new System.Drawing.Size(351, 22);
             this.tbRemarks.TabIndex = 9;
             // 
             // btnSubmit
             // 
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(296, 289);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(395, 356);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(118, 47);
+            this.btnSubmit.Size = new System.Drawing.Size(157, 58);
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -155,10 +150,10 @@
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(143, 289);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(191, 356);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(118, 47);
+            this.btnCancel.Size = new System.Drawing.Size(157, 58);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -166,10 +161,10 @@
             // 
             // frmMaintenance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(566, 386);
+            this.ClientSize = new System.Drawing.Size(755, 475);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbRemarks);
@@ -183,7 +178,7 @@
             this.Controls.Add(this.lbl_maintenance);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMaintenance";
             this.Text = "MaintenanceForm";
             this.ResumeLayout(false);

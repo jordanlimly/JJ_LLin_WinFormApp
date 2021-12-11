@@ -34,6 +34,16 @@
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPopularity = new System.Windows.Forms.Button();
+            this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.btnCloseWindow = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CrowdTab = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblTotalCrowd = new System.Windows.Forms.Label();
@@ -43,26 +53,18 @@
             this.lbDataComms = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PopularityTab = new System.Windows.Forms.TabPage();
+            this.panelPopularityChart = new System.Windows.Forms.Panel();
             this.MaintenanceTab = new System.Windows.Forms.TabPage();
+            this.panelUpForMtnce = new System.Windows.Forms.Panel();
             this.btnRetrieveMaintenanceRecord = new System.Windows.Forms.Button();
             this.btnAddMaintenanceRecord = new System.Windows.Forms.Button();
             this.panelNeedMtnce = new System.Windows.Forms.Panel();
             this.panelExpenditureChart = new System.Windows.Forms.Panel();
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.btnCloseWindow = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.sideNavPanel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPopularity = new System.Windows.Forms.Button();
-            this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.panelUpForMtnce = new System.Windows.Forms.Panel();
-            this.panelPopularityChart = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
             this.CurCrowdPanel.SuspendLayout();
@@ -70,8 +72,6 @@
             this.MaintenanceTab.SuspendLayout();
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
-            this.topPanel.SuspendLayout();
-            this.sideNavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -123,6 +123,130 @@
             this.tabControl1.Size = new System.Drawing.Size(1202, 658);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
+            // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.Black;
+            this.topPanel.Controls.Add(this.btnCloseWindow);
+            this.topPanel.Controls.Add(this.panel1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1202, 100);
+            this.topPanel.TabIndex = 5;
+            // 
+            // sideNavPanel
+            // 
+            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel5);
+            this.sideNavPanel.Controls.Add(this.panel4);
+            this.sideNavPanel.Controls.Add(this.panel3);
+            this.sideNavPanel.Controls.Add(this.panel2);
+            this.sideNavPanel.Controls.Add(this.btnPopularity);
+            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
+            this.sideNavPanel.Controls.Add(this.btnMaintenance);
+            this.sideNavPanel.Controls.Add(this.btnLogout);
+            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 100);
+            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideNavPanel.Name = "sideNavPanel";
+            this.sideNavPanel.Size = new System.Drawing.Size(178, 558);
+            this.sideNavPanel.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel5.Location = new System.Drawing.Point(4, 322);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(6, 35);
+            this.panel5.TabIndex = 5;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel4.Location = new System.Drawing.Point(4, 220);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(6, 35);
+            this.panel4.TabIndex = 4;
+            this.panel4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel3.Location = new System.Drawing.Point(4, 119);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(6, 35);
+            this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel2.Location = new System.Drawing.Point(4, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(6, 35);
+            this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
+            // 
+            // btnPopularity
+            // 
+            this.btnPopularity.BackColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPopularity.ForeColor = System.Drawing.Color.White;
+            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPopularity.Location = new System.Drawing.Point(12, 119);
+            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPopularity.Name = "btnPopularity";
+            this.btnPopularity.Size = new System.Drawing.Size(163, 35);
+            this.btnPopularity.TabIndex = 1;
+            this.btnPopularity.Text = "Game Popularity";
+            this.btnPopularity.UseVisualStyleBackColor = false;
+            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
+            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
+            // 
+            // btnCrowdLvl
+            // 
+            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
+            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
+            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrowdLvl.Name = "btnCrowdLvl";
+            this.btnCrowdLvl.Size = new System.Drawing.Size(163, 35);
+            this.btnCrowdLvl.TabIndex = 0;
+            this.btnCrowdLvl.Text = "Crowd Level";
+            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCrowdLvl.UseVisualStyleBackColor = false;
+            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
+            // 
+            // btnCloseWindow
+            // 
+            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
+            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseWindow.Location = new System.Drawing.Point(1142, 10);
+            this.btnCloseWindow.Name = "btnCloseWindow";
+            this.btnCloseWindow.Size = new System.Drawing.Size(48, 23);
+            this.btnCloseWindow.TabIndex = 1;
+            this.btnCloseWindow.UseVisualStyleBackColor = true;
+            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(178, 100);
+            this.panel1.TabIndex = 0;
             // 
             // CrowdTab
             // 
@@ -227,6 +351,13 @@
             this.PopularityTab.Text = "PopularityTab";
             this.PopularityTab.UseVisualStyleBackColor = true;
             // 
+            // panelPopularityChart
+            // 
+            this.panelPopularityChart.Location = new System.Drawing.Point(236, 132);
+            this.panelPopularityChart.Name = "panelPopularityChart";
+            this.panelPopularityChart.Size = new System.Drawing.Size(848, 354);
+            this.panelPopularityChart.TabIndex = 0;
+            // 
             // MaintenanceTab
             // 
             this.MaintenanceTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
@@ -245,6 +376,13 @@
             this.MaintenanceTab.Text = "MaintenanceTab";
             this.MaintenanceTab.UseVisualStyleBackColor = true;
             // 
+            // panelUpForMtnce
+            // 
+            this.panelUpForMtnce.Location = new System.Drawing.Point(847, 308);
+            this.panelUpForMtnce.Name = "panelUpForMtnce";
+            this.panelUpForMtnce.Size = new System.Drawing.Size(287, 144);
+            this.panelUpForMtnce.TabIndex = 5;
+            // 
             // btnRetrieveMaintenanceRecord
             // 
             this.btnRetrieveMaintenanceRecord.BackColor = System.Drawing.Color.Black;
@@ -258,6 +396,7 @@
             this.btnRetrieveMaintenanceRecord.TabIndex = 4;
             this.btnRetrieveMaintenanceRecord.Text = "Retrieve Record";
             this.btnRetrieveMaintenanceRecord.UseVisualStyleBackColor = false;
+            this.btnRetrieveMaintenanceRecord.Click += new System.EventHandler(this.btnRetrieveMaintenanceRecord_Click);
             // 
             // btnAddMaintenanceRecord
             // 
@@ -315,144 +454,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "MaintenanceTab";
             // 
-            // topPanel
-            // 
-            this.topPanel.BackColor = System.Drawing.Color.Black;
-            this.topPanel.Controls.Add(this.btnCloseWindow);
-            this.topPanel.Controls.Add(this.panel1);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1202, 100);
-            this.topPanel.TabIndex = 5;
-            // 
-            // btnCloseWindow
-            // 
-            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
-            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWindow.Location = new System.Drawing.Point(1142, 10);
-            this.btnCloseWindow.Name = "btnCloseWindow";
-            this.btnCloseWindow.Size = new System.Drawing.Size(48, 23);
-            this.btnCloseWindow.TabIndex = 1;
-            this.btnCloseWindow.UseVisualStyleBackColor = true;
-            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // sideNavPanel
-            // 
-            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
-            this.sideNavPanel.Controls.Add(this.panel5);
-            this.sideNavPanel.Controls.Add(this.panel4);
-            this.sideNavPanel.Controls.Add(this.panel3);
-            this.sideNavPanel.Controls.Add(this.panel2);
-            this.sideNavPanel.Controls.Add(this.btnPopularity);
-            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
-            this.sideNavPanel.Controls.Add(this.btnMaintenance);
-            this.sideNavPanel.Controls.Add(this.btnLogout);
-            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideNavPanel.Location = new System.Drawing.Point(0, 100);
-            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(178, 558);
-            this.sideNavPanel.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 322);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(6, 35);
-            this.panel5.TabIndex = 5;
-            this.panel5.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 220);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(6, 35);
-            this.panel4.TabIndex = 4;
-            this.panel4.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 119);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(6, 35);
-            this.panel3.TabIndex = 2;
-            this.panel3.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel2.Location = new System.Drawing.Point(4, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(6, 35);
-            this.panel2.TabIndex = 1;
-            this.panel2.Visible = false;
-            // 
-            // btnPopularity
-            // 
-            this.btnPopularity.BackColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPopularity.ForeColor = System.Drawing.Color.White;
-            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(12, 119);
-            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPopularity.Name = "btnPopularity";
-            this.btnPopularity.Size = new System.Drawing.Size(163, 35);
-            this.btnPopularity.TabIndex = 1;
-            this.btnPopularity.Text = "Game Popularity";
-            this.btnPopularity.UseVisualStyleBackColor = false;
-            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
-            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
-            // 
-            // btnCrowdLvl
-            // 
-            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
-            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
-            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrowdLvl.Name = "btnCrowdLvl";
-            this.btnCrowdLvl.Size = new System.Drawing.Size(163, 35);
-            this.btnCrowdLvl.TabIndex = 0;
-            this.btnCrowdLvl.Text = "Crowd Level";
-            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrowdLvl.UseVisualStyleBackColor = false;
-            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
-            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
-            // 
-            // panelUpForMtnce
-            // 
-            this.panelUpForMtnce.Location = new System.Drawing.Point(847, 308);
-            this.panelUpForMtnce.Name = "panelUpForMtnce";
-            this.panelUpForMtnce.Size = new System.Drawing.Size(287, 144);
-            this.panelUpForMtnce.TabIndex = 5;
-            // 
-            // panelPopularityChart
-            // 
-            this.panelPopularityChart.Location = new System.Drawing.Point(236, 132);
-            this.panelPopularityChart.Name = "panelPopularityChart";
-            this.panelPopularityChart.Size = new System.Drawing.Size(848, 354);
-            this.panelPopularityChart.TabIndex = 0;
-            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -467,6 +468,8 @@
             this.Text = "AdminMainpage";
             this.Load += new System.EventHandler(this.AdminMainpage_Load);
             this.tabControl1.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.sideNavPanel.ResumeLayout(false);
             this.CrowdTab.ResumeLayout(false);
             this.CrowdTab.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -478,8 +481,6 @@
             this.MaintenanceTab.PerformLayout();
             this.panelExpenditureChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
-            this.topPanel.ResumeLayout(false);
-            this.sideNavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
