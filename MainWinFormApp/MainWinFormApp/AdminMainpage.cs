@@ -539,5 +539,11 @@ namespace MainWinFormApp
                 myConnect.Close();
             }
         }
+
+        private void btnRetrieveMaintenanceRecord_Click(object sender, EventArgs e)
+        {
+            RUDMaintenance frm = new RUDMaintenance();
+            frm.ShowDialog();
+        }
     }
 }
