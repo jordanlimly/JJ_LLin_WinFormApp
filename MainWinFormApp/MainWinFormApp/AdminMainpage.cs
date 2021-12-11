@@ -674,6 +674,7 @@ namespace MainWinFormApp
             {
                 //Step 5: Close connection
                 myConnect.Close();
+
             }
         }
     }
