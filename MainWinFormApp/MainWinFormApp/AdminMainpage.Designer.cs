@@ -30,8 +30,10 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -65,6 +67,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.HourlyCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -76,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -181,6 +185,7 @@
             // CurCrowdPanel
             // 
             this.CurCrowdPanel.BackColor = System.Drawing.Color.GhostWhite;
+            this.CurCrowdPanel.Controls.Add(this.HourlyCrowdCht);
             this.CurCrowdPanel.Controls.Add(this.lblCurrentCrowd);
             this.CurCrowdPanel.Controls.Add(this.lbCurCrowdCount);
             this.CurCrowdPanel.Location = new System.Drawing.Point(231, 149);
@@ -329,18 +334,18 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea2);
+            chartArea3.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea3);
             legend1.Name = "Legend1";
             this.MaintenanceExpenditureChart.Legends.Add(legend1);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(3, -4);
             this.MaintenanceExpenditureChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series3);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(664, 401);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -485,6 +490,21 @@
             this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
             this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
             // 
+            // HourlyCrowdCht
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea2);
+            this.HourlyCrowdCht.Location = new System.Drawing.Point(16, 66);
+            this.HourlyCrowdCht.Name = "HourlyCrowdCht";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.MarkerColor = System.Drawing.Color.White;
+            series2.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series2);
+            this.HourlyCrowdCht.Size = new System.Drawing.Size(586, 251);
+            this.HourlyCrowdCht.TabIndex = 7;
+            this.HourlyCrowdCht.Text = "chart1";
+            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -513,6 +533,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.sideNavPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,5 +572,6 @@
         private System.Windows.Forms.Panel panelUpForMtnce;
         private System.Windows.Forms.Panel panelPopularityChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart TotalCrowdCht;
+        private System.Windows.Forms.DataVisualization.Charting.Chart HourlyCrowdCht;
     }
 }

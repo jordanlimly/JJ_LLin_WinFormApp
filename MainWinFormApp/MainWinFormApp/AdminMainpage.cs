@@ -81,7 +81,8 @@ namespace MainWinFormApp
 
                 //update database
                 addCrowdRecord(Convert.ToDateTime(strTime), 1);
-                loadDBtoChart();
+                loadDBtoTotalCrowdCht();
+                loadDBtoHourlyCht();
             }
             else if (strDistanceValue == "Out")
             {
@@ -94,6 +95,7 @@ namespace MainWinFormApp
 
                     //update database
                     addCrowdRecord(Convert.ToDateTime(strTime), -1);
+                    loadDBtoHourlyCht();
                 }
             }
 
@@ -304,7 +306,8 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
-            loadDBtoChart();
+            loadDBtoTotalCrowdCht();
+            loadDBtoHourlyCht();
             
             
         }
@@ -338,8 +341,11 @@ namespace MainWinFormApp
         private void AdminMainpage_Load(object sender, EventArgs e)
         {
             InitComms();
-            initChartProperties();
-            loadDBtoChart();
+            initTotalCrowdChtProperties();
+            loadDBtoTotalCrowdCht();
+            initHourlyCrowdChtProperties();
+            loadDBtoHourlyCht();
+
         }
 
         private void lbDataComms_SelectedIndexChanged(object sender, EventArgs e)
@@ -412,7 +418,7 @@ namespace MainWinFormApp
             cht.Series[0].IsXValueIndexed = false; //This must be false for AxisX max and min to work
         } //End of setXAxisDisplayRange()
 
-        private void initChartProperties()
+        private void initTotalCrowdChtProperties()
         {
             TotalCrowdCht.BackColor = getColor(243, 223, 193);
             TotalCrowdCht.BackGradientStyle = GradientStyle.TopBottom;
@@ -469,7 +475,7 @@ namespace MainWinFormApp
             chartArea1.AxisY.LabelStyle.Font = labelFont;
             chartArea1.AxisY.LineColor = colorGridLines;
             chartArea1.AxisY.MajorGrid.LineColor = colorGridLines;
-            chartArea1.AxisY.Interval = 2;
+            chartArea1.AxisY.Interval = 5;
             chartArea1.AxisY.IsStartedFromZero = true;
 
             // Line Graph Data points
@@ -488,9 +494,9 @@ namespace MainWinFormApp
             //series1.ToolTip = "Timestamp: #VALX{d MMM yyyy H:mm:ss}, Value : #VAL";
 
 
-        }//End of initChartProperties()
+        }//End of initTotalCrowdChtProperties()
 
-        private void loadDBtoChart()
+        private void loadDBtoTotalCrowdCht()
         {
             //Step 1: Create connection
             SqlConnection myConnect = new SqlConnection(strConnectionString);
@@ -528,6 +534,137 @@ namespace MainWinFormApp
 
                 //clears and reload series data if there are existing data on chart
                 TotalCrowdCht.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message.ToString());
+            }
+            finally
+            {
+                //Step 5: Close connection
+                myConnect.Close();
+            }
+        }
+
+        private void initHourlyCrowdChtProperties()
+        {
+            HourlyCrowdCht.BackColor = getColor(243, 223, 193);
+            HourlyCrowdCht.BackGradientStyle = GradientStyle.TopBottom;
+            HourlyCrowdCht.BorderlineColor = getColor(181, 64, 1);
+            HourlyCrowdCht.BorderlineDashStyle = ChartDashStyle.Solid;
+            HourlyCrowdCht.BorderlineWidth = 2;
+
+            //Title
+            Title title1 = new Title();
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 7.25F, System.Drawing.FontStyle.Bold);
+            title1.Text = "Hourly Crowd";
+            HourlyCrowdCht.Titles.Add(title1);
+
+            Font labelFont = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
+
+            //Graph legend
+            //Legend legend1 = chart1.Legends[0];
+            //legend1.BackColor = Color.Transparent;
+            //legend1.Enabled = true;
+            //legend1.Font = labelFont;
+
+            //Chart area is the whole X-Y axis area
+            Color colorGridLines = getColor(64, 64, 64, 64);
+            ChartArea chartArea1 = HourlyCrowdCht.ChartAreas[0];
+            chartArea1.BackColor = Color.OldLace;
+            chartArea1.BackGradientStyle = GradientStyle.TopBottom;
+            chartArea1.BorderColor = colorGridLines;
+            chartArea1.BorderDashStyle = ChartDashStyle.Solid;
+            chartArea1.ShadowColor = Color.Transparent;
+
+            //X-Axis settings
+            chartArea1.AxisX.LabelStyle.Font = labelFont;
+            chartArea1.AxisX.LineColor = colorGridLines;
+            chartArea1.AxisX.MajorGrid.LineColor = colorGridLines;
+
+            chartArea1.AxisX.IntervalType = DateTimeIntervalType.Hours;
+            chartArea1.AxisX.Interval = 1;
+            //DateTime minDate = getDateTime(2021, 12, 5, 0, 0, 0);
+            int curYear = Convert.ToInt32(DateTime.Now.Year);
+            int curMonth = Convert.ToInt32(DateTime.Now.Month);
+            int curDay = Convert.ToInt32(DateTime.Now.Day);
+            int curHour = Convert.ToInt32(DateTime.Now.Hour);
+            DateTime maxDate = getDateTime(curYear, curMonth, curDay, curHour, 0, 0);
+            //DateTime maxDate = getDateTime(2021, 12, 12, 0, 0, 0);
+            DateTime minDate = maxDate.AddHours(-8);
+
+
+            setXAxisDisplayRange(HourlyCrowdCht, minDate, maxDate);
+
+            //chartArea1.AxisX.LabelStyle.Format = "hh:ss";
+            // You can change to the below formats as well depending on your needs. 
+            //chartArea1.AxisX.LabelStyle.Format = "MMM dd";
+            chartArea1.AxisX.LabelStyle.Format = "h tt";
+            //chartAreal.AxisX.LabelStyle.Format "yyyy MMM dd HH:mm";
+            //chartAreal.AxisX.LabelStyle.Format="MMM dd HH:mm:ss";
+
+            // Y-Axis Settings
+            chartArea1.AxisY.LabelStyle.Font = labelFont;
+            chartArea1.AxisY.LineColor = colorGridLines;
+            chartArea1.AxisY.MajorGrid.LineColor = colorGridLines;
+            chartArea1.AxisY.Interval = 2;
+            chartArea1.AxisY.IsStartedFromZero = true;
+
+            // Line Graph Data points
+
+            Series series1 = HourlyCrowdCht.Series[0];
+            series1.Name = "Temp"; // This will show up in the legend text
+            Color lineColor = getColor(26, 59, 185, 180);
+            series1.BorderColor = lineColor; series1.ChartType = SeriesChartType.Spline;
+            series1.XValueType = ChartValueType.DateTime;
+            series1.YValueType = ChartValueType.Double;
+            series1.MarkerStyle = MarkerStyle.Circle;
+            series1.MarkerSize = 6;
+            series1.MarkerBorderColor = lineColor;
+            series1.MarkerColor = lineColor;
+            //Hover cursor on point to show
+            //series1.ToolTip = "Timestamp: #VALX{d MMM yyyy H:mm:ss}, Value : #VAL";
+
+
+        }//End of initTotalCrowdChtProperties()
+
+        private void loadDBtoHourlyCht()
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create SQL command
+            //string curDate = DateTime.Now.ToString("dd/MM/yyyy");
+            string todaydate = DateTime.Now.Date.ToString();
+            //String strCommandText = "Select * from CrowdLevelTable where CONVERT(VARCHAR, DateTime , 103) = '5/12/2021'";
+            //String strCommandText = "Select * from CrowdLevelTable WHERE Year(DateTime) = " + curYear + "AND Month(DateTime) = " + curMonth +
+            //    "AND Day(DateTime) = " + curDay + "AND Hour(DateTime) = " + curHour + "AND Minute(DateTime) = " + curMin;
+            //String strCommandText = "Select Datepart(Hour, [DateTime]) byHourly, sum(EnterExit) sumCol from CrowdLevelTable WHERE DateOnly = Convert(Date, '" + todaydate + "', 103) Group By Datepart(Hour, [DateTime])";
+            String strCommandText = "Select Datepart(Hour, [DateTime]) byHourly, Convert(DateTime, (Convert(Varchar, DateOnly)+ ' ' + Convert(Varchar, Datepart(Hour, [DateTime]))+':00:00')) newDate, sum(EnterExit) sumCol from CrowdLevelTable WHERE DateOnly = Convert(Date, '11/12/2021', 103) Group By Datepart(Hour, [DateTime]), DateOnly";
+
+            try
+            {
+                //Step 3. Create a Data Adapter to retrieve data from Table in Database
+                SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+                // create SELECT, DELETE, INSERT, UPDATE commands for data adapter
+                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                // STEP 4: Access data: Pill the Dataset using Data Adapter Fill method
+                // Note: We do NOT need to open database connection
+                // as data adapter does it internally
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                Console.WriteLine("The Dataset Rows = " + ds.Tables[0].Rows.Count);
+                HourlyCrowdCht.DataSource = ds;
+
+                // Chart X - Axis take from this Database field
+                HourlyCrowdCht.Series[0].XValueMember = "newDate";
+
+                //Chart Y-Axis take from this Database field.
+                HourlyCrowdCht.Series[0].YValueMembers = "sumCol";
+
+                //clears and reload series data if there are existing data on chart
+                HourlyCrowdCht.DataBind();
             }
             catch (SqlException ex)
             {
