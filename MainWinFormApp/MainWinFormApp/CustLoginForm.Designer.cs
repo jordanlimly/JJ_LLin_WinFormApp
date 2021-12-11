@@ -81,7 +81,7 @@
             this.btnLogin.Location = new System.Drawing.Point(171, 290);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(103, 28);
+            this.btnLogin.Size = new System.Drawing.Size(104, 43);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.btnCancel.Location = new System.Drawing.Point(349, 290);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 28);
+            this.btnCancel.Size = new System.Drawing.Size(104, 43);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
