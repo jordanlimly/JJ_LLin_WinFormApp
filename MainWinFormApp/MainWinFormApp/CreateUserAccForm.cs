@@ -14,11 +14,13 @@ namespace MainWinFormApp
 {
     public partial class frmCreateuserAcc : Form
     {
+       
         private string strConnectionString = ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
         public frmCreateuserAcc()
         {
             InitializeComponent();
+            
         }
 
         // i accidentally clicked the title im so sworryy :(((((
@@ -47,12 +49,19 @@ namespace MainWinFormApp
             cmd.Parameters.AddWithValue("@secqn2", combSQ2.SelectedItem.ToString());
             cmd.Parameters.AddWithValue("@secqn2ans", tbSQ2.Text);
 
+          
+
             myConnect.Open();
             result = cmd.ExecuteNonQuery();
 
             if (result > 0)
-           
+            {
                 MessageBox.Show("Account Created!");
+                CustLoginForm frm = new CustLoginForm();
+                this.Hide();
+                frm.ShowDialog();
+                this.Close();
+            }
                 
             else
                 MessageBox.Show("Account Creation unsuccessful!");
@@ -61,5 +70,12 @@ namespace MainWinFormApp
             Close();
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

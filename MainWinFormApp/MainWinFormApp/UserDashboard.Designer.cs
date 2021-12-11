@@ -35,7 +35,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.pBUserAvatar = new System.Windows.Forms.PictureBox();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -152,7 +152,7 @@
             // 
             // panelUser
             // 
-            this.panelUser.Controls.Add(this.label1);
+            this.panelUser.Controls.Add(this.lblUsername);
             this.panelUser.Controls.Add(this.pBUserAvatar);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUser.Location = new System.Drawing.Point(0, 80);
@@ -160,16 +160,16 @@
             this.panelUser.Size = new System.Drawing.Size(178, 144);
             this.panelUser.TabIndex = 2;
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(60, 103);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(69, 15);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "User Name";
             // 
             // pBUserAvatar
             // 
@@ -208,12 +208,13 @@
             this.btnX.BackColor = System.Drawing.Color.Transparent;
             this.btnX.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
             this.btnX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnX.FlatAppearance.BorderSize = 0;
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnX.ForeColor = System.Drawing.Color.White;
-            this.btnX.Location = new System.Drawing.Point(679, 11);
+            this.btnX.Location = new System.Drawing.Point(678, 12);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(36, 19);
+            this.btnX.Size = new System.Drawing.Size(28, 22);
             this.btnX.TabIndex = 2;
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -238,7 +239,6 @@
             this.pnlCurrCreds.Name = "pnlCurrCreds";
             this.pnlCurrCreds.Size = new System.Drawing.Size(258, 130);
             this.pnlCurrCreds.TabIndex = 2;
-            this.pnlCurrCreds.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCurrCreds_Paint);
             // 
             // lblCurrentCredits
             // 
@@ -378,7 +378,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Label lblDashboardText;
         private System.Windows.Forms.Panel pnlCurrCreds;
@@ -393,5 +392,6 @@
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel panelGMU;
         private System.Windows.Forms.Label lblGMU;
+        private System.Windows.Forms.Label lblUsername;
     }
 }
