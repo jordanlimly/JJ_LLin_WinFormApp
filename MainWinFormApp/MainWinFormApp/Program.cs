@@ -23,7 +23,8 @@ namespace MainWinFormApp
             //Application.Run(new frmCreateuserAcc());
             //Application.Run(new AdminMainpage());
             //Application.Run(new UserDashboard());
-            Application.Run(new PasswordResetForm());
+            //Application.Run(new PasswordResetForm());
+            //Application.Run(new LogoutForm());
         }
     }
 }

@@ -50,6 +50,7 @@
             this.pnlCurrPoints = new System.Windows.Forms.Panel();
             this.lblCurrentPoints = new System.Windows.Forms.Label();
             this.panelGMU = new System.Windows.Forms.Panel();
+            this.pictureBoxGMU = new System.Windows.Forms.PictureBox();
             this.lblGMU = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelUser.SuspendLayout();
@@ -60,6 +61,7 @@
             this.pnlAccumPoints.SuspendLayout();
             this.pnlCurrPoints.SuspendLayout();
             this.panelGMU.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMU)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -206,16 +208,17 @@
             // btnX
             // 
             this.btnX.BackColor = System.Drawing.Color.Transparent;
-            this.btnX.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
             this.btnX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnX.FlatAppearance.BorderSize = 0;
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnX.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.Color.White;
-            this.btnX.Location = new System.Drawing.Point(678, 12);
+            this.btnX.Location = new System.Drawing.Point(678, 3);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(28, 22);
+            this.btnX.Size = new System.Drawing.Size(37, 32);
             this.btnX.TabIndex = 2;
+            this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
@@ -311,12 +314,22 @@
             // 
             this.panelGMU.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
             this.panelGMU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGMU.Controls.Add(this.pictureBoxGMU);
             this.panelGMU.Controls.Add(this.lblGMU);
             this.panelGMU.Location = new System.Drawing.Point(178, 80);
             this.panelGMU.Name = "panelGMU";
             this.panelGMU.Size = new System.Drawing.Size(718, 447);
             this.panelGMU.TabIndex = 4;
             this.panelGMU.Visible = false;
+            // 
+            // pictureBoxGMU
+            // 
+            this.pictureBoxGMU.Image = global::MainWinFormApp.Properties.Resources.barchart_static;
+            this.pictureBoxGMU.Location = new System.Drawing.Point(117, 86);
+            this.pictureBoxGMU.Name = "pictureBoxGMU";
+            this.pictureBoxGMU.Size = new System.Drawing.Size(482, 289);
+            this.pictureBoxGMU.TabIndex = 5;
+            this.pictureBoxGMU.TabStop = false;
             // 
             // lblGMU
             // 
@@ -364,6 +377,7 @@
             this.pnlCurrPoints.PerformLayout();
             this.panelGMU.ResumeLayout(false);
             this.panelGMU.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMU)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,5 +407,6 @@
         private System.Windows.Forms.Panel panelGMU;
         private System.Windows.Forms.Label lblGMU;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.PictureBox pictureBoxGMU;
     }
 }
