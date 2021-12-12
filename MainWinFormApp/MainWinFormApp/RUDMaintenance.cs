@@ -95,5 +95,47 @@ namespace MainWinFormApp
             myConnect.Close();
             return result;
         }
+
+        private int DeleteMaintenanceRecord(string strGameMachineID, string strMaintenanceDate)
+        {
+            int result = 0;
+
+            //create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //create command
+            String strCommandText = "DELETE FROM GameMachineMaintenance WHERE GameMachineID = @GMachineID AND MaintenanceDate = @MtnceDate";
+            SqlCommand deleteValue = new SqlCommand(strCommandText, myConnect);
+            deleteValue.Parameters.AddWithValue("@GMachineID", strGameMachineID);
+            deleteValue.Parameters.AddWithValue("@MtnceDate", strMaintenanceDate);
+
+            //open connection
+            myConnect.Open();
+
+            //execute command
+            result = deleteValue.ExecuteNonQuery();
+
+            //close connection
+            myConnect.Close();
+
+            return result;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //prompt admin to confirm deletion of maintenance record
+            if (MessageBox.Show("Confirm Delete?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (DeleteMaintenanceRecord(tbGameMachineID.Text, tbDate.Text) > 0)
+                    MessageBox.Show("Maintenance Record for Game Machine " + tbGameMachineID.Text + " on " + tbDate.Text + " has been deleted");
+                else
+                    MessageBox.Show("Maintenance Record could not be deleted!");
+            }
+
+            tbGameMachineID.Text = String.Empty;
+            tbDate.Text = String.Empty;
+            tbCost.Text = String.Empty;
+            tbRemarks.Text = String.Empty;
+        }
     }
 }
