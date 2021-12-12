@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.TextBox();
-            this.lblCardID = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tbuCardID = new System.Windows.Forms.TextBox();
@@ -43,49 +40,10 @@
             this.tbSQ2 = new System.Windows.Forms.TextBox();
             this.combSQ2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblCardID = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.Black;
-            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblName.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblName.Location = new System.Drawing.Point(134, 110);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2);
-            this.lblName.Name = "lblName";
-            this.lblName.ReadOnly = true;
-            this.lblName.Size = new System.Drawing.Size(52, 18);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.BackColor = System.Drawing.Color.Black;
-            this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblEmail.Location = new System.Drawing.Point(134, 156);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.ReadOnly = true;
-            this.lblEmail.Size = new System.Drawing.Size(44, 18);
-            this.lblEmail.TabIndex = 1;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblCardID
-            // 
-            this.lblCardID.BackColor = System.Drawing.Color.Black;
-            this.lblCardID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblCardID.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblCardID.Location = new System.Drawing.Point(134, 202);
-            this.lblCardID.Margin = new System.Windows.Forms.Padding(2);
-            this.lblCardID.Name = "lblCardID";
-            this.lblCardID.ReadOnly = true;
-            this.lblCardID.Size = new System.Drawing.Size(63, 18);
-            this.lblCardID.TabIndex = 2;
-            this.lblCardID.Text = "Card ID:";
             // 
             // tbName
             // 
@@ -235,12 +193,51 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Security Question 2:";
             // 
+            // lblCardID
+            // 
+            this.lblCardID.AutoSize = true;
+            this.lblCardID.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCardID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblCardID.Location = new System.Drawing.Point(131, 203);
+            this.lblCardID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCardID.Name = "lblCardID";
+            this.lblCardID.Size = new System.Drawing.Size(68, 17);
+            this.lblCardID.TabIndex = 20;
+            this.lblCardID.Text = "Card ID:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblEmail.Location = new System.Drawing.Point(131, 157);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 17);
+            this.lblEmail.TabIndex = 21;
+            this.lblEmail.Text = "Email:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblName.Location = new System.Drawing.Point(131, 111);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(52, 17);
+            this.lblName.TabIndex = 22;
+            this.lblName.Text = "Name:";
+            // 
             // CustUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(592, 577);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblCardID);
             this.Controls.Add(this.tbSQ2);
             this.Controls.Add(this.combSQ2);
             this.Controls.Add(this.label2);
@@ -253,9 +250,6 @@
             this.Controls.Add(this.tbuCardID);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.tbName);
-            this.Controls.Add(this.lblCardID);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustUpdateForm";
@@ -267,10 +261,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox lblName;
-        private System.Windows.Forms.TextBox lblEmail;
-        private System.Windows.Forms.TextBox lblCardID;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox tbuCardID;
@@ -283,5 +273,8 @@
         private System.Windows.Forms.TextBox tbSQ2;
         private System.Windows.Forms.ComboBox combSQ2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCardID;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblName;
     }
 }
