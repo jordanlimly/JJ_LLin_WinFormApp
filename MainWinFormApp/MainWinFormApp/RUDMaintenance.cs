@@ -63,5 +63,37 @@ namespace MainWinFormApp
             reader.Close();
             myConnect.Close();
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (ModifyMaintenanceRecord() > 0)
+                MessageBox.Show("Maintenance Record Successfully Modified!");
+            else
+                MessageBox.Show("Maintenance Record Modification Failed!");
+        }
+
+        private int ModifyMaintenanceRecord()
+        {
+            // create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+            String strCommandText = "UPDATE GameMachineMaintenance SET MaintenanceFee = @NewMtnceFee, Remarks = @NewMtnceRemarks WHERE GameMachineID = @GMachineID AND MaintenanceDate = @MtnceDate";
+            SqlCommand modifyValue = new SqlCommand(strCommandText, myConnect);
+
+            //creating command
+            modifyValue.Parameters.AddWithValue("GMachineID", tbGameMachineID.Text);
+            modifyValue.Parameters.AddWithValue("MtnceDate", tbDate.Text);
+            modifyValue.Parameters.AddWithValue("NewMtnceFee", tbCost.Text);
+            modifyValue.Parameters.AddWithValue("NewMtnceRemarks", tbRemarks.Text);
+
+            //open connection
+            myConnect.Open();
+            //execute command
+            //indicate number of records modified
+            int result = modifyValue.ExecuteNonQuery();
+
+            //close
+            myConnect.Close();
+            return result;
+        }
     }
 }
