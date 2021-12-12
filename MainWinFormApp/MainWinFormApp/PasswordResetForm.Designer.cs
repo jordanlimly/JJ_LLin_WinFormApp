@@ -42,10 +42,10 @@
             // lblOldpw
             // 
             this.lblOldpw.AutoSize = true;
-            this.lblOldpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOldpw.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOldpw.Location = new System.Drawing.Point(80, 91);
             this.lblOldpw.Name = "lblOldpw";
-            this.lblOldpw.Size = new System.Drawing.Size(110, 18);
+            this.lblOldpw.Size = new System.Drawing.Size(116, 17);
             this.lblOldpw.TabIndex = 0;
             this.lblOldpw.Text = "Old Password: ";
             this.lblOldpw.Click += new System.EventHandler(this.lblOldpw_Click);
@@ -53,10 +53,10 @@
             // lblResetpw
             // 
             this.lblResetpw.AutoSize = true;
-            this.lblResetpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.lblResetpw.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResetpw.Location = new System.Drawing.Point(128, 29);
             this.lblResetpw.Name = "lblResetpw";
-            this.lblResetpw.Size = new System.Drawing.Size(248, 37);
+            this.lblResetpw.Size = new System.Drawing.Size(237, 36);
             this.lblResetpw.TabIndex = 1;
             this.lblResetpw.Text = "Reset Password";
             this.lblResetpw.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,20 +64,20 @@
             // lblNewpw
             // 
             this.lblNewpw.AutoSize = true;
-            this.lblNewpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewpw.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewpw.Location = new System.Drawing.Point(80, 136);
             this.lblNewpw.Name = "lblNewpw";
-            this.lblNewpw.Size = new System.Drawing.Size(113, 18);
+            this.lblNewpw.Size = new System.Drawing.Size(117, 17);
             this.lblNewpw.TabIndex = 2;
             this.lblNewpw.Text = "New Password:";
             // 
             // lblCfmpw
             // 
             this.lblCfmpw.AutoSize = true;
-            this.lblCfmpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCfmpw.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCfmpw.Location = new System.Drawing.Point(80, 179);
             this.lblCfmpw.Name = "lblCfmpw";
-            this.lblCfmpw.Size = new System.Drawing.Size(136, 18);
+            this.lblCfmpw.Size = new System.Drawing.Size(145, 17);
             this.lblCfmpw.TabIndex = 3;
             this.lblCfmpw.Text = "Confirm Password:";
             // 
@@ -85,7 +85,7 @@
             // 
             this.tbOldpw.BackColor = System.Drawing.Color.Gray;
             this.tbOldpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbOldpw.Location = new System.Drawing.Point(218, 93);
+            this.tbOldpw.Location = new System.Drawing.Point(241, 88);
             this.tbOldpw.Name = "tbOldpw";
             this.tbOldpw.Size = new System.Drawing.Size(156, 20);
             this.tbOldpw.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.tbNewpw.BackColor = System.Drawing.Color.Gray;
             this.tbNewpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbNewpw.Location = new System.Drawing.Point(218, 136);
+            this.tbNewpw.Location = new System.Drawing.Point(241, 133);
             this.tbNewpw.Name = "tbNewpw";
             this.tbNewpw.Size = new System.Drawing.Size(156, 20);
             this.tbNewpw.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             this.tbCfmpw.BackColor = System.Drawing.Color.Gray;
             this.tbCfmpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCfmpw.Location = new System.Drawing.Point(218, 179);
+            this.tbCfmpw.Location = new System.Drawing.Point(241, 176);
             this.tbCfmpw.Name = "tbCfmpw";
             this.tbCfmpw.Size = new System.Drawing.Size(156, 20);
             this.tbCfmpw.TabIndex = 6;
@@ -111,7 +111,7 @@
             // submitBtn
             // 
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.submitBtn.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.Location = new System.Drawing.Point(311, 234);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(104, 43);
@@ -122,7 +122,7 @@
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnCancel.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(83, 234);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
