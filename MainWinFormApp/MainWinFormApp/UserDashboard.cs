@@ -8,21 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace MainWinFormApp
 {
     public partial class UserDashboard : Form
     {
+        // retrieve connection information from App.Config
+        private string strConnectionString = ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
-    (
-        int nLeftRect,
-        int nTopRect,
-        int nRightRect,
-        int nBottomRect,
-        int nWidthEllipse,
-        int nHeightEllipse
-    );
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
 
         public UserDashboard()
         {
@@ -71,11 +77,6 @@ namespace MainWinFormApp
             btnLogout.BackColor = Color.FromArgb(46, 51, 73);
             LogoutForm frm = new LogoutForm();
             frm.ShowDialog();
-        }
-
-        private void pnlCurrCreds_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnGameMachineUsage_Click(object sender, EventArgs e)

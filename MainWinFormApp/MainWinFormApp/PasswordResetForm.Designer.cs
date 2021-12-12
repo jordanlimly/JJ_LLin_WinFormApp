@@ -43,10 +43,9 @@
             // 
             this.lblOldpw.AutoSize = true;
             this.lblOldpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOldpw.Location = new System.Drawing.Point(107, 112);
-            this.lblOldpw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOldpw.Location = new System.Drawing.Point(80, 91);
             this.lblOldpw.Name = "lblOldpw";
-            this.lblOldpw.Size = new System.Drawing.Size(137, 24);
+            this.lblOldpw.Size = new System.Drawing.Size(110, 18);
             this.lblOldpw.TabIndex = 0;
             this.lblOldpw.Text = "Old Password: ";
             this.lblOldpw.Click += new System.EventHandler(this.lblOldpw_Click);
@@ -55,10 +54,9 @@
             // 
             this.lblResetpw.AutoSize = true;
             this.lblResetpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.lblResetpw.Location = new System.Drawing.Point(171, 36);
-            this.lblResetpw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResetpw.Location = new System.Drawing.Point(128, 29);
             this.lblResetpw.Name = "lblResetpw";
-            this.lblResetpw.Size = new System.Drawing.Size(311, 46);
+            this.lblResetpw.Size = new System.Drawing.Size(248, 37);
             this.lblResetpw.TabIndex = 1;
             this.lblResetpw.Text = "Reset Password";
             this.lblResetpw.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -67,10 +65,9 @@
             // 
             this.lblNewpw.AutoSize = true;
             this.lblNewpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewpw.Location = new System.Drawing.Point(107, 167);
-            this.lblNewpw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNewpw.Location = new System.Drawing.Point(80, 136);
             this.lblNewpw.Name = "lblNewpw";
-            this.lblNewpw.Size = new System.Drawing.Size(141, 24);
+            this.lblNewpw.Size = new System.Drawing.Size(113, 18);
             this.lblNewpw.TabIndex = 2;
             this.lblNewpw.Text = "New Password:";
             // 
@@ -78,64 +75,67 @@
             // 
             this.lblCfmpw.AutoSize = true;
             this.lblCfmpw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCfmpw.Location = new System.Drawing.Point(107, 220);
-            this.lblCfmpw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCfmpw.Location = new System.Drawing.Point(80, 179);
             this.lblCfmpw.Name = "lblCfmpw";
-            this.lblCfmpw.Size = new System.Drawing.Size(167, 24);
+            this.lblCfmpw.Size = new System.Drawing.Size(136, 18);
             this.lblCfmpw.TabIndex = 3;
             this.lblCfmpw.Text = "Confirm Password:";
             // 
             // tbOldpw
             // 
-            this.tbOldpw.Location = new System.Drawing.Point(291, 114);
-            this.tbOldpw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbOldpw.BackColor = System.Drawing.Color.Gray;
+            this.tbOldpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbOldpw.Location = new System.Drawing.Point(218, 93);
             this.tbOldpw.Name = "tbOldpw";
-            this.tbOldpw.Size = new System.Drawing.Size(206, 22);
+            this.tbOldpw.Size = new System.Drawing.Size(156, 20);
             this.tbOldpw.TabIndex = 4;
             // 
             // tbNewpw
             // 
-            this.tbNewpw.Location = new System.Drawing.Point(291, 167);
-            this.tbNewpw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNewpw.BackColor = System.Drawing.Color.Gray;
+            this.tbNewpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNewpw.Location = new System.Drawing.Point(218, 136);
             this.tbNewpw.Name = "tbNewpw";
-            this.tbNewpw.Size = new System.Drawing.Size(206, 22);
+            this.tbNewpw.Size = new System.Drawing.Size(156, 20);
             this.tbNewpw.TabIndex = 5;
             // 
             // tbCfmpw
             // 
-            this.tbCfmpw.Location = new System.Drawing.Point(291, 220);
-            this.tbCfmpw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCfmpw.BackColor = System.Drawing.Color.Gray;
+            this.tbCfmpw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCfmpw.Location = new System.Drawing.Point(218, 179);
             this.tbCfmpw.Name = "tbCfmpw";
-            this.tbCfmpw.Size = new System.Drawing.Size(206, 22);
+            this.tbCfmpw.Size = new System.Drawing.Size(156, 20);
             this.tbCfmpw.TabIndex = 6;
             // 
             // submitBtn
             // 
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.submitBtn.Location = new System.Drawing.Point(415, 288);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.submitBtn.Location = new System.Drawing.Point(311, 234);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(120, 57);
+            this.submitBtn.Size = new System.Drawing.Size(104, 43);
             this.submitBtn.TabIndex = 7;
             this.submitBtn.Text = "Reset ";
             this.submitBtn.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnCancel.Location = new System.Drawing.Point(111, 288);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(83, 234);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(120, 57);
+            this.btnCancel.Size = new System.Drawing.Size(104, 43);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // PasswordResetForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 375);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(484, 305);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.tbCfmpw);
@@ -145,7 +145,8 @@
             this.Controls.Add(this.lblNewpw);
             this.Controls.Add(this.lblResetpw);
             this.Controls.Add(this.lblOldpw);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PasswordResetForm";
             this.Text = "PasswordResetForm";
             this.ResumeLayout(false);

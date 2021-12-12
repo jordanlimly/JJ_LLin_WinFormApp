@@ -19,6 +19,7 @@ namespace MainWinFormApp
         //retrieve connection information
         string strConnectionString = 
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
+
         public frmMaintenance()
         {
             InitializeComponent();

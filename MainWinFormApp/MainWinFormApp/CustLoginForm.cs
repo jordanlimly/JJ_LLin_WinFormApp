@@ -20,7 +20,10 @@ namespace MainWinFormApp
         public CustLoginForm()
         {
             InitializeComponent();
+            
         }
+
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -42,7 +45,14 @@ namespace MainWinFormApp
                 myConnect.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
+                {
                     MessageBox.Show("Login Successful");
+                    UserDashboard frm = new UserDashboard();
+                    this.Hide();
+                    frm.ShowDialog();
+                    this.Close();
+                }
+                    
                 else
                     MessageBox.Show("Login Fail");
                 //Step 5: Close connection
