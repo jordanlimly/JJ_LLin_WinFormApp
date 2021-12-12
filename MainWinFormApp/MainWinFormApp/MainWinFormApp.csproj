@@ -99,6 +99,12 @@
     <Compile Include="ForgetPasswordForm.Designer.cs">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameMachineDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMachineDetails.Designer.cs">
+      <DependentUpon>GameMachineDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMachineDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMachineDetails.Designer.cs">
+      <DependentUpon>RMachineDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="RUDMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,9 @@
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameMachineDetails.resx">
+      <DependentUpon>GameMachineDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogoutForm.resx">
       <DependentUpon>LogoutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RMachineDetails.resx">
+      <DependentUpon>RMachineDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RUDMaintenance.resx">
       <DependentUpon>RUDMaintenance.cs</DependentUpon>
     </EmbeddedResource>

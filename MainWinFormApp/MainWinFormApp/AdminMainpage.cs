@@ -685,5 +685,17 @@ namespace MainWinFormApp
             RUDMaintenance frm = new RUDMaintenance();
             frm.ShowDialog();
         }
+
+        private void btnAddMachine_Click(object sender, EventArgs e)
+        {
+            GameMachineDetails frm = new GameMachineDetails();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            RMachineDetails frm = new RMachineDetails();
+            frm.ShowDialog();
+        }
     }
 }
