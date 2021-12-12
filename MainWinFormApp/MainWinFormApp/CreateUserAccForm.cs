@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace MainWinFormApp
 {
@@ -23,12 +24,6 @@ namespace MainWinFormApp
             
         }
 
-        // i accidentally clicked the title im so sworryy :(((((
-        private void lblCreateUserAcc_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             int result = 0;
@@ -38,37 +33,58 @@ namespace MainWinFormApp
                 " VALUES (@cardid, @name, @email, @pw, @mtier, @secqn1, @secqn1ans, @secqn2, @secqn2ans)";
 
             //WHERE clause
-            SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
-            cmd.Parameters.AddWithValue("@cardid", tbCardID.Text);
-            cmd.Parameters.AddWithValue("@name", tbFullName.Text);
-            cmd.Parameters.AddWithValue("@email", tbEmail.Text);
-            cmd.Parameters.AddWithValue("@pw", tbPassword.Text);
-            cmd.Parameters.AddWithValue("@mtier", "Bronze");
-            cmd.Parameters.AddWithValue("@secqn1", combSQ1.SelectedItem.ToString());
-            cmd.Parameters.AddWithValue("@secqn1ans", tbSQ1.Text);
-            cmd.Parameters.AddWithValue("@secqn2", combSQ2.SelectedItem.ToString());
-            cmd.Parameters.AddWithValue("@secqn2ans", tbSQ2.Text);
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@cardid", tbCardID.Text);
+            updateCmd.Parameters.AddWithValue("@name", tbFullName.Text);
+            updateCmd.Parameters.AddWithValue("@email", tbEmail.Text);
+            updateCmd.Parameters.AddWithValue("@pw", tbPassword.Text);
+            updateCmd.Parameters.AddWithValue("@mtier", "Bronze");
+            updateCmd.Parameters.AddWithValue("@secqn1", combSQ1.SelectedItem.ToString());
+            updateCmd.Parameters.AddWithValue("@secqn1ans", tbSQ1.Text);
+            updateCmd.Parameters.AddWithValue("@secqn2", combSQ2.SelectedItem.ToString());
+            updateCmd.Parameters.AddWithValue("@secqn2ans", tbSQ2.Text);
 
-          
+            Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            bool isValid = regex.IsMatch(tbEmail.Text.Trim());
 
-            myConnect.Open();
-            result = cmd.ExecuteNonQuery();
-
-            if (result > 0)
+            if (isValid || string.IsNullOrEmpty(tbEmail.Text))
             {
-                MessageBox.Show("Account Created!");
-                CustLoginForm frm = new CustLoginForm();
-                this.Hide();
-                frm.ShowDialog();
-                this.Close();
+                if (!string.IsNullOrEmpty(tbPassword.Text))
+                {
+                    if (tbPassword.Text == tbCfmPassword.Text)
+                    {
+                        myConnect.Open();
+                        result = updateCmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Account Created!");
+                            CustLoginForm frm = new CustLoginForm();
+                            this.Hide();
+                            frm.ShowDialog();
+                            this.Close();
+                        }
+
+                        else
+                            MessageBox.Show("Account Creation unsuccessful!");
+
+                        myConnect.Close();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Passwords not matching!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter password!");
+                }
             }
-                
             else
-                MessageBox.Show("Account Creation unsuccessful!");
-
-            myConnect.Close();
-            Close();
-
+            {
+                MessageBox.Show("Invalid Email!");
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

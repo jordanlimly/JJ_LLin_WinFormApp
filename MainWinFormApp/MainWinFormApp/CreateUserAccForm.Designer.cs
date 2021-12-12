@@ -60,7 +60,6 @@
             this.lblCreateUserAcc.Size = new System.Drawing.Size(229, 36);
             this.lblCreateUserAcc.TabIndex = 0;
             this.lblCreateUserAcc.Text = "Create Account";
-            this.lblCreateUserAcc.Click += new System.EventHandler(this.lblCreateUserAcc_Click);
             // 
             // lblFullname
             // 

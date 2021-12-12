@@ -33,7 +33,7 @@
             this.lblCardID = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbuCardID = new System.Windows.Forms.TextBox();
             this.lblSecurityQn = new System.Windows.Forms.Label();
             this.combSQ1 = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -108,16 +108,16 @@
             this.textBox5.Size = new System.Drawing.Size(196, 20);
             this.textBox5.TabIndex = 4;
             // 
-            // textBox6
+            // tbuCardID
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Gray;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(299, 200);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(197, 20);
-            this.textBox6.TabIndex = 5;
+            this.tbuCardID.BackColor = System.Drawing.Color.Gray;
+            this.tbuCardID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbuCardID.Location = new System.Drawing.Point(299, 200);
+            this.tbuCardID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbuCardID.Name = "tbuCardID";
+            this.tbuCardID.ReadOnly = true;
+            this.tbuCardID.Size = new System.Drawing.Size(197, 20);
+            this.tbuCardID.TabIndex = 5;
             // 
             // lblSecurityQn
             // 
@@ -173,6 +173,7 @@
             this.btnSubmit.TabIndex = 14;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label1
             // 
@@ -211,6 +212,11 @@
             this.combSQ2.BackColor = System.Drawing.Color.Gray;
             this.combSQ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSQ2.FormattingEnabled = true;
+            this.combSQ2.Items.AddRange(new object[] {
+            "What is your father\'s name?",
+            "What is your sibling\'s name(any)?",
+            "Are you a pet owner?",
+            "What is your favourite teacher\'s name?"});
             this.combSQ2.Location = new System.Drawing.Point(298, 337);
             this.combSQ2.Margin = new System.Windows.Forms.Padding(2);
             this.combSQ2.Name = "combSQ2";
@@ -244,7 +250,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.combSQ1);
             this.Controls.Add(this.lblSecurityQn);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbuCardID);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.lblCardID);
@@ -267,7 +273,7 @@
         private System.Windows.Forms.TextBox lblCardID;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbuCardID;
         private System.Windows.Forms.Label lblSecurityQn;
         private System.Windows.Forms.ComboBox combSQ1;
         private System.Windows.Forms.Button btnCancel;
