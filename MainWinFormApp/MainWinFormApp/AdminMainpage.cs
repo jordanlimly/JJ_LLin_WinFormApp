@@ -355,11 +355,13 @@ namespace MainWinFormApp
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            AdminLogoutForm frm = new AdminLogoutForm(); //redirect to logout window
+            frm.ShowDialog(); 
+
             panel5.Visible = true;
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
-
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)

@@ -16,5 +16,16 @@ namespace MainWinFormApp
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            AdminLoginForm frm = new AdminLoginForm();  //open login form
+            frm.ShowDialog();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
