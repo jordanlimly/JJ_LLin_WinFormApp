@@ -637,12 +637,12 @@ namespace MainWinFormApp
 
             //Step 2: Create SQL command
             //string curDate = DateTime.Now.ToString("dd/MM/yyyy");
-            string todaydate = DateTime.Now.Date.ToString();
+            string todaydate = DateTime.Now.Date.ToString("dd/MM/yyyy");
             //String strCommandText = "Select * from CrowdLevelTable where CONVERT(VARCHAR, DateTime , 103) = '5/12/2021'";
             //String strCommandText = "Select * from CrowdLevelTable WHERE Year(DateTime) = " + curYear + "AND Month(DateTime) = " + curMonth +
             //    "AND Day(DateTime) = " + curDay + "AND Hour(DateTime) = " + curHour + "AND Minute(DateTime) = " + curMin;
             //String strCommandText = "Select Datepart(Hour, [DateTime]) byHourly, sum(EnterExit) sumCol from CrowdLevelTable WHERE DateOnly = Convert(Date, '" + todaydate + "', 103) Group By Datepart(Hour, [DateTime])";
-            String strCommandText = "Select Datepart(Hour, [DateTime]) byHourly, Convert(DateTime, (Convert(Varchar, DateOnly)+ ' ' + Convert(Varchar, Datepart(Hour, [DateTime]))+':00:00')) newDate, sum(EnterExit) sumCol from CrowdLevelTable WHERE DateOnly = Convert(Date, '11/12/2021', 103) Group By Datepart(Hour, [DateTime]), DateOnly";
+            String strCommandText = "Select Datepart(Hour, [DateTime]) byHourly, Convert(DateTime, (Convert(Varchar, DateOnly)+ ' ' + Convert(Varchar, Datepart(Hour, [DateTime]))+':00:00')) newDate, sum(EnterExit) sumCol from CrowdLevelTable WHERE DateOnly = Convert(Date, '" + todaydate + "', 103) Group By Datepart(Hour, [DateTime]), DateOnly";
 
             try
             {
