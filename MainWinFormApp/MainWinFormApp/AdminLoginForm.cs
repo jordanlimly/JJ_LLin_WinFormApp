@@ -26,5 +26,13 @@ namespace MainWinFormApp
         {
             Application.Exit();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            AdminMainpage frm = new AdminMainpage();
+
+            if (tbStaffID.Text == "S1234" && tbPassword.Text == "1234")
+                frm.ShowDialog();
+        }
     }
 }
