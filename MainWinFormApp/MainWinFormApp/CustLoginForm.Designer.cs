@@ -104,6 +104,7 @@
             this.tbLoginPw.Location = new System.Drawing.Point(274, 202);
             this.tbLoginPw.Margin = new System.Windows.Forms.Padding(2);
             this.tbLoginPw.Name = "tbLoginPw";
+            this.tbLoginPw.PasswordChar = '*';
             this.tbLoginPw.Size = new System.Drawing.Size(179, 20);
             this.tbLoginPw.TabIndex = 5;
             // 

@@ -54,6 +54,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(197, 20);
             this.tbName.TabIndex = 3;
+            this.tbName.Visible = false;
             // 
             // textBox5
             // 
@@ -65,6 +66,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(196, 20);
             this.textBox5.TabIndex = 4;
+            this.textBox5.Visible = false;
             // 
             // tbuCardID
             // 
@@ -73,7 +75,6 @@
             this.tbuCardID.Location = new System.Drawing.Point(299, 200);
             this.tbuCardID.Margin = new System.Windows.Forms.Padding(2);
             this.tbuCardID.Name = "tbuCardID";
-            this.tbuCardID.ReadOnly = true;
             this.tbuCardID.Size = new System.Drawing.Size(197, 20);
             this.tbuCardID.TabIndex = 5;
             // 
@@ -216,6 +217,7 @@
             this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "Email:";
+            this.lblEmail.Visible = false;
             // 
             // lblName
             // 
@@ -228,6 +230,7 @@
             this.lblName.Size = new System.Drawing.Size(52, 17);
             this.lblName.TabIndex = 22;
             this.lblName.Text = "Name:";
+            this.lblName.Visible = false;
             // 
             // CustUpdateForm
             // 
