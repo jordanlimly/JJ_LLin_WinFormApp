@@ -20,6 +20,7 @@ namespace MainWinFormApp
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             AdminLoginForm frm = new AdminLoginForm();  //open login form
+            this.Hide();
             frm.ShowDialog();
         }
 
