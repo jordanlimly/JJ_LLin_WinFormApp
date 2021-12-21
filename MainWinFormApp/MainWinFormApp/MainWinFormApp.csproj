@@ -255,6 +255,10 @@
   <ItemGroup>
     <None Include="Resources\barchart static.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\crowd icon 1.png" />
+    <None Include="Resources\output-onlinepngtools %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

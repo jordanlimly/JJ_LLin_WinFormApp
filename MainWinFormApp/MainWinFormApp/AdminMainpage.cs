@@ -17,6 +17,9 @@ namespace MainWinFormApp
 {
     public partial class AdminMainpage : Form
     {
+        int PW;
+        bool hiddenMinPanel;
+
         //===Crowd Level codes===
         string strConnectionString =
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
@@ -315,6 +318,9 @@ namespace MainWinFormApp
         {
             InitializeComponent();
             CurCrowdPanel.BackColor = Color.FromArgb(200, Color.White);
+            panel6.BackColor = Color.FromArgb(200, Color.White);
+            PW = panel7.Width;
+            hiddenMinPanel = false;
         }
 
         private void button1_Click(object sender, EventArgs e) // Current crowd btn click
@@ -457,7 +463,7 @@ namespace MainWinFormApp
 
             //Title
             Title title1 = new Title();
-            title1.Font = new System.Drawing.Font("Trebuchet MS", 7.25F, System.Drawing.FontStyle.Bold);
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 8.50F, System.Drawing.FontStyle.Bold);
             title1.Text = "Daily Number of Visitors for the past week";
             TotalCrowdCht.Titles.Add(title1);
 
@@ -585,8 +591,8 @@ namespace MainWinFormApp
 
             //Title
             Title title1 = new Title();
-            title1.Font = new System.Drawing.Font("Trebuchet MS", 7.25F, System.Drawing.FontStyle.Bold);
-            title1.Text = "Current 2 Minute Crowd";
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            title1.Text = "Current 2 Minutes Crowd";
             MinCrowdCht.Titles.Add(title1);
 
             Font labelFont = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
@@ -700,6 +706,42 @@ namespace MainWinFormApp
 
                 //clears and reload series data if there are existing data on chart
                 MinCrowdCht.DataBind();
+
+
+                //// get value for current crowd counter
+                //String strCommandText2 = "Select Top 1 sum(EnterExit) over (order by [DateTime] asc rows between unbounded preceding and current row) cumulEnterExit from CrowdLevelTable WHERE DateOnly = Convert(Date, '21/12/2021', 103) AND Convert(varchar, Datepart(Hour, [DateTime])) = 15 Group By Datepart(Hour, [DateTime]), Datepart(Minute, [DateTime]), DateOnly, [DateTime], EnterExit ORDER BY [DateTime] desc";
+                String strCommandText2 = "Select sum(EnterExit) counterSum from CrowdLevelTable WHERE DateOnly = Convert(Date, '" + todaydate + "', 103) AND Convert(varchar, Datepart(Hour, [DateTime])) = " + curHour + "";
+                SqlDataAdapter adapter2 = new SqlDataAdapter(strCommandText2, myConnect);
+                ////// create SELECT, DELETE, INSERT, UPDATE commands for data adapter
+                SqlCommandBuilder cmdBuilder2 = new SqlCommandBuilder(adapter2);
+
+                ////// STEP 4: Access data: Pill the Dataset using Data Adapter Fill method
+                ////// Note: We do NOT need to open database connection
+                ////// as data adapter does it internally
+                DataSet ds2 = new DataSet();
+                adapter2.Fill(ds2);
+
+                if (ds2.Tables[0].Rows[0]["counterSum"] is DBNull)
+                {
+                    int extractedCounterValue = 0;
+                    lbCurCrowdCount.Text = Convert.ToString(extractedCounterValue);
+                }
+                else if (ds2.Tables[0].Rows.Count > 0)
+                {
+                    Console.WriteLine(ds2.Tables[0].Rows[0]["counterSum"].ToString());
+                    int extractedCounterValue = Convert.ToInt32(ds2.Tables[0].Rows[0]["counterSum"]);
+                    lbCurCrowdCount.Text = Convert.ToString(extractedCounterValue);                                  
+                }
+                else
+                {
+                    int extractedCounterValue = 0;
+                    lbCurCrowdCount.Text = Convert.ToString(extractedCounterValue);
+                }
+                //Console.WriteLine(ds2.Tables[0].Rows[0]["counterSum"].ToString());
+
+                //Console.WriteLine("ds2 Dataset Rows = " + ds2.Tables[0].Rows.Count);
+                ////Console.WriteLine(ds2.Tables[0].Rows[0]["cumulEnterExit"].ToString());
+                //lbCurCrowdCount.Text = Convert.ToString(ds2);
             }
             catch (SqlException ex)
             {
@@ -724,7 +766,7 @@ namespace MainWinFormApp
 
             //Title
             Title title1 = new Title();
-            title1.Font = new System.Drawing.Font("Trebuchet MS", 7.25F, System.Drawing.FontStyle.Bold);
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             title1.Text = "Hourly Crowd";
             HourlyCrowdCht.Titles.Add(title1);
 
@@ -862,6 +904,50 @@ namespace MainWinFormApp
         {
             RMachineDetails frm = new RMachineDetails();
             frm.ShowDialog();
+        }
+
+        private void curCrowdbtn_Click(object sender, EventArgs e)
+        {
+            if (hiddenMinPanel)
+            {
+                curCrowdbtn.Text = "By Hour";
+                curCrowdbtn.BackColor = Color.FromArgb(209, 146, 13); ;
+                curCrowdbtn.ForeColor = Color.Black;
+                curCrowdbtn.FlatAppearance.BorderSize = 0;
+            }
+            else
+            {
+                curCrowdbtn.Text = "By Minute";
+                curCrowdbtn.BackColor = Color.Black;
+                curCrowdbtn.ForeColor = Color.FromArgb(209, 146, 13);
+                curCrowdbtn.FlatAppearance.BorderSize = 1;
+                curCrowdbtn.FlatAppearance.BorderColor = Color.FromArgb(209, 146, 13);
+            }
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (hiddenMinPanel)
+            {
+                panel7.Width += 15;
+                if (panel7.Width >= PW)
+                {
+                    timer1.Stop();
+                    hiddenMinPanel = false;
+                    this.Refresh();
+                }
+            }
+            else
+            {
+                panel7.Width -= 15;
+                if (panel7.Width <= 0)
+                {
+                    timer1.Stop();
+                    hiddenMinPanel = true;
+                    this.Refresh();
+                }
+            }
         }
     }
 }
