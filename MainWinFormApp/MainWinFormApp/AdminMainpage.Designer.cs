@@ -84,6 +84,8 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
+            this.lbTotalCrowdCount = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -196,6 +198,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.lbTotalCrowdCount);
             this.panel6.Controls.Add(this.TotalCrowdCht);
             this.panel6.Controls.Add(this.lblTotalCrowd);
             this.panel6.Location = new System.Drawing.Point(892, 146);
@@ -690,6 +694,31 @@
             this.timerDateTime.Interval = 1000;
             this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
+            // lbTotalCrowdCount
+            // 
+            this.lbTotalCrowdCount.AutoSize = true;
+            this.lbTotalCrowdCount.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lbTotalCrowdCount.Location = new System.Drawing.Point(227, 282);
+            this.lbTotalCrowdCount.Name = "lbTotalCrowdCount";
+            this.lbTotalCrowdCount.Size = new System.Drawing.Size(63, 61);
+            this.lbTotalCrowdCount.TabIndex = 7;
+            this.lbTotalCrowdCount.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(193, 294);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 43);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "X";
+            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -776,5 +805,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timerDateTime;
+        private System.Windows.Forms.Label lbTotalCrowdCount;
+        private System.Windows.Forms.Label label4;
     }
 }

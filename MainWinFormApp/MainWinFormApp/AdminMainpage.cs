@@ -584,6 +584,32 @@ namespace MainWinFormApp
 
                 //clears and reload series data if there are existing data on chart
                 TotalCrowdCht.DataBind();
+
+                // get value for total crowd counter
+                string todaydate = DateTime.Now.Date.ToString("dd/MM/yyyy");
+                String strCommandText2 = "Select Convert(varchar, [DateOnly], 103), sum(EnterExit) sumCol from CrowdLevelTable WHERE EnterExit = 1 AND Convert(varchar, [DateTime], 103) = '" + todaydate + "' group by DateOnly";
+                SqlDataAdapter adapter2 = new SqlDataAdapter(strCommandText2, myConnect);
+                ////// create SELECT, DELETE, INSERT, UPDATE commands for data adapter
+                SqlCommandBuilder cmdBuilder2 = new SqlCommandBuilder(adapter2);
+
+                ////// STEP 4: Access data: Pill the Dataset using Data Adapter Fill method
+                ////// Note: We do NOT need to open database connection
+                ////// as data adapter does it internally
+                DataSet ds2 = new DataSet();
+                adapter2.Fill(ds2);
+
+                if (ds2.Tables[0].Rows.Count == 1)
+                {
+                    int extractedCounterValue = Convert.ToInt32(ds2.Tables[0].Rows[0]["sumCol"]);
+                    lbTotalCrowdCount.Text = Convert.ToString(extractedCounterValue);
+                }
+                else
+                {
+                    int extractedCounterValue = 0;
+                    lbTotalCrowdCount.Text = Convert.ToString(extractedCounterValue);
+                }
+
+
             }
             catch (SqlException ex)
             {
