@@ -379,7 +379,22 @@ namespace MainWinFormApp
             loadDBtoHourlyCht();
             initMinCrowdChtProperties();
             loadDBtoMinuteCht();
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += Timer_Elapsed; ;
+            timer.Start();
         }
+
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Invoke(new MethodInvoker(delegate ()
+            {
+                lblDate.Text = DateTime.Now.ToString("dd MMMM yyyy");
+                lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+            }));
+
+        }
+
 
         private void lbDataComms_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -948,6 +963,12 @@ namespace MainWinFormApp
                     this.Refresh();
                 }
             }
+        }
+
+        private void timerDateTime_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToString("dd MMMM yyyy");
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

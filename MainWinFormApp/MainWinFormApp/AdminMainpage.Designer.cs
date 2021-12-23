@@ -29,29 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.sideNavPanel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPopularity = new System.Windows.Forms.Button();
-            this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnCloseWindow = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.CrowdTab = new System.Windows.Forms.TabPage();
             this.invisiblePanel = new System.Windows.Forms.Panel();
             this.curCrowdbtn = new System.Windows.Forms.Button();
@@ -60,11 +49,13 @@
             this.lblTotalCrowd = new System.Windows.Forms.Label();
             this.CurCrowdPanel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbCurCrowdCount = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCurrentCrowd2 = new System.Windows.Forms.Label();
             this.MinCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.HourlyCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblCurrentCrowd = new System.Windows.Forms.Label();
-            this.lbCurCrowdCount = new System.Windows.Forms.Label();
             this.lbDataComms = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PopularityTab = new System.Windows.Forms.TabPage();
@@ -79,23 +70,35 @@
             this.panelExpenditureChart = new System.Windows.Forms.Panel();
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.btnCloseWindow = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPopularity = new System.Windows.Forms.Button();
+            this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
-            this.topPanel.SuspendLayout();
-            this.sideNavPanel.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).BeginInit();
             this.CurCrowdPanel.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinCrowdCht)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).BeginInit();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.topPanel.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -147,141 +150,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1352, 822);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
-            // 
-            // topPanel
-            // 
-            this.topPanel.BackColor = System.Drawing.Color.Black;
-            this.topPanel.Controls.Add(this.btnCloseWindow);
-            this.topPanel.Controls.Add(this.panel1);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1352, 125);
-            this.topPanel.TabIndex = 5;
-            // 
-            // sideNavPanel
-            // 
-            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
-            this.sideNavPanel.Controls.Add(this.panel5);
-            this.sideNavPanel.Controls.Add(this.panel4);
-            this.sideNavPanel.Controls.Add(this.panel3);
-            this.sideNavPanel.Controls.Add(this.panel2);
-            this.sideNavPanel.Controls.Add(this.btnPopularity);
-            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
-            this.sideNavPanel.Controls.Add(this.btnMaintenance);
-            this.sideNavPanel.Controls.Add(this.btnLogout);
-            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideNavPanel.Location = new System.Drawing.Point(0, 125);
-            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
-            this.sideNavPanel.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 402);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(7, 44);
-            this.panel5.TabIndex = 5;
-            this.panel5.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 275);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(7, 44);
-            this.panel4.TabIndex = 4;
-            this.panel4.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 149);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 44);
-            this.panel3.TabIndex = 2;
-            this.panel3.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel2.Location = new System.Drawing.Point(4, 29);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 44);
-            this.panel2.TabIndex = 1;
-            this.panel2.Visible = false;
-            // 
-            // btnPopularity
-            // 
-            this.btnPopularity.BackColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPopularity.ForeColor = System.Drawing.Color.White;
-            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(14, 149);
-            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPopularity.Name = "btnPopularity";
-            this.btnPopularity.Size = new System.Drawing.Size(183, 44);
-            this.btnPopularity.TabIndex = 1;
-            this.btnPopularity.Text = "Game Machines";
-            this.btnPopularity.UseVisualStyleBackColor = false;
-            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
-            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
-            // 
-            // btnCrowdLvl
-            // 
-            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
-            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrowdLvl.Location = new System.Drawing.Point(14, 29);
-            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrowdLvl.Name = "btnCrowdLvl";
-            this.btnCrowdLvl.Size = new System.Drawing.Size(183, 44);
-            this.btnCrowdLvl.TabIndex = 0;
-            this.btnCrowdLvl.Text = "Crowd Level";
-            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrowdLvl.UseVisualStyleBackColor = false;
-            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
-            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnCloseWindow
-            // 
-            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
-            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWindow.Location = new System.Drawing.Point(1285, 12);
-            this.btnCloseWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCloseWindow.Name = "btnCloseWindow";
-            this.btnCloseWindow.Size = new System.Drawing.Size(54, 29);
-            this.btnCloseWindow.TabIndex = 1;
-            this.btnCloseWindow.UseVisualStyleBackColor = true;
-            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 125);
-            this.panel1.TabIndex = 0;
             // 
             // CrowdTab
             // 
@@ -338,14 +206,14 @@
             // 
             // TotalCrowdCht
             // 
-            chartArea23.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea23);
+            chartArea5.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea5);
             this.TotalCrowdCht.Location = new System.Drawing.Point(3, 42);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series23.ChartArea = "ChartArea1";
-            series23.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series23);
+            series5.ChartArea = "ChartArea1";
+            series5.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series5);
             this.TotalCrowdCht.Size = new System.Drawing.Size(396, 238);
             this.TotalCrowdCht.TabIndex = 1;
             this.TotalCrowdCht.Text = "chart1";
@@ -388,6 +256,43 @@
             this.panel7.Size = new System.Drawing.Size(622, 344);
             this.panel7.TabIndex = 9;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(494, 205);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 43);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "X";
+            // 
+            // lbCurCrowdCount
+            // 
+            this.lbCurCrowdCount.AutoSize = true;
+            this.lbCurCrowdCount.BackColor = System.Drawing.Color.Transparent;
+            this.lbCurCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lbCurCrowdCount.Location = new System.Drawing.Point(520, 192);
+            this.lbCurCrowdCount.Name = "lbCurCrowdCount";
+            this.lbCurCrowdCount.Size = new System.Drawing.Size(63, 61);
+            this.lbCurCrowdCount.TabIndex = 6;
+            this.lbCurCrowdCount.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::MainWinFormApp.Properties.Resources.output_onlinepngtools__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(497, 116);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblCurrentCrowd2
             // 
             this.lblCurrentCrowd2.AutoSize = true;
@@ -401,29 +306,29 @@
             // 
             // MinCrowdCht
             // 
-            chartArea21.Name = "ChartArea1";
-            this.MinCrowdCht.ChartAreas.Add(chartArea21);
+            chartArea6.Name = "ChartArea1";
+            this.MinCrowdCht.ChartAreas.Add(chartArea6);
             this.MinCrowdCht.Location = new System.Drawing.Point(17, 66);
             this.MinCrowdCht.Name = "MinCrowdCht";
-            series21.ChartArea = "ChartArea1";
-            series21.Name = "Series1";
-            this.MinCrowdCht.Series.Add(series21);
+            series6.ChartArea = "ChartArea1";
+            series6.Name = "Series1";
+            this.MinCrowdCht.Series.Add(series6);
             this.MinCrowdCht.Size = new System.Drawing.Size(447, 249);
             this.MinCrowdCht.TabIndex = 0;
             this.MinCrowdCht.Text = "chart1";
             // 
             // HourlyCrowdCht
             // 
-            chartArea22.Name = "ChartArea1";
-            this.HourlyCrowdCht.ChartAreas.Add(chartArea22);
+            chartArea7.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea7);
             this.HourlyCrowdCht.Location = new System.Drawing.Point(16, 66);
             this.HourlyCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyCrowdCht.Name = "HourlyCrowdCht";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series22.MarkerColor = System.Drawing.Color.White;
-            series22.Name = "Series1";
-            this.HourlyCrowdCht.Series.Add(series22);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.MarkerColor = System.Drawing.Color.White;
+            series7.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series7);
             this.HourlyCrowdCht.Size = new System.Drawing.Size(586, 251);
             this.HourlyCrowdCht.TabIndex = 7;
             this.HourlyCrowdCht.Text = "chart1";
@@ -438,18 +343,6 @@
             this.lblCurrentCrowd.Size = new System.Drawing.Size(210, 32);
             this.lblCurrentCrowd.TabIndex = 4;
             this.lblCurrentCrowd.Text = "Current Crowd";
-            // 
-            // lbCurCrowdCount
-            // 
-            this.lbCurCrowdCount.AutoSize = true;
-            this.lbCurCrowdCount.BackColor = System.Drawing.Color.Transparent;
-            this.lbCurCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lbCurCrowdCount.Location = new System.Drawing.Point(520, 192);
-            this.lbCurCrowdCount.Name = "lbCurCrowdCount";
-            this.lbCurCrowdCount.Size = new System.Drawing.Size(63, 61);
-            this.lbCurCrowdCount.TabIndex = 6;
-            this.lbCurCrowdCount.Text = "0";
             // 
             // lbDataComms
             // 
@@ -606,18 +499,18 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea24.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea24);
-            legend6.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend6);
+            chartArea8.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea8);
+            legend2.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend2);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(3, -4);
             this.MaintenanceExpenditureChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series24.ChartArea = "ChartArea1";
-            series24.Legend = "Legend1";
-            series24.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series24);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series8);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(664, 401);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -631,30 +524,171 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "MaintenanceTab";
             // 
-            // label2
+            // topPanel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(494, 205);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 43);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "X";
+            this.topPanel.BackColor = System.Drawing.Color.Black;
+            this.topPanel.Controls.Add(this.lblTime);
+            this.topPanel.Controls.Add(this.lblDate);
+            this.topPanel.Controls.Add(this.btnCloseWindow);
+            this.topPanel.Controls.Add(this.panel1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1352, 125);
+            this.topPanel.TabIndex = 5;
             // 
-            // pictureBox1
+            // btnCloseWindow
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::MainWinFormApp.Properties.Resources.output_onlinepngtools__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(497, 116);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
+            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseWindow.Location = new System.Drawing.Point(1285, 12);
+            this.btnCloseWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCloseWindow.Name = "btnCloseWindow";
+            this.btnCloseWindow.Size = new System.Drawing.Size(54, 29);
+            this.btnCloseWindow.TabIndex = 1;
+            this.btnCloseWindow.UseVisualStyleBackColor = true;
+            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 125);
+            this.panel1.TabIndex = 0;
+            // 
+            // sideNavPanel
+            // 
+            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel5);
+            this.sideNavPanel.Controls.Add(this.panel4);
+            this.sideNavPanel.Controls.Add(this.panel3);
+            this.sideNavPanel.Controls.Add(this.panel2);
+            this.sideNavPanel.Controls.Add(this.btnPopularity);
+            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
+            this.sideNavPanel.Controls.Add(this.btnMaintenance);
+            this.sideNavPanel.Controls.Add(this.btnLogout);
+            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 125);
+            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideNavPanel.Name = "sideNavPanel";
+            this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
+            this.sideNavPanel.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel5.Location = new System.Drawing.Point(4, 402);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(7, 44);
+            this.panel5.TabIndex = 5;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel4.Location = new System.Drawing.Point(4, 275);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(7, 44);
+            this.panel4.TabIndex = 4;
+            this.panel4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel3.Location = new System.Drawing.Point(4, 149);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(7, 44);
+            this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel2.Location = new System.Drawing.Point(4, 29);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(7, 44);
+            this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
+            // 
+            // btnPopularity
+            // 
+            this.btnPopularity.BackColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPopularity.ForeColor = System.Drawing.Color.White;
+            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPopularity.Location = new System.Drawing.Point(14, 149);
+            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPopularity.Name = "btnPopularity";
+            this.btnPopularity.Size = new System.Drawing.Size(183, 44);
+            this.btnPopularity.TabIndex = 1;
+            this.btnPopularity.Text = "Game Machines";
+            this.btnPopularity.UseVisualStyleBackColor = false;
+            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
+            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
+            // 
+            // btnCrowdLvl
+            // 
+            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
+            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrowdLvl.Location = new System.Drawing.Point(14, 29);
+            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrowdLvl.Name = "btnCrowdLvl";
+            this.btnCrowdLvl.Size = new System.Drawing.Size(183, 44);
+            this.btnCrowdLvl.TabIndex = 0;
+            this.btnCrowdLvl.Text = "Crowd Level";
+            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCrowdLvl.UseVisualStyleBackColor = false;
+            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDate.Location = new System.Drawing.Point(226, 36);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(267, 50);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "31 December 2021";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTime.Location = new System.Drawing.Point(226, 75);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(134, 50);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "12:00:00";
+            // 
+            // timerDateTime
+            // 
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
             // AdminMainpage
             // 
@@ -670,8 +704,6 @@
             this.Text = "AdminMainpage";
             this.Load += new System.EventHandler(this.AdminMainpage_Load);
             this.tabControl1.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
-            this.sideNavPanel.ResumeLayout(false);
             this.CrowdTab.ResumeLayout(false);
             this.CrowdTab.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -681,6 +713,7 @@
             this.CurCrowdPanel.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinCrowdCht)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).EndInit();
             this.PopularityTab.ResumeLayout(false);
@@ -688,7 +721,9 @@
             this.MaintenanceTab.PerformLayout();
             this.panelExpenditureChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sideNavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -738,5 +773,8 @@
         private System.Windows.Forms.Label lblCurrentCrowd2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Timer timerDateTime;
     }
 }
