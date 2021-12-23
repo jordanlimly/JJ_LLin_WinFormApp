@@ -45,6 +45,8 @@
             this.invisiblePanel = new System.Windows.Forms.Panel();
             this.curCrowdbtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbTotalCrowdCount = new System.Windows.Forms.Label();
             this.TotalCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTotalCrowd = new System.Windows.Forms.Label();
             this.CurCrowdPanel = new System.Windows.Forms.Panel();
@@ -71,6 +73,8 @@
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.btnCloseWindow = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sideNavPanel = new System.Windows.Forms.Panel();
@@ -81,11 +85,8 @@
             this.btnPopularity = new System.Windows.Forms.Button();
             this.btnCrowdLvl = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
-            this.lbTotalCrowdCount = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -198,6 +200,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.lbTotalCrowdCount);
             this.panel6.Controls.Add(this.TotalCrowdCht);
@@ -208,11 +211,36 @@
             this.panel6.Size = new System.Drawing.Size(410, 346);
             this.panel6.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(193, 294);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 43);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "X";
+            // 
+            // lbTotalCrowdCount
+            // 
+            this.lbTotalCrowdCount.AutoSize = true;
+            this.lbTotalCrowdCount.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotalCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lbTotalCrowdCount.Location = new System.Drawing.Point(227, 282);
+            this.lbTotalCrowdCount.Name = "lbTotalCrowdCount";
+            this.lbTotalCrowdCount.Size = new System.Drawing.Size(63, 61);
+            this.lbTotalCrowdCount.TabIndex = 7;
+            this.lbTotalCrowdCount.Text = "0";
+            // 
             // TotalCrowdCht
             // 
             chartArea5.Name = "ChartArea1";
             this.TotalCrowdCht.ChartAreas.Add(chartArea5);
-            this.TotalCrowdCht.Location = new System.Drawing.Point(3, 42);
+            this.TotalCrowdCht.Location = new System.Drawing.Point(2, 42);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
             series5.ChartArea = "ChartArea1";
@@ -289,7 +317,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MainWinFormApp.Properties.Resources.output_onlinepngtools__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(497, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(485, 116);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 76);
@@ -542,6 +570,30 @@
             this.topPanel.Size = new System.Drawing.Size(1352, 125);
             this.topPanel.TabIndex = 5;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTime.Location = new System.Drawing.Point(226, 75);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(134, 50);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "12:00:00";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDate.Location = new System.Drawing.Point(226, 36);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(267, 50);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "31 December 2021";
+            // 
             // btnCloseWindow
             // 
             this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
@@ -665,59 +717,22 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDate.Location = new System.Drawing.Point(226, 36);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(267, 50);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "31 December 2021";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTime.Location = new System.Drawing.Point(226, 75);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(134, 50);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "12:00:00";
-            // 
             // timerDateTime
             // 
             this.timerDateTime.Interval = 1000;
             this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
-            // lbTotalCrowdCount
+            // pictureBox2
             // 
-            this.lbTotalCrowdCount.AutoSize = true;
-            this.lbTotalCrowdCount.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotalCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lbTotalCrowdCount.Location = new System.Drawing.Point(227, 282);
-            this.lbTotalCrowdCount.Name = "lbTotalCrowdCount";
-            this.lbTotalCrowdCount.Size = new System.Drawing.Size(63, 61);
-            this.lbTotalCrowdCount.TabIndex = 7;
-            this.lbTotalCrowdCount.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(193, 294);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 43);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "X";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::MainWinFormApp.Properties.Resources.crowd_icon_total_2;
+            this.pictureBox2.Location = new System.Drawing.Point(104, 284);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(89, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // AdminMainpage
             // 
@@ -753,6 +768,7 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sideNavPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -807,5 +823,6 @@
         private System.Windows.Forms.Timer timerDateTime;
         private System.Windows.Forms.Label lbTotalCrowdCount;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

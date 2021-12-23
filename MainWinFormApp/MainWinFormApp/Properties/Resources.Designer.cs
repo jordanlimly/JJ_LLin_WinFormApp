@@ -83,6 +83,16 @@ namespace MainWinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crowd_icon_total_2 {
+            get {
+                object obj = ResourceManager.GetObject("crowd icon total 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_8_User_yellow_0_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-8-User-yellow-0-removebg-preview", resourceCulture);
