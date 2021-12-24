@@ -19,7 +19,8 @@ namespace MainWinFormApp
     {
         int PW;
         bool hiddenMinPanel;
-
+        bool sensor1triggered = false;
+        bool sensor2triggered = false;
         //===Crowd Level codes===
         string strConnectionString =
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
@@ -138,15 +139,43 @@ namespace MainWinFormApp
 
             if (strSensorTriggered == "Sensor1")
             {
+                if (sensor2triggered == true)
+                {
+                    // man walking out
+                    exitS1.Visible = true;
+                    timerMan.Stop();
+                    timerMan.Start();
+                }
+                else
+                {
+                    //man walking in
+                    enterS1.Visible = true;
+                    timerMan.Stop();
+                    timerMan.Start();
+                }
                 string strMessage = "Distance Sensor 1 was triggered";              
                 lbDataComms.Items.Insert(0, strMessage);
-                
+                sensor1triggered = true;
             }
             else if (strSensorTriggered == "Sensor2")
             {
+                if (sensor1triggered == true)
+                {
+                    // man walking in
+                    enterS2.Visible = true;
+                    timerMan.Stop();
+                    timerMan.Start();
+                }
+                else
+                {
+                    //man walking out
+                    exitS2.Visible = true;
+                    timerMan.Stop();
+                    timerMan.Start();
+                }
                 string strMessage = "Distance Sensor 2 was triggered";     
                 lbDataComms.Items.Insert(0, strMessage);
-                
+                sensor2triggered = true;
             }
         }
 
@@ -265,7 +294,14 @@ namespace MainWinFormApp
 
             //check whether Light value is send
             if (strData.IndexOf("SENSORTRIGGERED=") != -1) //check sensor triggered status
-                handledSensorTriggeredData(strData, strTime, "SENSORTRIGGERED=");    
+            {
+                handledSensorTriggeredData(strData, strTime, "SENSORTRIGGERED=");
+                if (sensor1triggered == true && sensor2triggered == true)
+                {
+                    sensor1triggered = false;
+                    sensor2triggered = false;
+                }
+            } 
             if (strData.IndexOf("DIRECTION=") != -1)
                 handledDistanceSensorData(strData, strTime, "DIRECTION=");
             if (strData.IndexOf("RFIDGAMESTART=") != -1) //check button status
@@ -995,6 +1031,14 @@ namespace MainWinFormApp
         {
             lblDate.Text = DateTime.Now.ToString("dd MMMM yyyy");
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void timerMan_Tick(object sender, EventArgs e)
+        {
+            enterS1.Visible = false;
+            enterS2.Visible = false;
+            exitS1.Visible = false;
+            exitS2.Visible = false;
         }
     }
 }

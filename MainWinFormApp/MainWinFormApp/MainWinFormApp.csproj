@@ -256,7 +256,12 @@
     <None Include="Resources\barchart static.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\walking man flipped.gif" />
+    <None Include="Resources\gate 2.png" />
+    <None Include="Resources\gate 1 %282%29.png" />
+    <None Include="Resources\arcade img.png" />
     <Content Include="Resources\crowd icon 1.png" />
+    <None Include="Resources\walking man.gif" />
     <None Include="Resources\crowd icon total 2.png" />
     <None Include="Resources\output-onlinepngtools %282%29.png" />
   </ItemGroup>

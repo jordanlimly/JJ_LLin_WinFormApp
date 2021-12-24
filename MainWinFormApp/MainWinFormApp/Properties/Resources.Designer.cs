@@ -63,6 +63,16 @@ namespace MainWinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arcade_img {
+            get {
+                object obj = ResourceManager.GetObject("arcade img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_sky_point_light_wallpaper_preview {
             get {
                 object obj = ResourceManager.GetObject("background-sky-point-light-wallpaper-preview", resourceCulture);
@@ -113,6 +123,36 @@ namespace MainWinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gate_1__2_ {
+            get {
+                object obj = ResourceManager.GetObject("gate 1 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gate_1__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("gate 1 (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gate_2 {
+            get {
+                object obj = ResourceManager.GetObject("gate 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1061119906_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1061119906-612x612", resourceCulture);
@@ -156,6 +196,26 @@ namespace MainWinFormApp.Properties {
         internal static System.Drawing.Bitmap output_onlinepngtools__2_ {
             get {
                 object obj = ResourceManager.GetObject("output-onlinepngtools (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walking_man {
+            get {
+                object obj = ResourceManager.GetObject("walking man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walking_man_flipped {
+            get {
+                object obj = ResourceManager.GetObject("walking man flipped", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

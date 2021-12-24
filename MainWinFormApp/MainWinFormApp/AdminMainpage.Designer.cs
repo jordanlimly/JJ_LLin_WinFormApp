@@ -41,10 +41,35 @@
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPopularity = new System.Windows.Forms.Button();
+            this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
+            this.timerMan = new System.Windows.Forms.Timer(this.components);
+            this.btnCloseWindow = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CrowdTab = new System.Windows.Forms.TabPage();
+            this.exitS1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ArcadeEntrance = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.enterS2 = new System.Windows.Forms.PictureBox();
+            this.enterS1 = new System.Windows.Forms.PictureBox();
             this.invisiblePanel = new System.Windows.Forms.Panel();
             this.curCrowdbtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbTotalCrowdCount = new System.Windows.Forms.Label();
             this.TotalCrowdCht = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -60,6 +85,7 @@
             this.lblCurrentCrowd = new System.Windows.Forms.Label();
             this.lbDataComms = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.arcadeImg = new System.Windows.Forms.PictureBox();
             this.PopularityTab = new System.Windows.Forms.TabPage();
             this.btnRetrieveDetails = new System.Windows.Forms.Button();
             this.btnAddMachine = new System.Windows.Forms.Button();
@@ -72,37 +98,30 @@
             this.panelExpenditureChart = new System.Windows.Forms.Panel();
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.btnCloseWindow = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.sideNavPanel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPopularity = new System.Windows.Forms.Button();
-            this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.exitS2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.CrowdTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enterS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enterS1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).BeginInit();
             this.CurCrowdPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinCrowdCht)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcadeImg)).BeginInit();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
-            this.topPanel.SuspendLayout();
-            this.sideNavPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -155,16 +174,198 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
             // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.Black;
+            this.topPanel.Controls.Add(this.lblTime);
+            this.topPanel.Controls.Add(this.lblDate);
+            this.topPanel.Controls.Add(this.btnCloseWindow);
+            this.topPanel.Controls.Add(this.panel1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1352, 125);
+            this.topPanel.TabIndex = 5;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTime.Location = new System.Drawing.Point(226, 75);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(134, 50);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "12:00:00";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDate.Location = new System.Drawing.Point(226, 36);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(267, 50);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "31 December 2021";
+            // 
+            // sideNavPanel
+            // 
+            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel5);
+            this.sideNavPanel.Controls.Add(this.panel4);
+            this.sideNavPanel.Controls.Add(this.panel3);
+            this.sideNavPanel.Controls.Add(this.panel2);
+            this.sideNavPanel.Controls.Add(this.btnPopularity);
+            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
+            this.sideNavPanel.Controls.Add(this.btnMaintenance);
+            this.sideNavPanel.Controls.Add(this.btnLogout);
+            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 125);
+            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideNavPanel.Name = "sideNavPanel";
+            this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
+            this.sideNavPanel.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel5.Location = new System.Drawing.Point(4, 402);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(7, 44);
+            this.panel5.TabIndex = 5;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel4.Location = new System.Drawing.Point(4, 275);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(7, 44);
+            this.panel4.TabIndex = 4;
+            this.panel4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel3.Location = new System.Drawing.Point(4, 149);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(7, 44);
+            this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel2.Location = new System.Drawing.Point(4, 29);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(7, 44);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnPopularity
+            // 
+            this.btnPopularity.BackColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPopularity.ForeColor = System.Drawing.Color.White;
+            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPopularity.Location = new System.Drawing.Point(14, 149);
+            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPopularity.Name = "btnPopularity";
+            this.btnPopularity.Size = new System.Drawing.Size(183, 44);
+            this.btnPopularity.TabIndex = 1;
+            this.btnPopularity.Text = "Game Machines";
+            this.btnPopularity.UseVisualStyleBackColor = false;
+            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
+            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
+            // 
+            // btnCrowdLvl
+            // 
+            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
+            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrowdLvl.Location = new System.Drawing.Point(14, 29);
+            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrowdLvl.Name = "btnCrowdLvl";
+            this.btnCrowdLvl.Size = new System.Drawing.Size(183, 44);
+            this.btnCrowdLvl.TabIndex = 0;
+            this.btnCrowdLvl.Text = "Crowd Level";
+            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCrowdLvl.UseVisualStyleBackColor = false;
+            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerDateTime
+            // 
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
+            // 
+            // timerMan
+            // 
+            this.timerMan.Enabled = true;
+            this.timerMan.Interval = 2300;
+            this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
+            // 
+            // btnCloseWindow
+            // 
+            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
+            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseWindow.Location = new System.Drawing.Point(1285, 12);
+            this.btnCloseWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCloseWindow.Name = "btnCloseWindow";
+            this.btnCloseWindow.Size = new System.Drawing.Size(54, 29);
+            this.btnCloseWindow.TabIndex = 1;
+            this.btnCloseWindow.UseVisualStyleBackColor = true;
+            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 125);
+            this.panel1.TabIndex = 0;
+            // 
             // CrowdTab
             // 
             this.CrowdTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
             this.CrowdTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CrowdTab.Controls.Add(this.exitS2);
+            this.CrowdTab.Controls.Add(this.exitS1);
+            this.CrowdTab.Controls.Add(this.label7);
+            this.CrowdTab.Controls.Add(this.label6);
+            this.CrowdTab.Controls.Add(this.ArcadeEntrance);
+            this.CrowdTab.Controls.Add(this.pictureBox4);
+            this.CrowdTab.Controls.Add(this.pictureBox3);
+            this.CrowdTab.Controls.Add(this.label5);
+            this.CrowdTab.Controls.Add(this.enterS2);
+            this.CrowdTab.Controls.Add(this.enterS1);
             this.CrowdTab.Controls.Add(this.invisiblePanel);
             this.CrowdTab.Controls.Add(this.curCrowdbtn);
             this.CrowdTab.Controls.Add(this.panel6);
             this.CrowdTab.Controls.Add(this.CurCrowdPanel);
             this.CrowdTab.Controls.Add(this.lbDataComms);
             this.CrowdTab.Controls.Add(this.label1);
+            this.CrowdTab.Controls.Add(this.arcadeImg);
             this.CrowdTab.Location = new System.Drawing.Point(4, 5);
             this.CrowdTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CrowdTab.Name = "CrowdTab";
@@ -173,6 +374,118 @@
             this.CrowdTab.TabIndex = 0;
             this.CrowdTab.Text = "CrowdTab";
             this.CrowdTab.UseVisualStyleBackColor = true;
+            // 
+            // exitS1
+            // 
+            this.exitS1.BackColor = System.Drawing.Color.Transparent;
+            this.exitS1.Image = global::MainWinFormApp.Properties.Resources.walking_man_flipped;
+            this.exitS1.Location = new System.Drawing.Point(314, 613);
+            this.exitS1.Name = "exitS1";
+            this.exitS1.Size = new System.Drawing.Size(130, 114);
+            this.exitS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitS1.TabIndex = 21;
+            this.exitS1.TabStop = false;
+            this.exitS1.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label7.Location = new System.Drawing.Point(550, 558);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Sensor 2";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label6.Location = new System.Drawing.Point(340, 558);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Sensor 1";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ArcadeEntrance
+            // 
+            this.ArcadeEntrance.AutoSize = true;
+            this.ArcadeEntrance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.ArcadeEntrance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArcadeEntrance.ForeColor = System.Drawing.Color.White;
+            this.ArcadeEntrance.Location = new System.Drawing.Point(405, 743);
+            this.ArcadeEntrance.Name = "ArcadeEntrance";
+            this.ArcadeEntrance.Size = new System.Drawing.Size(173, 25);
+            this.ArcadeEntrance.TabIndex = 18;
+            this.ArcadeEntrance.Text = "Arcade Entrance";
+            this.ArcadeEntrance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::MainWinFormApp.Properties.Resources.gate_2;
+            this.pictureBox4.Location = new System.Drawing.Point(293, 730);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(396, 56);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::MainWinFormApp.Properties.Resources.gate_1__2_1;
+            this.pictureBox3.Location = new System.Drawing.Point(283, 537);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(412, 72);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label5.Location = new System.Drawing.Point(695, 746);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 26);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "JJ LLin Arcade";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // enterS2
+            // 
+            this.enterS2.BackColor = System.Drawing.Color.Transparent;
+            this.enterS2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enterS2.Image = global::MainWinFormApp.Properties.Resources.walking_man;
+            this.enterS2.Location = new System.Drawing.Point(528, 610);
+            this.enterS2.Name = "enterS2";
+            this.enterS2.Size = new System.Drawing.Size(130, 114);
+            this.enterS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enterS2.TabIndex = 14;
+            this.enterS2.TabStop = false;
+            this.enterS2.Visible = false;
+            // 
+            // enterS1
+            // 
+            this.enterS1.BackColor = System.Drawing.Color.Transparent;
+            this.enterS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enterS1.Image = global::MainWinFormApp.Properties.Resources.walking_man;
+            this.enterS1.Location = new System.Drawing.Point(314, 610);
+            this.enterS1.Name = "enterS1";
+            this.enterS1.Size = new System.Drawing.Size(130, 114);
+            this.enterS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enterS1.TabIndex = 12;
+            this.enterS1.TabStop = false;
+            this.enterS1.Visible = false;
             // 
             // invisiblePanel
             // 
@@ -210,6 +523,18 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(410, 346);
             this.panel6.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::MainWinFormApp.Properties.Resources.crowd_icon_total_2;
+            this.pictureBox2.Location = new System.Drawing.Point(104, 284);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(89, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -398,6 +723,17 @@
             this.label1.Text = "CrowdTab";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // arcadeImg
+            // 
+            this.arcadeImg.BackColor = System.Drawing.Color.Transparent;
+            this.arcadeImg.Image = global::MainWinFormApp.Properties.Resources.arcade_img;
+            this.arcadeImg.Location = new System.Drawing.Point(645, 528);
+            this.arcadeImg.Name = "arcadeImg";
+            this.arcadeImg.Size = new System.Drawing.Size(273, 258);
+            this.arcadeImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.arcadeImg.TabIndex = 13;
+            this.arcadeImg.TabStop = false;
+            // 
             // PopularityTab
             // 
             this.PopularityTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
@@ -556,183 +892,17 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "MaintenanceTab";
             // 
-            // topPanel
+            // exitS2
             // 
-            this.topPanel.BackColor = System.Drawing.Color.Black;
-            this.topPanel.Controls.Add(this.lblTime);
-            this.topPanel.Controls.Add(this.lblDate);
-            this.topPanel.Controls.Add(this.btnCloseWindow);
-            this.topPanel.Controls.Add(this.panel1);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1352, 125);
-            this.topPanel.TabIndex = 5;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTime.Location = new System.Drawing.Point(226, 75);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(134, 50);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "12:00:00";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDate.Location = new System.Drawing.Point(226, 36);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(267, 50);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "31 December 2021";
-            // 
-            // btnCloseWindow
-            // 
-            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
-            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWindow.Location = new System.Drawing.Point(1285, 12);
-            this.btnCloseWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCloseWindow.Name = "btnCloseWindow";
-            this.btnCloseWindow.Size = new System.Drawing.Size(54, 29);
-            this.btnCloseWindow.TabIndex = 1;
-            this.btnCloseWindow.UseVisualStyleBackColor = true;
-            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 125);
-            this.panel1.TabIndex = 0;
-            // 
-            // sideNavPanel
-            // 
-            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
-            this.sideNavPanel.Controls.Add(this.panel5);
-            this.sideNavPanel.Controls.Add(this.panel4);
-            this.sideNavPanel.Controls.Add(this.panel3);
-            this.sideNavPanel.Controls.Add(this.panel2);
-            this.sideNavPanel.Controls.Add(this.btnPopularity);
-            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
-            this.sideNavPanel.Controls.Add(this.btnMaintenance);
-            this.sideNavPanel.Controls.Add(this.btnLogout);
-            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideNavPanel.Location = new System.Drawing.Point(0, 125);
-            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
-            this.sideNavPanel.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 402);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(7, 44);
-            this.panel5.TabIndex = 5;
-            this.panel5.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 275);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(7, 44);
-            this.panel4.TabIndex = 4;
-            this.panel4.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 149);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 44);
-            this.panel3.TabIndex = 2;
-            this.panel3.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel2.Location = new System.Drawing.Point(4, 29);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 44);
-            this.panel2.TabIndex = 1;
-            this.panel2.Visible = false;
-            // 
-            // btnPopularity
-            // 
-            this.btnPopularity.BackColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPopularity.ForeColor = System.Drawing.Color.White;
-            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(14, 149);
-            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPopularity.Name = "btnPopularity";
-            this.btnPopularity.Size = new System.Drawing.Size(183, 44);
-            this.btnPopularity.TabIndex = 1;
-            this.btnPopularity.Text = "Game Machines";
-            this.btnPopularity.UseVisualStyleBackColor = false;
-            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
-            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
-            // 
-            // btnCrowdLvl
-            // 
-            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
-            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrowdLvl.Location = new System.Drawing.Point(14, 29);
-            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrowdLvl.Name = "btnCrowdLvl";
-            this.btnCrowdLvl.Size = new System.Drawing.Size(183, 44);
-            this.btnCrowdLvl.TabIndex = 0;
-            this.btnCrowdLvl.Text = "Crowd Level";
-            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrowdLvl.UseVisualStyleBackColor = false;
-            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
-            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timerDateTime
-            // 
-            this.timerDateTime.Interval = 1000;
-            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::MainWinFormApp.Properties.Resources.crowd_icon_total_2;
-            this.pictureBox2.Location = new System.Drawing.Point(104, 284);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(89, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.exitS2.BackColor = System.Drawing.Color.Transparent;
+            this.exitS2.Image = global::MainWinFormApp.Properties.Resources.walking_man_flipped;
+            this.exitS2.Location = new System.Drawing.Point(527, 613);
+            this.exitS2.Name = "exitS2";
+            this.exitS2.Size = new System.Drawing.Size(130, 114);
+            this.exitS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitS2.TabIndex = 22;
+            this.exitS2.TabStop = false;
+            this.exitS2.Visible = false;
             // 
             // AdminMainpage
             // 
@@ -748,10 +918,19 @@
             this.Text = "AdminMainpage";
             this.Load += new System.EventHandler(this.AdminMainpage_Load);
             this.tabControl1.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sideNavPanel.ResumeLayout(false);
             this.CrowdTab.ResumeLayout(false);
             this.CrowdTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enterS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enterS1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalCrowdCht)).EndInit();
             this.CurCrowdPanel.ResumeLayout(false);
             this.CurCrowdPanel.PerformLayout();
@@ -760,15 +939,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinCrowdCht)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcadeImg)).EndInit();
             this.PopularityTab.ResumeLayout(false);
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
             this.panelExpenditureChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            this.sideNavPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitS2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -824,5 +1001,17 @@
         private System.Windows.Forms.Label lbTotalCrowdCount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox enterS1;
+        private System.Windows.Forms.PictureBox arcadeImg;
+        private System.Windows.Forms.Timer timerMan;
+        private System.Windows.Forms.PictureBox enterS2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ArcadeEntrance;
+        private System.Windows.Forms.PictureBox exitS1;
+        private System.Windows.Forms.PictureBox exitS2;
     }
 }
