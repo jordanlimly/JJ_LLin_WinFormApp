@@ -43,7 +43,7 @@ namespace MainWinFormApp
             StrCommandText += "WHERE GameMachineID = @GMachineID AND MaintenanceDate = @MtnceDate";
             SqlCommand retrieveValue = new SqlCommand(StrCommandText, myConnect);
             retrieveValue.Parameters.AddWithValue("@GMachineID", tbGameMachineID.Text);
-            retrieveValue.Parameters.AddWithValue("@MtnceDate", tbDate.Text);
+            retrieveValue.Parameters.AddWithValue("@MtnceDate", DTPickerRUDMaintenance.Text);
 
             //open connection
             myConnect.Open();
@@ -81,7 +81,7 @@ namespace MainWinFormApp
 
             //creating command
             modifyValue.Parameters.AddWithValue("GMachineID", tbGameMachineID.Text);
-            modifyValue.Parameters.AddWithValue("MtnceDate", tbDate.Text);
+            modifyValue.Parameters.AddWithValue("MtnceDate", DTPickerRUDMaintenance.Text);
             modifyValue.Parameters.AddWithValue("NewMtnceFee", tbCost.Text);
             modifyValue.Parameters.AddWithValue("NewMtnceRemarks", tbRemarks.Text);
 
@@ -126,14 +126,14 @@ namespace MainWinFormApp
             //prompt admin to confirm deletion of maintenance record
             if (MessageBox.Show("Confirm Delete?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (DeleteMaintenanceRecord(tbGameMachineID.Text, tbDate.Text) > 0)
-                    MessageBox.Show("Maintenance Record for Game Machine " + tbGameMachineID.Text + " on " + tbDate.Text + " has been deleted");
+                if (DeleteMaintenanceRecord(tbGameMachineID.Text, DTPickerRUDMaintenance.Text) > 0)
+                    MessageBox.Show("Maintenance Record for Game Machine " + tbGameMachineID.Text + " on " + DTPickerRUDMaintenance.Text + " has been deleted");
                 else
                     MessageBox.Show("Maintenance Record could not be deleted!");
             }
 
             tbGameMachineID.Text = String.Empty;
-            tbDate.Text = String.Empty;
+            DTPickerRUDMaintenance.Text = String.Empty;
             tbCost.Text = String.Empty;
             tbRemarks.Text = String.Empty;
         }

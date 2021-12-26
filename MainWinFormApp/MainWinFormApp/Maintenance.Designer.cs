@@ -34,11 +34,11 @@
             this.lbl_cost = new System.Windows.Forms.Label();
             this.lbl_remarks = new System.Windows.Forms.Label();
             this.tbMachineID = new System.Windows.Forms.TextBox();
-            this.tbDate = new System.Windows.Forms.TextBox();
             this.tbCost = new System.Windows.Forms.TextBox();
             this.tbRemarks = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.DTPickerMaintenance = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lbl_maintenance
@@ -67,15 +67,15 @@
             this.lbl_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.Location = new System.Drawing.Point(103, 182);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(188, 24);
+            this.lbl_date.Size = new System.Drawing.Size(53, 24);
             this.lbl_date.TabIndex = 3;
-            this.lbl_date.Text = "Date (YYYY-MM-DD):";
+            this.lbl_date.Text = "Date:";
             // 
             // lbl_cost
             // 
             this.lbl_cost.AutoSize = true;
             this.lbl_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cost.Location = new System.Drawing.Point(103, 223);
+            this.lbl_cost.Location = new System.Drawing.Point(103, 229);
             this.lbl_cost.Name = "lbl_cost";
             this.lbl_cost.Size = new System.Drawing.Size(166, 24);
             this.lbl_cost.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             this.lbl_remarks.AutoSize = true;
             this.lbl_remarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_remarks.Location = new System.Drawing.Point(103, 263);
+            this.lbl_remarks.Location = new System.Drawing.Point(103, 269);
             this.lbl_remarks.Name = "lbl_remarks";
             this.lbl_remarks.Size = new System.Drawing.Size(89, 24);
             this.lbl_remarks.TabIndex = 5;
@@ -101,22 +101,12 @@
             this.tbMachineID.Size = new System.Drawing.Size(130, 22);
             this.tbMachineID.TabIndex = 6;
             // 
-            // tbDate
-            // 
-            this.tbDate.BackColor = System.Drawing.Color.Gray;
-            this.tbDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDate.Location = new System.Drawing.Point(331, 185);
-            this.tbDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(187, 22);
-            this.tbDate.TabIndex = 7;
-            // 
             // tbCost
             // 
             this.tbCost.BackColor = System.Drawing.Color.Gray;
             this.tbCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCost.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbCost.Location = new System.Drawing.Point(331, 225);
+            this.tbCost.Location = new System.Drawing.Point(331, 231);
             this.tbCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbCost.Name = "tbCost";
             this.tbCost.Size = new System.Drawing.Size(130, 22);
@@ -127,7 +117,7 @@
             // 
             this.tbRemarks.BackColor = System.Drawing.Color.Gray;
             this.tbRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRemarks.Location = new System.Drawing.Point(331, 265);
+            this.tbRemarks.Location = new System.Drawing.Point(331, 271);
             this.tbRemarks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbRemarks.Name = "tbRemarks";
             this.tbRemarks.Size = new System.Drawing.Size(351, 22);
@@ -159,17 +149,29 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // DTPickerMaintenance
+            // 
+            this.DTPickerMaintenance.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPickerMaintenance.CalendarMonthBackground = System.Drawing.Color.White;
+            this.DTPickerMaintenance.CustomFormat = "yyyy-MM-dd";
+            this.DTPickerMaintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPickerMaintenance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPickerMaintenance.Location = new System.Drawing.Point(331, 184);
+            this.DTPickerMaintenance.Name = "DTPickerMaintenance";
+            this.DTPickerMaintenance.Size = new System.Drawing.Size(143, 24);
+            this.DTPickerMaintenance.TabIndex = 12;
+            // 
             // frmMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(755, 475);
+            this.Controls.Add(this.DTPickerMaintenance);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbRemarks);
             this.Controls.Add(this.tbCost);
-            this.Controls.Add(this.tbDate);
             this.Controls.Add(this.tbMachineID);
             this.Controls.Add(this.lbl_remarks);
             this.Controls.Add(this.lbl_cost);
@@ -194,10 +196,10 @@
         private System.Windows.Forms.Label lbl_cost;
         private System.Windows.Forms.Label lbl_remarks;
         private System.Windows.Forms.TextBox tbMachineID;
-        private System.Windows.Forms.TextBox tbDate;
         private System.Windows.Forms.TextBox tbCost;
         private System.Windows.Forms.TextBox tbRemarks;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker DTPickerMaintenance;
     }
 }

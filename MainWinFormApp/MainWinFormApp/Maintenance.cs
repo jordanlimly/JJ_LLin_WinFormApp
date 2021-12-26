@@ -50,7 +50,7 @@ namespace MainWinFormApp
 
             SqlCommand addValue = new SqlCommand(strCommandText, myConnect);
             addValue.Parameters.AddWithValue("@NewMachineID", tbMachineID.Text);
-            addValue.Parameters.AddWithValue("@NewDate", tbDate.Text);
+            addValue.Parameters.AddWithValue("@NewDate", DTPickerMaintenance.Text);
             addValue.Parameters.AddWithValue("@NewFee", tbCost.Text);
             addValue.Parameters.AddWithValue("@NewRemarks", tbRemarks.Text);
 

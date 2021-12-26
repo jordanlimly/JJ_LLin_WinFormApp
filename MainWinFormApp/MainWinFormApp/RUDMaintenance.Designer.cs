@@ -32,7 +32,6 @@
             this.lblGameMachineID = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.tbGameMachineID = new System.Windows.Forms.TextBox();
-            this.tbDate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCost = new System.Windows.Forms.Label();
             this.lblRemarks = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.DTPickerRUDMaintenance = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblMaintenanceRecordDetails
@@ -73,9 +73,9 @@
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lblDate.Location = new System.Drawing.Point(186, 183);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(188, 24);
+            this.lblDate.Size = new System.Drawing.Size(53, 24);
             this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "Date (YYYY-MM-DD):";
+            this.lblDate.Text = "Date:";
             // 
             // tbGameMachineID
             // 
@@ -85,15 +85,6 @@
             this.tbGameMachineID.Name = "tbGameMachineID";
             this.tbGameMachineID.Size = new System.Drawing.Size(146, 22);
             this.tbGameMachineID.TabIndex = 3;
-            // 
-            // tbDate
-            // 
-            this.tbDate.BackColor = System.Drawing.Color.Gray;
-            this.tbDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDate.Location = new System.Drawing.Point(392, 185);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(206, 22);
-            this.tbDate.TabIndex = 4;
             // 
             // label1
             // 
@@ -199,12 +190,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // DTPickerRUDMaintenance
+            // 
+            this.DTPickerRUDMaintenance.CustomFormat = "yyyy-MM-dd";
+            this.DTPickerRUDMaintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPickerRUDMaintenance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPickerRUDMaintenance.Location = new System.Drawing.Point(392, 183);
+            this.DTPickerRUDMaintenance.Name = "DTPickerRUDMaintenance";
+            this.DTPickerRUDMaintenance.Size = new System.Drawing.Size(146, 24);
+            this.DTPickerRUDMaintenance.TabIndex = 14;
+            // 
             // RUDMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(961, 587);
+            this.Controls.Add(this.DTPickerRUDMaintenance);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnModify);
@@ -214,7 +216,6 @@
             this.Controls.Add(this.lblRemarks);
             this.Controls.Add(this.lblCost);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbDate);
             this.Controls.Add(this.tbGameMachineID);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblGameMachineID);
@@ -233,7 +234,6 @@
         private System.Windows.Forms.Label lblGameMachineID;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TextBox tbGameMachineID;
-        private System.Windows.Forms.TextBox tbDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.Label lblRemarks;
@@ -243,5 +243,6 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker DTPickerRUDMaintenance;
     }
 }
