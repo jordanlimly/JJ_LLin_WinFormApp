@@ -260,6 +260,38 @@ namespace MainWinFormApp
             myConnect.Close();
         }
 
+        private void addLBItem(string detectedRFID, int pointsEarned, string machineID)
+        {
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "SELECT GameMachineName FROM GameMachine WHERE GameMachineID = '" + machineID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+           
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            string machineName = Convert.ToString(ds.Tables[0].Rows[0]["GameMachineName"]);
+
+            //Step 2: Create command
+            String strCommandText2 =
+                "SELECT Name FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter2 = new SqlDataAdapter(strCommandText2, myConnect);
+            SqlCommandBuilder cmdBuilder2 = new SqlCommandBuilder(adapter2);
+
+            DataSet ds2 = new DataSet();
+            adapter2.Fill(ds2);
+            string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
+
+            string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
+            lbCustomerActivity.Items.Insert(0, strMsg);
+            lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
+        }
+
         private void handleGameMode(string strData, string ID)
         {
             string detectedRFID = extractStringValue(strData, ID);
@@ -268,8 +300,9 @@ namespace MainWinFormApp
             deductMaintenanceCount("G001");
             DateTime curDT = DateTime.Now;
             addGameRecord("G001", curDT, detectedRFID);
-            addUserPoints(generateGamePoints(), detectedRFID);
-      
+            int pointsEarned = generateGamePoints();
+            addUserPoints(pointsEarned, detectedRFID);
+            addLBItem(detectedRFID, pointsEarned, "G001");
         }
 
         //create your own data handler for your project needs
@@ -366,6 +399,7 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+            panel8.Visible = false;
             loadDBtoTotalCrowdCht();
             loadDBtoHourlyCht();
             int curYear = Convert.ToInt32(DateTime.Now.Year);
@@ -393,7 +427,7 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
-
+            panel8.Visible = false;
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -403,7 +437,18 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel3.Visible = false;
             panel5.Visible = false;
+            panel8.Visible = false;
 
+        }
+
+        private void btnUserActivity_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(3);
+            panel8.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)
@@ -446,6 +491,7 @@ namespace MainWinFormApp
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+            panel8.Visible = false;
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
@@ -1040,5 +1086,7 @@ namespace MainWinFormApp
             exitS1.Visible = false;
             exitS2.Visible = false;
         }
+
+        
     }
 }
