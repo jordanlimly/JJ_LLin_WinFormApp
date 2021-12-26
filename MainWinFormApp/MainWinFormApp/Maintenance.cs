@@ -40,27 +40,78 @@ namespace MainWinFormApp
                 "INSERT GameMachineMaintenance (GameMachineID, MaintenanceDate, MaintenanceFee, Remarks)" +
                 " VALUES (@NewMachineID, @NewDate, @NewFee, @NewRemarks)";
 
+            String strCheckText = "SELECT GameMachineID FROM GameMachine";
+            strCheckText += " WHERE GameMachineID=@GMID";
+
+            String strUpdateUsageText =
+                "UPDATE GameMachine" +
+                " SET UsageCount = @NewUsageCount" +
+                " WHERE GameMachineID = @gmid";
+
             SqlCommand addValue = new SqlCommand(strCommandText, myConnect);
             addValue.Parameters.AddWithValue("@NewMachineID", tbMachineID.Text);
             addValue.Parameters.AddWithValue("@NewDate", tbDate.Text);
             addValue.Parameters.AddWithValue("@NewFee", tbCost.Text);
             addValue.Parameters.AddWithValue("@NewRemarks", tbRemarks.Text);
 
+            SqlCommand checkValue = new SqlCommand(strCheckText, myConnect);
+            checkValue.Parameters.AddWithValue("@GMID", tbMachineID.Text);
+
+            SqlCommand updateUsage = new SqlCommand(strUpdateUsageText, myConnect);
+            updateUsage.Parameters.AddWithValue("@NewUsageCount", 10);
+            updateUsage.Parameters.AddWithValue("@gmid", tbMachineID.Text);
+
+            try
+            {
+                myConnect.Open();
+
+                SqlDataReader reader = checkValue.ExecuteReader();
+                if (reader.Read())
+                {
+                    reader.Close();
+                    result = addValue.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("New Maintenance Record Added!");
+                        updateUsage.ExecuteNonQuery();
+                    }
+                    else
+                        MessageBox.Show("Failed to add new Maintenance record.");
+
+                }
+
+                else
+                    MessageBox.Show("Failed to add new Maintenance record.");
+
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message.ToString());
+            }
+
+            finally
+            {
+                myConnect.Close();
+                Close();
+            }
+
             //open connection and retrieve data by calling ExecuteReader
-            myConnect.Open();
+            
 
             //execute command
             //result indicates number of records created
-            result = addValue.ExecuteNonQuery();
+            //result = addValue.ExecuteNonQuery();
 
-            if (result > 0)
-                MessageBox.Show("New Maintenance Record Added!");
-            else
-                MessageBox.Show("Failed to add new Maintenance record.");
+            //if (result > 0)
+            //    MessageBox.Show("New Maintenance Record Added!");
+            //else
+            //    MessageBox.Show("Failed to add new Maintenance record.");
 
             //close connection
-            myConnect.Close();
-            Close();
+            //myConnect.Close();
+            //Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
