@@ -73,16 +73,16 @@ namespace MainWinFormApp
 
                     if (result > 0)
                     {
-                        MessageBox.Show("New Maintenance Record Added!");
+                        MessageBox.Show("New maintenance record added!");
                         updateUsage.ExecuteNonQuery();
                     }
                     else
-                        MessageBox.Show("Failed to add new Maintenance record.");
+                        MessageBox.Show("Failed to add new maintenance record.");
 
                 }
 
                 else
-                    MessageBox.Show("Failed to add new Maintenance record.");
+                    MessageBox.Show("Failed to add new maintenance record.");
 
                 reader.Close();
             }

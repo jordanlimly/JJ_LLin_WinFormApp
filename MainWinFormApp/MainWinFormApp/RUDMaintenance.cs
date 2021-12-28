@@ -45,23 +45,31 @@ namespace MainWinFormApp
             retrieveValue.Parameters.AddWithValue("@GMachineID", tbGameMachineID.Text);
             retrieveValue.Parameters.AddWithValue("@MtnceDate", DTPickerRUDMaintenance.Text);
 
-            //open connection
-            myConnect.Open();
 
-            //access data
-            SqlDataReader reader = retrieveValue.ExecuteReader();
+            if (tbGameMachineID.Text == String.Empty || DTPickerRUDMaintenance.Text == String.Empty)
 
-            if (reader.Read())
-            {
-                tbCost.Text = reader["MaintenanceFee"].ToString();
-                tbRemarks.Text = reader["Remarks"].ToString();
-                blnfound = true;
-            }
+                MessageBox.Show("Both inputs are required for retrieval of maintenance details.");
             else
-                MessageBox.Show("No Maintenance Record Found!");
+            {
+                //open connection
+                myConnect.Open();
 
-            reader.Close();
-            myConnect.Close();
+                //access data
+                SqlDataReader reader = retrieveValue.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    tbCost.Text = reader["MaintenanceFee"].ToString();
+                    tbRemarks.Text = reader["Remarks"].ToString();
+                    blnfound = true;
+                }
+                else
+                    MessageBox.Show("No Maintenance Record Found!");
+
+                reader.Close();
+                myConnect.Close();
+            }
+            
         }
 
         private void btnModify_Click(object sender, EventArgs e)

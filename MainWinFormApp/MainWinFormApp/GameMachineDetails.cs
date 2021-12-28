@@ -35,26 +35,65 @@ namespace MainWinFormApp
                 "INSERT GameMachine (GameMachineID, GameMachineName, UsageCount)" +
                 " VALUES (@NewGMachineID, @NewGMachineName, @NewUsageCount)";
 
+            String strCheckMachine = "SELECT GameMachineID, GameMachineName FROM GameMachine" +
+                " WHERE GameMachineID = @gmid AND GameMachineName = @gmName";
+
             SqlCommand addValue = new SqlCommand(strCommandText, myConnect);
             addValue.Parameters.AddWithValue("@NewGMachineID", tbGMachineID.Text);
             addValue.Parameters.AddWithValue("@NewGMachineName", tbGMachineName.Text);
             addValue.Parameters.AddWithValue("@NewUsageCount", 10);
 
-            //open connection
-            myConnect.Open();
+            SqlCommand checkMachines = new SqlCommand(strCheckMachine, myConnect);
+            checkMachines.Parameters.AddWithValue("@gmid", tbGMachineID.Text);
+            checkMachines.Parameters.AddWithValue("@gmName", tbGMachineName.Text);
+
+            try
+            {
+                //open connection
+                myConnect.Open();
+
+                SqlDataReader reader = checkMachines.ExecuteReader();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Game machine already exists! ");
+                }
+
+                else
+                {
+                    reader.Close();
+
+                    result = addValue.ExecuteNonQuery();
+
+                    if (result > 0)
+                        MessageBox.Show("New game machine has been added successfully!");
+                    else
+                        MessageBox.Show("Could not add game machine!");
+                }
+                    
+
+                reader.Close();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message.ToString());
+            }
+
+            finally
+            {
+                myConnect.Close();
+                Close();
+            }
+
 
             //execute command
             //indicate number of records created
-            result = addValue.ExecuteNonQuery();
 
-            if (result > 0)
-                MessageBox.Show("New Game Machine has been added successfully!");
-            else
-                MessageBox.Show("Could not add Game Machine!");
+
+
 
             //close connection
-            myConnect.Close();
-            Close();
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
