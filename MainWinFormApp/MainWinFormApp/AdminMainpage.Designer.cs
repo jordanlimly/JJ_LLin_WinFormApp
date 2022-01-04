@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -88,6 +89,8 @@
             this.lblCustomerActivity = new System.Windows.Forms.Label();
             this.lbCustomerActivity = new System.Windows.Forms.ListBox();
             this.TopUpTab = new System.Windows.Forms.TabPage();
+            this.lblTopupTitle = new System.Windows.Forms.Label();
+            this.btnTopupClear = new System.Windows.Forms.Button();
             this.lblErrorMsg2 = new System.Windows.Forms.Label();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.dgvTopup = new System.Windows.Forms.DataGridView();
@@ -115,8 +118,16 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.timerMan = new System.Windows.Forms.Timer(this.components);
-            this.btnTopupClear = new System.Windows.Forms.Button();
-            this.lblTopupTitle = new System.Windows.Forms.Label();
+            this.dgNeedMaintenance = new System.Windows.Forms.DataGridView();
+            this.dgUpForMaintenance = new System.Windows.Forms.DataGridView();
+            this.GameMachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsageCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameMachineID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameMachineName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsageCount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblufMtnce = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
@@ -136,6 +147,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcadeImg)).BeginInit();
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
+            this.panelUpForMtnce.SuspendLayout();
+            this.panelNeedMtnce.SuspendLayout();
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.CustomerActivitiesTab.SuspendLayout();
@@ -143,6 +156,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -152,10 +167,10 @@
             this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaintenance.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
-            this.btnMaintenance.Location = new System.Drawing.Point(14, 255);
+            this.btnMaintenance.Location = new System.Drawing.Point(12, 195);
             this.btnMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaintenance.Name = "btnMaintenance";
-            this.btnMaintenance.Size = new System.Drawing.Size(183, 44);
+            this.btnMaintenance.Size = new System.Drawing.Size(163, 35);
             this.btnMaintenance.TabIndex = 2;
             this.btnMaintenance.Text = "Maintenance";
             this.btnMaintenance.UseVisualStyleBackColor = false;
@@ -169,10 +184,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(14, 550);
+            this.btnLogout.Location = new System.Drawing.Point(12, 440);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(183, 44);
+            this.btnLogout.Size = new System.Drawing.Size(163, 35);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -193,7 +208,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1352, 822);
+            this.tabControl1.Size = new System.Drawing.Size(1202, 658);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
             // 
@@ -222,7 +237,7 @@
             this.CrowdTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CrowdTab.Name = "CrowdTab";
             this.CrowdTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CrowdTab.Size = new System.Drawing.Size(1344, 813);
+            this.CrowdTab.Size = new System.Drawing.Size(1194, 649);
             this.CrowdTab.TabIndex = 0;
             this.CrowdTab.Text = "CrowdTab";
             this.CrowdTab.UseVisualStyleBackColor = true;
@@ -231,9 +246,10 @@
             // 
             this.exitS2.BackColor = System.Drawing.Color.Transparent;
             this.exitS2.Image = global::MainWinFormApp.Properties.Resources.walking_man_flipped;
-            this.exitS2.Location = new System.Drawing.Point(527, 613);
+            this.exitS2.Location = new System.Drawing.Point(468, 490);
+            this.exitS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitS2.Name = "exitS2";
-            this.exitS2.Size = new System.Drawing.Size(130, 114);
+            this.exitS2.Size = new System.Drawing.Size(116, 91);
             this.exitS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitS2.TabIndex = 22;
             this.exitS2.TabStop = false;
@@ -243,9 +259,10 @@
             // 
             this.exitS1.BackColor = System.Drawing.Color.Transparent;
             this.exitS1.Image = global::MainWinFormApp.Properties.Resources.walking_man_flipped;
-            this.exitS1.Location = new System.Drawing.Point(314, 613);
+            this.exitS1.Location = new System.Drawing.Point(279, 490);
+            this.exitS1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitS1.Name = "exitS1";
-            this.exitS1.Size = new System.Drawing.Size(130, 114);
+            this.exitS1.Size = new System.Drawing.Size(116, 91);
             this.exitS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitS1.TabIndex = 21;
             this.exitS1.TabStop = false;
@@ -257,9 +274,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(550, 558);
+            this.label7.Location = new System.Drawing.Point(489, 446);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 20;
             this.label7.Text = "Sensor 2";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -270,9 +287,9 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(340, 558);
+            this.label6.Location = new System.Drawing.Point(302, 446);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 19;
             this.label6.Text = "Sensor 1";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -283,9 +300,9 @@
             this.ArcadeEntrance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.ArcadeEntrance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArcadeEntrance.ForeColor = System.Drawing.Color.White;
-            this.ArcadeEntrance.Location = new System.Drawing.Point(405, 743);
+            this.ArcadeEntrance.Location = new System.Drawing.Point(360, 594);
             this.ArcadeEntrance.Name = "ArcadeEntrance";
-            this.ArcadeEntrance.Size = new System.Drawing.Size(173, 25);
+            this.ArcadeEntrance.Size = new System.Drawing.Size(149, 20);
             this.ArcadeEntrance.TabIndex = 18;
             this.ArcadeEntrance.Text = "Arcade Entrance";
             this.ArcadeEntrance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -294,9 +311,10 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::MainWinFormApp.Properties.Resources.gate_2;
-            this.pictureBox4.Location = new System.Drawing.Point(293, 730);
+            this.pictureBox4.Location = new System.Drawing.Point(260, 584);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(396, 56);
+            this.pictureBox4.Size = new System.Drawing.Size(352, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -305,9 +323,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::MainWinFormApp.Properties.Resources.gate_1__2_1;
-            this.pictureBox3.Location = new System.Drawing.Point(283, 537);
+            this.pictureBox3.Location = new System.Drawing.Point(252, 430);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(412, 72);
+            this.pictureBox3.Size = new System.Drawing.Size(366, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -318,9 +337,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.label5.Location = new System.Drawing.Point(695, 746);
+            this.label5.Location = new System.Drawing.Point(618, 597);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 26);
+            this.label5.Size = new System.Drawing.Size(148, 24);
             this.label5.TabIndex = 15;
             this.label5.Text = "JJ LLin Arcade";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -330,9 +349,10 @@
             this.enterS2.BackColor = System.Drawing.Color.Transparent;
             this.enterS2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.enterS2.Image = global::MainWinFormApp.Properties.Resources.walking_man;
-            this.enterS2.Location = new System.Drawing.Point(528, 610);
+            this.enterS2.Location = new System.Drawing.Point(469, 488);
+            this.enterS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enterS2.Name = "enterS2";
-            this.enterS2.Size = new System.Drawing.Size(130, 114);
+            this.enterS2.Size = new System.Drawing.Size(116, 91);
             this.enterS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enterS2.TabIndex = 14;
             this.enterS2.TabStop = false;
@@ -343,9 +363,10 @@
             this.enterS1.BackColor = System.Drawing.Color.Transparent;
             this.enterS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.enterS1.Image = global::MainWinFormApp.Properties.Resources.walking_man;
-            this.enterS1.Location = new System.Drawing.Point(314, 610);
+            this.enterS1.Location = new System.Drawing.Point(279, 488);
+            this.enterS1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enterS1.Name = "enterS1";
-            this.enterS1.Size = new System.Drawing.Size(130, 114);
+            this.enterS1.Size = new System.Drawing.Size(116, 91);
             this.enterS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enterS1.TabIndex = 12;
             this.enterS1.TabStop = false;
@@ -358,7 +379,7 @@
             this.invisiblePanel.Location = new System.Drawing.Point(3, 2);
             this.invisiblePanel.Margin = new System.Windows.Forms.Padding(0);
             this.invisiblePanel.Name = "invisiblePanel";
-            this.invisiblePanel.Size = new System.Drawing.Size(226, 809);
+            this.invisiblePanel.Size = new System.Drawing.Size(201, 645);
             this.invisiblePanel.TabIndex = 11;
             // 
             // curCrowdbtn
@@ -367,9 +388,10 @@
             this.curCrowdbtn.FlatAppearance.BorderSize = 0;
             this.curCrowdbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.curCrowdbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.curCrowdbtn.Location = new System.Drawing.Point(229, 493);
+            this.curCrowdbtn.Location = new System.Drawing.Point(204, 394);
+            this.curCrowdbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.curCrowdbtn.Name = "curCrowdbtn";
-            this.curCrowdbtn.Size = new System.Drawing.Size(161, 38);
+            this.curCrowdbtn.Size = new System.Drawing.Size(143, 30);
             this.curCrowdbtn.TabIndex = 11;
             this.curCrowdbtn.Text = "By Hour";
             this.curCrowdbtn.UseVisualStyleBackColor = false;
@@ -382,20 +404,20 @@
             this.panel6.Controls.Add(this.lbTotalCrowdCount);
             this.panel6.Controls.Add(this.TotalCrowdCht);
             this.panel6.Controls.Add(this.lblTotalCrowd);
-            this.panel6.Location = new System.Drawing.Point(892, 146);
+            this.panel6.Location = new System.Drawing.Point(793, 117);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(410, 346);
+            this.panel6.Size = new System.Drawing.Size(364, 277);
             this.panel6.TabIndex = 8;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MainWinFormApp.Properties.Resources.crowd_icon_total_2;
-            this.pictureBox2.Location = new System.Drawing.Point(104, 284);
+            this.pictureBox2.Location = new System.Drawing.Point(92, 227);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(89, 59);
+            this.pictureBox2.Size = new System.Drawing.Size(79, 47);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -406,10 +428,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(193, 294);
+            this.label4.Location = new System.Drawing.Point(172, 235);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 43);
+            this.label4.Size = new System.Drawing.Size(33, 36);
             this.label4.TabIndex = 11;
             this.label4.Text = "X";
             // 
@@ -419,23 +441,23 @@
             this.lbTotalCrowdCount.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lbTotalCrowdCount.Location = new System.Drawing.Point(227, 282);
+            this.lbTotalCrowdCount.Location = new System.Drawing.Point(202, 226);
             this.lbTotalCrowdCount.Name = "lbTotalCrowdCount";
-            this.lbTotalCrowdCount.Size = new System.Drawing.Size(63, 61);
+            this.lbTotalCrowdCount.Size = new System.Drawing.Size(53, 52);
             this.lbTotalCrowdCount.TabIndex = 7;
             this.lbTotalCrowdCount.Text = "0";
             // 
             // TotalCrowdCht
             // 
-            chartArea1.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
-            this.TotalCrowdCht.Location = new System.Drawing.Point(2, 42);
+            chartArea17.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea17);
+            this.TotalCrowdCht.Location = new System.Drawing.Point(2, 34);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series1);
-            this.TotalCrowdCht.Size = new System.Drawing.Size(396, 238);
+            series17.ChartArea = "ChartArea1";
+            series17.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series17);
+            this.TotalCrowdCht.Size = new System.Drawing.Size(352, 190);
             this.TotalCrowdCht.TabIndex = 1;
             this.TotalCrowdCht.Text = "chart1";
             // 
@@ -444,9 +466,9 @@
             this.lblTotalCrowd.AutoSize = true;
             this.lblTotalCrowd.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCrowd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalCrowd.Location = new System.Drawing.Point(116, 8);
+            this.lblTotalCrowd.Location = new System.Drawing.Point(103, 6);
             this.lblTotalCrowd.Name = "lblTotalCrowd";
-            this.lblTotalCrowd.Size = new System.Drawing.Size(194, 32);
+            this.lblTotalCrowd.Size = new System.Drawing.Size(167, 29);
             this.lblTotalCrowd.TabIndex = 0;
             this.lblTotalCrowd.Text = "Total Visitors";
             // 
@@ -456,10 +478,10 @@
             this.CurCrowdPanel.Controls.Add(this.panel7);
             this.CurCrowdPanel.Controls.Add(this.HourlyCrowdCht);
             this.CurCrowdPanel.Controls.Add(this.lblCurrentCrowd);
-            this.CurCrowdPanel.Location = new System.Drawing.Point(231, 149);
+            this.CurCrowdPanel.Location = new System.Drawing.Point(205, 119);
             this.CurCrowdPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CurCrowdPanel.Name = "CurCrowdPanel";
-            this.CurCrowdPanel.Size = new System.Drawing.Size(622, 344);
+            this.CurCrowdPanel.Size = new System.Drawing.Size(553, 275);
             this.CurCrowdPanel.TabIndex = 7;
             // 
             // panel7
@@ -474,7 +496,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(622, 344);
+            this.panel7.Size = new System.Drawing.Size(553, 275);
             this.panel7.TabIndex = 9;
             // 
             // label2
@@ -483,10 +505,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(494, 205);
+            this.label2.Location = new System.Drawing.Point(439, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 43);
+            this.label2.Size = new System.Drawing.Size(33, 36);
             this.label2.TabIndex = 10;
             this.label2.Text = "X";
             // 
@@ -496,9 +518,9 @@
             this.lbCurCrowdCount.BackColor = System.Drawing.Color.Transparent;
             this.lbCurCrowdCount.Font = new System.Drawing.Font("Rockwell Extra Bold", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCurCrowdCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lbCurCrowdCount.Location = new System.Drawing.Point(520, 192);
+            this.lbCurCrowdCount.Location = new System.Drawing.Point(462, 154);
             this.lbCurCrowdCount.Name = "lbCurCrowdCount";
-            this.lbCurCrowdCount.Size = new System.Drawing.Size(63, 61);
+            this.lbCurCrowdCount.Size = new System.Drawing.Size(53, 52);
             this.lbCurCrowdCount.TabIndex = 6;
             this.lbCurCrowdCount.Text = "0";
             // 
@@ -506,10 +528,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MainWinFormApp.Properties.Resources.output_onlinepngtools__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(485, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 93);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(86, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -519,38 +541,39 @@
             this.lblCurrentCrowd2.AutoSize = true;
             this.lblCurrentCrowd2.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrentCrowd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentCrowd2.Location = new System.Drawing.Point(204, 8);
+            this.lblCurrentCrowd2.Location = new System.Drawing.Point(181, 6);
             this.lblCurrentCrowd2.Name = "lblCurrentCrowd2";
-            this.lblCurrentCrowd2.Size = new System.Drawing.Size(210, 32);
+            this.lblCurrentCrowd2.Size = new System.Drawing.Size(182, 29);
             this.lblCurrentCrowd2.TabIndex = 8;
             this.lblCurrentCrowd2.Text = "Current Crowd";
             // 
             // MinCrowdCht
             // 
-            chartArea2.Name = "ChartArea1";
-            this.MinCrowdCht.ChartAreas.Add(chartArea2);
-            this.MinCrowdCht.Location = new System.Drawing.Point(17, 66);
+            chartArea18.Name = "ChartArea1";
+            this.MinCrowdCht.ChartAreas.Add(chartArea18);
+            this.MinCrowdCht.Location = new System.Drawing.Point(15, 53);
+            this.MinCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinCrowdCht.Name = "MinCrowdCht";
-            series2.ChartArea = "ChartArea1";
-            series2.Name = "Series1";
-            this.MinCrowdCht.Series.Add(series2);
-            this.MinCrowdCht.Size = new System.Drawing.Size(447, 249);
+            series18.ChartArea = "ChartArea1";
+            series18.Name = "Series1";
+            this.MinCrowdCht.Series.Add(series18);
+            this.MinCrowdCht.Size = new System.Drawing.Size(397, 199);
             this.MinCrowdCht.TabIndex = 0;
             this.MinCrowdCht.Text = "chart1";
             // 
             // HourlyCrowdCht
             // 
-            chartArea3.Name = "ChartArea1";
-            this.HourlyCrowdCht.ChartAreas.Add(chartArea3);
-            this.HourlyCrowdCht.Location = new System.Drawing.Point(16, 66);
+            chartArea19.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea19);
+            this.HourlyCrowdCht.Location = new System.Drawing.Point(14, 53);
             this.HourlyCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyCrowdCht.Name = "HourlyCrowdCht";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.MarkerColor = System.Drawing.Color.White;
-            series3.Name = "Series1";
-            this.HourlyCrowdCht.Series.Add(series3);
-            this.HourlyCrowdCht.Size = new System.Drawing.Size(586, 251);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series19.MarkerColor = System.Drawing.Color.White;
+            series19.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series19);
+            this.HourlyCrowdCht.Size = new System.Drawing.Size(521, 201);
             this.HourlyCrowdCht.TabIndex = 7;
             this.HourlyCrowdCht.Text = "chart1";
             // 
@@ -559,9 +582,9 @@
             this.lblCurrentCrowd.AutoSize = true;
             this.lblCurrentCrowd.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrentCrowd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentCrowd.Location = new System.Drawing.Point(189, 8);
+            this.lblCurrentCrowd.Location = new System.Drawing.Point(168, 6);
             this.lblCurrentCrowd.Name = "lblCurrentCrowd";
-            this.lblCurrentCrowd.Size = new System.Drawing.Size(210, 32);
+            this.lblCurrentCrowd.Size = new System.Drawing.Size(182, 29);
             this.lblCurrentCrowd.TabIndex = 4;
             this.lblCurrentCrowd.Text = "Current Crowd";
             // 
@@ -569,11 +592,11 @@
             // 
             this.lbDataComms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.lbDataComms.FormattingEnabled = true;
-            this.lbDataComms.ItemHeight = 20;
-            this.lbDataComms.Location = new System.Drawing.Point(892, 528);
+            this.lbDataComms.ItemHeight = 16;
+            this.lbDataComms.Location = new System.Drawing.Point(793, 422);
             this.lbDataComms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbDataComms.Name = "lbDataComms";
-            this.lbDataComms.Size = new System.Drawing.Size(410, 244);
+            this.lbDataComms.Size = new System.Drawing.Size(365, 196);
             this.lbDataComms.TabIndex = 5;
             this.lbDataComms.Tag = "";
             this.lbDataComms.SelectedIndexChanged += new System.EventHandler(this.lbDataComms_SelectedIndexChanged);
@@ -581,9 +604,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(752, 72);
+            this.label1.Location = new System.Drawing.Point(668, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "CrowdTab";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -592,9 +615,10 @@
             // 
             this.arcadeImg.BackColor = System.Drawing.Color.Transparent;
             this.arcadeImg.Image = global::MainWinFormApp.Properties.Resources.arcade_img;
-            this.arcadeImg.Location = new System.Drawing.Point(645, 528);
+            this.arcadeImg.Location = new System.Drawing.Point(573, 422);
+            this.arcadeImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.arcadeImg.Name = "arcadeImg";
-            this.arcadeImg.Size = new System.Drawing.Size(273, 258);
+            this.arcadeImg.Size = new System.Drawing.Size(243, 206);
             this.arcadeImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.arcadeImg.TabIndex = 13;
             this.arcadeImg.TabStop = false;
@@ -610,7 +634,7 @@
             this.PopularityTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PopularityTab.Name = "PopularityTab";
             this.PopularityTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PopularityTab.Size = new System.Drawing.Size(1344, 813);
+            this.PopularityTab.Size = new System.Drawing.Size(1194, 649);
             this.PopularityTab.TabIndex = 1;
             this.PopularityTab.Text = "GameMachinesTab";
             this.PopularityTab.UseVisualStyleBackColor = true;
@@ -622,10 +646,9 @@
             this.btnRetrieveDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetrieveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetrieveDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnRetrieveDetails.Location = new System.Drawing.Point(786, 658);
-            this.btnRetrieveDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRetrieveDetails.Location = new System.Drawing.Point(699, 526);
             this.btnRetrieveDetails.Name = "btnRetrieveDetails";
-            this.btnRetrieveDetails.Size = new System.Drawing.Size(177, 72);
+            this.btnRetrieveDetails.Size = new System.Drawing.Size(157, 58);
             this.btnRetrieveDetails.TabIndex = 2;
             this.btnRetrieveDetails.Text = "Retrieve Details";
             this.btnRetrieveDetails.UseVisualStyleBackColor = false;
@@ -638,10 +661,9 @@
             this.btnAddMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMachine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnAddMachine.Location = new System.Drawing.Point(504, 658);
-            this.btnAddMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddMachine.Location = new System.Drawing.Point(448, 526);
             this.btnAddMachine.Name = "btnAddMachine";
-            this.btnAddMachine.Size = new System.Drawing.Size(177, 72);
+            this.btnAddMachine.Size = new System.Drawing.Size(157, 58);
             this.btnAddMachine.TabIndex = 1;
             this.btnAddMachine.Text = "Add Machine";
             this.btnAddMachine.UseVisualStyleBackColor = false;
@@ -649,16 +671,17 @@
             // 
             // panelPopularityChart
             // 
-            this.panelPopularityChart.Location = new System.Drawing.Point(405, 148);
-            this.panelPopularityChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelPopularityChart.Location = new System.Drawing.Point(360, 118);
             this.panelPopularityChart.Name = "panelPopularityChart";
-            this.panelPopularityChart.Size = new System.Drawing.Size(640, 442);
+            this.panelPopularityChart.Size = new System.Drawing.Size(569, 354);
             this.panelPopularityChart.TabIndex = 0;
             // 
             // MaintenanceTab
             // 
             this.MaintenanceTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
             this.MaintenanceTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MaintenanceTab.Controls.Add(this.label8);
+            this.MaintenanceTab.Controls.Add(this.lblufMtnce);
             this.MaintenanceTab.Controls.Add(this.panelUpForMtnce);
             this.MaintenanceTab.Controls.Add(this.btnRetrieveMaintenanceRecord);
             this.MaintenanceTab.Controls.Add(this.btnAddMaintenanceRecord);
@@ -668,17 +691,17 @@
             this.MaintenanceTab.Location = new System.Drawing.Point(4, 5);
             this.MaintenanceTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaintenanceTab.Name = "MaintenanceTab";
-            this.MaintenanceTab.Size = new System.Drawing.Size(1344, 813);
+            this.MaintenanceTab.Size = new System.Drawing.Size(1194, 649);
             this.MaintenanceTab.TabIndex = 2;
             this.MaintenanceTab.Text = "MaintenanceTab";
             this.MaintenanceTab.UseVisualStyleBackColor = true;
             // 
             // panelUpForMtnce
             // 
-            this.panelUpForMtnce.Location = new System.Drawing.Point(953, 385);
-            this.panelUpForMtnce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelUpForMtnce.Controls.Add(this.dgUpForMaintenance);
+            this.panelUpForMtnce.Location = new System.Drawing.Point(761, 388);
             this.panelUpForMtnce.Name = "panelUpForMtnce";
-            this.panelUpForMtnce.Size = new System.Drawing.Size(323, 180);
+            this.panelUpForMtnce.Size = new System.Drawing.Size(394, 194);
             this.panelUpForMtnce.TabIndex = 5;
             // 
             // btnRetrieveMaintenanceRecord
@@ -688,10 +711,9 @@
             this.btnRetrieveMaintenanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetrieveMaintenanceRecord.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetrieveMaintenanceRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnRetrieveMaintenanceRecord.Location = new System.Drawing.Point(821, 639);
-            this.btnRetrieveMaintenanceRecord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRetrieveMaintenanceRecord.Location = new System.Drawing.Point(516, 511);
             this.btnRetrieveMaintenanceRecord.Name = "btnRetrieveMaintenanceRecord";
-            this.btnRetrieveMaintenanceRecord.Size = new System.Drawing.Size(184, 89);
+            this.btnRetrieveMaintenanceRecord.Size = new System.Drawing.Size(164, 71);
             this.btnRetrieveMaintenanceRecord.TabIndex = 4;
             this.btnRetrieveMaintenanceRecord.Text = "Retrieve Record";
             this.btnRetrieveMaintenanceRecord.UseVisualStyleBackColor = false;
@@ -704,10 +726,9 @@
             this.btnAddMaintenanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaintenanceRecord.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaintenanceRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnAddMaintenanceRecord.Location = new System.Drawing.Point(510, 639);
-            this.btnAddMaintenanceRecord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddMaintenanceRecord.Location = new System.Drawing.Point(266, 511);
             this.btnAddMaintenanceRecord.Name = "btnAddMaintenanceRecord";
-            this.btnAddMaintenanceRecord.Size = new System.Drawing.Size(184, 89);
+            this.btnAddMaintenanceRecord.Size = new System.Drawing.Size(164, 71);
             this.btnAddMaintenanceRecord.TabIndex = 3;
             this.btnAddMaintenanceRecord.Text = "Add Record";
             this.btnAddMaintenanceRecord.UseVisualStyleBackColor = false;
@@ -715,45 +736,43 @@
             // 
             // panelNeedMtnce
             // 
-            this.panelNeedMtnce.Location = new System.Drawing.Point(953, 164);
-            this.panelNeedMtnce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelNeedMtnce.Controls.Add(this.dgNeedMaintenance);
+            this.panelNeedMtnce.Location = new System.Drawing.Point(761, 143);
             this.panelNeedMtnce.Name = "panelNeedMtnce";
-            this.panelNeedMtnce.Size = new System.Drawing.Size(323, 198);
+            this.panelNeedMtnce.Size = new System.Drawing.Size(394, 194);
             this.panelNeedMtnce.TabIndex = 2;
             // 
             // panelExpenditureChart
             // 
             this.panelExpenditureChart.Controls.Add(this.MaintenanceExpenditureChart);
-            this.panelExpenditureChart.Location = new System.Drawing.Point(248, 164);
-            this.panelExpenditureChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelExpenditureChart.Location = new System.Drawing.Point(220, 131);
             this.panelExpenditureChart.Name = "panelExpenditureChart";
-            this.panelExpenditureChart.Size = new System.Drawing.Size(664, 401);
+            this.panelExpenditureChart.Size = new System.Drawing.Size(498, 321);
             this.panelExpenditureChart.TabIndex = 1;
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
-            legend1.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend1);
-            this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(3, -4);
-            this.MaintenanceExpenditureChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            chartArea20.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea20);
+            legend5.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend5);
+            this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series4);
-            this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(664, 401);
+            series20.ChartArea = "ChartArea1";
+            series20.Legend = "Legend1";
+            series20.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series20);
+            this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(498, 324);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(706, 85);
+            this.label3.Location = new System.Drawing.Point(628, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 20);
+            this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "MaintenanceTab";
             // 
@@ -764,8 +783,9 @@
             this.CustomerActivitiesTab.Controls.Add(this.lblCustomerActivity);
             this.CustomerActivitiesTab.Controls.Add(this.lbCustomerActivity);
             this.CustomerActivitiesTab.Location = new System.Drawing.Point(4, 5);
+            this.CustomerActivitiesTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomerActivitiesTab.Name = "CustomerActivitiesTab";
-            this.CustomerActivitiesTab.Size = new System.Drawing.Size(1344, 813);
+            this.CustomerActivitiesTab.Size = new System.Drawing.Size(1194, 649);
             this.CustomerActivitiesTab.TabIndex = 3;
             this.CustomerActivitiesTab.UseVisualStyleBackColor = true;
             // 
@@ -775,9 +795,9 @@
             this.lblCustomerActivity.BackColor = System.Drawing.Color.Transparent;
             this.lblCustomerActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerActivity.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCustomerActivity.Location = new System.Drawing.Point(630, 178);
+            this.lblCustomerActivity.Location = new System.Drawing.Point(560, 142);
             this.lblCustomerActivity.Name = "lblCustomerActivity";
-            this.lblCustomerActivity.Size = new System.Drawing.Size(298, 39);
+            this.lblCustomerActivity.Size = new System.Drawing.Size(261, 33);
             this.lblCustomerActivity.TabIndex = 1;
             this.lblCustomerActivity.Text = "Customer Activity";
             // 
@@ -788,10 +808,11 @@
             this.lbCustomerActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomerActivity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.lbCustomerActivity.FormattingEnabled = true;
-            this.lbCustomerActivity.ItemHeight = 26;
-            this.lbCustomerActivity.Location = new System.Drawing.Point(299, 243);
+            this.lbCustomerActivity.ItemHeight = 22;
+            this.lbCustomerActivity.Location = new System.Drawing.Point(266, 194);
+            this.lbCustomerActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbCustomerActivity.Name = "lbCustomerActivity";
-            this.lbCustomerActivity.Size = new System.Drawing.Size(928, 470);
+            this.lbCustomerActivity.Size = new System.Drawing.Size(825, 376);
             this.lbCustomerActivity.TabIndex = 0;
             // 
             // TopUpTab
@@ -809,10 +830,40 @@
             this.TopUpTab.Controls.Add(this.tbRfidValue);
             this.TopUpTab.Controls.Add(this.lblRfidString);
             this.TopUpTab.Location = new System.Drawing.Point(4, 5);
+            this.TopUpTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TopUpTab.Name = "TopUpTab";
-            this.TopUpTab.Size = new System.Drawing.Size(1344, 813);
+            this.TopUpTab.Size = new System.Drawing.Size(1194, 649);
             this.TopUpTab.TabIndex = 4;
             this.TopUpTab.UseVisualStyleBackColor = true;
+            // 
+            // lblTopupTitle
+            // 
+            this.lblTopupTitle.AutoSize = true;
+            this.lblTopupTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopupTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopupTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblTopupTitle.Location = new System.Drawing.Point(519, 126);
+            this.lblTopupTitle.Name = "lblTopupTitle";
+            this.lblTopupTitle.Size = new System.Drawing.Size(302, 46);
+            this.lblTopupTitle.TabIndex = 10;
+            this.lblTopupTitle.Text = "Top Up Credits";
+            // 
+            // btnTopupClear
+            // 
+            this.btnTopupClear.BackColor = System.Drawing.Color.Black;
+            this.btnTopupClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnTopupClear.FlatAppearance.BorderSize = 2;
+            this.btnTopupClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopupClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopupClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnTopupClear.Location = new System.Drawing.Point(703, 359);
+            this.btnTopupClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTopupClear.Name = "btnTopupClear";
+            this.btnTopupClear.Size = new System.Drawing.Size(148, 62);
+            this.btnTopupClear.TabIndex = 9;
+            this.btnTopupClear.Text = "Clear All";
+            this.btnTopupClear.UseVisualStyleBackColor = false;
+            this.btnTopupClear.Click += new System.EventHandler(this.btnTopupClear_Click);
             // 
             // lblErrorMsg2
             // 
@@ -820,9 +871,9 @@
             this.lblErrorMsg2.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMsg2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMsg2.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorMsg2.Location = new System.Drawing.Point(970, 335);
+            this.lblErrorMsg2.Location = new System.Drawing.Point(862, 268);
             this.lblErrorMsg2.Name = "lblErrorMsg2";
-            this.lblErrorMsg2.Size = new System.Drawing.Size(0, 22);
+            this.lblErrorMsg2.Size = new System.Drawing.Size(0, 18);
             this.lblErrorMsg2.TabIndex = 8;
             // 
             // lblErrorMsg
@@ -831,23 +882,24 @@
             this.lblErrorMsg.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMsg.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorMsg.Location = new System.Drawing.Point(970, 289);
+            this.lblErrorMsg.Location = new System.Drawing.Point(862, 231);
             this.lblErrorMsg.Name = "lblErrorMsg";
-            this.lblErrorMsg.Size = new System.Drawing.Size(0, 22);
+            this.lblErrorMsg.Size = new System.Drawing.Size(0, 18);
             this.lblErrorMsg.TabIndex = 7;
             // 
             // dgvTopup
             // 
             this.dgvTopup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTopup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvTopup.Location = new System.Drawing.Point(537, 614);
-            this.dgvTopup.MaximumSize = new System.Drawing.Size(479, 79);
+            this.dgvTopup.Location = new System.Drawing.Point(477, 491);
+            this.dgvTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTopup.MaximumSize = new System.Drawing.Size(426, 63);
             this.dgvTopup.Name = "dgvTopup";
             this.dgvTopup.ReadOnly = true;
             this.dgvTopup.RowHeadersVisible = false;
             this.dgvTopup.RowTemplate.Height = 28;
             this.dgvTopup.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvTopup.Size = new System.Drawing.Size(450, 79);
+            this.dgvTopup.Size = new System.Drawing.Size(400, 63);
             this.dgvTopup.TabIndex = 6;
             // 
             // btnCfmTopup
@@ -858,9 +910,10 @@
             this.btnCfmTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCfmTopup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCfmTopup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnCfmTopup.Location = new System.Drawing.Point(559, 449);
+            this.btnCfmTopup.Location = new System.Drawing.Point(497, 359);
+            this.btnCfmTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCfmTopup.Name = "btnCfmTopup";
-            this.btnCfmTopup.Size = new System.Drawing.Size(167, 77);
+            this.btnCfmTopup.Size = new System.Drawing.Size(148, 62);
             this.btnCfmTopup.TabIndex = 5;
             this.btnCfmTopup.Text = "Confirm";
             this.btnCfmTopup.UseVisualStyleBackColor = false;
@@ -871,9 +924,10 @@
             this.tbTopupAmt.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tbTopupAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTopupAmt.ForeColor = System.Drawing.Color.Black;
-            this.tbTopupAmt.Location = new System.Drawing.Point(710, 332);
+            this.tbTopupAmt.Location = new System.Drawing.Point(631, 266);
+            this.tbTopupAmt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTopupAmt.Name = "tbTopupAmt";
-            this.tbTopupAmt.Size = new System.Drawing.Size(260, 32);
+            this.tbTopupAmt.Size = new System.Drawing.Size(232, 28);
             this.tbTopupAmt.TabIndex = 4;
             // 
             // lblTopupAmt
@@ -882,9 +936,9 @@
             this.lblTopupAmt.BackColor = System.Drawing.Color.Transparent;
             this.lblTopupAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopupAmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblTopupAmt.Location = new System.Drawing.Point(502, 335);
+            this.lblTopupAmt.Location = new System.Drawing.Point(446, 268);
             this.lblTopupAmt.Name = "lblTopupAmt";
-            this.lblTopupAmt.Size = new System.Drawing.Size(187, 29);
+            this.lblTopupAmt.Size = new System.Drawing.Size(156, 25);
             this.lblTopupAmt.TabIndex = 3;
             this.lblTopupAmt.Text = "Top Up Amount:";
             // 
@@ -893,10 +947,11 @@
             this.tbRfidValue.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tbRfidValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRfidValue.ForeColor = System.Drawing.Color.Black;
-            this.tbRfidValue.Location = new System.Drawing.Point(709, 282);
+            this.tbRfidValue.Location = new System.Drawing.Point(630, 226);
+            this.tbRfidValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbRfidValue.Name = "tbRfidValue";
             this.tbRfidValue.ReadOnly = true;
-            this.tbRfidValue.Size = new System.Drawing.Size(261, 32);
+            this.tbRfidValue.Size = new System.Drawing.Size(232, 28);
             this.tbRfidValue.TabIndex = 2;
             // 
             // lblRfidString
@@ -905,9 +960,9 @@
             this.lblRfidString.BackColor = System.Drawing.Color.Transparent;
             this.lblRfidString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRfidString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblRfidString.Location = new System.Drawing.Point(511, 284);
+            this.lblRfidString.Location = new System.Drawing.Point(454, 227);
             this.lblRfidString.Name = "lblRfidString";
-            this.lblRfidString.Size = new System.Drawing.Size(177, 29);
+            this.lblRfidString.Size = new System.Drawing.Size(145, 25);
             this.lblRfidString.TabIndex = 0;
             this.lblRfidString.Text = "RFID Detected:";
             // 
@@ -920,9 +975,8 @@
             this.topPanel.Controls.Add(this.panel1);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1352, 125);
+            this.topPanel.Size = new System.Drawing.Size(1202, 100);
             this.topPanel.TabIndex = 5;
             // 
             // lblTime
@@ -931,9 +985,9 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTime.Location = new System.Drawing.Point(226, 75);
+            this.lblTime.Location = new System.Drawing.Point(201, 60);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(134, 50);
+            this.lblTime.Size = new System.Drawing.Size(117, 43);
             this.lblTime.TabIndex = 3;
             this.lblTime.Text = "12:00:00";
             // 
@@ -943,9 +997,9 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDate.Location = new System.Drawing.Point(226, 36);
+            this.lblDate.Location = new System.Drawing.Point(201, 29);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(267, 50);
+            this.lblDate.Size = new System.Drawing.Size(233, 43);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "31 December 2021";
             // 
@@ -954,10 +1008,9 @@
             this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
             this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWindow.Location = new System.Drawing.Point(1285, 12);
-            this.btnCloseWindow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCloseWindow.Location = new System.Drawing.Point(1142, 10);
             this.btnCloseWindow.Name = "btnCloseWindow";
-            this.btnCloseWindow.Size = new System.Drawing.Size(54, 29);
+            this.btnCloseWindow.Size = new System.Drawing.Size(48, 23);
             this.btnCloseWindow.TabIndex = 1;
             this.btnCloseWindow.UseVisualStyleBackColor = true;
             this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
@@ -967,9 +1020,8 @@
             this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 125);
+            this.panel1.Size = new System.Drawing.Size(178, 100);
             this.panel1.TabIndex = 0;
             // 
             // sideNavPanel
@@ -988,19 +1040,19 @@
             this.sideNavPanel.Controls.Add(this.btnMaintenance);
             this.sideNavPanel.Controls.Add(this.btnLogout);
             this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideNavPanel.Location = new System.Drawing.Point(0, 125);
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 100);
             this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
             this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
+            this.sideNavPanel.Size = new System.Drawing.Size(178, 558);
             this.sideNavPanel.TabIndex = 6;
+            this.sideNavPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel_Paint);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel9.Location = new System.Drawing.Point(4, 463);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel9.Location = new System.Drawing.Point(4, 356);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(7, 44);
+            this.panel9.Size = new System.Drawing.Size(6, 35);
             this.panel9.TabIndex = 9;
             this.panel9.Visible = false;
             // 
@@ -1011,9 +1063,10 @@
             this.btnTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTopup.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopup.ForeColor = System.Drawing.Color.White;
-            this.btnTopup.Location = new System.Drawing.Point(14, 463);
+            this.btnTopup.Location = new System.Drawing.Point(12, 356);
+            this.btnTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTopup.Name = "btnTopup";
-            this.btnTopup.Size = new System.Drawing.Size(183, 44);
+            this.btnTopup.Size = new System.Drawing.Size(163, 35);
             this.btnTopup.TabIndex = 8;
             this.btnTopup.Text = "Top Up Credits";
             this.btnTopup.UseVisualStyleBackColor = true;
@@ -1022,10 +1075,9 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel8.Location = new System.Drawing.Point(4, 362);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(4, 276);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(7, 44);
+            this.panel8.Size = new System.Drawing.Size(6, 35);
             this.panel8.TabIndex = 7;
             this.panel8.Visible = false;
             // 
@@ -1038,10 +1090,10 @@
             this.btnUserActivity.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserActivity.ForeColor = System.Drawing.Color.White;
             this.btnUserActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserActivity.Location = new System.Drawing.Point(14, 336);
+            this.btnUserActivity.Location = new System.Drawing.Point(12, 255);
             this.btnUserActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUserActivity.Name = "btnUserActivity";
-            this.btnUserActivity.Size = new System.Drawing.Size(183, 98);
+            this.btnUserActivity.Size = new System.Drawing.Size(163, 78);
             this.btnUserActivity.TabIndex = 6;
             this.btnUserActivity.Text = "Customer Activity";
             this.btnUserActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1051,40 +1103,36 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 550);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(4, 440);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(7, 44);
+            this.panel5.Size = new System.Drawing.Size(6, 35);
             this.panel5.TabIndex = 5;
             this.panel5.Visible = false;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 255);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(4, 195);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(7, 44);
+            this.panel4.Size = new System.Drawing.Size(6, 35);
             this.panel4.TabIndex = 4;
             this.panel4.Visible = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 136);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(4, 109);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 44);
+            this.panel3.Size = new System.Drawing.Size(6, 35);
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel2.Location = new System.Drawing.Point(4, 29);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(4, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 44);
+            this.panel2.Size = new System.Drawing.Size(6, 35);
             this.panel2.TabIndex = 1;
             // 
             // btnPopularity
@@ -1095,10 +1143,10 @@
             this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopularity.ForeColor = System.Drawing.Color.White;
             this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(14, 136);
+            this.btnPopularity.Location = new System.Drawing.Point(12, 109);
             this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPopularity.Name = "btnPopularity";
-            this.btnPopularity.Size = new System.Drawing.Size(183, 44);
+            this.btnPopularity.Size = new System.Drawing.Size(163, 35);
             this.btnPopularity.TabIndex = 1;
             this.btnPopularity.Text = "Game Machines";
             this.btnPopularity.UseVisualStyleBackColor = false;
@@ -1114,10 +1162,10 @@
             this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
             this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrowdLvl.Location = new System.Drawing.Point(14, 29);
+            this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
             this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrowdLvl.Name = "btnCrowdLvl";
-            this.btnCrowdLvl.Size = new System.Drawing.Size(183, 44);
+            this.btnCrowdLvl.Size = new System.Drawing.Size(163, 35);
             this.btnCrowdLvl.TabIndex = 0;
             this.btnCrowdLvl.Text = "Crowd Level";
             this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1140,39 +1188,106 @@
             this.timerMan.Interval = 2300;
             this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
             // 
-            // btnTopupClear
+            // dgNeedMaintenance
             // 
-            this.btnTopupClear.BackColor = System.Drawing.Color.Black;
-            this.btnTopupClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnTopupClear.FlatAppearance.BorderSize = 2;
-            this.btnTopupClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopupClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTopupClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnTopupClear.Location = new System.Drawing.Point(791, 449);
-            this.btnTopupClear.Name = "btnTopupClear";
-            this.btnTopupClear.Size = new System.Drawing.Size(167, 77);
-            this.btnTopupClear.TabIndex = 9;
-            this.btnTopupClear.Text = "Clear All";
-            this.btnTopupClear.UseVisualStyleBackColor = false;
-            this.btnTopupClear.Click += new System.EventHandler(this.btnTopupClear_Click);
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            this.dgNeedMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgNeedMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNeedMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GameMachineID,
+            this.GameMachineName,
+            this.UsageCount});
+            this.dgNeedMaintenance.Location = new System.Drawing.Point(0, 0);
+            this.dgNeedMaintenance.Name = "dgNeedMaintenance";
+            this.dgNeedMaintenance.RowTemplate.Height = 24;
+            this.dgNeedMaintenance.Size = new System.Drawing.Size(394, 194);
+            this.dgNeedMaintenance.TabIndex = 0;
+            this.dgNeedMaintenance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNeedMaintenance_CellContentClick);
             // 
-            // lblTopupTitle
+            // dgUpForMaintenance
             // 
-            this.lblTopupTitle.AutoSize = true;
-            this.lblTopupTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopupTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopupTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblTopupTitle.Location = new System.Drawing.Point(584, 158);
-            this.lblTopupTitle.Name = "lblTopupTitle";
-            this.lblTopupTitle.Size = new System.Drawing.Size(361, 55);
-            this.lblTopupTitle.TabIndex = 10;
-            this.lblTopupTitle.Text = "Top Up Credits";
+            this.dgUpForMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUpForMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GameMachineID2,
+            this.GameMachineName2,
+            this.UsageCount2});
+            this.dgUpForMaintenance.Location = new System.Drawing.Point(0, 0);
+            this.dgUpForMaintenance.Name = "dgUpForMaintenance";
+            this.dgUpForMaintenance.RowTemplate.Height = 24;
+            this.dgUpForMaintenance.Size = new System.Drawing.Size(394, 194);
+            this.dgUpForMaintenance.TabIndex = 1;
+            // 
+            // GameMachineID
+            // 
+            this.GameMachineID.DataPropertyName = "GameMachineID";
+            this.GameMachineID.HeaderText = "ID";
+            this.GameMachineID.Name = "GameMachineID";
+            this.GameMachineID.ReadOnly = true;
+            // 
+            // GameMachineName
+            // 
+            this.GameMachineName.DataPropertyName = "GameMachineName";
+            this.GameMachineName.HeaderText = "Machine Name";
+            this.GameMachineName.Name = "GameMachineName";
+            this.GameMachineName.ReadOnly = true;
+            // 
+            // UsageCount
+            // 
+            this.UsageCount.DataPropertyName = "UsageCount";
+            this.UsageCount.HeaderText = "Uses Left";
+            this.UsageCount.Name = "UsageCount";
+            this.UsageCount.ReadOnly = true;
+            // 
+            // GameMachineID2
+            // 
+            this.GameMachineID2.DataPropertyName = "GameMachineID";
+            this.GameMachineID2.HeaderText = "ID";
+            this.GameMachineID2.Name = "GameMachineID2";
+            this.GameMachineID2.ReadOnly = true;
+            // 
+            // GameMachineName2
+            // 
+            this.GameMachineName2.DataPropertyName = "GameMachineName";
+            this.GameMachineName2.HeaderText = "Machine Name";
+            this.GameMachineName2.Name = "GameMachineName2";
+            this.GameMachineName2.ReadOnly = true;
+            // 
+            // UsageCount2
+            // 
+            this.UsageCount2.DataPropertyName = "UsageCount";
+            this.UsageCount2.HeaderText = "Uses Left";
+            this.UsageCount2.Name = "UsageCount2";
+            this.UsageCount2.ReadOnly = true;
+            // 
+            // lblufMtnce
+            // 
+            this.lblufMtnce.AutoSize = true;
+            this.lblufMtnce.BackColor = System.Drawing.Color.Black;
+            this.lblufMtnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblufMtnce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblufMtnce.Location = new System.Drawing.Point(814, 361);
+            this.lblufMtnce.Name = "lblufMtnce";
+            this.lblufMtnce.Size = new System.Drawing.Size(294, 24);
+            this.lblufMtnce.TabIndex = 6;
+            this.lblufMtnce.Text = "Going To Be Up For Maintenance";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Black;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label8.Location = new System.Drawing.Point(860, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(200, 24);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Requires Maintenance";
             // 
             // AdminMainpage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 822);
+            this.ClientSize = new System.Drawing.Size(1202, 658);
             this.Controls.Add(this.sideNavPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.tabControl1);
@@ -1205,6 +1320,8 @@
             this.PopularityTab.ResumeLayout(false);
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
+            this.panelUpForMtnce.ResumeLayout(false);
+            this.panelNeedMtnce.ResumeLayout(false);
             this.panelExpenditureChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.CustomerActivitiesTab.ResumeLayout(false);
@@ -1215,6 +1332,8 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sideNavPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1300,5 +1419,15 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnTopupClear;
         private System.Windows.Forms.Label lblTopupTitle;
+        private System.Windows.Forms.DataGridView dgUpForMaintenance;
+        private System.Windows.Forms.DataGridView dgNeedMaintenance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameMachineID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameMachineName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsageCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameMachineID2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameMachineName2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsageCount2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblufMtnce;
     }
 }

@@ -477,6 +477,23 @@ namespace MainWinFormApp
             panel8.Visible = false;
             panel9.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
+
+            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
+            {
+                sqlconnection.Open();
+
+                SqlDataAdapter sqldaMtnceSch = new SqlDataAdapter("SELECT * FROM GameMachine WHERE UsageCount=0", sqlconnection);
+                SqlDataAdapter sqldaMtnceSch2 = new SqlDataAdapter("SELECT * FROM GameMachine WHERE UsageCount BETWEEN 1 AND 5 ORDER BY UsageCount ASC", sqlconnection);
+
+                DataTable dttable = new DataTable();
+                DataTable dttable2 = new DataTable();
+
+                sqldaMtnceSch.Fill(dttable);
+                sqldaMtnceSch2.Fill(dttable2);
+
+                dgNeedMaintenance.DataSource = dttable;
+                dgUpForMaintenance.DataSource = dttable2;
+            }
         }
 
         private void btnUserActivity_Click(object sender, EventArgs e)
@@ -1221,6 +1238,16 @@ namespace MainWinFormApp
             lblErrorMsg2.Text = "";
             dgvTopup.DataSource = null;
             dgvTopup.Refresh();
+        }
+
+        private void sideNavPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgNeedMaintenance_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
