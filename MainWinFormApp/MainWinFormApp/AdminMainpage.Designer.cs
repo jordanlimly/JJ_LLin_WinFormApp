@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -85,13 +85,26 @@
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
             this.CustomerActivitiesTab = new System.Windows.Forms.TabPage();
+            this.lblCustomerActivity = new System.Windows.Forms.Label();
             this.lbCustomerActivity = new System.Windows.Forms.ListBox();
+            this.TopUpTab = new System.Windows.Forms.TabPage();
+            this.lblErrorMsg2 = new System.Windows.Forms.Label();
+            this.lblErrorMsg = new System.Windows.Forms.Label();
+            this.dgvTopup = new System.Windows.Forms.DataGridView();
+            this.btnCfmTopup = new System.Windows.Forms.Button();
+            this.tbTopupAmt = new System.Windows.Forms.TextBox();
+            this.lblTopupAmt = new System.Windows.Forms.Label();
+            this.tbRfidValue = new System.Windows.Forms.TextBox();
+            this.lblRfidString = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.btnCloseWindow = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnTopup = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btnUserActivity = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -102,8 +115,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.timerMan = new System.Windows.Forms.Timer(this.components);
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.lblCustomerActivity = new System.Windows.Forms.Label();
+            this.btnTopupClear = new System.Windows.Forms.Button();
+            this.lblTopupTitle = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
@@ -126,6 +139,8 @@
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.CustomerActivitiesTab.SuspendLayout();
+            this.TopUpTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +152,7 @@
             this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaintenance.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
-            this.btnMaintenance.Location = new System.Drawing.Point(14, 273);
+            this.btnMaintenance.Location = new System.Drawing.Point(14, 255);
             this.btnMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(183, 44);
@@ -154,7 +169,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(14, 485);
+            this.btnLogout.Location = new System.Drawing.Point(14, 550);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(183, 44);
@@ -171,6 +186,7 @@
             this.tabControl1.Controls.Add(this.PopularityTab);
             this.tabControl1.Controls.Add(this.MaintenanceTab);
             this.tabControl1.Controls.Add(this.CustomerActivitiesTab);
+            this.tabControl1.Controls.Add(this.TopUpTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -411,14 +427,14 @@
             // 
             // TotalCrowdCht
             // 
-            chartArea17.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea17);
+            chartArea1.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
             this.TotalCrowdCht.Location = new System.Drawing.Point(2, 42);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series17.ChartArea = "ChartArea1";
-            series17.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series17);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series1);
             this.TotalCrowdCht.Size = new System.Drawing.Size(396, 238);
             this.TotalCrowdCht.TabIndex = 1;
             this.TotalCrowdCht.Text = "chart1";
@@ -511,29 +527,29 @@
             // 
             // MinCrowdCht
             // 
-            chartArea18.Name = "ChartArea1";
-            this.MinCrowdCht.ChartAreas.Add(chartArea18);
+            chartArea2.Name = "ChartArea1";
+            this.MinCrowdCht.ChartAreas.Add(chartArea2);
             this.MinCrowdCht.Location = new System.Drawing.Point(17, 66);
             this.MinCrowdCht.Name = "MinCrowdCht";
-            series18.ChartArea = "ChartArea1";
-            series18.Name = "Series1";
-            this.MinCrowdCht.Series.Add(series18);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.MinCrowdCht.Series.Add(series2);
             this.MinCrowdCht.Size = new System.Drawing.Size(447, 249);
             this.MinCrowdCht.TabIndex = 0;
             this.MinCrowdCht.Text = "chart1";
             // 
             // HourlyCrowdCht
             // 
-            chartArea19.Name = "ChartArea1";
-            this.HourlyCrowdCht.ChartAreas.Add(chartArea19);
+            chartArea3.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea3);
             this.HourlyCrowdCht.Location = new System.Drawing.Point(16, 66);
             this.HourlyCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyCrowdCht.Name = "HourlyCrowdCht";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series19.MarkerColor = System.Drawing.Color.White;
-            series19.Name = "Series1";
-            this.HourlyCrowdCht.Series.Add(series19);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.MarkerColor = System.Drawing.Color.White;
+            series3.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series3);
             this.HourlyCrowdCht.Size = new System.Drawing.Size(586, 251);
             this.HourlyCrowdCht.TabIndex = 7;
             this.HourlyCrowdCht.Text = "chart1";
@@ -716,18 +732,18 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea20.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea20);
-            legend5.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
+            legend1.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend1);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(3, -4);
             this.MaintenanceExpenditureChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series20);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series4);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(664, 401);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -753,6 +769,18 @@
             this.CustomerActivitiesTab.TabIndex = 3;
             this.CustomerActivitiesTab.UseVisualStyleBackColor = true;
             // 
+            // lblCustomerActivity
+            // 
+            this.lblCustomerActivity.AutoSize = true;
+            this.lblCustomerActivity.BackColor = System.Drawing.Color.Transparent;
+            this.lblCustomerActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerActivity.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCustomerActivity.Location = new System.Drawing.Point(630, 178);
+            this.lblCustomerActivity.Name = "lblCustomerActivity";
+            this.lblCustomerActivity.Size = new System.Drawing.Size(298, 39);
+            this.lblCustomerActivity.TabIndex = 1;
+            this.lblCustomerActivity.Text = "Customer Activity";
+            // 
             // lbCustomerActivity
             // 
             this.lbCustomerActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(3)))), ((int)(((byte)(16)))));
@@ -765,6 +793,123 @@
             this.lbCustomerActivity.Name = "lbCustomerActivity";
             this.lbCustomerActivity.Size = new System.Drawing.Size(928, 470);
             this.lbCustomerActivity.TabIndex = 0;
+            // 
+            // TopUpTab
+            // 
+            this.TopUpTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
+            this.TopUpTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TopUpTab.Controls.Add(this.lblTopupTitle);
+            this.TopUpTab.Controls.Add(this.btnTopupClear);
+            this.TopUpTab.Controls.Add(this.lblErrorMsg2);
+            this.TopUpTab.Controls.Add(this.lblErrorMsg);
+            this.TopUpTab.Controls.Add(this.dgvTopup);
+            this.TopUpTab.Controls.Add(this.btnCfmTopup);
+            this.TopUpTab.Controls.Add(this.tbTopupAmt);
+            this.TopUpTab.Controls.Add(this.lblTopupAmt);
+            this.TopUpTab.Controls.Add(this.tbRfidValue);
+            this.TopUpTab.Controls.Add(this.lblRfidString);
+            this.TopUpTab.Location = new System.Drawing.Point(4, 5);
+            this.TopUpTab.Name = "TopUpTab";
+            this.TopUpTab.Size = new System.Drawing.Size(1344, 813);
+            this.TopUpTab.TabIndex = 4;
+            this.TopUpTab.UseVisualStyleBackColor = true;
+            // 
+            // lblErrorMsg2
+            // 
+            this.lblErrorMsg2.AutoSize = true;
+            this.lblErrorMsg2.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorMsg2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMsg2.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMsg2.Location = new System.Drawing.Point(970, 335);
+            this.lblErrorMsg2.Name = "lblErrorMsg2";
+            this.lblErrorMsg2.Size = new System.Drawing.Size(0, 22);
+            this.lblErrorMsg2.TabIndex = 8;
+            // 
+            // lblErrorMsg
+            // 
+            this.lblErrorMsg.AutoSize = true;
+            this.lblErrorMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMsg.Location = new System.Drawing.Point(970, 289);
+            this.lblErrorMsg.Name = "lblErrorMsg";
+            this.lblErrorMsg.Size = new System.Drawing.Size(0, 22);
+            this.lblErrorMsg.TabIndex = 7;
+            // 
+            // dgvTopup
+            // 
+            this.dgvTopup.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTopup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvTopup.Location = new System.Drawing.Point(537, 614);
+            this.dgvTopup.MaximumSize = new System.Drawing.Size(479, 79);
+            this.dgvTopup.Name = "dgvTopup";
+            this.dgvTopup.ReadOnly = true;
+            this.dgvTopup.RowHeadersVisible = false;
+            this.dgvTopup.RowTemplate.Height = 28;
+            this.dgvTopup.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvTopup.Size = new System.Drawing.Size(450, 79);
+            this.dgvTopup.TabIndex = 6;
+            // 
+            // btnCfmTopup
+            // 
+            this.btnCfmTopup.BackColor = System.Drawing.Color.Black;
+            this.btnCfmTopup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnCfmTopup.FlatAppearance.BorderSize = 2;
+            this.btnCfmTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCfmTopup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCfmTopup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnCfmTopup.Location = new System.Drawing.Point(559, 449);
+            this.btnCfmTopup.Name = "btnCfmTopup";
+            this.btnCfmTopup.Size = new System.Drawing.Size(167, 77);
+            this.btnCfmTopup.TabIndex = 5;
+            this.btnCfmTopup.Text = "Confirm";
+            this.btnCfmTopup.UseVisualStyleBackColor = false;
+            this.btnCfmTopup.Click += new System.EventHandler(this.btnCfmTopup_Click);
+            // 
+            // tbTopupAmt
+            // 
+            this.tbTopupAmt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbTopupAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTopupAmt.ForeColor = System.Drawing.Color.Black;
+            this.tbTopupAmt.Location = new System.Drawing.Point(710, 332);
+            this.tbTopupAmt.Name = "tbTopupAmt";
+            this.tbTopupAmt.Size = new System.Drawing.Size(260, 32);
+            this.tbTopupAmt.TabIndex = 4;
+            // 
+            // lblTopupAmt
+            // 
+            this.lblTopupAmt.AutoSize = true;
+            this.lblTopupAmt.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopupAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopupAmt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblTopupAmt.Location = new System.Drawing.Point(502, 335);
+            this.lblTopupAmt.Name = "lblTopupAmt";
+            this.lblTopupAmt.Size = new System.Drawing.Size(187, 29);
+            this.lblTopupAmt.TabIndex = 3;
+            this.lblTopupAmt.Text = "Top Up Amount:";
+            // 
+            // tbRfidValue
+            // 
+            this.tbRfidValue.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbRfidValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRfidValue.ForeColor = System.Drawing.Color.Black;
+            this.tbRfidValue.Location = new System.Drawing.Point(709, 282);
+            this.tbRfidValue.Name = "tbRfidValue";
+            this.tbRfidValue.ReadOnly = true;
+            this.tbRfidValue.Size = new System.Drawing.Size(261, 32);
+            this.tbRfidValue.TabIndex = 2;
+            // 
+            // lblRfidString
+            // 
+            this.lblRfidString.AutoSize = true;
+            this.lblRfidString.BackColor = System.Drawing.Color.Transparent;
+            this.lblRfidString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRfidString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblRfidString.Location = new System.Drawing.Point(511, 284);
+            this.lblRfidString.Name = "lblRfidString";
+            this.lblRfidString.Size = new System.Drawing.Size(177, 29);
+            this.lblRfidString.TabIndex = 0;
+            this.lblRfidString.Text = "RFID Detected:";
             // 
             // topPanel
             // 
@@ -830,6 +975,8 @@
             // sideNavPanel
             // 
             this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel9);
+            this.sideNavPanel.Controls.Add(this.btnTopup);
             this.sideNavPanel.Controls.Add(this.panel8);
             this.sideNavPanel.Controls.Add(this.btnUserActivity);
             this.sideNavPanel.Controls.Add(this.panel5);
@@ -847,6 +994,41 @@
             this.sideNavPanel.Size = new System.Drawing.Size(200, 697);
             this.sideNavPanel.TabIndex = 6;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel9.Location = new System.Drawing.Point(4, 463);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(7, 44);
+            this.panel9.TabIndex = 9;
+            this.panel9.Visible = false;
+            // 
+            // btnTopup
+            // 
+            this.btnTopup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTopup.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopup.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopup.ForeColor = System.Drawing.Color.White;
+            this.btnTopup.Location = new System.Drawing.Point(14, 463);
+            this.btnTopup.Name = "btnTopup";
+            this.btnTopup.Size = new System.Drawing.Size(183, 44);
+            this.btnTopup.TabIndex = 8;
+            this.btnTopup.Text = "Top Up Credits";
+            this.btnTopup.UseVisualStyleBackColor = true;
+            this.btnTopup.Click += new System.EventHandler(this.btnTopup_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel8.Location = new System.Drawing.Point(4, 362);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(7, 44);
+            this.panel8.TabIndex = 7;
+            this.panel8.Visible = false;
+            // 
             // btnUserActivity
             // 
             this.btnUserActivity.BackColor = System.Drawing.Color.Black;
@@ -856,7 +1038,7 @@
             this.btnUserActivity.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserActivity.ForeColor = System.Drawing.Color.White;
             this.btnUserActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserActivity.Location = new System.Drawing.Point(14, 354);
+            this.btnUserActivity.Location = new System.Drawing.Point(14, 336);
             this.btnUserActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUserActivity.Name = "btnUserActivity";
             this.btnUserActivity.Size = new System.Drawing.Size(183, 98);
@@ -869,7 +1051,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 485);
+            this.panel5.Location = new System.Drawing.Point(4, 550);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(7, 44);
@@ -879,7 +1061,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 273);
+            this.panel4.Location = new System.Drawing.Point(4, 255);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(7, 44);
@@ -889,7 +1071,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 149);
+            this.panel3.Location = new System.Drawing.Point(4, 136);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(7, 44);
@@ -913,7 +1095,7 @@
             this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopularity.ForeColor = System.Drawing.Color.White;
             this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(14, 149);
+            this.btnPopularity.Location = new System.Drawing.Point(14, 136);
             this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPopularity.Name = "btnPopularity";
             this.btnPopularity.Size = new System.Drawing.Size(183, 44);
@@ -958,27 +1140,33 @@
             this.timerMan.Interval = 2300;
             this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
             // 
-            // panel8
+            // btnTopupClear
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel8.Location = new System.Drawing.Point(4, 380);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(7, 44);
-            this.panel8.TabIndex = 7;
-            this.panel8.Visible = false;
+            this.btnTopupClear.BackColor = System.Drawing.Color.Black;
+            this.btnTopupClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnTopupClear.FlatAppearance.BorderSize = 2;
+            this.btnTopupClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopupClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopupClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnTopupClear.Location = new System.Drawing.Point(791, 449);
+            this.btnTopupClear.Name = "btnTopupClear";
+            this.btnTopupClear.Size = new System.Drawing.Size(167, 77);
+            this.btnTopupClear.TabIndex = 9;
+            this.btnTopupClear.Text = "Clear All";
+            this.btnTopupClear.UseVisualStyleBackColor = false;
+            this.btnTopupClear.Click += new System.EventHandler(this.btnTopupClear_Click);
             // 
-            // lblCustomerActivity
+            // lblTopupTitle
             // 
-            this.lblCustomerActivity.AutoSize = true;
-            this.lblCustomerActivity.BackColor = System.Drawing.Color.Transparent;
-            this.lblCustomerActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerActivity.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCustomerActivity.Location = new System.Drawing.Point(630, 178);
-            this.lblCustomerActivity.Name = "lblCustomerActivity";
-            this.lblCustomerActivity.Size = new System.Drawing.Size(298, 39);
-            this.lblCustomerActivity.TabIndex = 1;
-            this.lblCustomerActivity.Text = "Customer Activity";
+            this.lblTopupTitle.AutoSize = true;
+            this.lblTopupTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopupTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopupTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblTopupTitle.Location = new System.Drawing.Point(584, 158);
+            this.lblTopupTitle.Name = "lblTopupTitle";
+            this.lblTopupTitle.Size = new System.Drawing.Size(361, 55);
+            this.lblTopupTitle.TabIndex = 10;
+            this.lblTopupTitle.Text = "Top Up Credits";
             // 
             // AdminMainpage
             // 
@@ -1021,6 +1209,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.CustomerActivitiesTab.ResumeLayout(false);
             this.CustomerActivitiesTab.PerformLayout();
+            this.TopUpTab.ResumeLayout(false);
+            this.TopUpTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sideNavPanel.ResumeLayout(false);
@@ -1096,5 +1287,18 @@
         private System.Windows.Forms.Button btnUserActivity;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblCustomerActivity;
+        private System.Windows.Forms.Button btnTopup;
+        private System.Windows.Forms.TabPage TopUpTab;
+        private System.Windows.Forms.Label lblRfidString;
+        private System.Windows.Forms.TextBox tbRfidValue;
+        private System.Windows.Forms.TextBox tbTopupAmt;
+        private System.Windows.Forms.Label lblTopupAmt;
+        private System.Windows.Forms.Button btnCfmTopup;
+        private System.Windows.Forms.DataGridView dgvTopup;
+        private System.Windows.Forms.Label lblErrorMsg;
+        private System.Windows.Forms.Label lblErrorMsg2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnTopupClear;
+        private System.Windows.Forms.Label lblTopupTitle;
     }
 }

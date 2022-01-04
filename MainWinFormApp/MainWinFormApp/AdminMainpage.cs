@@ -305,6 +305,38 @@ namespace MainWinFormApp
             addLBItem(detectedRFID, pointsEarned, "G001");
         }
 
+        private void handleRFIDTopup(string strData, string ID)
+        {
+            string detectedRFID = extractStringValue(strData, ID);
+            Console.WriteLine("Detected RFID = " + detectedRFID);
+
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            String strCommandText =
+                "SELECT RFID_ID, Name, CurrentCredits FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                dgvTopup.DataSource = dt;
+                tbRfidValue.Text = detectedRFID;
+                lblErrorMsg.Text = "";
+            }
+            else
+            {
+                tbRfidValue.Text = "";
+                dgvTopup.DataSource = null;
+                dgvTopup.Refresh();
+                lblErrorMsg.Text = "Unknown RFID detected";
+            }
+
+        }
+
         //create your own data handler for your project needs
         //private void handleButtonData(string strData, string strTime, string ID)
         //{
@@ -339,6 +371,8 @@ namespace MainWinFormApp
                 handledDistanceSensorData(strData, strTime, "DIRECTION=");
             if (strData.IndexOf("RFIDGAMESTART=") != -1) //check button status
                 handleGameMode(strData, "RFIDGAMESTART=");
+            if (strData.IndexOf("RFIDTOPUPSTR=") != -1)
+                handleRFIDTopup(strData, "RFIDTOPUPSTR=");
         }
 
         private void handleSensorData(String strData)
@@ -400,6 +434,7 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel5.Visible = false;
             panel8.Visible = false;
+            panel9.Visible = false;
             loadDBtoTotalCrowdCht();
             loadDBtoHourlyCht();
             int curYear = Convert.ToInt32(DateTime.Now.Year);
@@ -411,7 +446,7 @@ namespace MainWinFormApp
             DateTime minDate = maxDate.AddMinutes(-2);
             setXAxisDisplayRange(MinCrowdCht, minDate, maxDate);
             loadDBtoMinuteCht();
-
+            dataComms.sendData("RFIDRETURNNORM");
         }
         
 
@@ -428,6 +463,8 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel5.Visible = false;
             panel8.Visible = false;
+            panel9.Visible = false;
+            dataComms.sendData("RFIDRETURNNORM");
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -438,7 +475,8 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel5.Visible = false;
             panel8.Visible = false;
-
+            panel9.Visible = false;
+            dataComms.sendData("RFIDRETURNNORM");
         }
 
         private void btnUserActivity_Click(object sender, EventArgs e)
@@ -449,6 +487,8 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+            panel9.Visible = false;
+            dataComms.sendData("RFIDRETURNNORM");
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)
@@ -492,6 +532,7 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel4.Visible = false;
             panel8.Visible = false;
+            panel9.Visible = false;
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
@@ -1087,6 +1128,99 @@ namespace MainWinFormApp
             exitS2.Visible = false;
         }
 
-        
+        private void btnTopup_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            panel5.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = true;
+            dataComms.sendData("RFIDTOPUP");
+            tbRfidValue.Text = "";
+            tbTopupAmt.Text = "";
+            lblErrorMsg.Text = "";
+            lblErrorMsg2.Text = "";
+            dgvTopup.DataSource = null;
+            dgvTopup.Refresh();
+
+        }
+
+        private void btnCfmTopup_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbRfidValue.Text))
+            {
+                lblErrorMsg.Text = "Invalid RFID value!";
+                return;
+            }
+            else
+            {
+                string strRfid = tbRfidValue.Text;
+
+                int topupAmt;
+                if (String.IsNullOrEmpty(tbTopupAmt.Text))
+                {
+                    lblErrorMsg2.Text = "Invalid Top Up value!";
+                    return;
+                }
+                else if (!int.TryParse(tbTopupAmt.Text, out topupAmt))
+                {
+                    lblErrorMsg2.Text = "Invalid Top Up value!";
+                    return;
+                }
+                else
+                {
+                    topupAmt = Convert.ToInt32(tbTopupAmt.Text);
+                    lblErrorMsg.Text = "";
+                    lblErrorMsg2.Text = "";
+
+                    SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+                    //Step 2: Create command
+                    String strCommandText =
+                        "UPDATE UserAccount SET CurrentCredits = (CurrentCredits + @topupamt) WHERE RFID_ID = @rfid_id";
+
+                    SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+                    updateCmd.Parameters.AddWithValue("@topupamt", topupAmt);
+                    updateCmd.Parameters.AddWithValue("@rfid_id", strRfid);
+
+                    //Step 3: Open Connection myConnect.Open();
+                    myConnect.Open();
+
+                    //Step 4: ExecuteCommand
+                    int result = updateCmd.ExecuteNonQuery();
+
+                    String strCommandText2 = "SELECT RFID_ID, Name, CurrentCredits FROM UserAccount WHERE RFID_ID = '" + strRfid + "'";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(strCommandText2, myConnect);
+                    SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt.Rows.Count == 1)
+                    {
+                        dgvTopup.DataSource = dt;                      
+                    }
+
+
+                    //Step 5: Close connection
+                    myConnect.Close();
+                }
+            }
+
+           
+        }
+
+        private void btnTopupClear_Click(object sender, EventArgs e)
+        {
+            tbRfidValue.Text = "";
+            tbTopupAmt.Text = "";
+            lblErrorMsg.Text = "";
+            lblErrorMsg2.Text = "";
+            dgvTopup.DataSource = null;
+            dgvTopup.Refresh();
+        }
     }
 }
