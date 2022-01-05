@@ -29,16 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -78,10 +85,20 @@
             this.btnAddMachine = new System.Windows.Forms.Button();
             this.panelPopularityChart = new System.Windows.Forms.Panel();
             this.MaintenanceTab = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblufMtnce = new System.Windows.Forms.Label();
             this.panelUpForMtnce = new System.Windows.Forms.Panel();
+            this.dgUpForMaintenance = new System.Windows.Forms.DataGridView();
+            this.GameMachineID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameMachineName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsageCount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRetrieveMaintenanceRecord = new System.Windows.Forms.Button();
             this.btnAddMaintenanceRecord = new System.Windows.Forms.Button();
             this.panelNeedMtnce = new System.Windows.Forms.Panel();
+            this.dgNeedMaintenance = new System.Windows.Forms.DataGridView();
+            this.GameMachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsageCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelExpenditureChart = new System.Windows.Forms.Panel();
             this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
@@ -118,16 +135,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.timerMan = new System.Windows.Forms.Timer(this.components);
-            this.dgNeedMaintenance = new System.Windows.Forms.DataGridView();
-            this.dgUpForMaintenance = new System.Windows.Forms.DataGridView();
-            this.GameMachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GameMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsageCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GameMachineID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GameMachineName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsageCount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblufMtnce = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.StaffAccountsTab = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnStaffAccounts = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddAcc = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
@@ -148,7 +163,9 @@
             this.PopularityTab.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
             this.panelUpForMtnce.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).BeginInit();
             this.panelNeedMtnce.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).BeginInit();
             this.panelExpenditureChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.CustomerActivitiesTab.SuspendLayout();
@@ -156,8 +173,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).BeginInit();
+            this.StaffAccountsTab.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -167,7 +185,7 @@
             this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaintenance.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
-            this.btnMaintenance.Location = new System.Drawing.Point(12, 195);
+            this.btnMaintenance.Location = new System.Drawing.Point(12, 181);
             this.btnMaintenance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(163, 35);
@@ -184,7 +202,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(12, 440);
+            this.btnLogout.Location = new System.Drawing.Point(12, 494);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(163, 35);
@@ -202,6 +220,7 @@
             this.tabControl1.Controls.Add(this.MaintenanceTab);
             this.tabControl1.Controls.Add(this.CustomerActivitiesTab);
             this.tabControl1.Controls.Add(this.TopUpTab);
+            this.tabControl1.Controls.Add(this.StaffAccountsTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -449,14 +468,14 @@
             // 
             // TotalCrowdCht
             // 
-            chartArea17.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea17);
+            chartArea1.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
             this.TotalCrowdCht.Location = new System.Drawing.Point(2, 34);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series17.ChartArea = "ChartArea1";
-            series17.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series17);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series1);
             this.TotalCrowdCht.Size = new System.Drawing.Size(352, 190);
             this.TotalCrowdCht.TabIndex = 1;
             this.TotalCrowdCht.Text = "chart1";
@@ -549,30 +568,30 @@
             // 
             // MinCrowdCht
             // 
-            chartArea18.Name = "ChartArea1";
-            this.MinCrowdCht.ChartAreas.Add(chartArea18);
+            chartArea2.Name = "ChartArea1";
+            this.MinCrowdCht.ChartAreas.Add(chartArea2);
             this.MinCrowdCht.Location = new System.Drawing.Point(15, 53);
             this.MinCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinCrowdCht.Name = "MinCrowdCht";
-            series18.ChartArea = "ChartArea1";
-            series18.Name = "Series1";
-            this.MinCrowdCht.Series.Add(series18);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.MinCrowdCht.Series.Add(series2);
             this.MinCrowdCht.Size = new System.Drawing.Size(397, 199);
             this.MinCrowdCht.TabIndex = 0;
             this.MinCrowdCht.Text = "chart1";
             // 
             // HourlyCrowdCht
             // 
-            chartArea19.Name = "ChartArea1";
-            this.HourlyCrowdCht.ChartAreas.Add(chartArea19);
+            chartArea3.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea3);
             this.HourlyCrowdCht.Location = new System.Drawing.Point(14, 53);
             this.HourlyCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyCrowdCht.Name = "HourlyCrowdCht";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series19.MarkerColor = System.Drawing.Color.White;
-            series19.Name = "Series1";
-            this.HourlyCrowdCht.Series.Add(series19);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.MarkerColor = System.Drawing.Color.White;
+            series3.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series3);
             this.HourlyCrowdCht.Size = new System.Drawing.Size(521, 201);
             this.HourlyCrowdCht.TabIndex = 7;
             this.HourlyCrowdCht.Text = "chart1";
@@ -696,6 +715,30 @@
             this.MaintenanceTab.Text = "MaintenanceTab";
             this.MaintenanceTab.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Black;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label8.Location = new System.Drawing.Point(860, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(200, 24);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Requires Maintenance";
+            // 
+            // lblufMtnce
+            // 
+            this.lblufMtnce.AutoSize = true;
+            this.lblufMtnce.BackColor = System.Drawing.Color.Black;
+            this.lblufMtnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblufMtnce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblufMtnce.Location = new System.Drawing.Point(814, 361);
+            this.lblufMtnce.Name = "lblufMtnce";
+            this.lblufMtnce.Size = new System.Drawing.Size(294, 24);
+            this.lblufMtnce.TabIndex = 6;
+            this.lblufMtnce.Text = "Going To Be Up For Maintenance";
+            // 
             // panelUpForMtnce
             // 
             this.panelUpForMtnce.Controls.Add(this.dgUpForMaintenance);
@@ -703,6 +746,66 @@
             this.panelUpForMtnce.Name = "panelUpForMtnce";
             this.panelUpForMtnce.Size = new System.Drawing.Size(394, 194);
             this.panelUpForMtnce.TabIndex = 5;
+            // 
+            // dgUpForMaintenance
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgUpForMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgUpForMaintenance.BackgroundColor = System.Drawing.Color.Black;
+            this.dgUpForMaintenance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgUpForMaintenance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgUpForMaintenance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgUpForMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgUpForMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUpForMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GameMachineID2,
+            this.GameMachineName2,
+            this.UsageCount2});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgUpForMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgUpForMaintenance.EnableHeadersVisualStyles = false;
+            this.dgUpForMaintenance.Location = new System.Drawing.Point(0, 0);
+            this.dgUpForMaintenance.Name = "dgUpForMaintenance";
+            this.dgUpForMaintenance.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgUpForMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgUpForMaintenance.RowTemplate.Height = 24;
+            this.dgUpForMaintenance.Size = new System.Drawing.Size(394, 194);
+            this.dgUpForMaintenance.TabIndex = 1;
+            // 
+            // GameMachineID2
+            // 
+            this.GameMachineID2.DataPropertyName = "GameMachineID";
+            this.GameMachineID2.HeaderText = "ID";
+            this.GameMachineID2.Name = "GameMachineID2";
+            this.GameMachineID2.ReadOnly = true;
+            // 
+            // GameMachineName2
+            // 
+            this.GameMachineName2.DataPropertyName = "GameMachineName";
+            this.GameMachineName2.HeaderText = "Machine Name";
+            this.GameMachineName2.Name = "GameMachineName2";
+            this.GameMachineName2.ReadOnly = true;
+            // 
+            // UsageCount2
+            // 
+            this.UsageCount2.DataPropertyName = "UsageCount";
+            this.UsageCount2.HeaderText = "Uses Left";
+            this.UsageCount2.Name = "UsageCount2";
+            this.UsageCount2.ReadOnly = true;
             // 
             // btnRetrieveMaintenanceRecord
             // 
@@ -724,7 +827,7 @@
             this.btnAddMaintenanceRecord.BackColor = System.Drawing.Color.Black;
             this.btnAddMaintenanceRecord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnAddMaintenanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMaintenanceRecord.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaintenanceRecord.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaintenanceRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
             this.btnAddMaintenanceRecord.Location = new System.Drawing.Point(266, 511);
             this.btnAddMaintenanceRecord.Name = "btnAddMaintenanceRecord";
@@ -742,6 +845,67 @@
             this.panelNeedMtnce.Size = new System.Drawing.Size(394, 194);
             this.panelNeedMtnce.TabIndex = 2;
             // 
+            // dgNeedMaintenance
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgNeedMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgNeedMaintenance.BackgroundColor = System.Drawing.Color.Black;
+            this.dgNeedMaintenance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNeedMaintenance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgNeedMaintenance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNeedMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgNeedMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNeedMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GameMachineID,
+            this.GameMachineName,
+            this.UsageCount});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNeedMaintenance.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgNeedMaintenance.EnableHeadersVisualStyles = false;
+            this.dgNeedMaintenance.Location = new System.Drawing.Point(0, 0);
+            this.dgNeedMaintenance.Name = "dgNeedMaintenance";
+            this.dgNeedMaintenance.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgNeedMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgNeedMaintenance.RowTemplate.Height = 24;
+            this.dgNeedMaintenance.Size = new System.Drawing.Size(394, 194);
+            this.dgNeedMaintenance.TabIndex = 0;
+            this.dgNeedMaintenance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNeedMaintenance_CellContentClick);
+            // 
+            // GameMachineID
+            // 
+            this.GameMachineID.DataPropertyName = "GameMachineID";
+            this.GameMachineID.HeaderText = "ID";
+            this.GameMachineID.Name = "GameMachineID";
+            this.GameMachineID.ReadOnly = true;
+            // 
+            // GameMachineName
+            // 
+            this.GameMachineName.DataPropertyName = "GameMachineName";
+            this.GameMachineName.HeaderText = "Machine Name";
+            this.GameMachineName.Name = "GameMachineName";
+            this.GameMachineName.ReadOnly = true;
+            // 
+            // UsageCount
+            // 
+            this.UsageCount.DataPropertyName = "UsageCount";
+            this.UsageCount.HeaderText = "Uses Left";
+            this.UsageCount.Name = "UsageCount";
+            this.UsageCount.ReadOnly = true;
+            // 
             // panelExpenditureChart
             // 
             this.panelExpenditureChart.Controls.Add(this.MaintenanceExpenditureChart);
@@ -752,17 +916,17 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea20.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea20);
-            legend5.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
+            legend1.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend1);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
             this.MaintenanceExpenditureChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series20);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series4);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(498, 324);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -1027,7 +1191,9 @@
             // sideNavPanel
             // 
             this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel10);
             this.sideNavPanel.Controls.Add(this.panel9);
+            this.sideNavPanel.Controls.Add(this.btnStaffAccounts);
             this.sideNavPanel.Controls.Add(this.btnTopup);
             this.sideNavPanel.Controls.Add(this.panel8);
             this.sideNavPanel.Controls.Add(this.btnUserActivity);
@@ -1050,7 +1216,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel9.Location = new System.Drawing.Point(4, 356);
+            this.panel9.Location = new System.Drawing.Point(4, 340);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(6, 35);
             this.panel9.TabIndex = 9;
@@ -1063,7 +1229,7 @@
             this.btnTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTopup.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopup.ForeColor = System.Drawing.Color.White;
-            this.btnTopup.Location = new System.Drawing.Point(12, 356);
+            this.btnTopup.Location = new System.Drawing.Point(12, 340);
             this.btnTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTopup.Name = "btnTopup";
             this.btnTopup.Size = new System.Drawing.Size(163, 35);
@@ -1075,7 +1241,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel8.Location = new System.Drawing.Point(4, 276);
+            this.panel8.Location = new System.Drawing.Point(4, 261);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(6, 35);
             this.panel8.TabIndex = 7;
@@ -1090,10 +1256,10 @@
             this.btnUserActivity.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserActivity.ForeColor = System.Drawing.Color.White;
             this.btnUserActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserActivity.Location = new System.Drawing.Point(12, 255);
+            this.btnUserActivity.Location = new System.Drawing.Point(12, 261);
             this.btnUserActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUserActivity.Name = "btnUserActivity";
-            this.btnUserActivity.Size = new System.Drawing.Size(163, 78);
+            this.btnUserActivity.Size = new System.Drawing.Size(165, 35);
             this.btnUserActivity.TabIndex = 6;
             this.btnUserActivity.Text = "Customer Activity";
             this.btnUserActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1103,7 +1269,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 440);
+            this.panel5.Location = new System.Drawing.Point(4, 494);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(6, 35);
             this.panel5.TabIndex = 5;
@@ -1112,7 +1278,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 195);
+            this.panel4.Location = new System.Drawing.Point(4, 181);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(6, 35);
             this.panel4.TabIndex = 4;
@@ -1121,7 +1287,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 109);
+            this.panel3.Location = new System.Drawing.Point(4, 101);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(6, 35);
             this.panel3.TabIndex = 2;
@@ -1143,7 +1309,7 @@
             this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopularity.ForeColor = System.Drawing.Color.White;
             this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(12, 109);
+            this.btnPopularity.Location = new System.Drawing.Point(12, 101);
             this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPopularity.Name = "btnPopularity";
             this.btnPopularity.Size = new System.Drawing.Size(163, 35);
@@ -1188,100 +1354,104 @@
             this.timerMan.Interval = 2300;
             this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
             // 
-            // dgNeedMaintenance
+            // StaffAccountsTab
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            this.dgNeedMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgNeedMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNeedMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.GameMachineID,
-            this.GameMachineName,
-            this.UsageCount});
-            this.dgNeedMaintenance.Location = new System.Drawing.Point(0, 0);
-            this.dgNeedMaintenance.Name = "dgNeedMaintenance";
-            this.dgNeedMaintenance.RowTemplate.Height = 24;
-            this.dgNeedMaintenance.Size = new System.Drawing.Size(394, 194);
-            this.dgNeedMaintenance.TabIndex = 0;
-            this.dgNeedMaintenance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNeedMaintenance_CellContentClick);
+            this.StaffAccountsTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
+            this.StaffAccountsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.StaffAccountsTab.Controls.Add(this.btnRefresh);
+            this.StaffAccountsTab.Controls.Add(this.btnDeleteAccount);
+            this.StaffAccountsTab.Controls.Add(this.btnAddAcc);
+            this.StaffAccountsTab.Controls.Add(this.panel11);
+            this.StaffAccountsTab.Location = new System.Drawing.Point(4, 5);
+            this.StaffAccountsTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StaffAccountsTab.Name = "StaffAccountsTab";
+            this.StaffAccountsTab.Size = new System.Drawing.Size(1194, 649);
+            this.StaffAccountsTab.TabIndex = 5;
+            this.StaffAccountsTab.UseVisualStyleBackColor = true;
             // 
-            // dgUpForMaintenance
+            // panel10
             // 
-            this.dgUpForMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUpForMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.GameMachineID2,
-            this.GameMachineName2,
-            this.UsageCount2});
-            this.dgUpForMaintenance.Location = new System.Drawing.Point(0, 0);
-            this.dgUpForMaintenance.Name = "dgUpForMaintenance";
-            this.dgUpForMaintenance.RowTemplate.Height = 24;
-            this.dgUpForMaintenance.Size = new System.Drawing.Size(394, 194);
-            this.dgUpForMaintenance.TabIndex = 1;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel10.Location = new System.Drawing.Point(4, 417);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(6, 35);
+            this.panel10.TabIndex = 11;
+            this.panel10.Visible = false;
             // 
-            // GameMachineID
+            // btnStaffAccounts
             // 
-            this.GameMachineID.DataPropertyName = "GameMachineID";
-            this.GameMachineID.HeaderText = "ID";
-            this.GameMachineID.Name = "GameMachineID";
-            this.GameMachineID.ReadOnly = true;
+            this.btnStaffAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStaffAccounts.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStaffAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffAccounts.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffAccounts.ForeColor = System.Drawing.Color.White;
+            this.btnStaffAccounts.Location = new System.Drawing.Point(12, 417);
+            this.btnStaffAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStaffAccounts.Name = "btnStaffAccounts";
+            this.btnStaffAccounts.Size = new System.Drawing.Size(163, 35);
+            this.btnStaffAccounts.TabIndex = 10;
+            this.btnStaffAccounts.Text = "Staff Accounts";
+            this.btnStaffAccounts.UseVisualStyleBackColor = true;
+            this.btnStaffAccounts.Click += new System.EventHandler(this.btnStaffAccounts_Click);
             // 
-            // GameMachineName
+            // panel11
             // 
-            this.GameMachineName.DataPropertyName = "GameMachineName";
-            this.GameMachineName.HeaderText = "Machine Name";
-            this.GameMachineName.Name = "GameMachineName";
-            this.GameMachineName.ReadOnly = true;
+            this.panel11.Controls.Add(this.dataGridView1);
+            this.panel11.Location = new System.Drawing.Point(280, 131);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(791, 375);
+            this.panel11.TabIndex = 0;
             // 
-            // UsageCount
+            // dataGridView1
             // 
-            this.UsageCount.DataPropertyName = "UsageCount";
-            this.UsageCount.HeaderText = "Uses Left";
-            this.UsageCount.Name = "UsageCount";
-            this.UsageCount.ReadOnly = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(791, 375);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // GameMachineID2
+            // btnAddAcc
             // 
-            this.GameMachineID2.DataPropertyName = "GameMachineID";
-            this.GameMachineID2.HeaderText = "ID";
-            this.GameMachineID2.Name = "GameMachineID2";
-            this.GameMachineID2.ReadOnly = true;
+            this.btnAddAcc.BackColor = System.Drawing.Color.Black;
+            this.btnAddAcc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnAddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAcc.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnAddAcc.Location = new System.Drawing.Point(334, 542);
+            this.btnAddAcc.Name = "btnAddAcc";
+            this.btnAddAcc.Size = new System.Drawing.Size(164, 71);
+            this.btnAddAcc.TabIndex = 1;
+            this.btnAddAcc.Text = "Add Account";
+            this.btnAddAcc.UseVisualStyleBackColor = false;
             // 
-            // GameMachineName2
+            // btnDeleteAccount
             // 
-            this.GameMachineName2.DataPropertyName = "GameMachineName";
-            this.GameMachineName2.HeaderText = "Machine Name";
-            this.GameMachineName2.Name = "GameMachineName2";
-            this.GameMachineName2.ReadOnly = true;
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnDeleteAccount.Location = new System.Drawing.Point(595, 542);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(164, 71);
+            this.btnDeleteAccount.TabIndex = 2;
+            this.btnDeleteAccount.Text = "Remove Account";
+            this.btnDeleteAccount.UseVisualStyleBackColor = false;
             // 
-            // UsageCount2
+            // btnRefresh
             // 
-            this.UsageCount2.DataPropertyName = "UsageCount";
-            this.UsageCount2.HeaderText = "Uses Left";
-            this.UsageCount2.Name = "UsageCount2";
-            this.UsageCount2.ReadOnly = true;
-            // 
-            // lblufMtnce
-            // 
-            this.lblufMtnce.AutoSize = true;
-            this.lblufMtnce.BackColor = System.Drawing.Color.Black;
-            this.lblufMtnce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblufMtnce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblufMtnce.Location = new System.Drawing.Point(814, 361);
-            this.lblufMtnce.Name = "lblufMtnce";
-            this.lblufMtnce.Size = new System.Drawing.Size(294, 24);
-            this.lblufMtnce.TabIndex = 6;
-            this.lblufMtnce.Text = "Going To Be Up For Maintenance";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Black;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.label8.Location = new System.Drawing.Point(860, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 24);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Requires Maintenance";
+            this.btnRefresh.BackColor = System.Drawing.Color.Black;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnRefresh.Location = new System.Drawing.Point(854, 542);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(164, 71);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // AdminMainpage
             // 
@@ -1321,7 +1491,9 @@
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
             this.panelUpForMtnce.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).EndInit();
             this.panelNeedMtnce.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).EndInit();
             this.panelExpenditureChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.CustomerActivitiesTab.ResumeLayout(false);
@@ -1332,8 +1504,9 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sideNavPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).EndInit();
+            this.StaffAccountsTab.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1429,5 +1602,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UsageCount2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblufMtnce;
+        private System.Windows.Forms.TabPage StaffAccountsTab;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btnStaffAccounts;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDeleteAccount;
+        private System.Windows.Forms.Button btnAddAcc;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

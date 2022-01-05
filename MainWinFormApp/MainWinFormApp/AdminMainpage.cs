@@ -435,6 +435,7 @@ namespace MainWinFormApp
             panel5.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
+            panel10.Visible = false;
             loadDBtoTotalCrowdCht();
             loadDBtoHourlyCht();
             int curYear = Convert.ToInt32(DateTime.Now.Year);
@@ -464,6 +465,7 @@ namespace MainWinFormApp
             panel5.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
+            panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
         }
 
@@ -476,6 +478,7 @@ namespace MainWinFormApp
             panel5.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
+            panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
 
             using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
@@ -505,6 +508,7 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel5.Visible = false;
             panel9.Visible = false;
+            panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
         }
 
@@ -550,6 +554,7 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
+            panel10.Visible = false;
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
@@ -1154,6 +1159,7 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel8.Visible = false;
             panel9.Visible = true;
+            panel10.Visible = false;
             dataComms.sendData("RFIDTOPUP");
             tbRfidValue.Text = "";
             tbTopupAmt.Text = "";
@@ -1247,6 +1253,20 @@ namespace MainWinFormApp
 
         private void dgNeedMaintenance_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btnStaffAccounts_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+
+            panel10.Visible = true;
+            panel9.Visible = false;
+            panel5.Visible = false;
+            panel8.Visible = false;
+            panel4.Visible = false;
+            panel3.Visible = false;
+            panel2.Visible = false;
 
         }
     }
