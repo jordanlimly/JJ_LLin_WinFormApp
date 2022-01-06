@@ -1268,6 +1268,52 @@ namespace MainWinFormApp
             panel3.Visible = false;
             panel2.Visible = false;
 
+            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
+            {
+                sqlconnection.Open();
+
+                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+
+                DataTable dttable = new DataTable();
+
+                sqldaStaffAccs.Fill(dttable);
+
+                dgvStaffAccounts.DataSource = dttable;
+            }
+
+        }
+
+        private void btnAddAcc_Click(object sender, EventArgs e)
+        {
+            AddStaffAcc frm = new AddStaffAcc();
+            frm.ShowDialog();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
+            {
+                sqlconnection.Open();
+
+                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+
+                DataTable dttable = new DataTable();
+
+                sqldaStaffAccs.Fill(dttable);
+
+                dgvStaffAccounts.DataSource = dttable;
+            }
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            DeleteStaffAccount frm = new DeleteStaffAccount();
+            frm.ShowDialog();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

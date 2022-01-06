@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStaffAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffAcc.Designer.cs">
+      <DependentUpon>AddStaffAcc.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     </Compile>
     <Compile Include="CustUpdateForm.Designer.cs">
       <DependentUpon>CustUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStaffAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStaffAccount.Designer.cs">
+      <DependentUpon>DeleteStaffAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgetPasswordForm.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,9 @@
     <Compile Include="UserDashboard.Designer.cs">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStaffAcc.resx">
+      <DependentUpon>AddStaffAcc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustUpdateForm.resx">
       <DependentUpon>CustUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStaffAccount.resx">
+      <DependentUpon>DeleteStaffAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>

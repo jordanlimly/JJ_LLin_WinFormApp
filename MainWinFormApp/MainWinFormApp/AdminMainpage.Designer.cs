@@ -46,9 +46,34 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnStaffAccounts = new System.Windows.Forms.Button();
+            this.btnTopup = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnUserActivity = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPopularity = new System.Windows.Forms.Button();
+            this.btnCrowdLvl = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
+            this.timerMan = new System.Windows.Forms.Timer(this.components);
+            this.btnCloseWindow = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CrowdTab = new System.Windows.Forms.TabPage();
             this.exitS2 = new System.Windows.Forms.PictureBox();
             this.exitS1 = new System.Windows.Forms.PictureBox();
@@ -116,34 +141,20 @@
             this.lblTopupAmt = new System.Windows.Forms.Label();
             this.tbRfidValue = new System.Windows.Forms.TextBox();
             this.lblRfidString = new System.Windows.Forms.Label();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.btnCloseWindow = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.sideNavPanel = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnTopup = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnUserActivity = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPopularity = new System.Windows.Forms.Button();
-            this.btnCrowdLvl = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
-            this.timerMan = new System.Windows.Forms.Timer(this.components);
             this.StaffAccountsTab = new System.Windows.Forms.TabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnStaffAccounts = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAddAcc = new System.Windows.Forms.Button();
-            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.btnAddAcc = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.dgvStaffAccounts = new System.Windows.Forms.DataGridView();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnModify = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitS1)).BeginInit();
@@ -171,11 +182,9 @@
             this.CustomerActivitiesTab.SuspendLayout();
             this.TopUpTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).BeginInit();
-            this.topPanel.SuspendLayout();
-            this.sideNavPanel.SuspendLayout();
             this.StaffAccountsTab.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -230,6 +239,255 @@
             this.tabControl1.Size = new System.Drawing.Size(1202, 658);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
+            // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.Black;
+            this.topPanel.Controls.Add(this.lblTime);
+            this.topPanel.Controls.Add(this.lblDate);
+            this.topPanel.Controls.Add(this.btnCloseWindow);
+            this.topPanel.Controls.Add(this.panel1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1202, 100);
+            this.topPanel.TabIndex = 5;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTime.Location = new System.Drawing.Point(201, 60);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(117, 43);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "12:00:00";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDate.Location = new System.Drawing.Point(201, 29);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(233, 43);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "31 December 2021";
+            // 
+            // sideNavPanel
+            // 
+            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
+            this.sideNavPanel.Controls.Add(this.panel10);
+            this.sideNavPanel.Controls.Add(this.panel9);
+            this.sideNavPanel.Controls.Add(this.btnStaffAccounts);
+            this.sideNavPanel.Controls.Add(this.btnTopup);
+            this.sideNavPanel.Controls.Add(this.panel8);
+            this.sideNavPanel.Controls.Add(this.btnUserActivity);
+            this.sideNavPanel.Controls.Add(this.panel5);
+            this.sideNavPanel.Controls.Add(this.panel4);
+            this.sideNavPanel.Controls.Add(this.panel3);
+            this.sideNavPanel.Controls.Add(this.panel2);
+            this.sideNavPanel.Controls.Add(this.btnPopularity);
+            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
+            this.sideNavPanel.Controls.Add(this.btnMaintenance);
+            this.sideNavPanel.Controls.Add(this.btnLogout);
+            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideNavPanel.Location = new System.Drawing.Point(0, 100);
+            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideNavPanel.Name = "sideNavPanel";
+            this.sideNavPanel.Size = new System.Drawing.Size(178, 558);
+            this.sideNavPanel.TabIndex = 6;
+            this.sideNavPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel_Paint);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel10.Location = new System.Drawing.Point(4, 417);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(6, 35);
+            this.panel10.TabIndex = 11;
+            this.panel10.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel9.Location = new System.Drawing.Point(4, 340);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(6, 35);
+            this.panel9.TabIndex = 9;
+            this.panel9.Visible = false;
+            // 
+            // btnStaffAccounts
+            // 
+            this.btnStaffAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStaffAccounts.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStaffAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffAccounts.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffAccounts.ForeColor = System.Drawing.Color.White;
+            this.btnStaffAccounts.Location = new System.Drawing.Point(12, 417);
+            this.btnStaffAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStaffAccounts.Name = "btnStaffAccounts";
+            this.btnStaffAccounts.Size = new System.Drawing.Size(163, 35);
+            this.btnStaffAccounts.TabIndex = 10;
+            this.btnStaffAccounts.Text = "Staff Accounts";
+            this.btnStaffAccounts.UseVisualStyleBackColor = true;
+            this.btnStaffAccounts.Click += new System.EventHandler(this.btnStaffAccounts_Click);
+            // 
+            // btnTopup
+            // 
+            this.btnTopup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTopup.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopup.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopup.ForeColor = System.Drawing.Color.White;
+            this.btnTopup.Location = new System.Drawing.Point(12, 340);
+            this.btnTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTopup.Name = "btnTopup";
+            this.btnTopup.Size = new System.Drawing.Size(163, 35);
+            this.btnTopup.TabIndex = 8;
+            this.btnTopup.Text = "Top Up Credits";
+            this.btnTopup.UseVisualStyleBackColor = true;
+            this.btnTopup.Click += new System.EventHandler(this.btnTopup_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel8.Location = new System.Drawing.Point(4, 261);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(6, 35);
+            this.panel8.TabIndex = 7;
+            this.panel8.Visible = false;
+            // 
+            // btnUserActivity
+            // 
+            this.btnUserActivity.BackColor = System.Drawing.Color.Black;
+            this.btnUserActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUserActivity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserActivity.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserActivity.ForeColor = System.Drawing.Color.White;
+            this.btnUserActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserActivity.Location = new System.Drawing.Point(12, 261);
+            this.btnUserActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUserActivity.Name = "btnUserActivity";
+            this.btnUserActivity.Size = new System.Drawing.Size(165, 35);
+            this.btnUserActivity.TabIndex = 6;
+            this.btnUserActivity.Text = "Customer Activity";
+            this.btnUserActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUserActivity.UseVisualStyleBackColor = false;
+            this.btnUserActivity.Click += new System.EventHandler(this.btnUserActivity_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel5.Location = new System.Drawing.Point(4, 494);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(6, 35);
+            this.panel5.TabIndex = 5;
+            this.panel5.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel4.Location = new System.Drawing.Point(4, 181);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(6, 35);
+            this.panel4.TabIndex = 4;
+            this.panel4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel3.Location = new System.Drawing.Point(4, 101);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(6, 35);
+            this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.panel2.Location = new System.Drawing.Point(4, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(6, 35);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnPopularity
+            // 
+            this.btnPopularity.BackColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPopularity.ForeColor = System.Drawing.Color.White;
+            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPopularity.Location = new System.Drawing.Point(12, 101);
+            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPopularity.Name = "btnPopularity";
+            this.btnPopularity.Size = new System.Drawing.Size(163, 35);
+            this.btnPopularity.TabIndex = 1;
+            this.btnPopularity.Text = "Game Machines";
+            this.btnPopularity.UseVisualStyleBackColor = false;
+            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
+            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
+            // 
+            // btnCrowdLvl
+            // 
+            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
+            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
+            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrowdLvl.Name = "btnCrowdLvl";
+            this.btnCrowdLvl.Size = new System.Drawing.Size(163, 35);
+            this.btnCrowdLvl.TabIndex = 0;
+            this.btnCrowdLvl.Text = "Crowd Level";
+            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCrowdLvl.UseVisualStyleBackColor = false;
+            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerDateTime
+            // 
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
+            // 
+            // timerMan
+            // 
+            this.timerMan.Enabled = true;
+            this.timerMan.Interval = 2300;
+            this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
+            // 
+            // btnCloseWindow
+            // 
+            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
+            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseWindow.Location = new System.Drawing.Point(1142, 10);
+            this.btnCloseWindow.Name = "btnCloseWindow";
+            this.btnCloseWindow.Size = new System.Drawing.Size(48, 23);
+            this.btnCloseWindow.TabIndex = 1;
+            this.btnCloseWindow.UseVisualStyleBackColor = true;
+            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(178, 100);
+            this.panel1.TabIndex = 0;
             // 
             // CrowdTab
             // 
@@ -1130,234 +1388,11 @@
             this.lblRfidString.TabIndex = 0;
             this.lblRfidString.Text = "RFID Detected:";
             // 
-            // topPanel
-            // 
-            this.topPanel.BackColor = System.Drawing.Color.Black;
-            this.topPanel.Controls.Add(this.lblTime);
-            this.topPanel.Controls.Add(this.lblDate);
-            this.topPanel.Controls.Add(this.btnCloseWindow);
-            this.topPanel.Controls.Add(this.panel1);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1202, 100);
-            this.topPanel.TabIndex = 5;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTime.Location = new System.Drawing.Point(201, 60);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(117, 43);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "12:00:00";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDate.Location = new System.Drawing.Point(201, 29);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(233, 43);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "31 December 2021";
-            // 
-            // btnCloseWindow
-            // 
-            this.btnCloseWindow.BackgroundImage = global::MainWinFormApp.Properties.Resources.Windows_Close_Icon__1_;
-            this.btnCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseWindow.Location = new System.Drawing.Point(1142, 10);
-            this.btnCloseWindow.Name = "btnCloseWindow";
-            this.btnCloseWindow.Size = new System.Drawing.Size(48, 23);
-            this.btnCloseWindow.TabIndex = 1;
-            this.btnCloseWindow.UseVisualStyleBackColor = true;
-            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::MainWinFormApp.Properties.Resources.JJ_LLin_logo_png;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // sideNavPanel
-            // 
-            this.sideNavPanel.BackColor = System.Drawing.Color.Black;
-            this.sideNavPanel.Controls.Add(this.panel10);
-            this.sideNavPanel.Controls.Add(this.panel9);
-            this.sideNavPanel.Controls.Add(this.btnStaffAccounts);
-            this.sideNavPanel.Controls.Add(this.btnTopup);
-            this.sideNavPanel.Controls.Add(this.panel8);
-            this.sideNavPanel.Controls.Add(this.btnUserActivity);
-            this.sideNavPanel.Controls.Add(this.panel5);
-            this.sideNavPanel.Controls.Add(this.panel4);
-            this.sideNavPanel.Controls.Add(this.panel3);
-            this.sideNavPanel.Controls.Add(this.panel2);
-            this.sideNavPanel.Controls.Add(this.btnPopularity);
-            this.sideNavPanel.Controls.Add(this.btnCrowdLvl);
-            this.sideNavPanel.Controls.Add(this.btnMaintenance);
-            this.sideNavPanel.Controls.Add(this.btnLogout);
-            this.sideNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideNavPanel.Location = new System.Drawing.Point(0, 100);
-            this.sideNavPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sideNavPanel.Name = "sideNavPanel";
-            this.sideNavPanel.Size = new System.Drawing.Size(178, 558);
-            this.sideNavPanel.TabIndex = 6;
-            this.sideNavPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel_Paint);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel9.Location = new System.Drawing.Point(4, 340);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(6, 35);
-            this.panel9.TabIndex = 9;
-            this.panel9.Visible = false;
-            // 
-            // btnTopup
-            // 
-            this.btnTopup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTopup.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTopup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopup.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTopup.ForeColor = System.Drawing.Color.White;
-            this.btnTopup.Location = new System.Drawing.Point(12, 340);
-            this.btnTopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTopup.Name = "btnTopup";
-            this.btnTopup.Size = new System.Drawing.Size(163, 35);
-            this.btnTopup.TabIndex = 8;
-            this.btnTopup.Text = "Top Up Credits";
-            this.btnTopup.UseVisualStyleBackColor = true;
-            this.btnTopup.Click += new System.EventHandler(this.btnTopup_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel8.Location = new System.Drawing.Point(4, 261);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(6, 35);
-            this.panel8.TabIndex = 7;
-            this.panel8.Visible = false;
-            // 
-            // btnUserActivity
-            // 
-            this.btnUserActivity.BackColor = System.Drawing.Color.Black;
-            this.btnUserActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUserActivity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserActivity.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserActivity.ForeColor = System.Drawing.Color.White;
-            this.btnUserActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserActivity.Location = new System.Drawing.Point(12, 261);
-            this.btnUserActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUserActivity.Name = "btnUserActivity";
-            this.btnUserActivity.Size = new System.Drawing.Size(165, 35);
-            this.btnUserActivity.TabIndex = 6;
-            this.btnUserActivity.Text = "Customer Activity";
-            this.btnUserActivity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUserActivity.UseVisualStyleBackColor = false;
-            this.btnUserActivity.Click += new System.EventHandler(this.btnUserActivity_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel5.Location = new System.Drawing.Point(4, 494);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(6, 35);
-            this.panel5.TabIndex = 5;
-            this.panel5.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel4.Location = new System.Drawing.Point(4, 181);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(6, 35);
-            this.panel4.TabIndex = 4;
-            this.panel4.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel3.Location = new System.Drawing.Point(4, 101);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(6, 35);
-            this.panel3.TabIndex = 2;
-            this.panel3.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel2.Location = new System.Drawing.Point(4, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(6, 35);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnPopularity
-            // 
-            this.btnPopularity.BackColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPopularity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPopularity.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPopularity.ForeColor = System.Drawing.Color.White;
-            this.btnPopularity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPopularity.Location = new System.Drawing.Point(12, 101);
-            this.btnPopularity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPopularity.Name = "btnPopularity";
-            this.btnPopularity.Size = new System.Drawing.Size(163, 35);
-            this.btnPopularity.TabIndex = 1;
-            this.btnPopularity.Text = "Game Machines";
-            this.btnPopularity.UseVisualStyleBackColor = false;
-            this.btnPopularity.Click += new System.EventHandler(this.btnPopularity_Click);
-            this.btnPopularity.Leave += new System.EventHandler(this.btnPopularity_Leave);
-            // 
-            // btnCrowdLvl
-            // 
-            this.btnCrowdLvl.BackColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCrowdLvl.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCrowdLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrowdLvl.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrowdLvl.ForeColor = System.Drawing.Color.White;
-            this.btnCrowdLvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrowdLvl.Location = new System.Drawing.Point(12, 23);
-            this.btnCrowdLvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrowdLvl.Name = "btnCrowdLvl";
-            this.btnCrowdLvl.Size = new System.Drawing.Size(163, 35);
-            this.btnCrowdLvl.TabIndex = 0;
-            this.btnCrowdLvl.Text = "Crowd Level";
-            this.btnCrowdLvl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrowdLvl.UseVisualStyleBackColor = false;
-            this.btnCrowdLvl.Click += new System.EventHandler(this.button1_Click);
-            this.btnCrowdLvl.Leave += new System.EventHandler(this.btnCrowdLvl_Leave);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timerDateTime
-            // 
-            this.timerDateTime.Interval = 1000;
-            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
-            // 
-            // timerMan
-            // 
-            this.timerMan.Enabled = true;
-            this.timerMan.Interval = 2300;
-            this.timerMan.Tick += new System.EventHandler(this.timerMan_Tick);
-            // 
             // StaffAccountsTab
             // 
             this.StaffAccountsTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
             this.StaffAccountsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.StaffAccountsTab.Controls.Add(this.btnModify);
             this.StaffAccountsTab.Controls.Add(this.btnRefresh);
             this.StaffAccountsTab.Controls.Add(this.btnDeleteAccount);
             this.StaffAccountsTab.Controls.Add(this.btnAddAcc);
@@ -1369,61 +1404,20 @@
             this.StaffAccountsTab.TabIndex = 5;
             this.StaffAccountsTab.UseVisualStyleBackColor = true;
             // 
-            // panel10
+            // btnRefresh
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.panel10.Location = new System.Drawing.Point(4, 417);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(6, 35);
-            this.panel10.TabIndex = 11;
-            this.panel10.Visible = false;
-            // 
-            // btnStaffAccounts
-            // 
-            this.btnStaffAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStaffAccounts.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnStaffAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffAccounts.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffAccounts.ForeColor = System.Drawing.Color.White;
-            this.btnStaffAccounts.Location = new System.Drawing.Point(12, 417);
-            this.btnStaffAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnStaffAccounts.Name = "btnStaffAccounts";
-            this.btnStaffAccounts.Size = new System.Drawing.Size(163, 35);
-            this.btnStaffAccounts.TabIndex = 10;
-            this.btnStaffAccounts.Text = "Staff Accounts";
-            this.btnStaffAccounts.UseVisualStyleBackColor = true;
-            this.btnStaffAccounts.Click += new System.EventHandler(this.btnStaffAccounts_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.dataGridView1);
-            this.panel11.Location = new System.Drawing.Point(280, 131);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(791, 375);
-            this.panel11.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(791, 375);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnAddAcc
-            // 
-            this.btnAddAcc.BackColor = System.Drawing.Color.Black;
-            this.btnAddAcc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnAddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAcc.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnAddAcc.Location = new System.Drawing.Point(334, 542);
-            this.btnAddAcc.Name = "btnAddAcc";
-            this.btnAddAcc.Size = new System.Drawing.Size(164, 71);
-            this.btnAddAcc.TabIndex = 1;
-            this.btnAddAcc.Text = "Add Account";
-            this.btnAddAcc.UseVisualStyleBackColor = false;
+            this.btnRefresh.BackColor = System.Drawing.Color.Black;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnRefresh.Location = new System.Drawing.Point(943, 542);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(164, 71);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDeleteAccount
             // 
@@ -1432,26 +1426,119 @@
             this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAccount.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnDeleteAccount.Location = new System.Drawing.Point(595, 542);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(473, 542);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(164, 71);
             this.btnDeleteAccount.TabIndex = 2;
             this.btnDeleteAccount.Text = "Remove Account";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
-            // btnRefresh
+            // btnAddAcc
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Black;
-            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnRefresh.Location = new System.Drawing.Point(854, 542);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(164, 71);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnAddAcc.BackColor = System.Drawing.Color.Black;
+            this.btnAddAcc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnAddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAcc.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnAddAcc.Location = new System.Drawing.Point(240, 542);
+            this.btnAddAcc.Name = "btnAddAcc";
+            this.btnAddAcc.Size = new System.Drawing.Size(164, 71);
+            this.btnAddAcc.TabIndex = 1;
+            this.btnAddAcc.Text = "Add Account";
+            this.btnAddAcc.UseVisualStyleBackColor = false;
+            this.btnAddAcc.Click += new System.EventHandler(this.btnAddAcc_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.dgvStaffAccounts);
+            this.panel11.Location = new System.Drawing.Point(280, 131);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(791, 375);
+            this.panel11.TabIndex = 0;
+            // 
+            // dgvStaffAccounts
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgvStaffAccounts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvStaffAccounts.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvStaffAccounts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvStaffAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvStaffAccounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvStaffAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaffAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FirstName,
+            this.LastName,
+            this.Position,
+            this.StaffID});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffAccounts.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvStaffAccounts.EnableHeadersVisualStyles = false;
+            this.dgvStaffAccounts.Location = new System.Drawing.Point(0, 0);
+            this.dgvStaffAccounts.Name = "dgvStaffAccounts";
+            this.dgvStaffAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgvStaffAccounts.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvStaffAccounts.RowTemplate.Height = 24;
+            this.dgvStaffAccounts.Size = new System.Drawing.Size(791, 375);
+            this.dgvStaffAccounts.TabIndex = 0;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Position
+            // 
+            this.Position.DataPropertyName = "Position";
+            this.Position.HeaderText = "Job Position";
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            // 
+            // StaffID
+            // 
+            this.StaffID.DataPropertyName = "StaffID";
+            this.StaffID.HeaderText = "Staff ID";
+            this.StaffID.Name = "StaffID";
+            this.StaffID.ReadOnly = true;
+            // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.Color.Black;
+            this.btnModify.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModify.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnModify.Location = new System.Drawing.Point(706, 542);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(164, 71);
+            this.btnModify.TabIndex = 4;
+            this.btnModify.Text = "Modify Details";
+            this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // AdminMainpage
             // 
@@ -1467,6 +1554,9 @@
             this.Text = "AdminMainpage";
             this.Load += new System.EventHandler(this.AdminMainpage_Load);
             this.tabControl1.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sideNavPanel.ResumeLayout(false);
             this.CrowdTab.ResumeLayout(false);
             this.CrowdTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).EndInit();
@@ -1501,12 +1591,9 @@
             this.TopUpTab.ResumeLayout(false);
             this.TopUpTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopup)).EndInit();
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            this.sideNavPanel.ResumeLayout(false);
             this.StaffAccountsTab.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1609,6 +1696,11 @@
         private System.Windows.Forms.Button btnDeleteAccount;
         private System.Windows.Forms.Button btnAddAcc;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStaffAccounts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StaffID;
+        private System.Windows.Forms.Button btnModify;
     }
 }
