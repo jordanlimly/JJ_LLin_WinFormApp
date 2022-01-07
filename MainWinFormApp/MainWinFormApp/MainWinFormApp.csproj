@@ -129,6 +129,12 @@
     <Compile Include="Maintenance.Designer.cs">
       <DependentUpon>Maintenance.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyStaffAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyStaffAcc.Designer.cs">
+      <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
+    </Compile>
     <Compile Include="PasswordResetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance.resx">
       <DependentUpon>Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyStaffAcc.resx">
+      <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordResetForm.resx">
       <DependentUpon>PasswordResetForm.cs</DependentUpon>

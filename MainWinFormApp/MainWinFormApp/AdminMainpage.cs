@@ -1313,7 +1313,8 @@ namespace MainWinFormApp
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-
+            ModifyStaffAcc frm = new ModifyStaffAcc();
+            frm.ShowDialog();
         }
     }
 }
