@@ -37,7 +37,7 @@ namespace MainWinFormApp
             SqlConnection myConnect = new SqlConnection(strConnectionString);
 
             //create command
-            string StrCommandText = "SELECT MaintenanceFee, Remarks FROM GameMachineMaintenance ";
+            String StrCommandText = "SELECT MaintenanceFee, Remarks FROM GameMachineMaintenance ";
 
             //adding a WHERE claus
             StrCommandText += "WHERE GameMachineID = @GMachineID AND MaintenanceDate = @MtnceDate";

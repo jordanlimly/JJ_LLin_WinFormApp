@@ -164,6 +164,7 @@
             this.tbFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbFname.Location = new System.Drawing.Point(424, 262);
             this.tbFname.Name = "tbFname";
+            this.tbFname.ReadOnly = true;
             this.tbFname.Size = new System.Drawing.Size(183, 22);
             this.tbFname.TabIndex = 10;
             // 
@@ -173,6 +174,7 @@
             this.tbLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLname.Location = new System.Drawing.Point(424, 313);
             this.tbLname.Name = "tbLname";
+            this.tbLname.ReadOnly = true;
             this.tbLname.Size = new System.Drawing.Size(183, 22);
             this.tbLname.TabIndex = 11;
             // 
@@ -191,6 +193,7 @@
             this.tbNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNewPassword.Location = new System.Drawing.Point(424, 413);
             this.tbNewPassword.Name = "tbNewPassword";
+            this.tbNewPassword.PasswordChar = '*';
             this.tbNewPassword.Size = new System.Drawing.Size(183, 22);
             this.tbNewPassword.TabIndex = 13;
             // 
@@ -200,6 +203,7 @@
             this.tbCfmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCfmPassword.Location = new System.Drawing.Point(424, 466);
             this.tbCfmPassword.Name = "tbCfmPassword";
+            this.tbCfmPassword.PasswordChar = '*';
             this.tbCfmPassword.Size = new System.Drawing.Size(183, 22);
             this.tbCfmPassword.TabIndex = 14;
             // 
@@ -218,6 +222,7 @@
             this.tbMPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMPass.Location = new System.Drawing.Point(424, 582);
             this.tbMPass.Name = "tbMPass";
+            this.tbMPass.PasswordChar = '*';
             this.tbMPass.Size = new System.Drawing.Size(183, 22);
             this.tbMPass.TabIndex = 16;
             // 
@@ -234,6 +239,7 @@
             this.btnRetrieve.TabIndex = 17;
             this.btnRetrieve.Text = "Retrieve Details";
             this.btnRetrieve.UseVisualStyleBackColor = false;
+            this.btnRetrieve.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // btnExit
             // 
@@ -263,6 +269,7 @@
             this.btnModify.TabIndex = 19;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // ModifyStaffAcc
             // 
