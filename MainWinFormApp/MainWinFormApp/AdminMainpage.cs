@@ -285,11 +285,19 @@ namespace MainWinFormApp
 
             DataSet ds2 = new DataSet();
             adapter2.Fill(ds2);
-            string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
+            try
+            {
+                string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
 
-            string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
-            lbCustomerActivity.Items.Insert(0, strMsg);
-            lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
+                string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
+                lbCustomerActivity.Items.Insert(0, strMsg);
+                lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void handleGameMode(string strData, string ID)
