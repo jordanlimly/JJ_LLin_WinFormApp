@@ -75,7 +75,7 @@ namespace MainWinFormApp
             SqlConnection myConnect = new SqlConnection(strConnectionString);
 
             String StrModifyText = "UPDATE StaffAccounts SET Position = @NewPosition, Password = @NewPass WHERE StaffID = @StaffID";
-            String StrModifyText2 = "UPDATE StaffAccounts Set Position = @NewPos WHERE StaffID = @SID";
+            String StrModifyText2 = "UPDATE StaffAccounts SET Position = @NewPos WHERE StaffID = @SID";
             String StrCheckManagerText = "SELECT StaffID, Position, Password FROM StaffAccounts" +
                 " WHERE StaffID = @MstaffID AND Position = @Mpos AND Password = @Mpass";
 
