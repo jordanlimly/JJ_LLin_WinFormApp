@@ -1124,7 +1124,7 @@ namespace MainWinFormApp
         {
             if (hiddenMinPanel)
             {
-                panel7.Width += 15;
+                panel7.Width += 5;
                 if (panel7.Width >= PW)
                 {
                     timer1.Stop();
@@ -1134,7 +1134,7 @@ namespace MainWinFormApp
             }
             else
             {
-                panel7.Width -= 15;
+                panel7.Width -= 5;
                 if (panel7.Width <= 0)
                 {
                     timer1.Stop();
