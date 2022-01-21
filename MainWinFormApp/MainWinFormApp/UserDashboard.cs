@@ -48,7 +48,7 @@ namespace MainWinFormApp
 
         private void btnLoadData_Click(object sender, EventArgs e)
         {
-            this.Refresh();
+            loadchart();
         }
 
         private void Dashboard()
@@ -79,6 +79,11 @@ namespace MainWinFormApp
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            pnlAccumPoints.Visible = true;
+            pnlCurrCreds.Visible = true;
+            pnlCurrPoints.Visible = true;
+            pnlMemTier.Visible = true;
+            panelGMU.Visible = false;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -123,12 +128,16 @@ namespace MainWinFormApp
             pnlNav.Left = btnGameMachineUsage.Left;
             btnGameMachineUsage.BackColor = Color.FromArgb(46, 51, 73);
             panelGMU.Visible = true;
+            pnlAccumPoints.Visible = false;
+            pnlCurrCreds.Visible = false;
+            pnlMemTier.Visible = false;
         }
 
         private void btnGameMachineUsage_Leave(object sender, EventArgs e)
         {
             btnGameMachineUsage.BackColor = Color.FromArgb(0, 0, 0);
-            panelGMU.Visible = false;
+
+
         }
 
         private Color getColor(int r, int g, int b, int transparent = 255)
