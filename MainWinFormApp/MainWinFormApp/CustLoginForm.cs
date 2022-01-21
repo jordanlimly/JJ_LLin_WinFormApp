@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+//using System.Web.HttpContext.Current.Session;
+
 
 namespace MainWinFormApp
 {
@@ -23,15 +25,19 @@ namespace MainWinFormApp
             
         }
 
-        
+
+        public static string UserEmail = "";
+        public static string UserRFID = "";
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+
             //Open Connection
             SqlConnection myConnect = new SqlConnection(strConnectionString);
 
             //Create COmmand
-            string strCommandText = "SELECT Email, Password FROM UserAccount";
+            string strCommandText = "SELECT RFID_ID, Email, Password FROM UserAccount";
 
             //WHERE clause
             strCommandText += " WHERE Email=@email AND Password=@pw";
@@ -47,14 +53,18 @@ namespace MainWinFormApp
                 if (reader.Read())
                 {
                     MessageBox.Show("Login Successful");
-                    UserDashboard frm = new UserDashboard();
+                    //Session["User"] = tbLoginEmail.Text;
+                    UserEmail = tbLoginEmail.Text;
+                    UserRFID = reader["RFID_ID"].ToString();
+                    new UserDashboard().Show();
                     this.Hide();
-                    frm.ShowDialog();
-                    this.Close();
                 }
                     
                 else
                     MessageBox.Show("Login Fail");
+                    tbLoginEmail.Clear();
+                    tbLoginPw.Clear();
+
                 //Step 5: Close connection
                 reader.Close();
             }
@@ -72,6 +82,18 @@ namespace MainWinFormApp
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblHere_Click(object sender, EventArgs e)
+        {
+            new frmCreateuserAcc().Show();
+            this.Hide();
+        }
+
+        private void lnklblForgetPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new frmforgetpw().Show();
+            
         }
     }
 }

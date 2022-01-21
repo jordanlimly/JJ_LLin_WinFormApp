@@ -54,5 +54,11 @@ namespace MainWinFormApp
             myConnect.Close();
             return result;
         }
+
+        private void lnklblResetPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordChangeForm frm = new PasswordChangeForm();
+            frm.ShowDialog();
+        }
     }
 }

@@ -135,11 +135,11 @@
     <Compile Include="ModifyStaffAcc.Designer.cs">
       <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
     </Compile>
-    <Compile Include="PasswordResetForm.cs">
+    <Compile Include="PasswordChangeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PasswordResetForm.Designer.cs">
-      <DependentUpon>PasswordResetForm.cs</DependentUpon>
+    <Compile Include="PasswordChangeForm.Designer.cs">
+      <DependentUpon>PasswordChangeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
@@ -209,8 +209,8 @@
     <EmbeddedResource Include="ModifyStaffAcc.resx">
       <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PasswordResetForm.resx">
-      <DependentUpon>PasswordResetForm.cs</DependentUpon>
+    <EmbeddedResource Include="PasswordChangeForm.resx">
+      <DependentUpon>PasswordChangeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

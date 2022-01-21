@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnGameMachineUsage = new System.Windows.Forms.Button();
@@ -35,7 +38,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.pBUserAvatar = new System.Windows.Forms.PictureBox();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,7 +53,8 @@
             this.pnlCurrPoints = new System.Windows.Forms.Panel();
             this.lblCurrentPoints = new System.Windows.Forms.Label();
             this.panelGMU = new System.Windows.Forms.Panel();
-            this.pictureBoxGMU = new System.Windows.Forms.PictureBox();
+            this.btnLoadData = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblGMU = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelUser.SuspendLayout();
@@ -61,7 +65,7 @@
             this.pnlAccumPoints.SuspendLayout();
             this.pnlCurrPoints.SuspendLayout();
             this.panelGMU.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -154,7 +158,7 @@
             // 
             // panelUser
             // 
-            this.panelUser.Controls.Add(this.lblUsername);
+            this.panelUser.Controls.Add(this.tbUsername);
             this.panelUser.Controls.Add(this.pBUserAvatar);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUser.Location = new System.Drawing.Point(0, 80);
@@ -162,16 +166,18 @@
             this.panelUser.Size = new System.Drawing.Size(178, 144);
             this.panelUser.TabIndex = 2;
             // 
-            // lblUsername
+            // tbUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(60, 103);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(69, 15);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "User Name";
+            this.tbUsername.BackColor = System.Drawing.Color.Black;
+            this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbUsername.Cursor = System.Windows.Forms.Cursors.No;
+            this.tbUsername.Enabled = false;
+            this.tbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.tbUsername.Location = new System.Drawing.Point(35, 100);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.ReadOnly = true;
+            this.tbUsername.Size = new System.Drawing.Size(116, 20);
+            this.tbUsername.TabIndex = 1;
             // 
             // pBUserAvatar
             // 
@@ -314,7 +320,8 @@
             // 
             this.panelGMU.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
             this.panelGMU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelGMU.Controls.Add(this.pictureBoxGMU);
+            this.panelGMU.Controls.Add(this.btnLoadData);
+            this.panelGMU.Controls.Add(this.chart1);
             this.panelGMU.Controls.Add(this.lblGMU);
             this.panelGMU.Location = new System.Drawing.Point(178, 80);
             this.panelGMU.Name = "panelGMU";
@@ -322,14 +329,31 @@
             this.panelGMU.TabIndex = 4;
             this.panelGMU.Visible = false;
             // 
-            // pictureBoxGMU
+            // btnLoadData
             // 
-            this.pictureBoxGMU.Image = global::MainWinFormApp.Properties.Resources.barchart_static;
-            this.pictureBoxGMU.Location = new System.Drawing.Point(117, 86);
-            this.pictureBoxGMU.Name = "pictureBoxGMU";
-            this.pictureBoxGMU.Size = new System.Drawing.Size(482, 289);
-            this.pictureBoxGMU.TabIndex = 5;
-            this.pictureBoxGMU.TabStop = false;
+            this.btnLoadData.Location = new System.Drawing.Point(624, 58);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(82, 38);
+            this.btnLoadData.TabIndex = 6;
+            this.btnLoadData.Text = "Load Data";
+            this.btnLoadData.UseVisualStyleBackColor = true;
+            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(31, 58);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(587, 366);
+            this.chart1.TabIndex = 5;
+            this.chart1.Text = "chart1";
             // 
             // lblGMU
             // 
@@ -361,6 +385,7 @@
             this.Name = "UserDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDashboard";
+            this.Load += new System.EventHandler(this.UserDashboard_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
@@ -377,7 +402,7 @@
             this.pnlCurrPoints.PerformLayout();
             this.panelGMU.ResumeLayout(false);
             this.panelGMU.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,7 +431,8 @@
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel panelGMU;
         private System.Windows.Forms.Label lblGMU;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.PictureBox pictureBoxGMU;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnLoadData;
     }
 }

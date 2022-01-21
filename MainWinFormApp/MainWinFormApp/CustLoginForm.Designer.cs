@@ -35,6 +35,9 @@
             this.tbLoginEmail = new System.Windows.Forms.TextBox();
             this.tbLoginPw = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblCreateAcc = new System.Windows.Forms.Label();
+            this.lblHere = new System.Windows.Forms.Label();
+            this.lnklblForgetPw = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblLoginfrm
@@ -78,7 +81,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnLogin.Location = new System.Drawing.Point(171, 290);
+            this.btnLogin.Location = new System.Drawing.Point(171, 317);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(104, 43);
@@ -113,7 +116,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnCancel.Location = new System.Drawing.Point(349, 290);
+            this.btnCancel.Location = new System.Drawing.Point(349, 317);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
@@ -122,12 +125,49 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblCreateAcc
+            // 
+            this.lblCreateAcc.AutoSize = true;
+            this.lblCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblCreateAcc.Location = new System.Drawing.Point(211, 256);
+            this.lblCreateAcc.Name = "lblCreateAcc";
+            this.lblCreateAcc.Size = new System.Drawing.Size(134, 13);
+            this.lblCreateAcc.TabIndex = 7;
+            this.lblCreateAcc.Text = "New? Create your account";
+            // 
+            // lblHere
+            // 
+            this.lblHere.AutoSize = true;
+            this.lblHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lblHere.Location = new System.Drawing.Point(346, 256);
+            this.lblHere.Name = "lblHere";
+            this.lblHere.Size = new System.Drawing.Size(36, 13);
+            this.lblHere.TabIndex = 8;
+            this.lblHere.Text = "here!";
+            this.lblHere.Click += new System.EventHandler(this.lblHere_Click);
+            // 
+            // lnklblForgetPw
+            // 
+            this.lnklblForgetPw.AutoSize = true;
+            this.lnklblForgetPw.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lnklblForgetPw.Location = new System.Drawing.Point(211, 280);
+            this.lnklblForgetPw.Name = "lnklblForgetPw";
+            this.lnklblForgetPw.Size = new System.Drawing.Size(92, 13);
+            this.lnklblForgetPw.TabIndex = 9;
+            this.lnklblForgetPw.TabStop = true;
+            this.lnklblForgetPw.Text = "Forget Password?";
+            this.lnklblForgetPw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblForgetPw_LinkClicked);
+            // 
             // CustLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(608, 403);
+            this.Controls.Add(this.lnklblForgetPw);
+            this.Controls.Add(this.lblHere);
+            this.Controls.Add(this.lblCreateAcc);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbLoginPw);
             this.Controls.Add(this.tbLoginEmail);
@@ -154,5 +194,8 @@
         private System.Windows.Forms.TextBox tbLoginEmail;
         private System.Windows.Forms.TextBox tbLoginPw;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblCreateAcc;
+        private System.Windows.Forms.Label lblHere;
+        private System.Windows.Forms.LinkLabel lnklblForgetPw;
     }
 }

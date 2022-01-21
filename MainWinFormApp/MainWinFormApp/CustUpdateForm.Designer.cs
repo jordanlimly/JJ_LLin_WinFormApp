@@ -43,6 +43,7 @@
             this.lblCardID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.lnklblResetPw = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // tbName
@@ -111,7 +112,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnCancel.Location = new System.Drawing.Point(346, 455);
+            this.btnCancel.Location = new System.Drawing.Point(345, 497);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 43);
@@ -125,7 +126,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnSubmit.Location = new System.Drawing.Point(134, 455);
+            this.btnSubmit.Location = new System.Drawing.Point(134, 497);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(104, 43);
@@ -232,12 +233,26 @@
             this.lblName.Text = "Name:";
             this.lblName.Visible = false;
             // 
+            // lnklblResetPw
+            // 
+            this.lnklblResetPw.AutoSize = true;
+            this.lnklblResetPw.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnklblResetPw.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lnklblResetPw.Location = new System.Drawing.Point(373, 429);
+            this.lnklblResetPw.Name = "lnklblResetPw";
+            this.lnklblResetPw.Size = new System.Drawing.Size(123, 16);
+            this.lnklblResetPw.TabIndex = 23;
+            this.lnklblResetPw.TabStop = true;
+            this.lnklblResetPw.Text = "Change Password";
+            this.lnklblResetPw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblResetPw_LinkClicked);
+            // 
             // CustUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(592, 577);
+            this.Controls.Add(this.lnklblResetPw);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCardID);
@@ -279,5 +294,6 @@
         private System.Windows.Forms.Label lblCardID;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.LinkLabel lnklblResetPw;
     }
 }
