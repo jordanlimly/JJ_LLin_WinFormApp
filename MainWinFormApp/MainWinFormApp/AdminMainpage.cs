@@ -19,6 +19,8 @@ namespace MainWinFormApp
     {
         int PW;
         bool hiddenMinPanel;
+        int PH;
+        bool hiddenMsgPanel;
         bool sensor1triggered = false;
         bool sensor2triggered = false;
         //===Crowd Level codes===
@@ -285,11 +287,19 @@ namespace MainWinFormApp
 
             DataSet ds2 = new DataSet();
             adapter2.Fill(ds2);
-            string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
+            try
+            {
+                string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
 
-            string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
-            lbCustomerActivity.Items.Insert(0, strMsg);
-            lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
+                string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
+                lbCustomerActivity.Items.Insert(0, strMsg);
+                lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void handleGameMode(string strData, string ID)
@@ -326,6 +336,8 @@ namespace MainWinFormApp
                 dgvTopup.DataSource = dt;
                 tbRfidValue.Text = detectedRFID;
                 lblErrorMsg.Text = "";
+                hiddenMsgPanel = false;
+                msgTimer.Start();
             }
             else
             {
@@ -424,6 +436,7 @@ namespace MainWinFormApp
             panel6.BackColor = Color.FromArgb(200, Color.White);
             PW = panel7.Width;
             hiddenMinPanel = false;
+            PH = msgPanel.Height;
         }
 
         private void button1_Click(object sender, EventArgs e) // Current crowd btn click
@@ -448,6 +461,8 @@ namespace MainWinFormApp
             setXAxisDisplayRange(MinCrowdCht, minDate, maxDate);
             loadDBtoMinuteCht();
             dataComms.sendData("RFIDRETURNNORM");
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
         
 
@@ -467,6 +482,8 @@ namespace MainWinFormApp
             panel9.Visible = false;
             panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -480,6 +497,8 @@ namespace MainWinFormApp
             panel9.Visible = false;
             panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
+            hiddenMsgPanel = false;
+            msgTimer.Start();
 
             using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
             {
@@ -510,6 +529,8 @@ namespace MainWinFormApp
             panel9.Visible = false;
             panel10.Visible = false;
             dataComms.sendData("RFIDRETURNNORM");
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)
@@ -525,6 +546,8 @@ namespace MainWinFormApp
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed; ;
             timer.Start();
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -1116,7 +1139,7 @@ namespace MainWinFormApp
         {
             if (hiddenMinPanel)
             {
-                panel7.Width += 15;
+                panel7.Width += 4;
                 if (panel7.Width >= PW)
                 {
                     timer1.Stop();
@@ -1126,7 +1149,7 @@ namespace MainWinFormApp
             }
             else
             {
-                panel7.Width -= 15;
+                panel7.Width -= 4;
                 if (panel7.Width <= 0)
                 {
                     timer1.Stop();
@@ -1167,7 +1190,6 @@ namespace MainWinFormApp
             lblErrorMsg2.Text = "";
             dgvTopup.DataSource = null;
             dgvTopup.Refresh();
-
         }
 
         private void btnCfmTopup_Click(object sender, EventArgs e)
@@ -1214,6 +1236,12 @@ namespace MainWinFormApp
                     //Step 4: ExecuteCommand
                     int result = updateCmd.ExecuteNonQuery();
 
+                    if (result > 0)
+                    {
+                        hiddenMsgPanel = true;
+                        msgTimer.Start();
+                    }
+
                     String strCommandText2 = "SELECT RFID_ID, Name, CurrentCredits FROM UserAccount WHERE RFID_ID = '" + strRfid + "'";
 
                     SqlDataAdapter adapter = new SqlDataAdapter(strCommandText2, myConnect);
@@ -1244,6 +1272,8 @@ namespace MainWinFormApp
             lblErrorMsg2.Text = "";
             dgvTopup.DataSource = null;
             dgvTopup.Refresh();
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
 
         private void sideNavPanel_Paint(object sender, PaintEventArgs e)
@@ -1267,6 +1297,9 @@ namespace MainWinFormApp
             panel4.Visible = false;
             panel3.Visible = false;
             panel2.Visible = false;
+            dataComms.sendData("RFIDRETURNNORM");
+            hiddenMsgPanel = false;
+            msgTimer.Start();
 
             using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
             {
@@ -1315,6 +1348,49 @@ namespace MainWinFormApp
         {
             ModifyStaffAcc frm = new ModifyStaffAcc();
             frm.ShowDialog();
+        }
+
+        private void msgTimer_Tick(object sender, EventArgs e)
+        {
+            if (hiddenMsgPanel)
+            {
+                if (msgPanel.Height >= PH)
+                {
+                    msgTimer.Stop();
+                    hiddenMsgPanel = false;
+                    this.Refresh();
+                }
+                msgPanel.Height = msgPanel.Height + 8;
+                if (msgPanel.Height >= PH)
+                {
+                    msgTimer.Stop();
+                    hiddenMsgPanel = false;
+                    this.Refresh();
+                }
+            }
+            else
+            {
+                if (msgPanel.Height <= 0)
+                {
+                    msgTimer.Stop();
+                    hiddenMsgPanel = true;
+                    this.Refresh();
+                }
+                msgPanel.Height = msgPanel.Height - 8;
+                if (msgPanel.Height <= 0)
+                {
+                    msgTimer.Stop();
+                    hiddenMsgPanel = true;
+                    this.Refresh();
+                }
+            }
+        }
+
+        // close msg panel
+        private void label9_Click(object sender, EventArgs e)
+        {
+            hiddenMsgPanel = false;
+            msgTimer.Start();
         }
     }
 }
