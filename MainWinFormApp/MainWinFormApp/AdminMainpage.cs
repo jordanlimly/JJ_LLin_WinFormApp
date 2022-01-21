@@ -516,7 +516,180 @@ namespace MainWinFormApp
                 dgNeedMaintenance.DataSource = dttable;
                 dgUpForMaintenance.DataSource = dttable2;
             }
+
+            loadDBtoMaintenanceChart();
         }
+
+        // codes for maintenance expenditure chart - lid
+        private DateTime getDateTimeMaintenance(int year, int month, int day, int hour, int min, int sec, int millesecs = 0)
+        {
+            DateTime dt = new DateTime(month);
+            Console.WriteLine(dt.ToString("MM"));
+            //Console.WriteLine(dt.Month.ToString() + "/" + dt.Year.ToString());
+            return dt;
+        }
+
+        private void setXAxisDisplayRangeMaintenance(Chart chrt, DateTime dtStart, DateTime dtEnd)
+        {
+            DateTime minDate = dtStart.AddSeconds(-1);
+            DateTime maxDate = dtEnd;
+
+            Console.WriteLine("Setting AxisX.Minimum =" + minDate.ToOADate());
+            Console.WriteLine("Setting AxisX.MAximum =" + maxDate.ToOADate());
+
+            chrt.ChartAreas[0].AxisX.Minimum = minDate.ToOADate();
+            chrt.ChartAreas[0].AxisX.Maximum = maxDate.ToOADate();
+            chrt.Series[0].IsXValueIndexed = false;
+        }
+
+        private void initChartPropertiesMaintenance()
+        {
+            MaintenanceExpenditureChart.BackColor = getColor(243, 223, 193);
+            MaintenanceExpenditureChart.BackGradientStyle = GradientStyle.TopBottom;
+            MaintenanceExpenditureChart.BorderlineColor = getColor(181, 64, 1);
+            MaintenanceExpenditureChart.BorderlineDashStyle = ChartDashStyle.Solid;
+            MaintenanceExpenditureChart.BorderlineWidth = 2;
+
+            //Title
+            Title title1 = new Title();
+            title1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold);
+            title1.Text = "Monthly Maintenance Expenditure";
+            MaintenanceExpenditureChart.Titles.Add(title1);
+
+            Font labelFont = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
+
+            //Graph legend
+            Legend legend1 = MaintenanceExpenditureChart.Legends[0];
+            legend1.BackColor = Color.Transparent;
+            legend1.Enabled = true;
+            legend1.Font = labelFont;
+
+            //Chart area is the whole X-Y axis area
+            Color colorGridLines = getColor(64, 64, 64, 64);
+            ChartArea chartArea1 = MaintenanceExpenditureChart.ChartAreas[0];
+            chartArea1.BackColor = Color.OldLace;
+            chartArea1.BackGradientStyle = GradientStyle.TopBottom;
+            chartArea1.BorderColor = colorGridLines;
+            chartArea1.BorderDashStyle = ChartDashStyle.Solid;
+            chartArea1.ShadowColor = Color.Transparent;
+
+            //x-axis settings
+            chartArea1.AxisX.LabelStyle.Font = labelFont;
+            chartArea1.AxisX.LineColor = colorGridLines;
+            chartArea1.AxisX.MajorGrid.LineColor = colorGridLines;
+
+            chartArea1.AxisX.IntervalType = DateTimeIntervalType.Months;
+            chartArea1.AxisX.Interval = 1;
+
+            //int monthNow = DateTime.Now.Month;
+            //int yearNow = DateTime.Now.Year;
+            //DateTime minDate = getDateTimeMaintenance(yearNow, 1, 1, 00, 00, 00);
+            //DateTime maxDate = getDateTimeMaintenance(yearNow, 12, 31, 23, 59, 59);
+            //setXAxisDisplayRange(MaintenanceExpenditureChart, minDate, maxDate);
+
+            chartArea1.AxisX.LabelStyle.Format = "MMM";
+
+            //y-axis settings
+            chartArea1.AxisY.LabelStyle.Font = labelFont;
+            chartArea1.AxisY.LineColor = colorGridLines;
+            chartArea1.AxisY.MajorGrid.LineColor = colorGridLines;
+            chartArea1.AxisY.Interval = 250;
+            chartArea1.AxisY.IsStartedFromZero = true;
+
+            //line graph data points
+            Series series1 = MaintenanceExpenditureChart.Series[0];
+            series1.Name = "Spent";
+            Color lineColor = getColor(26, 59, 105, 180);
+            series1.BorderColor = lineColor;
+            series1.ChartType = SeriesChartType.Column;
+            series1.YValueType = ChartValueType.Double;
+            series1.XValueType = ChartValueType.Date;
+            //series1.MarkerStyle = MarkerStyle.Circle;
+            series1.MarkerSize = 6;
+            series1.MarkerBorderColor = lineColor;
+            series1.MarkerColor = lineColor;
+
+            //hover cursor on point to show
+            // series1.ToolTip = "Timestamp : #VAL{d MMM yyyy H:mm:ss}, Value : #VAL";
+        }
+
+        private void loadDBtoMaintenanceChart()
+        {
+            Console.WriteLine("Testing");
+            //Step 1: Create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create SQL command
+            //string curDate = DateTime.Now.ToString("dd/MM/yyyy");
+            //String strCommandText = "Select * from CrowdLevelTable where CONVERT(VARCHAR, DateTime , 103) = '5/12/2021'";
+            //String strCommandText = "Select * from CrowdLevelTable WHERE Year(DateTime) = " + curYear + "AND Month(DateTime) = " + curMonth +
+            //    "AND Day(DateTime) = " + curDay + "AND Hour(DateTime) = " + curHour + "AND Minute(DateTime) = " + curMin;
+            String strCommandText = "Select Datepart(Month, MaintenanceDate) perMonth, sum(MaintenanceFee) sumFee FROM GameMachineMaintenance group by Datepart(Month, [MaintenanceDate])";
+            //String strCommandText = "Select MaintenanceDate perMonth, sum(MaintenanceFee) sumFee FROM GameMachineMaintenance group by Datepart(Month, [MaintenanceDate]), MaintenanceDate"; //working one
+            //String strCommandText = "Select sum(MaintenanceFee)sumFee, Month(MaintenanceDate) perMonth from GameMachineMaintenance group by month(MaintenanceDate)";
+            //String strCommandText = "Select Month(MaintenanceDate) perMonth, sum(MaintenanceFee) sumFee FROM GameMachineMaintenance group by  Month(MaintenanceDate)";
+            myConnect.Open();
+            using (SqlCommand cmd = new SqlCommand(strCommandText, myConnect, null))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("Below");
+                        Console.WriteLine(reader["perMonth"]);
+                        Console.WriteLine(new DateTime(2010, Convert.ToInt32(reader["perMonth"]), 1));
+                    }
+                }
+            }
+
+            try
+            {
+                //Step 3. Create a Data Adapter to retrieve data from Table in Database
+                SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+                // create SELECT, DELETE, INSERT, UPDATE commands for data adapter
+                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                // STEP 4: Access data: Pill the Dataset using Data Adapter Fill method
+                // Note: We do NOT need to open database connection
+                // as data adapter does it internally
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataSet ds_clone = ds.Clone();
+                ds_clone.Tables[0].Columns[0].DataType = typeof(DateTime);
+                Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows[0][0]);
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    for (int j = 0; j < ds.Tables[0].Columns.Count; j++)
+                    {
+                        ds_clone.Tables[0].Rows.Add();
+                        Console.WriteLine(ds_clone.Tables[0].Rows.Count);
+                        ds_clone.Tables[0].Rows[i][0] = (new DateTime(2010, Convert.ToInt32(ds.Tables[0].Rows[i][0]), 1));
+                        ds_clone.Tables[0].Rows[i][1] = ds.Tables[0].Rows[i][1];
+                        Console.WriteLine(ds.Tables[0].Rows[i][0]);
+                    }
+                }
+                MaintenanceExpenditureChart.DataSource = ds_clone;
+
+                // Chart X - Axis take from this Database field
+                MaintenanceExpenditureChart.Series[0].XValueMember = "perMonth";
+
+                //Chart Y-Axis take from this Database field.
+                MaintenanceExpenditureChart.Series[0].YValueMembers = "sumFee";
+
+                //clears and reload series data if there are existing data on chart
+                MaintenanceExpenditureChart.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message.ToString());
+            }
+            finally
+            {
+                myConnect.Close();
+            }
+        }
+
+        // end of codes for chart - lid
 
         private void btnUserActivity_Click(object sender, EventArgs e)
         {
@@ -548,6 +721,8 @@ namespace MainWinFormApp
             timer.Start();
             hiddenMsgPanel = false;
             msgTimer.Start();
+
+            initChartPropertiesMaintenance();
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
