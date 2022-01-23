@@ -484,6 +484,19 @@ namespace MainWinFormApp
             dataComms.sendData("RFIDRETURNNORM");
             hiddenMsgPanel = false;
             msgTimer.Start();
+
+            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
+            {
+                sqlconnection.Open();
+
+                SqlDataAdapter sqldaPopularity = new SqlDataAdapter("SELECT GameMachineID, COUNT(GameMachineID) Uses FROM GameRecord GROUP BY GameMachineID ORDER BY COUNT(GameMachineID) DESC", sqlconnection);
+
+                DataTable dttable = new DataTable();
+
+                sqldaPopularity.Fill(dttable);
+
+                dgvPopularity.DataSource = dttable;
+            }
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -656,7 +669,7 @@ namespace MainWinFormApp
                 adapter.Fill(ds);
                 DataSet ds_clone = ds.Clone();
                 ds_clone.Tables[0].Columns[0].DataType = typeof(DateTime);
-                Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows[0][0]);
+                //Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows[0][0]);
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     for (int j = 0; j < ds.Tables[0].Columns.Count; j++)

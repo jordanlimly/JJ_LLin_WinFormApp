@@ -43,13 +43,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -104,6 +104,7 @@
             this.GameMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsageCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelExpenditureChart = new System.Windows.Forms.Panel();
+            this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
             this.CustomerActivitiesTab = new System.Windows.Forms.TabPage();
             this.lblCustomerActivity = new System.Windows.Forms.Label();
@@ -156,7 +157,7 @@
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.timerMan = new System.Windows.Forms.Timer(this.components);
             this.msgTimer = new System.Windows.Forms.Timer(this.components);
-            this.MaintenanceExpenditureChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dgvPopularity = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
@@ -175,12 +176,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcadeImg)).BeginInit();
             this.PopularityTab.SuspendLayout();
+            this.panelPopularityChart.SuspendLayout();
             this.MaintenanceTab.SuspendLayout();
             this.panelUpForMtnce.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUpForMaintenance)).BeginInit();
             this.panelNeedMtnce.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).BeginInit();
             this.panelExpenditureChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
             this.CustomerActivitiesTab.SuspendLayout();
             this.TopUpTab.SuspendLayout();
             this.msgPanel.SuspendLayout();
@@ -190,7 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffAccounts)).BeginInit();
             this.topPanel.SuspendLayout();
             this.sideNavPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopularity)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -705,6 +708,7 @@
             // 
             // panelPopularityChart
             // 
+            this.panelPopularityChart.Controls.Add(this.dgvPopularity);
             this.panelPopularityChart.Location = new System.Drawing.Point(360, 118);
             this.panelPopularityChart.Name = "panelPopularityChart";
             this.panelPopularityChart.Size = new System.Drawing.Size(569, 354);
@@ -928,6 +932,22 @@
             this.panelExpenditureChart.Name = "panelExpenditureChart";
             this.panelExpenditureChart.Size = new System.Drawing.Size(498, 321);
             this.panelExpenditureChart.TabIndex = 1;
+            // 
+            // MaintenanceExpenditureChart
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
+            legend1.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend1);
+            this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
+            this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series4);
+            this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(498, 324);
+            this.MaintenanceExpenditureChart.TabIndex = 0;
+            this.MaintenanceExpenditureChart.Text = "chart1";
             // 
             // label3
             // 
@@ -1579,21 +1599,14 @@
             this.msgTimer.Interval = 50;
             this.msgTimer.Tick += new System.EventHandler(this.msgTimer_Tick);
             // 
-            // MaintenanceExpenditureChart
+            // dgvPopularity
             // 
-            chartArea4.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
-            legend1.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend1);
-            this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
-            this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series4);
-            this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(498, 324);
-            this.MaintenanceExpenditureChart.TabIndex = 0;
-            this.MaintenanceExpenditureChart.Text = "chart1";
+            this.dgvPopularity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopularity.Location = new System.Drawing.Point(0, 0);
+            this.dgvPopularity.Name = "dgvPopularity";
+            this.dgvPopularity.RowTemplate.Height = 24;
+            this.dgvPopularity.Size = new System.Drawing.Size(569, 354);
+            this.dgvPopularity.TabIndex = 0;
             // 
             // AdminMainpage
             // 
@@ -1630,6 +1643,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HourlyCrowdCht)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcadeImg)).EndInit();
             this.PopularityTab.ResumeLayout(false);
+            this.panelPopularityChart.ResumeLayout(false);
             this.MaintenanceTab.ResumeLayout(false);
             this.MaintenanceTab.PerformLayout();
             this.panelUpForMtnce.ResumeLayout(false);
@@ -1637,6 +1651,7 @@
             this.panelNeedMtnce.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgNeedMaintenance)).EndInit();
             this.panelExpenditureChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
             this.CustomerActivitiesTab.ResumeLayout(false);
             this.CustomerActivitiesTab.PerformLayout();
             this.TopUpTab.ResumeLayout(false);
@@ -1650,7 +1665,7 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sideNavPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MaintenanceExpenditureChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopularity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1764,5 +1779,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.DataVisualization.Charting.Chart MaintenanceExpenditureChart;
+        private System.Windows.Forms.DataGridView dgvPopularity;
     }
 }
