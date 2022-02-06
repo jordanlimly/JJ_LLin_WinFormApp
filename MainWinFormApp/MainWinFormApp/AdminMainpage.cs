@@ -262,7 +262,7 @@ namespace MainWinFormApp
             myConnect.Close();
         }
 
-        private void addLBItem(string detectedRFID, int pointsEarned, string machineID)
+        private void addLBItem(string detectedRFID, int pointsEarned, string machineID, string pointsBefore, string pointsAfter)
         {
             //Step 1: Create connection
             SqlConnection myConnect = new SqlConnection(strConnectionString);
@@ -292,6 +292,7 @@ namespace MainWinFormApp
                 string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
 
                 string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
+                lbCustomerActivity.Items.Insert(0, "Initial Points: " + pointsBefore + "   >>>>>   Updated Points: " + pointsAfter);
                 lbCustomerActivity.Items.Insert(0, strMsg);
                 lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
             }
@@ -302,17 +303,114 @@ namespace MainWinFormApp
             
         }
 
+        private string getUserPoints(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "SELECT CurrentPoints FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+            string userpoints;
+            try
+            {
+                userpoints = Convert.ToString(ds.Tables[0].Rows[0]["CurrentPoints"]);
+            }
+            catch
+            {
+                userpoints = "0";
+            }
+            
+            return userpoints;
+        }
+
+        private bool checkCredits(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "SELECT CurrentCredits FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+            try
+            {
+                int creds = Convert.ToInt32(Convert.ToString(ds.Tables[0].Rows[0]["CurrentCredits"]));
+                if (creds > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
+
+        private void deductCredits(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "UPDATE UserAccount SET CurrentCredits = (CurrentCredits - 1) WHERE RFID_ID = @rfid_id";
+
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@rfid_id", detectedRFID);
+
+            //Step 3: Open Connection myConnect.Open();
+            myConnect.Open();
+
+            //Step 4: ExecuteCommand
+            int result = updateCmd.ExecuteNonQuery();
+
+            //Step 5: Close connection
+            myConnect.Close();
+        }
+
         private void handleGameMode(string strData, string ID)
         {
             string detectedRFID = extractStringValue(strData, ID);
+            string machineID = cbGameMachines.Text;
+            Console.WriteLine("machineID = " + machineID);
 
-            //update DB
-            deductMaintenanceCount("G001");
-            DateTime curDT = DateTime.Now;
-            addGameRecord("G001", curDT, detectedRFID);
-            int pointsEarned = generateGamePoints();
-            addUserPoints(pointsEarned, detectedRFID);
-            addLBItem(detectedRFID, pointsEarned, "G001");
+            //check credits of user
+            bool positiveCredits = checkCredits(detectedRFID);
+
+            if (positiveCredits == true)
+            {
+                //update DB
+                deductMaintenanceCount(machineID);
+                DateTime curDT = DateTime.Now;
+                addGameRecord(machineID, curDT, detectedRFID);
+                deductCredits(detectedRFID);
+                string pointsBefore = getUserPoints(detectedRFID);
+                int pointsEarned = generateGamePoints();
+                addUserPoints(pointsEarned, detectedRFID);
+                string pointsAfter = getUserPoints(detectedRFID);
+                if (!(pointsBefore == "0" || pointsAfter == "0"))
+                {
+                    addLBItem(detectedRFID, pointsEarned, machineID, pointsBefore, pointsAfter);
+                }
+            }
+            
+            
         }
 
         private void handleRFIDTopup(string strData, string ID)
@@ -734,7 +832,7 @@ namespace MainWinFormApp
             timer.Start();
             hiddenMsgPanel = false;
             msgTimer.Start();
-
+            cbGameMachines.SelectedIndex = 0;
             initChartPropertiesMaintenance();
         }
 
