@@ -19,6 +19,7 @@ namespace MainWinFormApp
         private string strConnectionString =
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
+        public static string managerloggedin = "";
         public AdminLoginForm()
         {
             InitializeComponent();
@@ -72,10 +73,11 @@ namespace MainWinFormApp
                         manager.Close();
                         staff.Close();
 
+                        managerloggedin = "true";
+
                         MessageBox.Show("Login Successful!");
 
-                        AdminMainpage frm = new AdminMainpage();
-                        frm.Show();
+                        new AdminMainpage().Show();
 
                         this.Hide();
                     }
@@ -85,11 +87,9 @@ namespace MainWinFormApp
                         manager.Close();
 
                         MessageBox.Show("Login Successful!");
+                        new AdminMainpage().Show();
 
-                        AdminMainpage frm = new AdminMainpage();
-                        frm.Show();
-
-                        this.Hide(); 
+                        this.Hide();
                     }
                     else
                     {
@@ -97,14 +97,13 @@ namespace MainWinFormApp
                     }
 
                 }
-                catch(SqlException ex)
+                catch (SqlException ex)
                 {
                     MessageBox.Show("Error: " + ex.Message.ToString());
                 }
                 finally
                 {
                     myConnect.Close();
-                    Close();
                 }
             }
 

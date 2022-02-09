@@ -834,6 +834,17 @@ namespace MainWinFormApp
             msgTimer.Start();
             cbGameMachines.SelectedIndex = 0;
             initChartPropertiesMaintenance();
+
+            if (AdminLoginForm.managerloggedin == "true")
+            {
+                panel10.Visible = false;
+                btnStaffAccounts.Visible = true;
+            }
+            else
+            {
+                panel10.Visible = false;
+                btnStaffAccounts.Visible = false;
+            }
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
