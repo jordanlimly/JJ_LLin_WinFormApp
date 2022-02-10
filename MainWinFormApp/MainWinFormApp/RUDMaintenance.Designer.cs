@@ -31,7 +31,6 @@
             this.lblMaintenanceRecordDetails = new System.Windows.Forms.Label();
             this.lblGameMachineID = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.tbGameMachineID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCost = new System.Windows.Forms.Label();
             this.lblRemarks = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.DTPickerRUDMaintenance = new System.Windows.Forms.DateTimePicker();
+            this.comboGID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblMaintenanceRecordDetails
@@ -76,15 +76,6 @@
             this.lblDate.Size = new System.Drawing.Size(53, 24);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date:";
-            // 
-            // tbGameMachineID
-            // 
-            this.tbGameMachineID.BackColor = System.Drawing.Color.Gray;
-            this.tbGameMachineID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbGameMachineID.Location = new System.Drawing.Point(392, 136);
-            this.tbGameMachineID.Name = "tbGameMachineID";
-            this.tbGameMachineID.Size = new System.Drawing.Size(146, 22);
-            this.tbGameMachineID.TabIndex = 3;
             // 
             // label1
             // 
@@ -200,12 +191,23 @@
             this.DTPickerRUDMaintenance.Size = new System.Drawing.Size(146, 24);
             this.DTPickerRUDMaintenance.TabIndex = 14;
             // 
+            // comboGID
+            // 
+            this.comboGID.BackColor = System.Drawing.Color.White;
+            this.comboGID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGID.FormattingEnabled = true;
+            this.comboGID.Location = new System.Drawing.Point(392, 135);
+            this.comboGID.Name = "comboGID";
+            this.comboGID.Size = new System.Drawing.Size(146, 24);
+            this.comboGID.TabIndex = 15;
+            // 
             // RUDMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(961, 587);
+            this.Controls.Add(this.comboGID);
             this.Controls.Add(this.DTPickerRUDMaintenance);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
@@ -216,7 +218,6 @@
             this.Controls.Add(this.lblRemarks);
             this.Controls.Add(this.lblCost);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbGameMachineID);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblGameMachineID);
             this.Controls.Add(this.lblMaintenanceRecordDetails);
@@ -233,7 +234,6 @@
         private System.Windows.Forms.Label lblMaintenanceRecordDetails;
         private System.Windows.Forms.Label lblGameMachineID;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.TextBox tbGameMachineID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.Label lblRemarks;
@@ -244,5 +244,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DateTimePicker DTPickerRUDMaintenance;
+        private System.Windows.Forms.ComboBox comboGID;
     }
 }
