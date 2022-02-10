@@ -26,8 +26,8 @@ namespace MainWinFormApp
         }
 
 
-        public static string UserEmail = "";
-        public static string UserRFID = "";
+        //public static string UserEmail = "";
+        //public static string UserRFID = "";
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -52,11 +52,8 @@ namespace MainWinFormApp
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    MessageBox.Show("Login Successful");
-                    //Session["User"] = tbLoginEmail.Text;
-                    UserEmail = tbLoginEmail.Text;
-                    UserRFID = reader["RFID_ID"].ToString();
-                    new UserDashboard().Show();
+                    MessageBox.Show("Login Successful!");
+                    new UserDashboard(tbLoginEmail.Text).Show();
                     this.Hide();
                 }
                     

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.tbuCardID = new System.Windows.Forms.TextBox();
+            this.lbluEmail = new System.Windows.Forms.TextBox();
             this.lblSecurityQn = new System.Windows.Forms.Label();
             this.combSQ1 = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -42,42 +40,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCardID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.lnklblResetPw = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // tbName
+            // lbluEmail
             // 
-            this.tbName.BackColor = System.Drawing.Color.Gray;
-            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbName.Location = new System.Drawing.Point(299, 108);
-            this.tbName.Margin = new System.Windows.Forms.Padding(2);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(197, 20);
-            this.tbName.TabIndex = 3;
-            this.tbName.Visible = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Gray;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(299, 154);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(196, 20);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Visible = false;
-            // 
-            // tbuCardID
-            // 
-            this.tbuCardID.BackColor = System.Drawing.Color.Gray;
-            this.tbuCardID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbuCardID.Location = new System.Drawing.Point(299, 200);
-            this.tbuCardID.Margin = new System.Windows.Forms.Padding(2);
-            this.tbuCardID.Name = "tbuCardID";
-            this.tbuCardID.Size = new System.Drawing.Size(197, 20);
-            this.tbuCardID.TabIndex = 5;
+            this.lbluEmail.BackColor = System.Drawing.Color.Black;
+            this.lbluEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbluEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.lbluEmail.Location = new System.Drawing.Point(298, 122);
+            this.lbluEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.lbluEmail.Name = "lbluEmail";
+            this.lbluEmail.ReadOnly = true;
+            this.lbluEmail.Size = new System.Drawing.Size(196, 18);
+            this.lbluEmail.TabIndex = 4;
+            this.lbluEmail.Text = "lbl";
+            this.lbluEmail.Visible = false;
             // 
             // lblSecurityQn
             // 
@@ -203,35 +182,21 @@
             this.lblCardID.Location = new System.Drawing.Point(131, 203);
             this.lblCardID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCardID.Name = "lblCardID";
-            this.lblCardID.Size = new System.Drawing.Size(68, 17);
+            this.lblCardID.Size = new System.Drawing.Size(0, 17);
             this.lblCardID.TabIndex = 20;
-            this.lblCardID.Text = "Card ID:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblEmail.Location = new System.Drawing.Point(131, 157);
+            this.lblEmail.Location = new System.Drawing.Point(131, 123);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "Email:";
             this.lblEmail.Visible = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.lblName.Location = new System.Drawing.Point(131, 111);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(52, 17);
-            this.lblName.TabIndex = 22;
-            this.lblName.Text = "Name:";
-            this.lblName.Visible = false;
             // 
             // lnklblResetPw
             // 
@@ -253,7 +218,6 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(592, 577);
             this.Controls.Add(this.lnklblResetPw);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCardID);
             this.Controls.Add(this.tbSQ2);
@@ -265,9 +229,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.combSQ1);
             this.Controls.Add(this.lblSecurityQn);
-            this.Controls.Add(this.tbuCardID);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.lbluEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustUpdateForm";
@@ -279,9 +241,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbName;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox tbuCardID;
+        private System.Windows.Forms.TextBox lbluEmail;
         private System.Windows.Forms.Label lblSecurityQn;
         private System.Windows.Forms.ComboBox combSQ1;
         private System.Windows.Forms.Button btnCancel;
@@ -293,7 +253,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCardID;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.LinkLabel lnklblResetPw;
     }
 }

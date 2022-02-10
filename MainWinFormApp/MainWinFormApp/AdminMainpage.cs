@@ -656,7 +656,7 @@ namespace MainWinFormApp
                 adapter.Fill(ds);
                 DataSet ds_clone = ds.Clone();
                 ds_clone.Tables[0].Columns[0].DataType = typeof(DateTime);
-                Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows[0][0]);
+                //Console.WriteLine("Dataset Rows = " + ds.Tables[0].Rows[0][0]);
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     for (int j = 0; j < ds.Tables[0].Columns.Count; j++)
