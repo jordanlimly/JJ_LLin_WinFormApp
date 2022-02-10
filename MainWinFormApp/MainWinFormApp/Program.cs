@@ -25,6 +25,7 @@ namespace MainWinFormApp
             //Application.Run(new UserDashboard());
             //Application.Run(new PasswordResetForm());
             //Application.Run(new LogoutForm());
+            Application.Run(new AdminLoginForm());
         }
     }
 }

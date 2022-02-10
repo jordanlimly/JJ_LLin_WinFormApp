@@ -31,6 +31,12 @@ namespace MainWinFormApp
 
         public delegate void myprocessDataDelegate(String strData);
 
+        DataTable StaffTable = new DataTable();
+
+        DataGridViewRow currentRow = null;
+
+        SqlDataAdapter StaffAdapter;
+
         private void addCrowdRecord(DateTime curDateTime, int enterExit)
         {
             int result = 0;
@@ -262,7 +268,7 @@ namespace MainWinFormApp
             myConnect.Close();
         }
 
-        private void addLBItem(string detectedRFID, int pointsEarned, string machineID)
+        private void addLBItem(string detectedRFID, int pointsEarned, string machineID, string pointsBefore, string pointsAfter)
         {
             //Step 1: Create connection
             SqlConnection myConnect = new SqlConnection(strConnectionString);
@@ -292,6 +298,7 @@ namespace MainWinFormApp
                 string custName = Convert.ToString(ds2.Tables[0].Rows[0]["Name"]);
 
                 string strMsg = custName + " (RFID: " + detectedRFID + ") earned " + Convert.ToString(pointsEarned) + " points from " + machineName + " (" + machineID + ")";
+                lbCustomerActivity.Items.Insert(0, "Initial Points: " + pointsBefore + "   >>>>>   Updated Points: " + pointsAfter);
                 lbCustomerActivity.Items.Insert(0, strMsg);
                 lbCustomerActivity.Items.Insert(0, "---------------------------------------------------------------------------------------------------------------------------");
             }
@@ -302,17 +309,114 @@ namespace MainWinFormApp
             
         }
 
+        private string getUserPoints(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "SELECT CurrentPoints FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+            string userpoints;
+            try
+            {
+                userpoints = Convert.ToString(ds.Tables[0].Rows[0]["CurrentPoints"]);
+            }
+            catch
+            {
+                userpoints = "0";
+            }
+            
+            return userpoints;
+        }
+
+        private bool checkCredits(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "SELECT CurrentCredits FROM UserAccount WHERE RFID_ID = '" + detectedRFID + "'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(strCommandText, myConnect);
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+            try
+            {
+                int creds = Convert.ToInt32(Convert.ToString(ds.Tables[0].Rows[0]["CurrentCredits"]));
+                if (creds > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
+
+        private void deductCredits(string detectedRFID)
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //Step 2: Create command
+            String strCommandText =
+                "UPDATE UserAccount SET CurrentCredits = (CurrentCredits - 1) WHERE RFID_ID = @rfid_id";
+
+            SqlCommand updateCmd = new SqlCommand(strCommandText, myConnect);
+            updateCmd.Parameters.AddWithValue("@rfid_id", detectedRFID);
+
+            //Step 3: Open Connection myConnect.Open();
+            myConnect.Open();
+
+            //Step 4: ExecuteCommand
+            int result = updateCmd.ExecuteNonQuery();
+
+            //Step 5: Close connection
+            myConnect.Close();
+        }
+
         private void handleGameMode(string strData, string ID)
         {
             string detectedRFID = extractStringValue(strData, ID);
+            string machineID = cbGameMachines.Text;
+            Console.WriteLine("machineID = " + machineID);
 
-            //update DB
-            deductMaintenanceCount("G001");
-            DateTime curDT = DateTime.Now;
-            addGameRecord("G001", curDT, detectedRFID);
-            int pointsEarned = generateGamePoints();
-            addUserPoints(pointsEarned, detectedRFID);
-            addLBItem(detectedRFID, pointsEarned, "G001");
+            //check credits of user
+            bool positiveCredits = checkCredits(detectedRFID);
+
+            if (positiveCredits == true)
+            {
+                //update DB
+                deductMaintenanceCount(machineID);
+                DateTime curDT = DateTime.Now;
+                addGameRecord(machineID, curDT, detectedRFID);
+                deductCredits(detectedRFID);
+                string pointsBefore = getUserPoints(detectedRFID);
+                int pointsEarned = generateGamePoints();
+                addUserPoints(pointsEarned, detectedRFID);
+                string pointsAfter = getUserPoints(detectedRFID);
+                if (!(pointsBefore == "0" || pointsAfter == "0"))
+                {
+                    addLBItem(detectedRFID, pointsEarned, machineID, pointsBefore, pointsAfter);
+                }
+            }
+            
+            
         }
 
         private void handleRFIDTopup(string strData, string ID)
@@ -484,6 +588,19 @@ namespace MainWinFormApp
             dataComms.sendData("RFIDRETURNNORM");
             hiddenMsgPanel = false;
             msgTimer.Start();
+
+            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
+            {
+                sqlconnection.Open();
+
+                SqlDataAdapter sqldaPopularity = new SqlDataAdapter("SELECT GameMachineID, COUNT(GameMachineID) Uses FROM GameRecord GROUP BY GameMachineID ORDER BY COUNT(GameMachineID) DESC", sqlconnection);
+
+                DataTable dttable = new DataTable();
+
+                sqldaPopularity.Fill(dttable);
+
+                dgvPopularity.DataSource = dttable;
+            }
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -721,8 +838,19 @@ namespace MainWinFormApp
             timer.Start();
             hiddenMsgPanel = false;
             msgTimer.Start();
-
+            cbGameMachines.SelectedIndex = 0;
             initChartPropertiesMaintenance();
+
+            if (AdminLoginForm.managerloggedin == "true")
+            {
+                panel10.Visible = false;
+                btnStaffAccounts.Visible = true;
+            }
+            else
+            {
+                panel10.Visible = false;
+                btnStaffAccounts.Visible = false;
+            }
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -1476,19 +1604,26 @@ namespace MainWinFormApp
             hiddenMsgPanel = false;
             msgTimer.Start();
 
-            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
-            {
-                sqlconnection.Open();
+            loadStaffAcc();
 
-                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+        }
 
-                DataTable dttable = new DataTable();
+        private void loadStaffAcc()
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
 
-                sqldaStaffAccs.Fill(dttable);
+            String strCommandText = "SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts";
 
-                dgvStaffAccounts.DataSource = dttable;
-            }
+            StaffAdapter = new SqlDataAdapter(strCommandText, myConnect);
 
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(StaffAdapter);
+
+            StaffTable.Clear();
+
+            StaffAdapter.Fill(StaffTable);
+
+            if (StaffTable.Rows.Count > 0)
+                dgvStaffAccounts.DataSource = StaffTable;
         }
 
         private void btnAddAcc_Click(object sender, EventArgs e)
@@ -1499,30 +1634,73 @@ namespace MainWinFormApp
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
-            {
-                sqlconnection.Open();
+            loadStaffAcc();
+        }
 
-                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+        private int DeleteStaff(string sid)
+        {
+            int result = 0;
 
-                DataTable dttable = new DataTable();
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
 
-                sqldaStaffAccs.Fill(dttable);
+            String strCommandText = "DELETE FROM StaffAccounts WHERE StaffID = @StaffID";
 
-                dgvStaffAccounts.DataSource = dttable;
-            }
+            SqlCommand deletecmd = new SqlCommand(strCommandText, myConnect);
+            deletecmd.Parameters.AddWithValue("StaffID", sid);
+
+            myConnect.Open();
+
+            result = deletecmd.ExecuteNonQuery();
+
+            myConnect.Close();
+
+            return result;
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            DeleteStaffAccount frm = new DeleteStaffAccount();
-            frm.ShowDialog();
+            if (MessageBox.Show("Confirm Delete?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                System.Windows.Forms.DialogResult.Yes)
+            {
+                if (currentRow == null)
+                {
+                    MessageBox.Show("No account selected to delete!");
+                }
+                else
+                {
+                    string sid = currentRow.Cells[3].Value + "";
+                    string name = currentRow.Cells[0].Value + "";
+
+                    if (DeleteStaff(sid) > 0)
+                    {
+                        MessageBox.Show(name + "'s account has been deleted!");
+                    }
+                    else
+                        MessageBox.Show("Account deletion failed!");
+                    loadStaffAcc();
+                }
+            }
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            ModifyStaffAcc frm = new ModifyStaffAcc();
-            frm.ShowDialog();
+            int modifiedRows = 0;
+
+            DataTable UpdatedStaffTable = StaffTable.GetChanges();
+
+            if(UpdatedStaffTable != null)
+            {
+                modifiedRows = StaffAdapter.Update(UpdatedStaffTable);
+
+                StaffTable.AcceptChanges();
+            }
+            else
+            {
+                MessageBox.Show("There are no changes to update.");
+            }
+
+            if(modifiedRows > 0)
+                MessageBox.Show("There are " + modifiedRows + " records updated.");
         }
 
         private void msgTimer_Tick(object sender, EventArgs e)
@@ -1566,6 +1744,12 @@ namespace MainWinFormApp
         {
             hiddenMsgPanel = false;
             msgTimer.Start();
+        }
+
+        private void dgvStaffAccounts_Click(object sender, EventArgs e)
+        {
+            currentRow = dgvStaffAccounts.CurrentRow;
+
         }
     }
 }

@@ -19,9 +19,11 @@ namespace MainWinFormApp
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            AdminLoginForm frm = new AdminLoginForm();  //open login form
-            this.Hide();
-            frm.ShowDialog();
+            AdminLoginForm.managerloggedin = "false";
+            Application.Exit();
+            //AdminLoginForm frm = new AdminLoginForm();  //open login form
+            //this.Hide();
+            //frm.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
