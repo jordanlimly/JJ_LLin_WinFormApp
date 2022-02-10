@@ -891,7 +891,7 @@ namespace MainWinFormApp
 
         private void btnCloseWindow_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnCrowdLvl_Leave(object sender, EventArgs e)
