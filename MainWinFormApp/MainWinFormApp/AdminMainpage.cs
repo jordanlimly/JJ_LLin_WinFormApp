@@ -31,6 +31,12 @@ namespace MainWinFormApp
 
         public delegate void myprocessDataDelegate(String strData);
 
+        DataTable StaffTable = new DataTable();
+
+        DataGridViewRow currentRow = null;
+
+        SqlDataAdapter StaffAdapter;
+
         private void addCrowdRecord(DateTime curDateTime, int enterExit)
         {
             int result = 0;
@@ -1598,19 +1604,26 @@ namespace MainWinFormApp
             hiddenMsgPanel = false;
             msgTimer.Start();
 
-            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
-            {
-                sqlconnection.Open();
+            loadStaffAcc();
 
-                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+        }
 
-                DataTable dttable = new DataTable();
+        private void loadStaffAcc()
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
 
-                sqldaStaffAccs.Fill(dttable);
+            String strCommandText = "SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts";
 
-                dgvStaffAccounts.DataSource = dttable;
-            }
+            StaffAdapter = new SqlDataAdapter(strCommandText, myConnect);
 
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(StaffAdapter);
+
+            StaffTable.Clear();
+
+            StaffAdapter.Fill(StaffTable);
+
+            if (StaffTable.Rows.Count > 0)
+                dgvStaffAccounts.DataSource = StaffTable;
         }
 
         private void btnAddAcc_Click(object sender, EventArgs e)
@@ -1621,30 +1634,73 @@ namespace MainWinFormApp
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlconnection = new SqlConnection(strConnectionString))
-            {
-                sqlconnection.Open();
+            loadStaffAcc();
+        }
 
-                SqlDataAdapter sqldaStaffAccs = new SqlDataAdapter("SELECT FirstName, LastName, Position, StaffID FROM StaffAccounts", sqlconnection);
+        private int DeleteStaff(string sid)
+        {
+            int result = 0;
 
-                DataTable dttable = new DataTable();
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
 
-                sqldaStaffAccs.Fill(dttable);
+            String strCommandText = "DELETE FROM StaffAccounts WHERE StaffID = @StaffID";
 
-                dgvStaffAccounts.DataSource = dttable;
-            }
+            SqlCommand deletecmd = new SqlCommand(strCommandText, myConnect);
+            deletecmd.Parameters.AddWithValue("StaffID", sid);
+
+            myConnect.Open();
+
+            result = deletecmd.ExecuteNonQuery();
+
+            myConnect.Close();
+
+            return result;
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            DeleteStaffAccount frm = new DeleteStaffAccount();
-            frm.ShowDialog();
+            if (MessageBox.Show("Confirm Delete?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                System.Windows.Forms.DialogResult.Yes)
+            {
+                if (currentRow == null)
+                {
+                    MessageBox.Show("No account selected to delete!");
+                }
+                else
+                {
+                    string sid = currentRow.Cells[3].Value + "";
+                    string name = currentRow.Cells[0].Value + "";
+
+                    if (DeleteStaff(sid) > 0)
+                    {
+                        MessageBox.Show(name + "'s account has been deleted!");
+                    }
+                    else
+                        MessageBox.Show("Account deletion failed!");
+                    loadStaffAcc();
+                }
+            }
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            ModifyStaffAcc frm = new ModifyStaffAcc();
-            frm.ShowDialog();
+            int modifiedRows = 0;
+
+            DataTable UpdatedStaffTable = StaffTable.GetChanges();
+
+            if(UpdatedStaffTable != null)
+            {
+                modifiedRows = StaffAdapter.Update(UpdatedStaffTable);
+
+                StaffTable.AcceptChanges();
+            }
+            else
+            {
+                MessageBox.Show("There are no changes to update.");
+            }
+
+            if(modifiedRows > 0)
+                MessageBox.Show("There are " + modifiedRows + " records updated.");
         }
 
         private void msgTimer_Tick(object sender, EventArgs e)
@@ -1688,6 +1744,12 @@ namespace MainWinFormApp
         {
             hiddenMsgPanel = false;
             msgTimer.Start();
+        }
+
+        private void dgvStaffAccounts_Click(object sender, EventArgs e)
+        {
+            currentRow = dgvStaffAccounts.CurrentRow;
+
         }
     }
 }

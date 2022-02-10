@@ -99,12 +99,6 @@
     <Compile Include="CustUpdateForm.Designer.cs">
       <DependentUpon>CustUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteStaffAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteStaffAccount.Designer.cs">
-      <DependentUpon>DeleteStaffAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="ForgetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,12 +122,6 @@
     </Compile>
     <Compile Include="Maintenance.Designer.cs">
       <DependentUpon>Maintenance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModifyStaffAcc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModifyStaffAcc.Designer.cs">
-      <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordChangeForm.cs">
       <SubType>Form</SubType>
@@ -191,9 +179,6 @@
     <EmbeddedResource Include="CustUpdateForm.resx">
       <DependentUpon>CustUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteStaffAccount.resx">
-      <DependentUpon>DeleteStaffAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance.resx">
       <DependentUpon>Maintenance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModifyStaffAcc.resx">
-      <DependentUpon>ModifyStaffAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordChangeForm.resx">
       <DependentUpon>PasswordChangeForm.cs</DependentUpon>
