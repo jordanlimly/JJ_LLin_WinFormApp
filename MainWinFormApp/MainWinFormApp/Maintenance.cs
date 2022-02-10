@@ -20,9 +20,25 @@ namespace MainWinFormApp
         string strConnectionString = 
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
+        
+
         public frmMaintenance()
         {
             InitializeComponent();
+
+            DTPickerMaintenance.MinDate = DateTime.Today.AddDays(-30);
+            DTPickerMaintenance.MaxDate = DateTime.Today;
+
+            SqlConnection myConnection = new SqlConnection(strConnectionString);
+            SqlCommand cmd = new SqlCommand("Select GameMachineID from GameMachine", myConnection);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable table1 = new DataTable();
+            da.Fill(table1);
+
+            comboGID.DataSource = table1;
+            comboGID.DisplayMember = "GameMachineID";
+            comboGID.ValueMember = "GameMachineID";
         }
 
         private void tbCost_TextChanged(object sender, EventArgs e)
@@ -49,17 +65,17 @@ namespace MainWinFormApp
                 " WHERE GameMachineID = @gmid";
 
             SqlCommand addValue = new SqlCommand(strCommandText, myConnect);
-            addValue.Parameters.AddWithValue("@NewMachineID", tbMachineID.Text);
+            addValue.Parameters.AddWithValue("@NewMachineID", comboGID.Text);
             addValue.Parameters.AddWithValue("@NewDate", DTPickerMaintenance.Text);
             addValue.Parameters.AddWithValue("@NewFee", tbCost.Text);
             addValue.Parameters.AddWithValue("@NewRemarks", tbRemarks.Text);
 
             SqlCommand checkValue = new SqlCommand(strCheckText, myConnect);
-            checkValue.Parameters.AddWithValue("@GMID", tbMachineID.Text);
+            checkValue.Parameters.AddWithValue("@GMID", comboGID.Text);
 
             SqlCommand updateUsage = new SqlCommand(strUpdateUsageText, myConnect);
             updateUsage.Parameters.AddWithValue("@NewUsageCount", 10);
-            updateUsage.Parameters.AddWithValue("@gmid", tbMachineID.Text);
+            updateUsage.Parameters.AddWithValue("@gmid", comboGID.Text);
 
             try
             {

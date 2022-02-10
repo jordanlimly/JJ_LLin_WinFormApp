@@ -22,6 +22,20 @@ namespace MainWinFormApp
         public RUDMaintenance()
         {
             InitializeComponent();
+
+            DTPickerRUDMaintenance.MinDate = DateTime.Today.AddDays(-30);
+            DTPickerRUDMaintenance.MaxDate = DateTime.Today;
+
+            SqlConnection myConnection = new SqlConnection(strConnectionString);
+            SqlCommand cmd = new SqlCommand("Select GameMachineID from GameMachine", myConnection);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable table1 = new DataTable();
+            da.Fill(table1);
+
+            comboGID.DataSource = table1;
+            comboGID.DisplayMember = "GameMachineID";
+            comboGID.ValueMember = "GameMachineID";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -42,11 +56,11 @@ namespace MainWinFormApp
             //adding a WHERE claus
             StrCommandText += "WHERE GameMachineID = @GMachineID AND MaintenanceDate = @MtnceDate";
             SqlCommand retrieveValue = new SqlCommand(StrCommandText, myConnect);
-            retrieveValue.Parameters.AddWithValue("@GMachineID", tbGameMachineID.Text);
+            retrieveValue.Parameters.AddWithValue("@GMachineID", comboGID.Text);
             retrieveValue.Parameters.AddWithValue("@MtnceDate", DTPickerRUDMaintenance.Text);
 
 
-            if (tbGameMachineID.Text == String.Empty || DTPickerRUDMaintenance.Text == String.Empty)
+            if (comboGID.Text == String.Empty || DTPickerRUDMaintenance.Text == String.Empty)
 
                 MessageBox.Show("Both inputs are required for retrieval of maintenance details.");
             else
@@ -88,7 +102,7 @@ namespace MainWinFormApp
             SqlCommand modifyValue = new SqlCommand(strCommandText, myConnect);
 
             //creating command
-            modifyValue.Parameters.AddWithValue("GMachineID", tbGameMachineID.Text);
+            modifyValue.Parameters.AddWithValue("GMachineID", comboGID.Text);
             modifyValue.Parameters.AddWithValue("MtnceDate", DTPickerRUDMaintenance.Text);
             modifyValue.Parameters.AddWithValue("NewMtnceFee", tbCost.Text);
             modifyValue.Parameters.AddWithValue("NewMtnceRemarks", tbRemarks.Text);
@@ -134,13 +148,13 @@ namespace MainWinFormApp
             //prompt admin to confirm deletion of maintenance record
             if (MessageBox.Show("Confirm Delete?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (DeleteMaintenanceRecord(tbGameMachineID.Text, DTPickerRUDMaintenance.Text) > 0)
-                    MessageBox.Show("Maintenance Record for Game Machine " + tbGameMachineID.Text + " on " + DTPickerRUDMaintenance.Text + " has been deleted");
+                if (DeleteMaintenanceRecord(comboGID.Text, DTPickerRUDMaintenance.Text) > 0)
+                    MessageBox.Show("Maintenance Record for Game Machine " + comboGID.Text + " on " + DTPickerRUDMaintenance.Text + " has been deleted");
                 else
                     MessageBox.Show("Maintenance Record could not be deleted!");
             }
 
-            tbGameMachineID.Text = String.Empty;
+            comboGID.Text = String.Empty;
             DTPickerRUDMaintenance.Text = String.Empty;
             tbCost.Text = String.Empty;
             tbRemarks.Text = String.Empty;

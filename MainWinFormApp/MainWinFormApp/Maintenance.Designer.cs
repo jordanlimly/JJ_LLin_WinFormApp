@@ -33,12 +33,12 @@
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_cost = new System.Windows.Forms.Label();
             this.lbl_remarks = new System.Windows.Forms.Label();
-            this.tbMachineID = new System.Windows.Forms.TextBox();
             this.tbCost = new System.Windows.Forms.TextBox();
             this.tbRemarks = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.DTPickerMaintenance = new System.Windows.Forms.DateTimePicker();
+            this.comboGID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbl_maintenance
@@ -90,16 +90,6 @@
             this.lbl_remarks.Size = new System.Drawing.Size(89, 24);
             this.lbl_remarks.TabIndex = 5;
             this.lbl_remarks.Text = "Remarks:";
-            // 
-            // tbMachineID
-            // 
-            this.tbMachineID.BackColor = System.Drawing.Color.Gray;
-            this.tbMachineID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbMachineID.Location = new System.Drawing.Point(331, 138);
-            this.tbMachineID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMachineID.Name = "tbMachineID";
-            this.tbMachineID.Size = new System.Drawing.Size(130, 22);
-            this.tbMachineID.TabIndex = 6;
             // 
             // tbCost
             // 
@@ -161,18 +151,28 @@
             this.DTPickerMaintenance.Size = new System.Drawing.Size(143, 24);
             this.DTPickerMaintenance.TabIndex = 12;
             // 
+            // comboGID
+            // 
+            this.comboGID.BackColor = System.Drawing.Color.White;
+            this.comboGID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGID.FormattingEnabled = true;
+            this.comboGID.Location = new System.Drawing.Point(331, 137);
+            this.comboGID.Name = "comboGID";
+            this.comboGID.Size = new System.Drawing.Size(143, 24);
+            this.comboGID.TabIndex = 13;
+            // 
             // frmMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(755, 475);
+            this.Controls.Add(this.comboGID);
             this.Controls.Add(this.DTPickerMaintenance);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbRemarks);
             this.Controls.Add(this.tbCost);
-            this.Controls.Add(this.tbMachineID);
             this.Controls.Add(this.lbl_remarks);
             this.Controls.Add(this.lbl_cost);
             this.Controls.Add(this.lbl_date);
@@ -195,11 +195,11 @@
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label lbl_cost;
         private System.Windows.Forms.Label lbl_remarks;
-        private System.Windows.Forms.TextBox tbMachineID;
         private System.Windows.Forms.TextBox tbCost;
         private System.Windows.Forms.TextBox tbRemarks;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DateTimePicker DTPickerMaintenance;
+        private System.Windows.Forms.ComboBox comboGID;
     }
 }
