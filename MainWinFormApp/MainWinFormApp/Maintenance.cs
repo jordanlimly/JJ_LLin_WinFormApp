@@ -20,9 +20,14 @@ namespace MainWinFormApp
         string strConnectionString = 
             ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
+        
+
         public frmMaintenance()
         {
             InitializeComponent();
+
+            DTPickerMaintenance.MinDate = DateTime.Today.AddDays(-30);
+            DTPickerMaintenance.MaxDate = DateTime.Today;
         }
 
         private void tbCost_TextChanged(object sender, EventArgs e)
