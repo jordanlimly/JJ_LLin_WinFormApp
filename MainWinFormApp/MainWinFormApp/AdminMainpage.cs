@@ -841,16 +841,17 @@ namespace MainWinFormApp
             cbGameMachines.SelectedIndex = 0;
             initChartPropertiesMaintenance();
 
-            if (AdminLoginForm.managerloggedin == "true")
-            {
-                panel10.Visible = false;
-                btnStaffAccounts.Visible = true;
-            }
-            else
-            {
-                panel10.Visible = false;
-                btnStaffAccounts.Visible = false;
-            }
+            btnCrowdLvl.Visible = false;
+            btnPopularity.Visible = false;
+            btnUserActivity.Visible = false;
+            btnMaintenance.Visible = false;
+            btnLogout.Visible = false;
+            btnStaffAccounts.Visible = false;
+            btnTopup.Visible = false;
+
+            panel2.Visible = false;
+
+            tabControl1.SelectTab(7);
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -871,8 +872,12 @@ namespace MainWinFormApp
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            AdminLogoutForm frm = new AdminLogoutForm(); //redirect to logout window
-            frm.ShowDialog(); 
+            tabControl1.SelectTab(6);
+
+
+
+            //AdminLogoutForm frm = new AdminLogoutForm(); //redirect to logout window
+            //frm.ShowDialog(); 
 
             panel5.Visible = true;
             panel2.Visible = false;
@@ -881,6 +886,13 @@ namespace MainWinFormApp
             panel8.Visible = false;
             panel9.Visible = false;
             panel10.Visible = false;
+
+            btnCrowdLvl.Visible = false;
+            btnPopularity.Visible = false;
+            btnMaintenance.Visible = false;
+            btnUserActivity.Visible = false;
+            btnTopup.Visible = false;
+            btnStaffAccounts.Visible = false;
         }
 
         private void btnAddMaintenanceRecord_Click(object sender, EventArgs e)
@@ -1750,6 +1762,188 @@ namespace MainWinFormApp
         {
             currentRow = dgvStaffAccounts.CurrentRow;
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            panel5.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+
+            btnCrowdLvl.Visible = true;
+            btnPopularity.Visible = true;
+            btnMaintenance.Visible = true;
+            btnUserActivity.Visible = true;
+            btnTopup.Visible = true;
+            btnStaffAccounts.Visible = true;
+
+            tabControl1.SelectTab(0);
+
+
+
+            //AdminLogoutForm frm = new AdminLogoutForm(); //redirect to logout window
+            //frm.ShowDialog(); 
+
+            
+        }
+
+        private string managerloggedin;
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            btnStaffAccounts.Visible = false;
+            btnCrowdLvl.Visible = false;
+            btnPopularity.Visible = false;
+            btnMaintenance.Visible = false;
+            btnUserActivity.Visible = false;
+            btnTopup.Visible = false;
+            btnLogout.Visible = false;
+
+
+            panel5.Visible = false;
+            panel10.Visible = false;
+            panel9.Visible = false;
+            panel8.Visible = false;
+            panel4.Visible = false;
+            panel3.Visible = false;
+            panel2.Visible = false;
+
+
+            tabControl1.SelectTab(7);
+        }
+
+        
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            //create connection
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+
+            //create command
+            String strCheckManagerLogin = "SELECT StaffID, Password, Position FROM StaffAccounts" +
+                " WHERE StaffID = @staffid AND Password = @pw AND Position = @Pos";
+            String strCheckStaffLogin = "SELECT StaffID, Password, Position FROM StaffAccounts" +
+                " WHERE StaffID = @SID AND Password = @pass";
+
+            SqlCommand checkManager = new SqlCommand(strCheckManagerLogin, myConnect);
+            checkManager.Parameters.AddWithValue("@staffid", tbStaffID.Text);
+            checkManager.Parameters.AddWithValue("@pw", tbPassword.Text);
+            checkManager.Parameters.AddWithValue("@Pos", "Manager");
+
+            SqlCommand checkStaff = new SqlCommand(strCheckStaffLogin, myConnect);
+            checkStaff.Parameters.AddWithValue("@SID", tbStaffID.Text);
+            checkStaff.Parameters.AddWithValue("@pass", tbPassword.Text);
+
+            if (tbStaffID.Text == String.Empty || tbPassword.Text == String.Empty)
+            {
+                MessageBox.Show("Required inputs are missing!");
+            }
+            else
+            {
+                try
+                {
+                    myConnect.Open();
+
+                    SqlDataReader manager = checkManager.ExecuteReader();
+                    SqlDataReader staff = checkStaff.ExecuteReader();
+
+                    if (manager.Read())
+                    {
+                        manager.Close();
+                        staff.Close();
+
+                        managerloggedin = "true";
+
+                        MessageBox.Show("Login Successful!");
+
+                        tabControl1.SelectTab(0);
+                    }
+                    else if (staff.Read())
+                    {
+                        staff.Close();
+                        manager.Close();
+
+                        managerloggedin = "false";
+
+                        MessageBox.Show("Login Successful!");
+
+                        tabControl1.SelectTab(0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Account! Login Failed.");
+
+                    }
+
+                    if (managerloggedin == "true")
+                    {
+                        panel10.Visible = false;
+                        btnStaffAccounts.Visible = true;
+
+                        btnStaffAccounts.Visible = true;
+                        btnCrowdLvl.Visible = true;
+                        btnPopularity.Visible = true;
+                        btnMaintenance.Visible = true;
+                        btnUserActivity.Visible = true;
+                        btnTopup.Visible = true;
+                        btnLogout.Visible = true;
+
+
+                        panel5.Visible = false;
+                        panel10.Visible = false;
+                        panel9.Visible = false;
+                        panel8.Visible = false;
+                        panel4.Visible = false;
+                        panel3.Visible = false;
+                        panel2.Visible = true;
+
+                    }
+                    else if (managerloggedin == "false")
+                    {
+                        panel10.Visible = false;
+                        btnStaffAccounts.Visible = false;
+
+                        btnStaffAccounts.Visible = false;
+                        btnCrowdLvl.Visible = true;
+                        btnPopularity.Visible = true;
+                        btnMaintenance.Visible = true;
+                        btnUserActivity.Visible = true;
+                        btnTopup.Visible = true;
+                        btnLogout.Visible = true;
+
+
+                        panel5.Visible = false;
+                        panel10.Visible = false;
+                        panel9.Visible = false;
+                        panel8.Visible = false;
+                        panel4.Visible = false;
+                        panel3.Visible = false;
+                        panel2.Visible = true;
+                    }
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message.ToString());
+                }
+                finally
+                {
+                    tbPassword.Text = String.Empty;
+                    tbStaffID.Text = String.Empty;
+                    myConnect.Close();
+                }
+            }
         }
     }
 }

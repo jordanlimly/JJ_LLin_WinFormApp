@@ -21,11 +21,11 @@ namespace MainWinFormApp
             //Application.Run(new frmCurrentCrowd());
             //Application.Run(new CustLoginForm());
             //Application.Run(new frmCreateuserAcc());
-            //Application.Run(new AdminMainpage());
+            Application.Run(new AdminMainpage());
             //Application.Run(new UserDashboard());
             //Application.Run(new PasswordResetForm());
             //Application.Run(new LogoutForm());
-            Application.Run(new AdminLoginForm());
+            //Application.Run(new AdminLoginForm());
         }
     }
 }

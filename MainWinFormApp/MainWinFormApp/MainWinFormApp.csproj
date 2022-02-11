@@ -57,18 +57,6 @@
     <Compile Include="AddStaffAcc.Designer.cs">
       <DependentUpon>AddStaffAcc.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminLoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLoginForm.Designer.cs">
-      <DependentUpon>AdminLoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminLogoutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLogoutForm.Designer.cs">
-      <DependentUpon>AdminLogoutForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminMainpage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,12 +145,6 @@
     </Compile>
     <EmbeddedResource Include="AddStaffAcc.resx">
       <DependentUpon>AddStaffAcc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminLoginForm.resx">
-      <DependentUpon>AdminLoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminLogoutForm.resx">
-      <DependentUpon>AdminLogoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainpage.resx">
       <DependentUpon>AdminMainpage.cs</DependentUpon>
