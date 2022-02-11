@@ -208,13 +208,12 @@ namespace MainWinFormApp
         {
 
             SqlConnection myConnect = new SqlConnection(strConnectionString);
-            String queryTxt = "SELECT b.GameMachineName, COUNT(a.GameMachineID) Usage FROM GameRecord a INNER JOIN GameMachine b on(a.GameMachineID = b.GameMachineID) INNER JOIN UserAccount u on(a.RFID_ID = u.RFID_ID) WHERE u.Email = '" + lblEmail.Text + "'  group by b.GameMachineName; ";
-
+            String queryTxt = "SELECT top 5 b.GameMachineName, COUNT(a.GameMachineID) Usage FROM GameRecord a INNER JOIN GameMachine b on(a.GameMachineID = b.GameMachineID) INNER JOIN UserAccount u on(a.RFID_ID = u.RFID_ID) WHERE u.Email = '" + lblEmail.Text + "' group by b.GameMachineName order by COUNT(a.GameMachineID)DESC";
 
             DataTable dt = GetData(queryTxt);
 
-            string[] x = (from p in dt.AsEnumerable() orderby p.Field<string>("GameMachineName") ascending select p.Field<string>("GameMachineName")).ToArray();
-            int[] y = (from p in dt.AsEnumerable() orderby p.Field<string>("GameMachineName") ascending select p.Field<int>("Usage")).ToArray();
+            string[] x = (from p in dt.AsEnumerable() select p.Field<string>("GameMachineName")).ToArray();
+            int[] y = (from p in dt.AsEnumerable()  select p.Field<int>("Usage")).ToArray();
 
             chart1.Series[0].ChartType = SeriesChartType.Column;
             chart1.Series[0].IsValueShownAsLabel = true;
