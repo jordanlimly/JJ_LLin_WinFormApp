@@ -1954,6 +1954,28 @@ namespace MainWinFormApp
                         panel3.Visible = false;
                         panel2.Visible = true;
                     }
+                    else
+                    {
+                        panel10.Visible = false;
+                        btnStaffAccounts.Visible = false;
+
+                        btnStaffAccounts.Visible = false;
+                        btnCrowdLvl.Visible = false;
+                        btnPopularity.Visible = false;
+                        btnMaintenance.Visible = false;
+                        btnUserActivity.Visible = false;
+                        btnTopup.Visible = false;
+                        btnLogout.Visible = false;
+
+
+                        panel5.Visible = false;
+                        panel10.Visible = false;
+                        panel9.Visible = false;
+                        panel8.Visible = false;
+                        panel4.Visible = false;
+                        panel3.Visible = false;
+                        panel2.Visible = false;
+                    }
 
                 }
                 catch (SqlException ex)
