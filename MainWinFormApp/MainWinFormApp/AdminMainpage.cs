@@ -1822,6 +1822,8 @@ namespace MainWinFormApp
 
         private string managerloggedin;
 
+        private string invalidacc;
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             btnStaffAccounts.Visible = false;
@@ -1887,6 +1889,7 @@ namespace MainWinFormApp
                         staff.Close();
 
                         managerloggedin = "true";
+                        invalidacc = "false";
 
                         MessageBox.Show("Login Successful!");
 
@@ -1898,6 +1901,7 @@ namespace MainWinFormApp
                         manager.Close();
 
                         managerloggedin = "false";
+                        invalidacc = "false";
 
                         MessageBox.Show("Login Successful!");
 
@@ -1906,55 +1910,11 @@ namespace MainWinFormApp
                     else
                     {
                         MessageBox.Show("Invalid Account! Login Failed.");
-
+                        invalidacc = "true";
                     }
 
-                    if (managerloggedin == "true")
-                    {
-                        panel10.Visible = false;
-                        btnStaffAccounts.Visible = true;
 
-                        btnStaffAccounts.Visible = true;
-                        btnCrowdLvl.Visible = true;
-                        btnPopularity.Visible = true;
-                        btnMaintenance.Visible = true;
-                        btnUserActivity.Visible = true;
-                        btnTopup.Visible = true;
-                        btnLogout.Visible = true;
-
-
-                        panel5.Visible = false;
-                        panel10.Visible = false;
-                        panel9.Visible = false;
-                        panel8.Visible = false;
-                        panel4.Visible = false;
-                        panel3.Visible = false;
-                        panel2.Visible = true;
-
-                    }
-                    else if (managerloggedin == "false")
-                    {
-                        panel10.Visible = false;
-                        btnStaffAccounts.Visible = false;
-
-                        btnStaffAccounts.Visible = false;
-                        btnCrowdLvl.Visible = true;
-                        btnPopularity.Visible = true;
-                        btnMaintenance.Visible = true;
-                        btnUserActivity.Visible = true;
-                        btnTopup.Visible = true;
-                        btnLogout.Visible = true;
-
-
-                        panel5.Visible = false;
-                        panel10.Visible = false;
-                        panel9.Visible = false;
-                        panel8.Visible = false;
-                        panel4.Visible = false;
-                        panel3.Visible = false;
-                        panel2.Visible = true;
-                    }
-                    else
+                    if (invalidacc == "true")
                     {
                         panel10.Visible = false;
                         btnStaffAccounts.Visible = false;
@@ -1975,6 +1935,51 @@ namespace MainWinFormApp
                         panel4.Visible = false;
                         panel3.Visible = false;
                         panel2.Visible = false;
+                    }
+                    else if (managerloggedin == "true" && invalidacc == "false")
+                    {
+                        panel10.Visible = false;
+                        btnStaffAccounts.Visible = true;
+
+                        btnStaffAccounts.Visible = true;
+                        btnCrowdLvl.Visible = true;
+                        btnPopularity.Visible = true;
+                        btnMaintenance.Visible = true;
+                        btnUserActivity.Visible = true;
+                        btnTopup.Visible = true;
+                        btnLogout.Visible = true;
+
+
+                        panel5.Visible = false;
+                        panel10.Visible = false;
+                        panel9.Visible = false;
+                        panel8.Visible = false;
+                        panel4.Visible = false;
+                        panel3.Visible = false;
+                        panel2.Visible = true;
+
+                    }
+                    else if (managerloggedin == "false" && invalidacc == "false")
+                    {
+                        panel10.Visible = false;
+                        btnStaffAccounts.Visible = false;
+
+                        btnStaffAccounts.Visible = false;
+                        btnCrowdLvl.Visible = true;
+                        btnPopularity.Visible = true;
+                        btnMaintenance.Visible = true;
+                        btnUserActivity.Visible = true;
+                        btnTopup.Visible = true;
+                        btnLogout.Visible = true;
+
+
+                        panel5.Visible = false;
+                        panel10.Visible = false;
+                        panel9.Visible = false;
+                        panel8.Visible = false;
+                        panel4.Visible = false;
+                        panel3.Visible = false;
+                        panel2.Visible = true;
                     }
 
                 }
