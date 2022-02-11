@@ -806,6 +806,28 @@ namespace MainWinFormApp
             }
         }
 
+        private void loadCBCustAct()
+        {
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+            try
+            {
+                myConnect.Open();
+                SqlCommand sc = new SqlCommand("Select GameMachineID from GameMachine", myConnect);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("GameMachineID", typeof(string));
+                dt.Load(reader);
+                cbGameMachines.ValueMember = "GameMachineID";
+                cbGameMachines.DataSource = dt;
+                myConnect.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
         // end of codes for chart - lid
 
         private void btnUserActivity_Click(object sender, EventArgs e)
@@ -821,6 +843,7 @@ namespace MainWinFormApp
             dataComms.sendData("RFIDRETURNNORM");
             hiddenMsgPanel = false;
             msgTimer.Start();
+            loadCBCustAct();
         }
 
         private void AdminMainpage_Load(object sender, EventArgs e)

@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnMaintenance = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -137,6 +137,17 @@
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoginLogoutTab = new System.Windows.Forms.TabPage();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.labelLogoutMsg = new System.Windows.Forms.Label();
+            this.LoginTab = new System.Windows.Forms.TabPage();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbStaffID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -159,17 +170,6 @@
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.timerMan = new System.Windows.Forms.Timer(this.components);
             this.msgTimer = new System.Windows.Forms.Timer(this.components);
-            this.LoginLogoutTab = new System.Windows.Forms.TabPage();
-            this.labelLogoutMsg = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.LoginTab = new System.Windows.Forms.TabPage();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbStaffID = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.CrowdTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitS2)).BeginInit();
@@ -204,10 +204,10 @@
             this.StaffAccountsTab.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffAccounts)).BeginInit();
-            this.topPanel.SuspendLayout();
-            this.sideNavPanel.SuspendLayout();
             this.LoginLogoutTab.SuspendLayout();
             this.LoginTab.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.sideNavPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMaintenance
@@ -502,14 +502,14 @@
             // 
             // TotalCrowdCht
             // 
-            chartArea5.Name = "ChartArea1";
-            this.TotalCrowdCht.ChartAreas.Add(chartArea5);
+            chartArea1.Name = "ChartArea1";
+            this.TotalCrowdCht.ChartAreas.Add(chartArea1);
             this.TotalCrowdCht.Location = new System.Drawing.Point(2, 34);
             this.TotalCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalCrowdCht.Name = "TotalCrowdCht";
-            series5.ChartArea = "ChartArea1";
-            series5.Name = "Series1";
-            this.TotalCrowdCht.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.TotalCrowdCht.Series.Add(series1);
             this.TotalCrowdCht.Size = new System.Drawing.Size(352, 190);
             this.TotalCrowdCht.TabIndex = 1;
             this.TotalCrowdCht.Text = "chart1";
@@ -602,30 +602,30 @@
             // 
             // MinCrowdCht
             // 
-            chartArea6.Name = "ChartArea1";
-            this.MinCrowdCht.ChartAreas.Add(chartArea6);
+            chartArea2.Name = "ChartArea1";
+            this.MinCrowdCht.ChartAreas.Add(chartArea2);
             this.MinCrowdCht.Location = new System.Drawing.Point(15, 53);
             this.MinCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinCrowdCht.Name = "MinCrowdCht";
-            series6.ChartArea = "ChartArea1";
-            series6.Name = "Series1";
-            this.MinCrowdCht.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.MinCrowdCht.Series.Add(series2);
             this.MinCrowdCht.Size = new System.Drawing.Size(397, 199);
             this.MinCrowdCht.TabIndex = 0;
             this.MinCrowdCht.Text = "chart1";
             // 
             // HourlyCrowdCht
             // 
-            chartArea7.Name = "ChartArea1";
-            this.HourlyCrowdCht.ChartAreas.Add(chartArea7);
+            chartArea3.Name = "ChartArea1";
+            this.HourlyCrowdCht.ChartAreas.Add(chartArea3);
             this.HourlyCrowdCht.Location = new System.Drawing.Point(14, 53);
             this.HourlyCrowdCht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourlyCrowdCht.Name = "HourlyCrowdCht";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.MarkerColor = System.Drawing.Color.White;
-            series7.Name = "Series1";
-            this.HourlyCrowdCht.Series.Add(series7);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.MarkerColor = System.Drawing.Color.White;
+            series3.Name = "Series1";
+            this.HourlyCrowdCht.Series.Add(series3);
             this.HourlyCrowdCht.Size = new System.Drawing.Size(521, 201);
             this.HourlyCrowdCht.TabIndex = 7;
             this.HourlyCrowdCht.Text = "chart1";
@@ -793,39 +793,39 @@
             // 
             // dgUpForMaintenance
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
-            this.dgUpForMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgUpForMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgUpForMaintenance.BackgroundColor = System.Drawing.Color.Black;
             this.dgUpForMaintenance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgUpForMaintenance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgUpForMaintenance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgUpForMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgUpForMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgUpForMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgUpForMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GameMachineID2,
             this.GameMachineName2,
             this.UsageCount2});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgUpForMaintenance.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgUpForMaintenance.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgUpForMaintenance.EnableHeadersVisualStyles = false;
             this.dgUpForMaintenance.Location = new System.Drawing.Point(0, 0);
             this.dgUpForMaintenance.Name = "dgUpForMaintenance";
             this.dgUpForMaintenance.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
-            this.dgUpForMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgUpForMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgUpForMaintenance.RowTemplate.Height = 24;
             this.dgUpForMaintenance.Size = new System.Drawing.Size(394, 194);
             this.dgUpForMaintenance.TabIndex = 1;
@@ -891,39 +891,39 @@
             // 
             // dgNeedMaintenance
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
-            this.dgNeedMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgNeedMaintenance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgNeedMaintenance.BackgroundColor = System.Drawing.Color.Black;
             this.dgNeedMaintenance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgNeedMaintenance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgNeedMaintenance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgNeedMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNeedMaintenance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgNeedMaintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNeedMaintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GameMachineID,
             this.GameMachineName,
             this.UsageCount});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNeedMaintenance.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNeedMaintenance.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgNeedMaintenance.EnableHeadersVisualStyles = false;
             this.dgNeedMaintenance.Location = new System.Drawing.Point(0, 0);
             this.dgNeedMaintenance.Name = "dgNeedMaintenance";
             this.dgNeedMaintenance.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
-            this.dgNeedMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgNeedMaintenance.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgNeedMaintenance.RowTemplate.Height = 24;
             this.dgNeedMaintenance.Size = new System.Drawing.Size(394, 194);
             this.dgNeedMaintenance.TabIndex = 0;
@@ -960,16 +960,16 @@
             // 
             // MaintenanceExpenditureChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea8);
-            legend2.Name = "Legend1";
-            this.MaintenanceExpenditureChart.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.MaintenanceExpenditureChart.ChartAreas.Add(chartArea4);
+            legend1.Name = "Legend1";
+            this.MaintenanceExpenditureChart.Legends.Add(legend1);
             this.MaintenanceExpenditureChart.Location = new System.Drawing.Point(0, 0);
             this.MaintenanceExpenditureChart.Name = "MaintenanceExpenditureChart";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Maintenance Monthly Expenditure";
-            this.MaintenanceExpenditureChart.Series.Add(series8);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Maintenance Monthly Expenditure";
+            this.MaintenanceExpenditureChart.Series.Add(series4);
             this.MaintenanceExpenditureChart.Size = new System.Drawing.Size(498, 324);
             this.MaintenanceExpenditureChart.TabIndex = 0;
             this.MaintenanceExpenditureChart.Text = "chart1";
@@ -1003,9 +1003,7 @@
             this.cbGameMachines.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGameMachines.FormattingEnabled = true;
             this.cbGameMachines.Items.AddRange(new object[] {
-            "G001",
-            "G002",
-            "G003"});
+            "G001"});
             this.cbGameMachines.Location = new System.Drawing.Point(949, 167);
             this.cbGameMachines.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbGameMachines.Name = "cbGameMachines";
@@ -1319,40 +1317,40 @@
             // 
             // dgvStaffAccounts
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
-            this.dgvStaffAccounts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
+            this.dgvStaffAccounts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvStaffAccounts.BackgroundColor = System.Drawing.Color.Black;
             this.dgvStaffAccounts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvStaffAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvStaffAccounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvStaffAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaffAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FirstName,
             this.LastName,
             this.Position,
             this.StaffID});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaffAccounts.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffAccounts.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvStaffAccounts.EnableHeadersVisualStyles = false;
             this.dgvStaffAccounts.Location = new System.Drawing.Point(0, 0);
             this.dgvStaffAccounts.Name = "dgvStaffAccounts";
             this.dgvStaffAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
-            this.dgvStaffAccounts.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.dgvStaffAccounts.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvStaffAccounts.RowTemplate.Height = 24;
             this.dgvStaffAccounts.Size = new System.Drawing.Size(791, 375);
             this.dgvStaffAccounts.TabIndex = 0;
@@ -1382,6 +1380,148 @@
             this.StaffID.HeaderText = "Staff ID";
             this.StaffID.Name = "StaffID";
             this.StaffID.ReadOnly = true;
+            // 
+            // LoginLogoutTab
+            // 
+            this.LoginLogoutTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
+            this.LoginLogoutTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginLogoutTab.Controls.Add(this.btnCancel);
+            this.LoginLogoutTab.Controls.Add(this.btnConfirm);
+            this.LoginLogoutTab.Controls.Add(this.labelLogoutMsg);
+            this.LoginLogoutTab.Location = new System.Drawing.Point(4, 5);
+            this.LoginLogoutTab.Name = "LoginLogoutTab";
+            this.LoginLogoutTab.Size = new System.Drawing.Size(1194, 649);
+            this.LoginLogoutTab.TabIndex = 6;
+            this.LoginLogoutTab.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnCancel.Location = new System.Drawing.Point(405, 417);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(164, 71);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.Black;
+            this.btnConfirm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnConfirm.Location = new System.Drawing.Point(759, 417);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(164, 71);
+            this.btnConfirm.TabIndex = 9;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // labelLogoutMsg
+            // 
+            this.labelLogoutMsg.AutoSize = true;
+            this.labelLogoutMsg.BackColor = System.Drawing.Color.Black;
+            this.labelLogoutMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogoutMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.labelLogoutMsg.Location = new System.Drawing.Point(534, 287);
+            this.labelLogoutMsg.Name = "labelLogoutMsg";
+            this.labelLogoutMsg.Size = new System.Drawing.Size(277, 39);
+            this.labelLogoutMsg.TabIndex = 8;
+            this.labelLogoutMsg.Text = "Confirm Logout? ";
+            this.labelLogoutMsg.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // LoginTab
+            // 
+            this.LoginTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
+            this.LoginTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginTab.Controls.Add(this.tbPassword);
+            this.LoginTab.Controls.Add(this.tbStaffID);
+            this.LoginTab.Controls.Add(this.label11);
+            this.LoginTab.Controls.Add(this.label12);
+            this.LoginTab.Controls.Add(this.btnLogin);
+            this.LoginTab.Controls.Add(this.label10);
+            this.LoginTab.Location = new System.Drawing.Point(4, 5);
+            this.LoginTab.Name = "LoginTab";
+            this.LoginTab.Size = new System.Drawing.Size(1194, 649);
+            this.LoginTab.TabIndex = 7;
+            this.LoginTab.UseVisualStyleBackColor = true;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BackColor = System.Drawing.Color.Gray;
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPassword.Location = new System.Drawing.Point(633, 344);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(197, 22);
+            this.tbPassword.TabIndex = 16;
+            // 
+            // tbStaffID
+            // 
+            this.tbStaffID.BackColor = System.Drawing.Color.Gray;
+            this.tbStaffID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbStaffID.Location = new System.Drawing.Point(633, 276);
+            this.tbStaffID.Name = "tbStaffID";
+            this.tbStaffID.Size = new System.Drawing.Size(197, 22);
+            this.tbStaffID.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Black;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label11.Location = new System.Drawing.Point(486, 342);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 24);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Password: ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Black;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label12.Location = new System.Drawing.Point(486, 274);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(76, 24);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Staff ID: ";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Black;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.btnLogin.Location = new System.Drawing.Point(585, 417);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(164, 71);
+            this.btnLogin.TabIndex = 12;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
+            this.label10.Location = new System.Drawing.Point(578, 147);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(179, 39);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Staff Login";
             // 
             // topPanel
             // 
@@ -1638,148 +1778,6 @@
             this.msgTimer.Interval = 50;
             this.msgTimer.Tick += new System.EventHandler(this.msgTimer_Tick);
             // 
-            // LoginLogoutTab
-            // 
-            this.LoginLogoutTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
-            this.LoginLogoutTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LoginLogoutTab.Controls.Add(this.btnCancel);
-            this.LoginLogoutTab.Controls.Add(this.btnConfirm);
-            this.LoginLogoutTab.Controls.Add(this.labelLogoutMsg);
-            this.LoginLogoutTab.Location = new System.Drawing.Point(4, 5);
-            this.LoginLogoutTab.Name = "LoginLogoutTab";
-            this.LoginLogoutTab.Size = new System.Drawing.Size(1194, 649);
-            this.LoginLogoutTab.TabIndex = 6;
-            this.LoginLogoutTab.UseVisualStyleBackColor = true;
-            // 
-            // labelLogoutMsg
-            // 
-            this.labelLogoutMsg.AutoSize = true;
-            this.labelLogoutMsg.BackColor = System.Drawing.Color.Black;
-            this.labelLogoutMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogoutMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.labelLogoutMsg.Location = new System.Drawing.Point(534, 287);
-            this.labelLogoutMsg.Name = "labelLogoutMsg";
-            this.labelLogoutMsg.Size = new System.Drawing.Size(277, 39);
-            this.labelLogoutMsg.TabIndex = 8;
-            this.labelLogoutMsg.Text = "Confirm Logout? ";
-            this.labelLogoutMsg.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Black;
-            this.btnConfirm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnConfirm.Location = new System.Drawing.Point(759, 417);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(164, 71);
-            this.btnConfirm.TabIndex = 9;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Black;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnCancel.Location = new System.Drawing.Point(405, 417);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(164, 71);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // LoginTab
-            // 
-            this.LoginTab.BackgroundImage = global::MainWinFormApp.Properties.Resources.istockphoto_1061119906_612x612;
-            this.LoginTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LoginTab.Controls.Add(this.tbPassword);
-            this.LoginTab.Controls.Add(this.tbStaffID);
-            this.LoginTab.Controls.Add(this.label11);
-            this.LoginTab.Controls.Add(this.label12);
-            this.LoginTab.Controls.Add(this.btnLogin);
-            this.LoginTab.Controls.Add(this.label10);
-            this.LoginTab.Location = new System.Drawing.Point(4, 5);
-            this.LoginTab.Name = "LoginTab";
-            this.LoginTab.Size = new System.Drawing.Size(1194, 649);
-            this.LoginTab.TabIndex = 7;
-            this.LoginTab.UseVisualStyleBackColor = true;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Black;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.btnLogin.Location = new System.Drawing.Point(585, 417);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(164, 71);
-            this.btnLogin.TabIndex = 12;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.label10.Location = new System.Drawing.Point(578, 147);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(179, 39);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Staff Login";
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.BackColor = System.Drawing.Color.Gray;
-            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPassword.Location = new System.Drawing.Point(633, 344);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(197, 22);
-            this.tbPassword.TabIndex = 16;
-            // 
-            // tbStaffID
-            // 
-            this.tbStaffID.BackColor = System.Drawing.Color.Gray;
-            this.tbStaffID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbStaffID.Location = new System.Drawing.Point(633, 276);
-            this.tbStaffID.Name = "tbStaffID";
-            this.tbStaffID.Size = new System.Drawing.Size(197, 22);
-            this.tbStaffID.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.label11.Location = new System.Drawing.Point(486, 342);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 24);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Password: ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(146)))), ((int)(((byte)(13)))));
-            this.label12.Location = new System.Drawing.Point(486, 274);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 24);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Staff ID: ";
-            // 
             // AdminMainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1835,13 +1833,13 @@
             this.StaffAccountsTab.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffAccounts)).EndInit();
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            this.sideNavPanel.ResumeLayout(false);
             this.LoginLogoutTab.ResumeLayout(false);
             this.LoginLogoutTab.PerformLayout();
             this.LoginTab.ResumeLayout(false);
             this.LoginTab.PerformLayout();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sideNavPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
