@@ -187,6 +187,19 @@ namespace MainWinFormApp
             }
         }
 
+        private void handledCancelAnimation(string strData, string ID)
+        {
+            string strValue = extractStringValue(strData, ID);
+            if (strValue == "S1")
+            {
+                sensor1triggered = false;
+            }
+            else if (strValue == "S2")
+            {
+                sensor2triggered = false;
+            }
+        }
+
         private void deductMaintenanceCount(string machineID)
         {
             //Step 1: Create connection
@@ -489,6 +502,8 @@ namespace MainWinFormApp
                 handleGameMode(strData, "RFIDGAMESTART=");
             if (strData.IndexOf("RFIDTOPUPSTR=") != -1)
                 handleRFIDTopup(strData, "RFIDTOPUPSTR=");
+            if (strData.IndexOf("CANCELANIMATION=") != -1)
+                handledCancelAnimation(strData, "CANCELANIMATION=");
         }
 
         private void handleSensorData(String strData)
