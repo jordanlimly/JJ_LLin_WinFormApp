@@ -44,7 +44,7 @@ namespace MainWinFormApp
             addAccount.Parameters.AddWithValue("@NewLname", tbLname.Text);
             addAccount.Parameters.AddWithValue("@NewPosition", char.ToUpper(tbPosition.Text[0]) + tbPosition.Text.Substring(1));
             addAccount.Parameters.AddWithValue("@NewPassword", tbPassword.Text);
-            addAccount.Parameters.AddWithValue("@NewStaffID", tbFname.Text.Substring(0,1) + Idnumbers.ToString());
+            addAccount.Parameters.AddWithValue("@NewStaffID", (tbFname.Text.Substring(0,1)).ToUpper() + Idnumbers.ToString());
             
 
             if (tbFname.Text == String.Empty || tbPassword.Text == String.Empty || tbCfmPassword.Text == String.Empty
