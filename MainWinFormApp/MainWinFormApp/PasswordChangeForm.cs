@@ -91,7 +91,7 @@ namespace MainWinFormApp
                     }
                     else
                     {
-                        MessageBox.Show("Old password is incorrect!");
+                        MessageBox.Show("Wrong Credentials Entered! Please Try Again!");
                     }
                 }
                 catch (SqlException ex)
