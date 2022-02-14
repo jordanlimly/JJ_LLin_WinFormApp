@@ -201,6 +201,16 @@ namespace MainWinFormApp
 
         private void btnGameMachineUsage_Click(object sender, EventArgs e)
         {
+            try
+            {
+                loadchart();
+            }
+            catch
+            {
+
+            }
+
+
             pnlNav.Height = btnGameMachineUsage.Height;
             pnlNav.Top = btnGameMachineUsage.Top;
             pnlNav.Left = btnGameMachineUsage.Left;
