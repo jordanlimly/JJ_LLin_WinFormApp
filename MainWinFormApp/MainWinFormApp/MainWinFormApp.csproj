@@ -247,6 +247,18 @@
     <None Include="Resources\barchart static.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\images\prize1.jpg" />
+    <Content Include="bin\Debug\images\prize10.jpg" />
+    <Content Include="bin\Debug\images\prize11.jpg" />
+    <Content Include="bin\Debug\images\prize12.jpg" />
+    <Content Include="bin\Debug\images\prize2.jpg" />
+    <Content Include="bin\Debug\images\prize3.jpg" />
+    <Content Include="bin\Debug\images\prize4.jpg" />
+    <Content Include="bin\Debug\images\prize5.jpg" />
+    <Content Include="bin\Debug\images\prize6.jpg" />
+    <Content Include="bin\Debug\images\prize7.jpg" />
+    <Content Include="bin\Debug\images\prize8.jpg" />
+    <Content Include="bin\Debug\images\prize9.jpg" />
     <None Include="Resources\walking man flipped.gif" />
     <None Include="Resources\gate 2.png" />
     <None Include="Resources\gate 1 %282%29.png" />

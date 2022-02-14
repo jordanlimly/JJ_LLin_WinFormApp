@@ -22,7 +22,19 @@ namespace MainWinFormApp
         public CustLoginForm()
         {
             InitializeComponent();
-            
+
+            SqlConnection myConnect = new SqlConnection(strConnectionString);
+            string updGCommandText = "UPDATE UserAccount SET MembershipTier='Gold' WHERE AccumulatedPoints>1000 ";
+            string updSCommandText = "UPDATE UserAccount SET MembershipTier='Silver' WHERE AccumulatedPoints>499 AND AccumulatedPoints<999 ";
+
+            SqlCommand updateGComd = new SqlCommand(updGCommandText, myConnect);
+            SqlCommand updateSComd = new SqlCommand(updSCommandText, myConnect);
+
+            myConnect.Open();
+            int result = updateGComd.ExecuteNonQuery();
+            int results = updateSComd.ExecuteNonQuery();
+            myConnect.Close();
+
         }
 
 

@@ -47,34 +47,50 @@ namespace MainWinFormApp
             Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
             bool isValid = regex.IsMatch(tbEmail.Text.Trim());
 
-            if (isValid || string.IsNullOrEmpty(tbEmail.Text))
+            if (isValid || !string.IsNullOrEmpty(tbEmail.Text))
             {
                 if (!string.IsNullOrEmpty(tbPassword.Text))
                 {
-                    if (tbPassword.Text == tbCfmPassword.Text)
+                    if (!string.IsNullOrEmpty(tbCardID.Text))
                     {
-                        myConnect.Open();
-                        result = updateCmd.ExecuteNonQuery();
-
-                        if (result > 0)
+                        if (!string.IsNullOrEmpty(tbCardID.Text))
                         {
-                            MessageBox.Show("Account Created!");
-                            CustLoginForm frm = new CustLoginForm();
-                            this.Hide();
-                            frm.ShowDialog();
-                            this.Close();
+                            if (tbPassword.Text == tbCfmPassword.Text)
+                            {
+                                myConnect.Open();
+                                result = updateCmd.ExecuteNonQuery();
+
+                                if (result > 0)
+                                {
+                                    MessageBox.Show("Account Created!");
+                                    CustLoginForm frm = new CustLoginForm();
+                                    this.Hide();
+                                    frm.ShowDialog();
+                                    this.Close();
+                                }
+
+                                else
+                                    MessageBox.Show("Account Creation unsuccessful!");
+
+                                myConnect.Close();
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Passwords not matching!");
+                            }
                         }
-
                         else
-                            MessageBox.Show("Account Creation unsuccessful!");
-
-                        myConnect.Close();
-                        Close();
+                        {
+                            MessageBox.Show("Please enter Security Question inputs!");
+                        }
+                            
                     }
                     else
                     {
-                        MessageBox.Show("Passwords not matching!");
+                        MessageBox.Show("Please enter Card ID!");
                     }
+                        
                 }
                 else
                 {
@@ -84,6 +100,7 @@ namespace MainWinFormApp
             else
             {
                 MessageBox.Show("Invalid Email!");
+                tbEmail.Text = "";
             }
         }
 

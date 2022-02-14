@@ -19,7 +19,10 @@ namespace MainWinFormApp
         // retrieve connection information from App.Config
         private string strConnectionString = ConfigurationManager.ConnectionStrings["JJLLinDBConnection"].ConnectionString;
 
-
+        private string[] pics;
+        //string[] pics = new string[] { };
+        int i = 0;
+        //int i = 0;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -54,6 +57,20 @@ namespace MainWinFormApp
                 cCredit.Text = reader["CurrentCredits"].ToString();
                 cPoint.Text = reader["CurrentPoints"].ToString();
                 lblmTier.Text = reader["MembershipTier"].ToString();
+                
+                if (lblmTier.Text == "Gold")
+                {
+                    this.pics = new string[] { "prize9.jpg", "prize10.jpg", "prize11.jpg", "prize12.jpg", "prize5.jpg", "prize6.jpg", "prize7.jpg", "prize8.jpg", "prize1.jpg", "prize2.jpg", "prize3.jpg", "prize4.jpg" };
+                
+                }
+                else if (lblmTier.Text == "Silver")
+                {
+                    this.pics = new string[] { "prize5.jpg", "prize6.jpg", "prize7.jpg", "prize8.jpg", "prize1.jpg", "prize2.jpg", "prize3.jpg", "prize4.jpg" };
+                }
+                else
+                {
+                    this.pics = new string[] { "prize1.jpg", "prize2.jpg", "prize3.jpg", "prize4.jpg" };
+                }
                 int creditValue = int.Parse(cCredit.Text);
                 if (creditValue >= 50)
                 {
@@ -93,13 +110,15 @@ namespace MainWinFormApp
         private void UserDashboard_Load(object sender, EventArgs e)
         {
             //lblEmail.Text = CustLoginForm.UserEmail;
-            loadchart();
+            //loadchart();
             pnlAccumPoints.Visible = true;
             pnlCurrCreds.Visible = true;
             pnlCurrPoints.Visible = true;
             //pnlMemTier.Visible = true;
             panel2.Visible = true;
             panel1.Visible = true;
+
+            pictureBox1.Image = Image.FromFile(Application.StartupPath + "\\images\\" + this.pics[0]);
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
@@ -112,8 +131,8 @@ namespace MainWinFormApp
             SqlConnection myConnect = new SqlConnection(strConnectionString);
             string strCommandText = "SELECT Name FROM UserAccount ";
 
-
             SqlCommand cmd = new SqlCommand(strCommandText, myConnect);
+
             myConnect.Open();
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -127,6 +146,7 @@ namespace MainWinFormApp
 
             reader.Close();
             myConnect.Close();
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -219,6 +239,72 @@ namespace MainWinFormApp
             chart1.Series[0].IsValueShownAsLabel = true;
             chart1.Series[0].Points.DataBindXY(x, y);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            i += 1;
+
+            if (this.pics.Length == i)
+            {
+                i = 0;
+            }
+
+            //'Set to Load the image.
+            pictureBox1.Image = Image.FromFile(Application.StartupPath + "//images//" + this.pics[i]);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //'Disable timer to prevent the next image from loading..
+            timer1.Enabled = false;
+
+
+            //'Set this formula to increment i by 1
+            i += 1;
+
+
+            //'Set a validation of pictures
+            if (this.pics.Length == i)
+            {
+                i = 0;
+            }
+
+            //'Set to Load the image.
+            pictureBox1.Image = Image.FromFile(Application.StartupPath + "//images//" + this.pics[i]);
+
+
+            //'Re-Enable timer to resets the image loads in 5 seconds..
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            //'Disable timer to prevent the next image from loading..
+            timer1.Enabled = false;
+
+
+            //'Set this formula to increment i by 1
+            i -= 1;
+
+
+            //'Set a validation of pictures
+            if (this.pics.Length == i)
+            {
+                i = 0;
+
+            }
+
+            //'Set to Load the image.
+            pictureBox1.Image = Image.FromFile(Application.StartupPath + "//images//" + this.pics[i]);
+
+
+            //'Re-Enable timer to resets the image loads in 5 seconds..
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+        }
+
+
 
         private static DataTable GetData(string query)
         {

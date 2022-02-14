@@ -56,7 +56,6 @@
             this.lbluEmail.Size = new System.Drawing.Size(196, 18);
             this.lbluEmail.TabIndex = 4;
             this.lbluEmail.Text = "lbl";
-            this.lbluEmail.Visible = false;
             // 
             // lblSecurityQn
             // 
@@ -196,7 +195,6 @@
             this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "Email:";
-            this.lblEmail.Visible = false;
             // 
             // lnklblResetPw
             // 
