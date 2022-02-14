@@ -36,7 +36,7 @@ namespace MainWinFormApp
                 " VALUES (@NewGMachineID, @NewGMachineName, @NewUsageCount)";
 
             String strCheckMachine = "SELECT GameMachineID, GameMachineName FROM GameMachine" +
-                " WHERE GameMachineID = @gmid AND GameMachineName = @gmName";
+                " WHERE GameMachineID = @gmid OR GameMachineName = @gmName";
 
             SqlCommand addValue = new SqlCommand(strCommandText, myConnect);
             addValue.Parameters.AddWithValue("@NewGMachineID", tbGMachineID.Text);
